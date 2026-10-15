@@ -59,6 +59,15 @@ def run_crisp_dm_pipeline(problem_name="startups"):
         target = "Price per Ping"
         X = df[features].astype(float).values
         y = df[target].astype(float).values
+    elif problem_name == "tsmc_2330":
+        print("Objective: Predict TSMC (2330.TW) daily closing price via Autoregressive Lag modeling.")
+        print("Target: Close Price (NT$ TWD). Features: Lag 1, Lag 2, Lag 3, Lag 4, Lag 5.")
+        print("Hypothesis: Financial markets exhibit strong Markovian persistence where Lag 1 carries dominant predictive weight.")
+        df = pd.read_csv("tsmc_2330_ar.csv")
+        features = ["Lag_1", "Lag_2", "Lag_3", "Lag_4", "Lag_5"]
+        target = "Close"
+        X = df[features].astype(float).values
+        y = df[target].astype(float).values
     else:
         print("Objective: Predict individual medical insurance charges from health and demographic factors.")
         print("Target: Charges ($ USD). Features: Age, BMI, Children, Smoker Status, Region.")
@@ -202,19 +211,23 @@ def run_crisp_dm_pipeline(problem_name="startups"):
     # -------------------------------------------------------------------------
     # PHASE 6: DEPLOYMENT
     # -------------------------------------------------------------------------
-    print("\n[PHASE 6: DEPLOYMENT]")
-    print("Application is deployed to GitHub Pages via automated GitHub Actions (.github/workflows/pages.yml)!")
-    print("Public Live URL: https://yenyen0921.github.io/AIoT-DIC2-MultipleLR/\n")
+    print("\n[PHASE 6: DEPLOYMENT (PICKLE / GZIP / REST API / GITHUB PAGES)]")
+    print("1. Serialized Scikit-Learn Pipeline: 'startup_profit_model.pkl' & 'startup_profit_model.pkl.gz'")
+    print("2. Web Application: Deployed live via GitHub Pages (.github/workflows/pages.yml)")
+    print("   Public URL: https://yenyen0921.github.io/AIoT-DIC2-MultipleLR/")
+    print("3. REST API Server: Flask service in 'app.py' (/api/predict, /api/models)\n")
 
 def main():
     parser = argparse.ArgumentParser(description="AIoT DIC2 Multiple Linear Regression CLI")
-    parser.add_argument("--problem", choices=["startups", "real_estate", "insurance", "all"], default="all",
+    parser.add_argument("--problem", choices=["startups", "real_estate", "insurance", "tsmc_2330", "all"], default="all",
                         help="Choose regression problem to run")
     args = parser.parse_args()
 
     if args.problem == "all":
         run_crisp_dm_pipeline("startups")
         run_crisp_dm_pipeline("real_estate")
+        run_crisp_dm_pipeline("insurance")
+        run_crisp_dm_pipeline("tsmc_2330")
     else:
         run_crisp_dm_pipeline(args.problem)
 

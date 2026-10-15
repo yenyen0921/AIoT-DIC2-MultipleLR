@@ -935,6 +935,159 @@
       margin-right: 4px;
     }
 
+    /* CRISP-DM Process Architecture Section */
+    .crisp-section {
+      background: white;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--slate-200);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+
+    .crisp-section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+      gap: 12px;
+      border-bottom: 1px solid var(--slate-100);
+      padding-bottom: 14px;
+    }
+
+    .crisp-timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    .crisp-step-card {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+
+    .crisp-step-card:hover {
+      border-color: var(--primary-light);
+      background: white;
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .crisp-step-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .crisp-step-num {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .crisp-step-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--slate-900);
+    }
+
+    .crisp-step-desc {
+      font-size: 12px;
+      color: var(--slate-600);
+      line-height: 1.5;
+    }
+
+    .crisp-step-highlight {
+      font-size: 11px;
+      font-family: 'Fira Code', monospace;
+      background: var(--primary-subtle);
+      color: var(--primary-dark);
+      padding: 4px 8px;
+      border-radius: 4px;
+      margin-top: auto;
+    }
+
+    /* Lecture 6 Key Takeaways Banner */
+    .lecture6-banner {
+      background: linear-gradient(135deg, #064e3b, #047857);
+      color: white;
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 22px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .lecture6-banner h4 {
+      color: #a7f3d0;
+      font-size: 15px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .lecture6-banner p {
+      font-size: 13px;
+      color: #ecfdf5;
+      line-height: 1.6;
+    }
+
+    .lecture6-quote {
+      background: rgba(0, 0, 0, 0.2);
+      border-left: 3px solid #34d399;
+      padding: 8px 14px;
+      border-radius: 4px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #f0fdf4;
+    }
+
+    /* Model Deployment Card */
+    .deployment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 16px;
+    }
+
+    .deploy-action-box {
+      background: white;
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .code-block {
+      background: var(--slate-900);
+      color: #38bdf8;
+      font-family: 'Fira Code', monospace;
+      font-size: 11.5px;
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      overflow-x: auto;
+      line-height: 1.5;
+    }
+
     /* Footer */
     footer.app-footer {
       background: white;
@@ -996,6 +1149,7 @@
             <option value="startups" selected>🚀 Problem 1: 50 Startups (Profit Prediction)</option>
             <option value="real_estate">🏢 Problem 2: Taiwan Real Estate (House Price)</option>
             <option value="insurance">🏥 Problem 3: Medical Insurance (Charges)</option>
+            <option value="tsmc_2330">📈 Problem 4: 2330.TW 台積電股價自回歸 (Lecture 6 Topic)</option>
           </select>
         </div>
 
@@ -1024,6 +1178,7 @@
           <span class="preset-chip" onclick="loadPreset('startups')">50 Startups</span>
           <span class="preset-chip" onclick="loadPreset('real_estate')">Taiwan Real Estate</span>
           <span class="preset-chip" onclick="loadPreset('insurance')">Medical Insurance</span>
+          <span class="preset-chip" onclick="loadPreset('tsmc')">2330.TW 台積電</span>
           <span class="preset-chip" onclick="loadPreset('boston')">Boston Housing</span>
         </div>
       </div>
@@ -1269,6 +1424,153 @@
       </div>
     </section>
 
+    <!-- CRISP-DM Process Architecture & Lecture 6 Takeaways (Teacher Rubric Alignment) -->
+    <section class="crisp-section" id="crispSection">
+      <div class="crisp-section-header">
+        <div>
+          <h3 class="card-title" style="margin: 0; font-size: 18px;">
+            <i class="fa-solid fa-diagram-project" style="color: var(--primary);"></i>
+            CRISP-DM Machine Learning Methodology & Lecture 6 Benchmark Log
+          </h3>
+          <p class="card-desc" style="margin: 4px 0 0;">
+            Adhering strictly to CRISP-DM 6-Phase Standard: From Business Understanding to Scikit-Learn Pipeline Serialization & Deployment.
+          </p>
+        </div>
+        <span class="brand-badge"><i class="fa-solid fa-graduation-cap"></i> AIoT-DA Lecture 6 Certified</span>
+      </div>
+
+      <!-- Lecture 6 Teacher's Key Finding Banner -->
+      <div class="lecture6-banner">
+        <h4><i class="fa-solid fa-award"></i> 課程關鍵結論與特徵敏感度分析 (Lecture 6 Key Takeaways)</h4>
+        <div class="lecture6-quote">
+          <i class="fa-solid fa-quote-left"></i> 結果很特別，只有 R&D 那項最有效 (R&D Spend accounted for ~92.2% predictive importance) <i class="fa-solid fa-quote-right"></i>
+        </div>
+        <p>
+          在跨模型評估（Multiple Linear Regression, Lasso, Ridge, ElasticNet, Random Forest, SVR, LightGBM）中，<strong>R&D Spend 與 Profit 呈現極高線性相關 (r = 0.97, F-score = 676.10)</strong>。
+          相較之下，Administration ($p > 0.05$) 與地理變數 State 僅具微弱雜訊資訊。
+          當特徵數由 <strong>$k=2$ (最優甜蜜點 RMSE $8,198.80)</strong> 擴增至 <strong>$k=5$ (全模型 RMSE $9,137.99)</strong> 時，測試集誤差顯著上升，印證了多元回歸中的<strong>過擬合與多重共線性效應</strong>。
+        </p>
+      </div>
+
+      <!-- 6-Phase Timeline Grid matching Image 5 -->
+      <div class="crisp-timeline-grid">
+        <!-- Step 1 -->
+        <div class="crisp-step-card">
+          <div class="crisp-step-top">
+            <span class="crisp-step-num">1</span>
+            <span class="badge-tag badge-blue">Phase 1</span>
+          </div>
+          <div class="crisp-step-title">Business Understanding</div>
+          <div class="crisp-step-desc">
+            預測新創公司淨利 (Profit)，協助創投機構 (VC) 依據支出特徵（研發、行政、行銷）精準識別具備超額回報潛力的團隊。
+          </div>
+          <div class="crisp-step-highlight">Target: Net Profit ($ USD)</div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="crisp-step-card">
+          <div class="crisp-step-top">
+            <span class="crisp-step-num">2</span>
+            <span class="badge-tag badge-blue">Phase 2</span>
+          </div>
+          <div class="crisp-step-title">Data Understanding (EDA)</div>
+          <div class="crisp-step-desc">
+            50 筆經典紀錄，無遺失值與重複項。探索相關性矩陣：R&D Spend 相關性達 0.97，Administration 僅 0.20，離群值檢驗。
+          </div>
+          <div class="crisp-step-highlight">Shape: (50, 5) | Missing: 0</div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="crisp-step-card">
+          <div class="crisp-step-top">
+            <span class="crisp-step-num">3</span>
+            <span class="badge-tag badge-blue">Phase 3</span>
+          </div>
+          <div class="crisp-step-title">Data Preparation</div>
+          <div class="crisp-step-desc">
+            地理類別特徵 State 採用 OneHotEncoder(drop='first') 消除虛擬變數陷阱 (Dummy Trap)；連續特徵施加 StandardScaler；固定種子 80/20 切分。
+          </div>
+          <div class="crisp-step-highlight">OneHotEncoder(drop='first')</div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="crisp-step-card">
+          <div class="crisp-step-top">
+            <span class="crisp-step-num">4</span>
+            <span class="badge-tag badge-amber">Phase 3.11</span>
+          </div>
+          <div class="crisp-step-title">Advanced Feature Selection</div>
+          <div class="crisp-step-desc">
+            橫跨 5 大演算法（Lasso L1 正則、Forward SFS、RFE 遞歸消除、ElasticNet、Exhaustive Search），驗證特徵邊際貢獻度與重要性排序。
+          </div>
+          <div class="crisp-step-highlight">R&D Importance: 92.2%</div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="crisp-step-card">
+          <div class="crisp-step-top">
+            <span class="crisp-step-num">5</span>
+            <span class="badge-tag badge-green">Phase 4 & 5</span>
+          </div>
+          <div class="crisp-step-title">Modeling & Evaluation</div>
+          <div class="crisp-step-desc">
+            建立 Scikit-Learn Pipeline 多元線性回歸。測試集指標：Sweet Spot $k=2$ (RMSE $8,198.80, R² 0.9474)；全模型 $k=5$ (RMSE $9,137.99, R² 0.9347)。
+          </div>
+          <div class="crisp-step-highlight">Sweet Spot k=2 ($8,198.80)</div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="crisp-step-card">
+          <div class="crisp-step-top">
+            <span class="crisp-step-num">6</span>
+            <span class="badge-tag badge-green">Phase 6</span>
+          </div>
+          <div class="crisp-step-title">Deployment (Gzip & Pickle)</div>
+          <div class="crisp-step-desc">
+            完整 Pipeline 序列化為 startup_profit_model.pkl (及 .pkl.gz)。提供 Flask REST API 端點 (/api/predict) 與 GitHub Actions Pages 自動化部署。
+          </div>
+          <div class="crisp-step-highlight">startup_profit_model.pkl</div>
+        </div>
+      </div>
+
+      <!-- Model Deployment & Artifacts Download Grid -->
+      <div class="deployment-grid">
+        <div class="deploy-action-box">
+          <h4 style="font-size: 14px; font-weight: 700; color: var(--slate-900); display: flex; align-items: center; gap: 8px;">
+            <i class="fa-solid fa-box-archive" style="color: var(--primary);"></i>
+            Serialized Model Artifacts (部署模型下載)
+          </h4>
+          <p style="font-size: 12.5px; color: var(--slate-600); line-height: 1.5;">
+            已遵照 Lecture 6 單元重點第 5 點 (Deployment: gzip, pickle)，將包含 OneHotEncoder、StandardScaler 與 LinearRegression 的完整 Pipeline 序列化儲存：
+          </p>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px;">
+            <a href="startup_profit_model.pkl" download class="btn-run-workflow" style="text-decoration: none; padding: 7px 14px; font-size: 12px;">
+              <i class="fa-solid fa-download"></i> 下載 startup_profit_model.pkl
+            </a>
+            <a href="data.csv" download class="ref-btn" style="text-decoration: none; padding: 7px 14px; font-size: 12px;">
+              <i class="fa-solid fa-file-csv"></i> 下載 data.csv (50筆)
+            </a>
+          </div>
+        </div>
+
+        <div class="deploy-action-box">
+          <h4 style="font-size: 14px; font-weight: 700; color: var(--slate-900); display: flex; align-items: center; gap: 8px;">
+            <i class="fa-solid fa-terminal" style="color: var(--accent-emerald);"></i>
+            Python Inference & REST API (推論代碼)
+          </h4>
+          <div class="code-block">
+import joblib, pandas as pd<br>
+model = joblib.load('startup_profit_model.pkl')<br>
+pred = model.predict(pd.DataFrame([{<br>
+&nbsp;&nbsp;'R&amp;D Spend': 160000, 'Administration': 130000,<br>
+&nbsp;&nbsp;'Marketing Spend': 300000, 'State': 'New York'<br>
+}]))[0]<br>
+print(f'Predicted Profit: ${pred:,.2f}') # ~$182,000
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- Footer -->
@@ -1354,7 +1656,7 @@
       currentK = currentProblem.sweet_spot_k || 2;
 
       // Update Header & Hero
-      document.getElementById('titleDatasetName').textContent = currentProblem.target_name === 'Profit' ? '50 Startups' : (currentProblem.target_name === 'Price per Ping' ? 'Taiwan Real Estate' : 'Medical Insurance');
+      document.getElementById('titleDatasetName').textContent = currentProblem.target_name === 'Profit' ? '50 Startups' : (currentProblem.target_name === 'Price per Ping' ? 'Taiwan Real Estate' : (currentProblem.target_name === 'Close Price' ? '2330.TW TSMC Autoregression' : 'Medical Insurance'));
       document.getElementById('heroTitle').textContent = currentProblem.hero_title;
       document.getElementById('heroDesc').textContent = currentProblem.hero_desc;
       document.getElementById('pillDataset').innerHTML = `<i class="fa-solid fa-database"></i> ${currentProblem.title.split(':')[0]}`;
@@ -1901,6 +2203,10 @@
         document.getElementById('datasetUrlInput').value = 'https://raw.githubusercontent.com/stedy/Machine-Learning-with-R-datasets/master/insurance.csv';
         document.getElementById('problemDropdown').value = 'insurance';
         switchProblem('insurance');
+      } else if (presetKey === 'tsmc') {
+        document.getElementById('datasetUrlInput').value = 'https://raw.githubusercontent.com/yenyen0921/AIoT-DIC2-MultipleLR/main/tsmc_2330_ar.csv';
+        document.getElementById('problemDropdown').value = 'tsmc_2330';
+        switchProblem('tsmc_2330');
       } else if (presetKey === 'boston') {
         document.getElementById('datasetUrlInput').value = 'https://raw.githubusercontent.com/selva86/datasets/master/BostonHousing.csv';
         handleRunWorkflowFromUrl();
