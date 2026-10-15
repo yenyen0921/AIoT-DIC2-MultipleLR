@@ -13,8 +13,13 @@
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
-  <!-- Chart.js CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <!-- Chart.js (Local with CDN fallback) -->
+  <script src="chart.umd.min.js"></script>
+  <script>
+    if (typeof Chart === 'undefined') {
+      document.write('<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"><\/script>');
+    }
+  </script>
   
   <!-- Precomputed Multi-Problem Model Data & Client-side ML Engine -->
   <script src="model_data.js"></script>
@@ -1308,10 +1313,9 @@
 
     // Initialize App
     document.addEventListener('DOMContentLoaded', () => {
+      initCharts();
       initEventListeners();
       switchProblem('startups');
-      initCharts();
-      updateDashboard();
     });
 
     function initEventListeners() {
@@ -1662,8 +1666,17 @@
 
     // Chart.js Setup
     function initCharts() {
-      const ctxRMSE = document.getElementById('rmseChart').getContext('2d');
-      const ctxR2 = document.getElementById('r2Chart').getContext('2d');
+      if (typeof Chart === 'undefined') {
+        console.warn('Chart.js not loaded yet, retrying in 200ms...');
+        setTimeout(initCharts, 200);
+        return;
+      }
+      const elRMSE = document.getElementById('rmseChart');
+      const elR2 = document.getElementById('r2Chart');
+      if (!elRMSE || !elR2) return;
+
+      const ctxRMSE = elRMSE.getContext('2d');
+      const ctxR2 = elR2.getContext('2d');
 
       const commonOptions = {
         responsive: true,
@@ -1738,6 +1751,10 @@
 
     function updateCharts() {
       if (!currentProblem || !currentProblem.models) return;
+      if (!rmseChartInstance || !r2ChartInstance) {
+        initCharts();
+        if (!rmseChartInstance || !r2ChartInstance) return;
+      }
 
       const isCompareAll = currentAlgo === 'ALL';
       document.getElementById('rmseChartBadge').textContent = isCompareAll ? 'Comparing 5 Methods' : currentAlgo;
