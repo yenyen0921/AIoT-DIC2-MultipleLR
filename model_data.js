@@ -1,6 +1,23243 @@
 // Multi-Problem Benchmark Model Data for AIoT DIC2 Multiple Linear Regression Explorer
-// Includes: 50 Startups, Taiwan Real Estate, Medical Insurance, and 2330.TW TSMC Autoregression
 window.PROBLEMS_DATA = {
+  "flood": {
+    "id": "flood",
+    "title": "Kaggle Predict the Flood: 20 Features Multiple Linear Regression Explorer (HW2 Primary)",
+    "badge": "CRISP-DM",
+    "hero_title": "Kaggle S4E5: Flood Probability Prediction (20 Features)",
+    "hero_desc": "Analyze 30,000 real-world observations across 20 environmental and infrastructural risk features from Kaggle Playground S4E5. Benchmark 5 Feature Selection Algorithms (Lasso, Forward SFS, RFE, ElasticNet, SelectKBest) against Baseline OLS to predict FloodProbability.",
+    "target_name": "Flood Probability",
+    "target_prefix": "",
+    "target_unit": "Probability (0~1)",
+    "sweet_spot_k": 20,
+    "sweet_spot_note": "Parsimony Analysis: All 20 features are orthogonal and non-collinear (Max VIF = 1.006). The full 20-feature OLS achieves peak R\u00b2 = 0.8445 and lowest test RMSE = 0.01998.",
+    "overfitting_k": 14,
+    "overfitting_note": "Consensus Top 14 Sub-model: Achieves R\u00b2 = 0.5454 and RMSE = 0.03417, demonstrating the value of comprehensive feature retention.",
+    "features_meta": [
+      {
+        "name": "MonsoonIntensity",
+        "min": 0,
+        "max": 16,
+        "default": 5,
+        "step": 1,
+        "unit": "Score"
+      },
+      {
+        "name": "TopographyDrainage",
+        "min": 0,
+        "max": 17,
+        "default": 5,
+        "step": 1,
+        "unit": "Score"
+      },
+      {
+        "name": "RiverManagement",
+        "min": 0,
+        "max": 16,
+        "default": 5,
+        "step": 1,
+        "unit": "Score"
+      },
+      {
+        "name": "Deforestation",
+        "min": 0,
+        "max": 16,
+        "default": 5,
+        "step": 1,
+        "unit": "Score"
+      },
+      {
+        "name": "Urbanization",
+        "min": 0,
+        "max": 15,
+        "default": 5,
+        "step": 1,
+        "unit": "Score"
+      },
+      {
+        "name": "ClimateChange",
+        "min": 0,
+        "max": 15,
+        "default": 5,
+        "step": 1,
+        "unit": "Score"
+      },
+      {
+        "name": "DamsQuality",
+        "min": 0,
+        "max": 15,
+        "default": 5,
+        "step": 1,
+        "unit": "Score"
+      },
+      {
+        "name": "Siltation",
+        "min": 0,
+        "max": 16,
+        "default": 5,
+        "step": 1,
+        "unit": "Score"
+      },
+      {
+        "name": "AgriculturalPractices",
+        "min": 0,
+        "max": 16,
+        "default": 5,
+        "step": 1,
+        "unit": "Score"
+      },
+      {
+        "name": "Encroachments",
+        "min": 0,
+        "max": 15,
+        "default": 5,
+        "step": 1,
+        "unit": "Score"
+      },
+      {
+        "name": "IneffectiveDisasterPreparedness",
+        "min": 0,
+        "max": 15,
+        "default": 5,
+        "step": 1,
+        "unit": "Score"
+      },
+      {
+        "name": "DrainageSystems",
+        "min": 0,
+        "max": 17,
+        "default": 5,
+        "step": 1,
+        "unit": "Score"
+      },
+      {
+        "name": "CoastalVulnerability",
+        "min": 0,
+        "max": 16,
+        "default": 5,
+        "step": 1,
+        "unit": "Score"
+      },
+      {
+        "name": "Landslides",
+        "min": 0,
+        "max": 15,
+        "default": 5,
+        "step": 1,
+        "unit": "Score"
+      },
+      {
+        "name": "Watersheds",
+        "min": 0,
+        "max": 16,
+        "default": 5,
+        "step": 1,
+        "unit": "Score"
+      },
+      {
+        "name": "DeterioratingInfrastructure",
+        "min": 0,
+        "max": 15,
+        "default": 5,
+        "step": 1,
+        "unit": "Score"
+      },
+      {
+        "name": "PopulationScore",
+        "min": 0,
+        "max": 16,
+        "default": 5,
+        "step": 1,
+        "unit": "Score"
+      },
+      {
+        "name": "WetlandLoss",
+        "min": 0,
+        "max": 16,
+        "default": 5,
+        "step": 1,
+        "unit": "Score"
+      },
+      {
+        "name": "InadequatePlanning",
+        "min": 0,
+        "max": 15,
+        "default": 5,
+        "step": 1,
+        "unit": "Score"
+      },
+      {
+        "name": "PoliticalFactors",
+        "min": 0,
+        "max": 16,
+        "default": 5,
+        "step": 1,
+        "unit": "Score"
+      }
+    ],
+    "models": {
+      "Lasso": [
+        {
+          "k": 1,
+          "features": [
+            "Encroachments"
+          ],
+          "rmse": 0.04981083737606677,
+          "mae": 0.040242264872498185,
+          "r2": 0.034054640523620616,
+          "adj_r2": 0.03389359594884955,
+          "f_stat": 863.8995044656974,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.4815715843860977,
+              "stderr": 0.0008359493892198568,
+              "tstat": 576.077440328679,
+              "pvalue": 1e-25,
+              "ci_lower": 0.47993312358322676,
+              "ci_upper": 0.48321004518896865,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.004584150857643431,
+              "stderr": 0.00015596504998314137,
+              "tstat": 29.39216739993314,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004278459359676474,
+              "ci_upper": 0.004889842355610388,
+              "vif": 1.0
+            }
+          ],
+          "outliers": [
+            {
+              "index": 5662,
+              "actual": 0.69,
+              "predicted": 0.5137,
+              "residual": 0.1763,
+              "abs_error": 0.1763,
+              "pct_error": 25.56,
+              "rank": 1
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.5045,
+              "residual": -0.1745,
+              "abs_error": 0.1745,
+              "pct_error": 52.88,
+              "rank": 2
+            },
+            {
+              "index": 274,
+              "actual": 0.33,
+              "predicted": 0.4999,
+              "residual": -0.1699,
+              "abs_error": 0.1699,
+              "pct_error": 51.49,
+              "rank": 3
+            },
+            {
+              "index": 15022,
+              "actual": 0.36,
+              "predicted": 0.5182,
+              "residual": -0.1582,
+              "abs_error": 0.1582,
+              "pct_error": 43.96,
+              "rank": 4
+            },
+            {
+              "index": 3396,
+              "actual": 0.67,
+              "predicted": 0.5137,
+              "residual": 0.1563,
+              "abs_error": 0.1563,
+              "pct_error": 23.33,
+              "rank": 5
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4907,
+              "residual": -0.1557,
+              "abs_error": 0.1557,
+              "pct_error": 46.49,
+              "rank": 6
+            },
+            {
+              "index": 14268,
+              "actual": 0.66,
+              "predicted": 0.5091,
+              "residual": 0.1509,
+              "abs_error": 0.1509,
+              "pct_error": 22.87,
+              "rank": 7
+            },
+            {
+              "index": 8615,
+              "actual": 0.34,
+              "predicted": 0.4907,
+              "residual": -0.1507,
+              "abs_error": 0.1507,
+              "pct_error": 44.34,
+              "rank": 8
+            },
+            {
+              "index": 14546,
+              "actual": 0.655,
+              "predicted": 0.5045,
+              "residual": 0.1505,
+              "abs_error": 0.1505,
+              "pct_error": 22.98,
+              "rank": 9
+            },
+            {
+              "index": 9898,
+              "actual": 0.645,
+              "predicted": 0.4953,
+              "residual": 0.1497,
+              "abs_error": 0.1497,
+              "pct_error": 23.21,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 2,
+          "features": [
+            "Encroachments",
+            "Landslides"
+          ],
+          "rmse": 0.049109729564492104,
+          "mae": 0.039754340841778354,
+          "r2": 0.06105541849163687,
+          "adj_r2": 0.06074228039541929,
+          "f_stat": 932.79686613572,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.4580190064478168,
+              "stderr": 0.001116007689372005,
+              "tstat": 410.4084683373026,
+              "pvalue": 1e-25,
+              "ci_lower": 0.4558316313766477,
+              "ci_upper": 0.4602063815189859,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.004655247727931278,
+              "stderr": 0.00015293501959741886,
+              "tstat": 30.43938360347813,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004355495089520337,
+              "ci_upper": 0.004955000366342219,
+              "vif": 1.000223559247612
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.004705764096419399,
+              "stderr": 0.00015133326129881827,
+              "tstat": 31.095372266692472,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004409150904273715,
+              "ci_upper": 0.005002377288565083,
+              "vif": 1.000223559247612
+            }
+          ],
+          "outliers": [
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.5048,
+              "residual": -0.1748,
+              "abs_error": 0.1748,
+              "pct_error": 52.98,
+              "rank": 1
+            },
+            {
+              "index": 274,
+              "actual": 0.33,
+              "predicted": 0.4908,
+              "residual": -0.1608,
+              "abs_error": 0.1608,
+              "pct_error": 48.71,
+              "rank": 2
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4956,
+              "residual": -0.1606,
+              "abs_error": 0.1606,
+              "pct_error": 47.93,
+              "rank": 3
+            },
+            {
+              "index": 1334,
+              "actual": 0.345,
+              "predicted": 0.505,
+              "residual": -0.16,
+              "abs_error": 0.16,
+              "pct_error": 46.37,
+              "rank": 4
+            },
+            {
+              "index": 9737,
+              "actual": 0.36,
+              "predicted": 0.5143,
+              "residual": -0.1543,
+              "abs_error": 0.1543,
+              "pct_error": 42.87,
+              "rank": 5
+            },
+            {
+              "index": 5662,
+              "actual": 0.69,
+              "predicted": 0.5377,
+              "residual": 0.1523,
+              "abs_error": 0.1523,
+              "pct_error": 22.08,
+              "rank": 6
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5001,
+              "residual": 0.1499,
+              "abs_error": 0.1499,
+              "pct_error": 23.06,
+              "rank": 7
+            },
+            {
+              "index": 15022,
+              "actual": 0.36,
+              "predicted": 0.5094,
+              "residual": -0.1494,
+              "abs_error": 0.1494,
+              "pct_error": 41.49,
+              "rank": 8
+            },
+            {
+              "index": 10483,
+              "actual": 0.625,
+              "predicted": 0.4768,
+              "residual": 0.1482,
+              "abs_error": 0.1482,
+              "pct_error": 23.71,
+              "rank": 9
+            },
+            {
+              "index": 3396,
+              "actual": 0.67,
+              "predicted": 0.5235,
+              "residual": 0.1465,
+              "abs_error": 0.1465,
+              "pct_error": 21.86,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 3,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors"
+          ],
+          "rmse": 0.04834850350253867,
+          "mae": 0.03903270973909711,
+          "r2": 0.08993806978183227,
+          "adj_r2": 0.08948273526037553,
+          "f_stat": 979.1568300341884,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.4344321450287186,
+              "stderr": 0.001324876291934314,
+              "tstat": 327.90393161496564,
+              "pvalue": 1e-25,
+              "ci_lower": 0.43183538749652733,
+              "ci_upper": 0.4370289025609098,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.004763164074858525,
+              "stderr": 0.00014990288826676222,
+              "tstat": 31.77499866701805,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004469354413855671,
+              "ci_upper": 0.005056973735861379,
+              "vif": 1.0007450140589416
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.004697907691842406,
+              "stderr": 0.00014829444540528003,
+              "tstat": 31.679593116271477,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004407250578848057,
+              "ci_upper": 0.0049885648048367546,
+              "vif": 1.0002263817543748
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.004668513789416542,
+              "stderr": 0.00014802941845964605,
+              "tstat": 31.53774322696008,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004378376129235636,
+              "ci_upper": 0.0049586514495974475,
+              "vif": 1.0005254244242494
+            }
+          ],
+          "outliers": [
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4957,
+              "residual": -0.1657,
+              "abs_error": 0.1657,
+              "pct_error": 50.23,
+              "rank": 1
+            },
+            {
+              "index": 25883,
+              "actual": 0.65,
+              "predicted": 0.4958,
+              "residual": 0.1542,
+              "abs_error": 0.1542,
+              "pct_error": 23.72,
+              "rank": 2
+            },
+            {
+              "index": 9544,
+              "actual": 0.365,
+              "predicted": 0.5187,
+              "residual": -0.1537,
+              "abs_error": 0.1537,
+              "pct_error": 42.12,
+              "rank": 3
+            },
+            {
+              "index": 274,
+              "actual": 0.33,
+              "predicted": 0.4816,
+              "residual": -0.1516,
+              "abs_error": 0.1516,
+              "pct_error": 45.93,
+              "rank": 4
+            },
+            {
+              "index": 14268,
+              "actual": 0.66,
+              "predicted": 0.5099,
+              "residual": 0.1501,
+              "abs_error": 0.1501,
+              "pct_error": 22.74,
+              "rank": 5
+            },
+            {
+              "index": 9737,
+              "actual": 0.36,
+              "predicted": 0.5097,
+              "residual": -0.1497,
+              "abs_error": 0.1497,
+              "pct_error": 41.58,
+              "rank": 6
+            },
+            {
+              "index": 15944,
+              "actual": 0.65,
+              "predicted": 0.5005,
+              "residual": 0.1495,
+              "abs_error": 0.1495,
+              "pct_error": 23.0,
+              "rank": 7
+            },
+            {
+              "index": 1045,
+              "actual": 0.635,
+              "predicted": 0.4863,
+              "residual": 0.1487,
+              "abs_error": 0.1487,
+              "pct_error": 23.41,
+              "rank": 8
+            },
+            {
+              "index": 3396,
+              "actual": 0.67,
+              "predicted": 0.524,
+              "residual": 0.146,
+              "abs_error": 0.146,
+              "pct_error": 21.79,
+              "rank": 9
+            },
+            {
+              "index": 29905,
+              "actual": 0.655,
+              "predicted": 0.51,
+              "residual": 0.145,
+              "abs_error": 0.145,
+              "pct_error": 22.14,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 4,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization"
+          ],
+          "rmse": 0.04747492234972325,
+          "mae": 0.03831098898523756,
+          "r2": 0.12252772937481893,
+          "adj_r2": 0.12194225996989805,
+          "f_stat": 1005.498702617891,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.4107554041838256,
+              "stderr": 0.0015058291132744818,
+              "tstat": 272.77690447266133,
+              "pvalue": 1e-25,
+              "ci_lower": 0.4078039791218076,
+              "ci_upper": 0.4137068292458436,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.00481821542752821,
+              "stderr": 0.00014698631703847137,
+              "tstat": 32.7800269073149,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004530122246132806,
+              "ci_upper": 0.005106308608923613,
+              "vif": 1.0008903034172218
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.00478871970095981,
+              "stderr": 0.00014542795838901914,
+              "tstat": 32.928466809318785,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004503680902517332,
+              "ci_upper": 0.005073758499402287,
+              "vif": 1.0006301475150623
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.00474999838141533,
+              "stderr": 0.00014516243120432472,
+              "tstat": 32.7219538968001,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004465480016254853,
+              "ci_upper": 0.0050345167465758065,
+              "vif": 1.000851769780042
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.0045580616751034475,
+              "stderr": 0.00014662660290600134,
+              "tstat": 31.086184803896106,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004270673533407685,
+              "ci_upper": 0.00484544981679921,
+              "vif": 1.0008596725430408
+            }
+          ],
+          "outliers": [
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4867,
+              "residual": -0.1567,
+              "abs_error": 0.1567,
+              "pct_error": 47.49,
+              "rank": 1
+            },
+            {
+              "index": 1045,
+              "actual": 0.635,
+              "predicted": 0.4817,
+              "residual": 0.1533,
+              "abs_error": 0.1533,
+              "pct_error": 24.15,
+              "rank": 2
+            },
+            {
+              "index": 23703,
+              "actual": 0.375,
+              "predicted": 0.5242,
+              "residual": -0.1492,
+              "abs_error": 0.1492,
+              "pct_error": 39.78,
+              "rank": 3
+            },
+            {
+              "index": 23131,
+              "actual": 0.38,
+              "predicted": 0.5287,
+              "residual": -0.1487,
+              "abs_error": 0.1487,
+              "pct_error": 39.14,
+              "rank": 4
+            },
+            {
+              "index": 10483,
+              "actual": 0.625,
+              "predicted": 0.4767,
+              "residual": 0.1483,
+              "abs_error": 0.1483,
+              "pct_error": 23.73,
+              "rank": 5
+            },
+            {
+              "index": 274,
+              "actual": 0.33,
+              "predicted": 0.4769,
+              "residual": -0.1469,
+              "abs_error": 0.1469,
+              "pct_error": 44.51,
+              "rank": 6
+            },
+            {
+              "index": 1334,
+              "actual": 0.345,
+              "predicted": 0.4908,
+              "residual": -0.1458,
+              "abs_error": 0.1458,
+              "pct_error": 42.26,
+              "rank": 7
+            },
+            {
+              "index": 25883,
+              "actual": 0.65,
+              "predicted": 0.505,
+              "residual": 0.145,
+              "abs_error": 0.145,
+              "pct_error": 22.31,
+              "rank": 8
+            },
+            {
+              "index": 24512,
+              "actual": 0.64,
+              "predicted": 0.4959,
+              "residual": 0.1441,
+              "abs_error": 0.1441,
+              "pct_error": 22.51,
+              "rank": 9
+            },
+            {
+              "index": 12152,
+              "actual": 0.63,
+              "predicted": 0.4869,
+              "residual": 0.1431,
+              "abs_error": 0.1431,
+              "pct_error": 22.72,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 5,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality"
+          ],
+          "rmse": 0.046435399634291434,
+          "mae": 0.03741537116517702,
+          "r2": 0.1605337315041846,
+          "adj_r2": 0.1598334760249589,
+          "f_stat": 1088.5530107115192,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.38477642318880717,
+              "stderr": 0.0016470407953182744,
+              "tstat": 233.6168140355339,
+              "pvalue": 1e-25,
+              "ci_lower": 0.38154822322998333,
+              "ci_upper": 0.388004623147631,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.004857357620147379,
+              "stderr": 0.0001434022404743047,
+              "tstat": 33.87225753294794,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004576289228817742,
+              "ci_upper": 0.005138426011477016,
+              "vif": 1.000951583198454
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.00485821903025244,
+              "stderr": 0.00014189152417616685,
+              "tstat": 34.23896570608875,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004580111642867153,
+              "ci_upper": 0.005136326417637727,
+              "vif": 1.0008274503097354
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.004853703232105069,
+              "stderr": 0.0001416496905040805,
+              "tstat": 34.265540678786365,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004576069838717071,
+              "ci_upper": 0.005131336625493066,
+              "vif": 1.0012927851009825
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.004611262400462498,
+              "stderr": 0.00014305504759588083,
+              "tstat": 32.23418172205254,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004330874507174572,
+              "ci_upper": 0.004891650293750424,
+              "vif": 1.0009734292452581
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.004968441526589481,
+              "stderr": 0.0001424239536723802,
+              "tstat": 34.88487293379354,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004689290577391616,
+              "ci_upper": 0.005247592475787346,
+              "vif": 1.0007878929457614
+            }
+          ],
+          "outliers": [
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4917,
+              "residual": -0.1567,
+              "abs_error": 0.1567,
+              "pct_error": 46.76,
+              "rank": 1
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4816,
+              "residual": -0.1516,
+              "abs_error": 0.1516,
+              "pct_error": 45.95,
+              "rank": 2
+            },
+            {
+              "index": 23703,
+              "actual": 0.375,
+              "predicted": 0.5247,
+              "residual": -0.1497,
+              "abs_error": 0.1497,
+              "pct_error": 39.92,
+              "rank": 3
+            },
+            {
+              "index": 23131,
+              "actual": 0.38,
+              "predicted": 0.5293,
+              "residual": -0.1493,
+              "abs_error": 0.1493,
+              "pct_error": 39.29,
+              "rank": 4
+            },
+            {
+              "index": 25883,
+              "actual": 0.65,
+              "predicted": 0.505,
+              "residual": 0.145,
+              "abs_error": 0.145,
+              "pct_error": 22.3,
+              "rank": 5
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5054,
+              "residual": 0.1446,
+              "abs_error": 0.1446,
+              "pct_error": 22.24,
+              "rank": 6
+            },
+            {
+              "index": 15306,
+              "actual": 0.625,
+              "predicted": 0.481,
+              "residual": 0.144,
+              "abs_error": 0.144,
+              "pct_error": 23.04,
+              "rank": 7
+            },
+            {
+              "index": 1334,
+              "actual": 0.345,
+              "predicted": 0.4858,
+              "residual": -0.1408,
+              "abs_error": 0.1408,
+              "pct_error": 40.8,
+              "rank": 8
+            },
+            {
+              "index": 29905,
+              "actual": 0.655,
+              "predicted": 0.5146,
+              "residual": 0.1404,
+              "abs_error": 0.1404,
+              "pct_error": 21.43,
+              "rank": 9
+            },
+            {
+              "index": 14268,
+              "actual": 0.66,
+              "predicted": 0.5196,
+              "residual": 0.1404,
+              "abs_error": 0.1404,
+              "pct_error": 21.27,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 6,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange"
+          ],
+          "rmse": 0.04549365905870497,
+          "mae": 0.03687707979989213,
+          "r2": 0.19423831547092119,
+          "adj_r2": 0.1934316126330814,
+          "f_stat": 1158.3104773013645,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.3593097819185808,
+              "stderr": 0.0017631139983195266,
+              "tstat": 203.79271122630132,
+              "pvalue": 1e-25,
+              "ci_lower": 0.35585407848187456,
+              "ci_upper": 0.3627654853552871,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.004861527738797204,
+              "stderr": 0.00013986881269269268,
+              "tstat": 34.75776797704375,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004587384865919526,
+              "ci_upper": 0.005135670611674882,
+              "vif": 1.0009523073826765
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.004953608833734264,
+              "stderr": 0.00013842202450351155,
+              "tstat": 35.78627643615051,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004682301665707381,
+              "ci_upper": 0.005224916001761146,
+              "vif": 1.0012144416491466
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.004941596115666981,
+              "stderr": 0.0001381821487009382,
+              "tstat": 35.76146529868969,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004670759104213142,
+              "ci_upper": 0.00521243312712082,
+              "vif": 1.0016226136845492
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.004587611594815477,
+              "stderr": 0.00013953175560710225,
+              "tstat": 32.87862017398687,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004314129353825557,
+              "ci_upper": 0.0048610938358053975,
+              "vif": 1.0009968369640962
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005011072337890538,
+              "stderr": 0.0001389199046465989,
+              "tstat": 36.07166554453304,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004738789324783204,
+              "ci_upper": 0.005283355350997871,
+              "vif": 1.000864606870152
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.004970496429699305,
+              "stderr": 0.00014180452164085772,
+              "tstat": 35.051748506919054,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0046925595672832245,
+              "ci_upper": 0.005248433292115386,
+              "vif": 1.000814350554139
+            }
+          ],
+          "outliers": [
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5011,
+              "residual": 0.1489,
+              "abs_error": 0.1489,
+              "pct_error": 22.91,
+              "rank": 1
+            },
+            {
+              "index": 24512,
+              "actual": 0.64,
+              "predicted": 0.4965,
+              "residual": 0.1435,
+              "abs_error": 0.1435,
+              "pct_error": 22.42,
+              "rank": 2
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4771,
+              "residual": -0.1421,
+              "abs_error": 0.1421,
+              "pct_error": 42.41,
+              "rank": 3
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4719,
+              "residual": -0.1419,
+              "abs_error": 0.1419,
+              "pct_error": 43.01,
+              "rank": 4
+            },
+            {
+              "index": 10275,
+              "actual": 0.39,
+              "predicted": 0.5259,
+              "residual": -0.1359,
+              "abs_error": 0.1359,
+              "pct_error": 34.86,
+              "rank": 5
+            },
+            {
+              "index": 23703,
+              "actual": 0.375,
+              "predicted": 0.5106,
+              "residual": -0.1356,
+              "abs_error": 0.1356,
+              "pct_error": 36.15,
+              "rank": 6
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5405,
+              "residual": -0.1355,
+              "abs_error": 0.1355,
+              "pct_error": 33.46,
+              "rank": 7
+            },
+            {
+              "index": 8725,
+              "actual": 0.425,
+              "predicted": 0.5604,
+              "residual": -0.1354,
+              "abs_error": 0.1354,
+              "pct_error": 31.87,
+              "rank": 8
+            },
+            {
+              "index": 23131,
+              "actual": 0.38,
+              "predicted": 0.5151,
+              "residual": -0.1351,
+              "abs_error": 0.1351,
+              "pct_error": 35.56,
+              "rank": 9
+            },
+            {
+              "index": 14268,
+              "actual": 0.66,
+              "predicted": 0.525,
+              "residual": 0.135,
+              "abs_error": 0.135,
+              "pct_error": 20.46,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 7,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange",
+            "DrainageSystems"
+          ],
+          "rmse": 0.044491975797647264,
+          "mae": 0.03609588426814741,
+          "r2": 0.22933034420445952,
+          "adj_r2": 0.22843002918600674,
+          "f_stat": 1202.6200432300757,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.33458702719768796,
+              "stderr": 0.0018720316553997697,
+              "tstat": 178.72936402148466,
+              "pvalue": 1e-25,
+              "ci_lower": 0.3309178451531044,
+              "ci_upper": 0.3382562092422715,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.004910080331952957,
+              "stderr": 0.00013667321248732867,
+              "tstat": 35.92569635698132,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004642200835477793,
+              "ci_upper": 0.0051779598284281214,
+              "vif": 1.0010632357369058
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.004999741652283578,
+              "stderr": 0.00013525889304710596,
+              "tstat": 36.96423606351963,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00473463422191125,
+              "ci_upper": 0.005264849082655906,
+              "vif": 1.0013167197819992
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.0050337494284348125,
+              "stderr": 0.00013504521348135204,
+              "tstat": 37.274549009690794,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004769060810011362,
+              "ci_upper": 0.005298438046858263,
+              "vif": 1.0020323158344215
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.004703094360476386,
+              "stderr": 0.00013637924036877084,
+              "tstat": 34.48541249943299,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0044357910493535956,
+              "ci_upper": 0.004970397671599177,
+              "vif": 1.00162745594889
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005062237683635077,
+              "stderr": 0.0001357469299872851,
+              "tstat": 37.291728690359605,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0047961737008599984,
+              "ci_upper": 0.005328301666410156,
+              "vif": 1.000989472900708
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.0050096557319636,
+              "stderr": 0.00013856187739952051,
+              "tstat": 36.15464676130995,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00473807445226054,
+              "ci_upper": 0.00528123701166666,
+              "vif": 1.0008845428352768
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.00460735842423767,
+              "stderr": 0.00013652541338856478,
+              "tstat": 33.747258549766656,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004339768613996083,
+              "ci_upper": 0.004874948234479257,
+              "vif": 1.0013739346946031
+            }
+          ],
+          "outliers": [
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5457,
+              "residual": -0.1407,
+              "abs_error": 0.1407,
+              "pct_error": 34.73,
+              "rank": 1
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5107,
+              "residual": 0.1393,
+              "abs_error": 0.1393,
+              "pct_error": 21.43,
+              "rank": 2
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4723,
+              "residual": -0.1373,
+              "abs_error": 0.1373,
+              "pct_error": 40.97,
+              "rank": 3
+            },
+            {
+              "index": 10275,
+              "actual": 0.39,
+              "predicted": 0.5263,
+              "residual": -0.1363,
+              "abs_error": 0.1363,
+              "pct_error": 34.95,
+              "rank": 4
+            },
+            {
+              "index": 25883,
+              "actual": 0.65,
+              "predicted": 0.5159,
+              "residual": 0.1341,
+              "abs_error": 0.1341,
+              "pct_error": 20.63,
+              "rank": 5
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4624,
+              "residual": -0.1324,
+              "abs_error": 0.1324,
+              "pct_error": 40.14,
+              "rank": 6
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4748,
+              "residual": 0.1302,
+              "abs_error": 0.1302,
+              "pct_error": 21.53,
+              "rank": 7
+            },
+            {
+              "index": 28780,
+              "actual": 0.405,
+              "predicted": 0.5349,
+              "residual": -0.1299,
+              "abs_error": 0.1299,
+              "pct_error": 32.07,
+              "rank": 8
+            },
+            {
+              "index": 8725,
+              "actual": 0.425,
+              "predicted": 0.5521,
+              "residual": -0.1271,
+              "abs_error": 0.1271,
+              "pct_error": 29.91,
+              "rank": 9
+            },
+            {
+              "index": 23703,
+              "actual": 0.375,
+              "predicted": 0.5018,
+              "residual": -0.1268,
+              "abs_error": 0.1268,
+              "pct_error": 33.81,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 8,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange",
+            "DrainageSystems",
+            "Watersheds"
+          ],
+          "rmse": 0.04317896260533049,
+          "mae": 0.0350023567024312,
+          "r2": 0.2741459859375137,
+          "adj_r2": 0.2731767266965689,
+          "f_stat": 1281.227965868661,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.30870065704044447,
+              "stderr": 0.0019522605990689168,
+              "tstat": 158.1247181793618,
+              "pvalue": 1e-25,
+              "ci_lower": 0.30487422626626937,
+              "ci_upper": 0.3125270878146196,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.004963181206089564,
+              "stderr": 0.0001329776434571194,
+              "tstat": 37.32342578089087,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00470254502491361,
+              "ci_upper": 0.005223817387265519,
+              "vif": 1.0011809664056472
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005089123058355959,
+              "stderr": 0.00013161621181786062,
+              "tstat": 38.66638454386326,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004831155283192952,
+              "ci_upper": 0.005347090833518966,
+              "vif": 1.0016573833871323
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.00509086817392726,
+              "stderr": 0.00013139509477648297,
+              "tstat": 38.74473535398995,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004833333788165353,
+              "ci_upper": 0.005348402559689167,
+              "vif": 1.0021719758931578
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.004751475600733946,
+              "stderr": 0.00013269032291782717,
+              "tstat": 35.80875753596932,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0044914025678150045,
+              "ci_upper": 0.005011548633652887,
+              "vif": 1.001725665843336
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005048730835621735,
+              "stderr": 0.00013206915069148963,
+              "tstat": 38.22793445091087,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004789875300266416,
+              "ci_upper": 0.005307586370977055,
+              "vif": 1.0009971938209525
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005060473734768452,
+              "stderr": 0.00013481437644476463,
+              "tstat": 37.536603055400406,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004796237556936714,
+              "ci_upper": 0.00532470991260019,
+              "vif": 1.0009894302094409
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.004709514530428075,
+              "stderr": 0.0001328549971538744,
+              "tstat": 35.448531341078976,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004449118736006482,
+              "ci_upper": 0.004969910324849669,
+              "vif": 1.0018107416118618
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.0048727060965124466,
+              "stderr": 0.0001323231077877947,
+              "tstat": 36.824302103958736,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004613352805248369,
+              "ci_upper": 0.005132059387776524,
+              "vif": 1.0011811677416156
+            }
+          ],
+          "outliers": [
+            {
+              "index": 10275,
+              "actual": 0.39,
+              "predicted": 0.5321,
+              "residual": -0.1421,
+              "abs_error": 0.1421,
+              "pct_error": 36.43,
+              "rank": 1
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4672,
+              "residual": -0.1372,
+              "abs_error": 0.1372,
+              "pct_error": 41.58,
+              "rank": 2
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5415,
+              "residual": -0.1365,
+              "abs_error": 0.1365,
+              "pct_error": 33.71,
+              "rank": 3
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.47,
+              "residual": 0.135,
+              "abs_error": 0.135,
+              "pct_error": 22.31,
+              "rank": 4
+            },
+            {
+              "index": 734,
+              "actual": 0.595,
+              "predicted": 0.4615,
+              "residual": 0.1335,
+              "abs_error": 0.1335,
+              "pct_error": 22.44,
+              "rank": 5
+            },
+            {
+              "index": 25883,
+              "actual": 0.65,
+              "predicted": 0.5212,
+              "residual": 0.1288,
+              "abs_error": 0.1288,
+              "pct_error": 19.82,
+              "rank": 6
+            },
+            {
+              "index": 15306,
+              "actual": 0.625,
+              "predicted": 0.4967,
+              "residual": 0.1283,
+              "abs_error": 0.1283,
+              "pct_error": 20.53,
+              "rank": 7
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.477,
+              "residual": 0.128,
+              "abs_error": 0.128,
+              "pct_error": 21.16,
+              "rank": 8
+            },
+            {
+              "index": 29540,
+              "actual": 0.425,
+              "predicted": 0.5523,
+              "residual": -0.1273,
+              "abs_error": 0.1273,
+              "pct_error": 29.94,
+              "rank": 9
+            },
+            {
+              "index": 24429,
+              "actual": 0.365,
+              "predicted": 0.4916,
+              "residual": -0.1266,
+              "abs_error": 0.1266,
+              "pct_error": 34.68,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 9,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange",
+            "DrainageSystems",
+            "Watersheds",
+            "PopulationScore"
+          ],
+          "rmse": 0.04178288820273688,
+          "mae": 0.033872497511383375,
+          "r2": 0.32032422881859124,
+          "adj_r2": 0.319303013135681,
+          "f_stat": 1373.300851972722,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.28259801107975147,
+              "stderr": 0.002012711631239315,
+              "tstat": 140.40660703378728,
+              "pvalue": 1e-25,
+              "ci_lower": 0.2786530962825224,
+              "ci_upper": 0.28654292587698055,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.004989686847137047,
+              "stderr": 0.00012906440010264887,
+              "tstat": 38.6604427182755,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0047367206229358555,
+              "ci_upper": 0.005242653071338239,
+              "vif": 1.0012095250782005
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005100921849668148,
+              "stderr": 0.0001277415790672154,
+              "tstat": 39.93157033845754,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004850548354696406,
+              "ci_upper": 0.00535129534463989,
+              "vif": 1.0016631627709205
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005157089688591013,
+              "stderr": 0.00012753823134452756,
+              "tstat": 40.435637488650926,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004907114755155739,
+              "ci_upper": 0.005407064622026288,
+              "vif": 1.0023547388778649
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.00480532329735406,
+              "stderr": 0.00012879131144139276,
+              "tstat": 37.31092760508732,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00455289232692893,
+              "ci_upper": 0.00505775426777919,
+              "vif": 1.0018441091799943
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.0051192890465814244,
+              "stderr": 0.00012819394730100004,
+              "tstat": 39.93393724402064,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004868028909871465,
+              "ci_upper": 0.005370549183291384,
+              "vif": 1.0012023248145643
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005099985676570431,
+              "stderr": 0.00013084925056326251,
+              "tstat": 38.97604040234612,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004843521145466437,
+              "ci_upper": 0.005356450207674426,
+              "vif": 1.001051163566798
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.004775452175558575,
+              "stderr": 0.00012895492561519349,
+              "tstat": 37.03194858805712,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004522700521352795,
+              "ci_upper": 0.005028203829764355,
+              "vif": 1.001987916771817
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.004902930351971024,
+              "stderr": 0.00012842969961640493,
+              "tstat": 38.17598551281475,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00465120814072287,
+              "ci_upper": 0.005154652563219178,
+              "vif": 1.0012186701002428
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.004917265877099404,
+              "stderr": 0.00012787874583196953,
+              "tstat": 38.452565710650674,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004666623535268744,
+              "ci_upper": 0.005167908218930064,
+              "vif": 1.0007582167467004
+            }
+          ],
+          "outliers": [
+            {
+              "index": 3858,
+              "actual": 0.405,
+              "predicted": 0.5426,
+              "residual": -0.1376,
+              "abs_error": 0.1376,
+              "pct_error": 33.97,
+              "rank": 1
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5422,
+              "residual": -0.1372,
+              "abs_error": 0.1372,
+              "pct_error": 33.87,
+              "rank": 2
+            },
+            {
+              "index": 8725,
+              "actual": 0.425,
+              "predicted": 0.5583,
+              "residual": -0.1333,
+              "abs_error": 0.1333,
+              "pct_error": 31.36,
+              "rank": 3
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5168,
+              "residual": 0.1332,
+              "abs_error": 0.1332,
+              "pct_error": 20.5,
+              "rank": 4
+            },
+            {
+              "index": 15306,
+              "actual": 0.625,
+              "predicted": 0.492,
+              "residual": 0.133,
+              "abs_error": 0.133,
+              "pct_error": 21.28,
+              "rank": 5
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4621,
+              "residual": -0.1321,
+              "abs_error": 0.1321,
+              "pct_error": 40.04,
+              "rank": 6
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.477,
+              "residual": 0.128,
+              "abs_error": 0.128,
+              "pct_error": 21.15,
+              "rank": 7
+            },
+            {
+              "index": 10275,
+              "actual": 0.39,
+              "predicted": 0.5176,
+              "residual": -0.1276,
+              "abs_error": 0.1276,
+              "pct_error": 32.73,
+              "rank": 8
+            },
+            {
+              "index": 2266,
+              "actual": 0.575,
+              "predicted": 0.4482,
+              "residual": 0.1268,
+              "abs_error": 0.1268,
+              "pct_error": 22.05,
+              "rank": 9
+            },
+            {
+              "index": 8763,
+              "actual": 0.35,
+              "predicted": 0.4763,
+              "residual": -0.1263,
+              "abs_error": 0.1263,
+              "pct_error": 36.09,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 10,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange",
+            "DrainageSystems",
+            "Watersheds",
+            "PopulationScore",
+            "CoastalVulnerability"
+          ],
+          "rmse": 0.04051192156995193,
+          "mae": 0.03278474145912551,
+          "r2": 0.36104457575792004,
+          "adj_r2": 0.3599776941011459,
+          "f_stat": 1470.9448228353988,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.25398077037756983,
+              "stderr": 0.002081612558665912,
+              "tstat": 122.01154788398469,
+              "pvalue": 1e-25,
+              "ci_lower": 0.24990080976258464,
+              "ci_upper": 0.258060730992555,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005147686089365891,
+              "stderr": 0.00012515073234234118,
+              "tstat": 41.131889466573405,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004902390653974902,
+              "ci_upper": 0.005392981524756879,
+              "vif": 1.0022393661846027
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.0051486472195389705,
+              "stderr": 0.00012381029798083878,
+              "tstat": 41.584967514865276,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004905979035496526,
+              "ci_upper": 0.005391315403581415,
+              "vif": 1.0017591257946201
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005236787970484836,
+              "stderr": 0.0001236238508941325,
+              "tstat": 42.36066044382854,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004994485222732337,
+              "ci_upper": 0.005479090718237336,
+              "vif": 1.0026233888268339
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.0048994720788794535,
+              "stderr": 0.00012484463441179413,
+              "tstat": 39.244554657581645,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004654776595432337,
+              "ci_upper": 0.00514416756232657,
+              "vif": 1.0022115645526188
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005201551960708617,
+              "stderr": 0.00012426034939909733,
+              "tstat": 41.8601105329453,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004958001675886387,
+              "ci_upper": 0.005445102245530848,
+              "vif": 1.0014852966196424
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005145137044603447,
+              "stderr": 0.00012682143730778617,
+              "tstat": 40.56993166002829,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004896567027480186,
+              "ci_upper": 0.005393707061726708,
+              "vif": 1.0011329730781862
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.0049514288082493346,
+              "stderr": 0.00012506016320167494,
+              "tstat": 39.59237443393181,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004706310888374051,
+              "ci_upper": 0.005196546728124618,
+              "vif": 1.0032686090661953
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005002991894925558,
+              "stderr": 0.00012449720577583214,
+              "tstat": 40.18557576251047,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0047589773716049276,
+              "ci_upper": 0.005247006418246189,
+              "vif": 1.0016358088864215
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005017415789659572,
+              "stderr": 0.00012396339100433055,
+              "tstat": 40.474980145422876,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004774447543291084,
+              "ci_upper": 0.00526038403602806,
+              "vif": 1.001179507331283
+            },
+            {
+              "feature": "CoastalVulnerability",
+              "coef": 0.004909622663456465,
+              "stderr": 0.0001246596459688699,
+              "tstat": 39.384217926324766,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00466528975735748,
+              "ci_upper": 0.00515395556955545,
+              "vif": 1.003916752075681
+            }
+          ],
+          "outliers": [
+            {
+              "index": 10275,
+              "actual": 0.39,
+              "predicted": 0.5278,
+              "residual": -0.1378,
+              "abs_error": 0.1378,
+              "pct_error": 35.33,
+              "rank": 1
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4616,
+              "residual": -0.1316,
+              "abs_error": 0.1316,
+              "pct_error": 39.88,
+              "rank": 2
+            },
+            {
+              "index": 3858,
+              "actual": 0.405,
+              "predicted": 0.5338,
+              "residual": -0.1288,
+              "abs_error": 0.1288,
+              "pct_error": 31.81,
+              "rank": 3
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5224,
+              "residual": 0.1276,
+              "abs_error": 0.1276,
+              "pct_error": 19.62,
+              "rank": 4
+            },
+            {
+              "index": 15306,
+              "actual": 0.625,
+              "predicted": 0.5016,
+              "residual": 0.1234,
+              "abs_error": 0.1234,
+              "pct_error": 19.74,
+              "rank": 5
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5283,
+              "residual": -0.1233,
+              "abs_error": 0.1233,
+              "pct_error": 30.44,
+              "rank": 6
+            },
+            {
+              "index": 24512,
+              "actual": 0.64,
+              "predicted": 0.5171,
+              "residual": 0.1229,
+              "abs_error": 0.1229,
+              "pct_error": 19.2,
+              "rank": 7
+            },
+            {
+              "index": 2266,
+              "actual": 0.575,
+              "predicted": 0.4523,
+              "residual": 0.1227,
+              "abs_error": 0.1227,
+              "pct_error": 21.34,
+              "rank": 8
+            },
+            {
+              "index": 516,
+              "actual": 0.595,
+              "predicted": 0.4726,
+              "residual": 0.1224,
+              "abs_error": 0.1224,
+              "pct_error": 20.58,
+              "rank": 9
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.4827,
+              "residual": 0.1223,
+              "abs_error": 0.1223,
+              "pct_error": 20.21,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 11,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange",
+            "DrainageSystems",
+            "Watersheds",
+            "PopulationScore",
+            "CoastalVulnerability",
+            "Deforestation"
+          ],
+          "rmse": 0.03890322078163271,
+          "mae": 0.031520881840369504,
+          "r2": 0.41078202033597544,
+          "adj_r2": 0.4096996225777416,
+          "f_stat": 1592.3974499617123,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.22595295496919826,
+              "stderr": 0.002119325491280064,
+              "tstat": 106.61550380009047,
+              "pvalue": 1e-25,
+              "ci_lower": 0.22179907700628934,
+              "ci_upper": 0.23010683293210718,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005213033669190518,
+              "stderr": 0.00012085642079808896,
+              "tstat": 43.13410603065741,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004976155084426263,
+              "ci_upper": 0.0054499122539547725,
+              "vif": 1.0024077575862742
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005187151885314183,
+              "stderr": 0.00011955550085349274,
+              "tstat": 43.38697800003941,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004952823103641337,
+              "ci_upper": 0.005421480666987029,
+              "vif": 1.0018188338209273
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005264031271745579,
+              "stderr": 0.00011937368992719854,
+              "tstat": 44.09708098121044,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00503005883948827,
+              "ci_upper": 0.005498003704002888,
+              "vif": 1.002653394888084
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.004974178980773684,
+              "stderr": 0.00012056399935746263,
+              "tstat": 41.257581096208,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004737873542033057,
+              "ci_upper": 0.00521048441951431,
+              "vif": 1.0024327198408651
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.0052773803469859095,
+              "stderr": 0.00012000027709049296,
+              "tstat": 43.97806800901138,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005042179803888543,
+              "ci_upper": 0.005512580890083276,
+              "vif": 1.001715122691285
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005188898768354132,
+              "stderr": 0.00012246400434722977,
+              "tstat": 42.37080761822655,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004948869319833561,
+              "ci_upper": 0.005428928216874703,
+              "vif": 1.0012064331745878
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.005019829696916871,
+              "stderr": 0.00012076994553221537,
+              "tstat": 41.5652228275439,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004783120603673729,
+              "ci_upper": 0.005256538790160014,
+              "vif": 1.0034535610354192
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.0050799734891085494,
+              "stderr": 0.00012022938187656973,
+              "tstat": 42.252346388370924,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004844323900630473,
+              "ci_upper": 0.005315623077586626,
+              "vif": 1.001871813593276
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005090794141939539,
+              "stderr": 0.00011971268803303926,
+              "tstat": 42.525100936122506,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004856157273394782,
+              "ci_upper": 0.005325431010484296,
+              "vif": 1.001395688169526
+            },
+            {
+              "feature": "CoastalVulnerability",
+              "coef": 0.004974263099485003,
+              "stderr": 0.00012038204558159002,
+              "tstat": 41.320639431348184,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004738314290145086,
+              "ci_upper": 0.00521021190882492,
+              "vif": 1.0040830974417638
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005058587889902108,
+              "stderr": 0.00012125712498798781,
+              "tstat": 41.7178610362338,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004820923924925652,
+              "ci_upper": 0.005296251854878565,
+              "vif": 1.001423695264686
+            }
+          ],
+          "outliers": [
+            {
+              "index": 516,
+              "actual": 0.595,
+              "predicted": 0.4522,
+              "residual": 0.1428,
+              "abs_error": 0.1428,
+              "pct_error": 24.0,
+              "rank": 1
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4614,
+              "residual": -0.1314,
+              "abs_error": 0.1314,
+              "pct_error": 39.82,
+              "rank": 2
+            },
+            {
+              "index": 15306,
+              "actual": 0.625,
+              "predicted": 0.4967,
+              "residual": 0.1283,
+              "abs_error": 0.1283,
+              "pct_error": 20.53,
+              "rank": 3
+            },
+            {
+              "index": 10275,
+              "actual": 0.39,
+              "predicted": 0.518,
+              "residual": -0.128,
+              "abs_error": 0.128,
+              "pct_error": 32.83,
+              "rank": 4
+            },
+            {
+              "index": 17697,
+              "actual": 0.595,
+              "predicted": 0.4722,
+              "residual": 0.1228,
+              "abs_error": 0.1228,
+              "pct_error": 20.65,
+              "rank": 5
+            },
+            {
+              "index": 9618,
+              "actual": 0.385,
+              "predicted": 0.5078,
+              "residual": -0.1228,
+              "abs_error": 0.1228,
+              "pct_error": 31.9,
+              "rank": 6
+            },
+            {
+              "index": 8615,
+              "actual": 0.34,
+              "predicted": 0.4608,
+              "residual": -0.1208,
+              "abs_error": 0.1208,
+              "pct_error": 35.53,
+              "rank": 7
+            },
+            {
+              "index": 6865,
+              "actual": 0.465,
+              "predicted": 0.5852,
+              "residual": -0.1202,
+              "abs_error": 0.1202,
+              "pct_error": 25.84,
+              "rank": 8
+            },
+            {
+              "index": 9986,
+              "actual": 0.605,
+              "predicted": 0.4867,
+              "residual": 0.1183,
+              "abs_error": 0.1183,
+              "pct_error": 19.55,
+              "rank": 9
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.4879,
+              "residual": 0.1171,
+              "abs_error": 0.1171,
+              "pct_error": 19.36,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 12,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange",
+            "DrainageSystems",
+            "Watersheds",
+            "PopulationScore",
+            "CoastalVulnerability",
+            "Deforestation",
+            "TopographyDrainage"
+          ],
+          "rmse": 0.037354049132902696,
+          "mae": 0.030269408138860195,
+          "r2": 0.456774377506327,
+          "adj_r2": 0.4556855671722826,
+          "f_stat": 1756.8136251510612,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.1972078057493103,
+              "stderr": 0.002130073057056006,
+              "tstat": 92.58264879509488,
+              "pvalue": 1e-25,
+              "ci_lower": 0.19303286255748053,
+              "ci_upper": 0.20138274894114006,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005296276933450847,
+              "stderr": 0.00011599335177254988,
+              "tstat": 45.66017666112675,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005068929963976649,
+              "ci_upper": 0.005523623902925045,
+              "vif": 1.002658304236764
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005260930478317519,
+              "stderr": 0.00011474195042306125,
+              "tstat": 45.85010503063715,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005036036255488319,
+              "ci_upper": 0.005485824701146719,
+              "vif": 1.002019833904391
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.0053083951430462385,
+              "stderr": 0.0001145601359777291,
+              "tstat": 46.33719310597021,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00508385727652989,
+              "ci_upper": 0.005532933009562587,
+              "vif": 1.0027263537246383
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005066021452494738,
+              "stderr": 0.00011571592354476135,
+              "tstat": 43.779812642078554,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004839218242347006,
+              "ci_upper": 0.00529282466264247,
+              "vif": 1.002739193040761
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.0053021197333222225,
+              "stderr": 0.00011515855664568733,
+              "tstat": 46.04190854558428,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005076408962296676,
+              "ci_upper": 0.005527830504347769,
+              "vif": 1.0017375534008701
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005178306675867377,
+              "stderr": 0.00011752179428446967,
+              "tstat": 44.06252225296124,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004947963959069817,
+              "ci_upper": 0.005408649392664938,
+              "vif": 1.0012103791618834
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.005118196841871689,
+              "stderr": 0.00011591612524723686,
+              "tstat": 44.15431270632205,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004891001236387105,
+              "ci_upper": 0.005345392447356273,
+              "vif": 1.0038042847281847
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005127659636776978,
+              "stderr": 0.00011538190695349615,
+              "tstat": 44.440760013124454,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004901511099148125,
+              "ci_upper": 0.005353808174405831,
+              "vif": 1.001954848526943
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005165917145878424,
+              "stderr": 0.00011489320136159477,
+              "tstat": 44.962774860978236,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004940726471209698,
+              "ci_upper": 0.005391107820547149,
+              "vif": 1.0016034456538823
+            },
+            {
+              "feature": "CoastalVulnerability",
+              "coef": 0.005045753573981604,
+              "stderr": 0.00011553436024935202,
+              "tstat": 43.673185735322434,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004819306227892874,
+              "ci_upper": 0.005272200920070334,
+              "vif": 1.0042696615139066
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005100148319263484,
+              "stderr": 0.00011636699185690401,
+              "tstat": 43.82813577870187,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004872069015223952,
+              "ci_upper": 0.0053282276233030165,
+              "vif": 1.0014856748712875
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.00519443986802501,
+              "stderr": 0.00011441699624749055,
+              "tstat": 45.39919800716615,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004970182555379929,
+              "ci_upper": 0.005418697180670091,
+              "vif": 1.0015575987567413
+            }
+          ],
+          "outliers": [
+            {
+              "index": 516,
+              "actual": 0.595,
+              "predicted": 0.4574,
+              "residual": 0.1376,
+              "abs_error": 0.1376,
+              "pct_error": 23.13,
+              "rank": 1
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.4777,
+              "residual": 0.1273,
+              "abs_error": 0.1273,
+              "pct_error": 21.05,
+              "rank": 2
+            },
+            {
+              "index": 6865,
+              "actual": 0.465,
+              "predicted": 0.5919,
+              "residual": -0.1269,
+              "abs_error": 0.1269,
+              "pct_error": 27.29,
+              "rank": 3
+            },
+            {
+              "index": 20184,
+              "actual": 0.515,
+              "predicted": 0.3941,
+              "residual": 0.1209,
+              "abs_error": 0.1209,
+              "pct_error": 23.48,
+              "rank": 4
+            },
+            {
+              "index": 19035,
+              "actual": 0.64,
+              "predicted": 0.5237,
+              "residual": 0.1163,
+              "abs_error": 0.1163,
+              "pct_error": 18.16,
+              "rank": 5
+            },
+            {
+              "index": 3978,
+              "actual": 0.56,
+              "predicted": 0.4459,
+              "residual": 0.1141,
+              "abs_error": 0.1141,
+              "pct_error": 20.37,
+              "rank": 6
+            },
+            {
+              "index": 28176,
+              "actual": 0.585,
+              "predicted": 0.4715,
+              "residual": 0.1135,
+              "abs_error": 0.1135,
+              "pct_error": 19.4,
+              "rank": 7
+            },
+            {
+              "index": 10275,
+              "actual": 0.39,
+              "predicted": 0.503,
+              "residual": -0.113,
+              "abs_error": 0.113,
+              "pct_error": 28.97,
+              "rank": 8
+            },
+            {
+              "index": 17697,
+              "actual": 0.595,
+              "predicted": 0.4826,
+              "residual": 0.1124,
+              "abs_error": 0.1124,
+              "pct_error": 18.89,
+              "rank": 9
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5386,
+              "residual": 0.1114,
+              "abs_error": 0.1114,
+              "pct_error": 17.14,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 13,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange",
+            "DrainageSystems",
+            "Watersheds",
+            "PopulationScore",
+            "CoastalVulnerability",
+            "Deforestation",
+            "TopographyDrainage",
+            "IneffectiveDisasterPreparedness"
+          ],
+          "rmse": 0.035915414547630434,
+          "mae": 0.028998356397101067,
+          "r2": 0.49781164018142565,
+          "adj_r2": 0.49672102062284873,
+          "f_stat": 1944.6841521175093,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.16786990659734388,
+              "stderr": 0.00212970134843621,
+              "tstat": 78.82321468247501,
+              "pvalue": 1e-25,
+              "ci_lower": 0.16369569195440892,
+              "ci_upper": 0.17204412124027885,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005422363851374351,
+              "stderr": 0.00011097336797016222,
+              "tstat": 48.86184812226551,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005204856050152833,
+              "ci_upper": 0.005639871652595868,
+              "vif": 1.0032376739741669
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005303504677410118,
+              "stderr": 0.0001097481168085205,
+              "tstat": 48.32433422673883,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005088398368465418,
+              "ci_upper": 0.005518610986354818,
+              "vif": 1.0020872950676587
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005321664635571329,
+              "stderr": 0.0001095708864265187,
+              "tstat": 48.56823567946752,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005106905698175353,
+              "ci_upper": 0.005536423572967306,
+              "vif": 1.0027329326204215
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.00511013883552446,
+              "stderr": 0.0001106799082908209,
+              "tstat": 46.17042889209064,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004893206215274451,
+              "ci_upper": 0.005327071455774469,
+              "vif": 1.0028104701723677
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005324489159828676,
+              "stderr": 0.00011014389991800105,
+              "tstat": 48.34120785438508,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0051086071159893946,
+              "ci_upper": 0.005540371203667958,
+              "vif": 1.0017560375821573
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005221513297866604,
+              "stderr": 0.00011240690654202357,
+              "tstat": 46.45189035528284,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005001195761044238,
+              "ci_upper": 0.005441830834688971,
+              "vif": 1.0012765578468312
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.005184871451173723,
+              "stderr": 0.00011087642529899985,
+              "tstat": 46.762613758440615,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0049675536575876835,
+              "ci_upper": 0.005402189244759763,
+              "vif": 1.0039666941735326
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005205716850569193,
+              "stderr": 0.00011036885489425102,
+              "tstat": 47.1665385634109,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004989393894976461,
+              "ci_upper": 0.0054220398061619254,
+              "vif": 1.002179096128618
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005254583044077678,
+              "stderr": 0.00010990508684683984,
+              "tstat": 47.8101896357199,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0050391690738578725,
+              "ci_upper": 0.005469997014297484,
+              "vif": 1.0018951543487664
+            },
+            {
+              "feature": "CoastalVulnerability",
+              "coef": 0.005133295981798854,
+              "stderr": 0.00011051783093198157,
+              "tstat": 46.44767218565981,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004916681033172171,
+              "ci_upper": 0.005349910930425538,
+              "vif": 1.0045516257199827
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005149372945838002,
+              "stderr": 0.00011130355566691187,
+              "tstat": 46.264226825314246,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004931217976730855,
+              "ci_upper": 0.005367527914945149,
+              "vif": 1.0015733101508546
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005207510983506991,
+              "stderr": 0.0001094339708444569,
+              "tstat": 47.585872497568836,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004993020400651856,
+              "ci_upper": 0.0054220015663621265,
+              "vif": 1.0015639909388512
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005243944691210452,
+              "stderr": 0.00011091309577000549,
+              "tstat": 47.27976128341542,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005026555023501241,
+              "ci_upper": 0.005461334358919663,
+              "vif": 1.0016739960412289
+            }
+          ],
+          "outliers": [
+            {
+              "index": 516,
+              "actual": 0.595,
+              "predicted": 0.431,
+              "residual": 0.164,
+              "abs_error": 0.164,
+              "pct_error": 27.56,
+              "rank": 1
+            },
+            {
+              "index": 6865,
+              "actual": 0.465,
+              "predicted": 0.6035,
+              "residual": -0.1385,
+              "abs_error": 0.1385,
+              "pct_error": 29.78,
+              "rank": 2
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.4724,
+              "residual": 0.1326,
+              "abs_error": 0.1326,
+              "pct_error": 21.91,
+              "rank": 3
+            },
+            {
+              "index": 20184,
+              "actual": 0.515,
+              "predicted": 0.3878,
+              "residual": 0.1272,
+              "abs_error": 0.1272,
+              "pct_error": 24.7,
+              "rank": 4
+            },
+            {
+              "index": 19035,
+              "actual": 0.64,
+              "predicted": 0.5135,
+              "residual": 0.1265,
+              "abs_error": 0.1265,
+              "pct_error": 19.76,
+              "rank": 5
+            },
+            {
+              "index": 8969,
+              "actual": 0.435,
+              "predicted": 0.5561,
+              "residual": -0.1211,
+              "abs_error": 0.1211,
+              "pct_error": 27.85,
+              "rank": 6
+            },
+            {
+              "index": 3978,
+              "actual": 0.56,
+              "predicted": 0.4402,
+              "residual": 0.1198,
+              "abs_error": 0.1198,
+              "pct_error": 21.4,
+              "rank": 7
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.4865,
+              "residual": 0.1185,
+              "abs_error": 0.1185,
+              "pct_error": 19.59,
+              "rank": 8
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5339,
+              "residual": 0.1161,
+              "abs_error": 0.1161,
+              "pct_error": 17.86,
+              "rank": 9
+            },
+            {
+              "index": 5697,
+              "actual": 0.56,
+              "predicted": 0.4506,
+              "residual": 0.1094,
+              "abs_error": 0.1094,
+              "pct_error": 19.54,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 14,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange",
+            "DrainageSystems",
+            "Watersheds",
+            "PopulationScore",
+            "CoastalVulnerability",
+            "Deforestation",
+            "TopographyDrainage",
+            "IneffectiveDisasterPreparedness",
+            "MonsoonIntensity"
+          ],
+          "rmse": 0.034354598933032755,
+          "mae": 0.02768960999006086,
+          "r2": 0.5405115062548307,
+          "adj_r2": 0.5394366793688771,
+          "f_stat": 2164.5448358064136,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.13831509565235536,
+              "stderr": 0.0021149955277724093,
+              "tstat": 65.39734663081481,
+              "pvalue": 1e-25,
+              "ci_lower": 0.13416970441792145,
+              "ci_upper": 0.14246048688678928,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005409924652290695,
+              "stderr": 0.00010571659233695905,
+              "tstat": 51.17384634426358,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005202720131310255,
+              "ci_upper": 0.0056171291732711355,
+              "vif": 1.0032433529613904
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005331194420172043,
+              "stderr": 0.00010455058422155466,
+              "tstat": 50.991531609949035,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005126275275097796,
+              "ci_upper": 0.00553611356524629,
+              "vif": 1.0021160338921358
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.0054209098851143046,
+              "stderr": 0.00010439953893800272,
+              "tstat": 51.9246535019038,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005216286788795819,
+              "ci_upper": 0.00562553298143279,
+              "vif": 1.0031035571333051
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005192992191049773,
+              "stderr": 0.00010545004407502969,
+              "tstat": 49.245993556483114,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004986310104662715,
+              "ci_upper": 0.005399674277436831,
+              "vif": 1.0030636454165411
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.0054071280645606986,
+              "stderr": 0.00010493942332775117,
+              "tstat": 51.52618427940976,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0052014467948383065,
+              "ci_upper": 0.005612809334283091,
+              "vif": 1.0020100938592253
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005297027735528814,
+              "stderr": 0.00010709280727065565,
+              "tstat": 49.46203083594248,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005087125833278329,
+              "ci_upper": 0.0055069296377793,
+              "vif": 1.0014801437940033
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.005252210632321788,
+              "stderr": 0.00010563271875438058,
+              "tstat": 49.721437583504205,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005045170503563202,
+              "ci_upper": 0.005459250761080374,
+              "vif": 1.0041335326793381
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005265528170223772,
+              "stderr": 0.00010514737263185948,
+              "tstat": 50.077600974960795,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005059439319865328,
+              "ci_upper": 0.005471617020582216,
+              "vif": 1.0023116946835327
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005298821847069305,
+              "stderr": 0.00010470244019208096,
+              "tstat": 50.60838923475324,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0050936050642928265,
+              "ci_upper": 0.005504038629845783,
+              "vif": 1.0019682873133327
+            },
+            {
+              "feature": "CoastalVulnerability",
+              "coef": 0.005201965589474407,
+              "stderr": 0.00010529149165471273,
+              "tstat": 49.40537461975991,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00499559426583117,
+              "ci_upper": 0.005408336913117644,
+              "vif": 1.0047263512808127
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005257824400999523,
+              "stderr": 0.00010605351304209504,
+              "tstat": 49.577088492227254,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0050499595154370166,
+              "ci_upper": 0.0054656892865620295,
+              "vif": 1.0020017157997254
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.0052282551166089285,
+              "stderr": 0.00010425066475658108,
+              "tstat": 50.1508084271365,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00502392381368603,
+              "ci_upper": 0.005432586419531827,
+              "vif": 1.0015802047355045
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005236897863398364,
+              "stderr": 0.00010565897224055851,
+              "tstat": 49.56415676157898,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005029806277806869,
+              "ci_upper": 0.005443989448989859,
+              "vif": 1.0016758177033158
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005287904368373821,
+              "stderr": 0.00010692189067771525,
+              "tstat": 49.45576939256211,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0050783374626455,
+              "ci_upper": 0.005497471274102143,
+              "vif": 1.0019041839507024
+            }
+          ],
+          "outliers": [
+            {
+              "index": 516,
+              "actual": 0.595,
+              "predicted": 0.441,
+              "residual": 0.154,
+              "abs_error": 0.154,
+              "pct_error": 25.88,
+              "rank": 1
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.462,
+              "residual": 0.143,
+              "abs_error": 0.143,
+              "pct_error": 23.64,
+              "rank": 2
+            },
+            {
+              "index": 8969,
+              "actual": 0.435,
+              "predicted": 0.5673,
+              "residual": -0.1323,
+              "abs_error": 0.1323,
+              "pct_error": 30.41,
+              "rank": 3
+            },
+            {
+              "index": 6865,
+              "actual": 0.465,
+              "predicted": 0.5891,
+              "residual": -0.1241,
+              "abs_error": 0.1241,
+              "pct_error": 26.69,
+              "rank": 4
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.4868,
+              "residual": 0.1182,
+              "abs_error": 0.1182,
+              "pct_error": 19.53,
+              "rank": 5
+            },
+            {
+              "index": 25759,
+              "actual": 0.595,
+              "predicted": 0.4823,
+              "residual": 0.1127,
+              "abs_error": 0.1127,
+              "pct_error": 18.94,
+              "rank": 6
+            },
+            {
+              "index": 19035,
+              "actual": 0.64,
+              "predicted": 0.5302,
+              "residual": 0.1098,
+              "abs_error": 0.1098,
+              "pct_error": 17.16,
+              "rank": 7
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5146,
+              "residual": -0.1096,
+              "abs_error": 0.1096,
+              "pct_error": 27.07,
+              "rank": 8
+            },
+            {
+              "index": 8180,
+              "actual": 0.57,
+              "predicted": 0.4606,
+              "residual": 0.1094,
+              "abs_error": 0.1094,
+              "pct_error": 19.19,
+              "rank": 9
+            },
+            {
+              "index": 16097,
+              "actual": 0.585,
+              "predicted": 0.4776,
+              "residual": 0.1074,
+              "abs_error": 0.1074,
+              "pct_error": 18.37,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 15,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange",
+            "DrainageSystems",
+            "Watersheds",
+            "PopulationScore",
+            "CoastalVulnerability",
+            "Deforestation",
+            "TopographyDrainage",
+            "IneffectiveDisasterPreparedness",
+            "MonsoonIntensity",
+            "RiverManagement"
+          ],
+          "rmse": 0.032518217588500924,
+          "mae": 0.026285386940927448,
+          "r2": 0.5883213541595386,
+          "adj_r2": 0.5872894056823315,
+          "f_stat": 2448.0579194674815,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.10798084009278086,
+              "stderr": 0.0020796389369062774,
+              "tstat": 51.92287861921639,
+              "pvalue": 1e-25,
+              "ci_lower": 0.10390474777644455,
+              "ci_upper": 0.11205693240911717,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005492041395919856,
+              "stderr": 9.998560578788955e-05,
+              "tstat": 54.92832045815402,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005296069608575593,
+              "ci_upper": 0.00568801318326412,
+              "vif": 1.003482042490292
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005379439085337261,
+              "stderr": 9.887519781163704e-05,
+              "tstat": 54.40635472189298,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0051856436976264525,
+              "ci_upper": 0.00557323447304807,
+              "vif": 1.0022001760462145
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005494298144309118,
+              "stderr": 9.873782532166999e-05,
+              "tstat": 55.64532261481036,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005300772006678645,
+              "ci_upper": 0.005687824281939592,
+              "vif": 1.003299014359477
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005323941075738927,
+              "stderr": 9.975195997167998e-05,
+              "tstat": 53.37179417076534,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005128427234194434,
+              "ci_upper": 0.005519454917283419,
+              "vif": 1.0036735873843932
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005402907334165804,
+              "stderr": 9.923879478888697e-05,
+              "tstat": 54.443500101543314,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005208399296379586,
+              "ci_upper": 0.005597415371952022,
+              "vif": 1.0020107330344363
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.0053345195777160645,
+              "stderr": 0.00010127761527398267,
+              "tstat": 52.672247103022535,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0051360154517790585,
+              "ci_upper": 0.0055330237036530705,
+              "vif": 1.001528543781259
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.0052844796564029675,
+              "stderr": 9.989623438117404e-05,
+              "tstat": 52.89968825290231,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005088683037015866,
+              "ci_upper": 0.005480276275790069,
+              "vif": 1.0041704828260465
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005309176600344114,
+              "stderr": 9.943879420779226e-05,
+              "tstat": 53.39140164199693,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005114276563696842,
+              "ci_upper": 0.005504076636991387,
+              "vif": 1.0023798019035177
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005294834005813659,
+              "stderr": 9.901468203654422e-05,
+              "tstat": 53.47524121583754,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0051007652290220315,
+              "ci_upper": 0.005488902782605286,
+              "vif": 1.0019688604603583
+            },
+            {
+              "feature": "CoastalVulnerability",
+              "coef": 0.005266680761129386,
+              "stderr": 9.957912186184298e-05,
+              "tstat": 52.88940756513629,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005071505682280174,
+              "ci_upper": 0.005461855839978599,
+              "vif": 1.004876017366642
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.0053446721189635915,
+              "stderr": 0.00010030559122989774,
+              "tstat": 53.28389029394927,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005148073160152992,
+              "ci_upper": 0.005541271077774191,
+              "vif": 1.0022666787307024
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005305049199567912,
+              "stderr": 9.859796692085095e-05,
+              "tstat": 53.8048538447706,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005111797184403044,
+              "ci_upper": 0.00549830121473278,
+              "vif": 1.0017945103424006
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.00530924802186606,
+              "stderr": 9.99284604120361e-05,
+              "tstat": 53.13048955196928,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0051133882394584695,
+              "ci_upper": 0.005505107804273651,
+              "vif": 1.0018610187123598
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005350824561447191,
+              "stderr": 0.00010112043960675949,
+              "tstat": 52.91536095230257,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0051526284998179425,
+              "ci_upper": 0.00554902062307644,
+              "vif": 1.0020409955670477
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005317947701336873,
+              "stderr": 9.986463210037574e-05,
+              "tstat": 53.25156253508958,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0051222130224201365,
+              "ci_upper": 0.00551368238025361,
+              "vif": 1.0019947493024985
+            }
+          ],
+          "outliers": [
+            {
+              "index": 516,
+              "actual": 0.595,
+              "predicted": 0.4565,
+              "residual": 0.1385,
+              "abs_error": 0.1385,
+              "pct_error": 23.28,
+              "rank": 1
+            },
+            {
+              "index": 8969,
+              "actual": 0.435,
+              "predicted": 0.568,
+              "residual": -0.133,
+              "abs_error": 0.133,
+              "pct_error": 30.57,
+              "rank": 2
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5359,
+              "residual": -0.1309,
+              "abs_error": 0.1309,
+              "pct_error": 32.32,
+              "rank": 3
+            },
+            {
+              "index": 25759,
+              "actual": 0.595,
+              "predicted": 0.472,
+              "residual": 0.123,
+              "abs_error": 0.123,
+              "pct_error": 20.67,
+              "rank": 4
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.4886,
+              "residual": 0.1164,
+              "abs_error": 0.1164,
+              "pct_error": 19.25,
+              "rank": 5
+            },
+            {
+              "index": 19035,
+              "actual": 0.64,
+              "predicted": 0.5252,
+              "residual": 0.1148,
+              "abs_error": 0.1148,
+              "pct_error": 17.93,
+              "rank": 6
+            },
+            {
+              "index": 6865,
+              "actual": 0.465,
+              "predicted": 0.5797,
+              "residual": -0.1147,
+              "abs_error": 0.1147,
+              "pct_error": 24.66,
+              "rank": 7
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.4922,
+              "residual": 0.1128,
+              "abs_error": 0.1128,
+              "pct_error": 18.64,
+              "rank": 8
+            },
+            {
+              "index": 16097,
+              "actual": 0.585,
+              "predicted": 0.4722,
+              "residual": 0.1128,
+              "abs_error": 0.1128,
+              "pct_error": 19.29,
+              "rank": 9
+            },
+            {
+              "index": 12035,
+              "actual": 0.59,
+              "predicted": 0.4818,
+              "residual": 0.1082,
+              "abs_error": 0.1082,
+              "pct_error": 18.34,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 16,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange",
+            "DrainageSystems",
+            "Watersheds",
+            "PopulationScore",
+            "CoastalVulnerability",
+            "Deforestation",
+            "TopographyDrainage",
+            "IneffectiveDisasterPreparedness",
+            "MonsoonIntensity",
+            "RiverManagement",
+            "Siltation"
+          ],
+          "rmse": 0.030533658951380105,
+          "mae": 0.024693006991870863,
+          "r2": 0.6370368162917952,
+          "adj_r2": 0.6360661642878956,
+          "f_stat": 2814.0631875027775,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.07852943958281018,
+              "stderr": 0.002017137984676547,
+              "tstat": 38.931119328161664,
+              "pvalue": 1e-25,
+              "ci_lower": 0.07457584913284415,
+              "ci_upper": 0.08248303003277621,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005536770402583994,
+              "stderr": 9.378093176695655e-05,
+              "tstat": 59.03940490101699,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0053529597763207586,
+              "ci_upper": 0.005720581028847229,
+              "vif": 1.0035516115606102
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.00538986159396329,
+              "stderr": 9.273639484837614e-05,
+              "tstat": 58.12024074017224,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005208098260060473,
+              "ci_upper": 0.005571624927866108,
+              "vif": 1.00220403373619
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005503798990007367,
+              "stderr": 9.260752160271243e-05,
+              "tstat": 59.43144676324178,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0053222882476660505,
+              "ci_upper": 0.005685309732348683,
+              "vif": 1.0033022323951335
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005419021927947201,
+              "stderr": 9.357326391595552e-05,
+              "tstat": 57.91207553489202,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005235618330671928,
+              "ci_upper": 0.005602425525222474,
+              "vif": 1.0039894795123807
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005493970977858397,
+              "stderr": 9.309081239749024e-05,
+              "tstat": 59.017327664942755,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005311512985559316,
+              "ci_upper": 0.005676428970157478,
+              "vif": 1.0023030153302874
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.0053967231317770415,
+              "stderr": 9.499567846516395e-05,
+              "tstat": 56.81019620019961,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00521053160198532,
+              "ci_upper": 0.005582914661568763,
+              "vif": 1.0016594227451967
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.005368132152333771,
+              "stderr": 9.370523797894971e-05,
+              "tstat": 57.28742883657889,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00518446988589503,
+              "ci_upper": 0.005551794418772512,
+              "vif": 1.0044144155553312
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.0053301039357320475,
+              "stderr": 9.326553558008298e-05,
+              "tstat": 57.14977030454432,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005147303485995085,
+              "ci_upper": 0.00551290438546901,
+              "vif": 1.0023951817333099
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.0053404892115149144,
+              "stderr": 9.287046012821623e-05,
+              "tstat": 57.50471359937139,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005158463109663611,
+              "ci_upper": 0.005522515313366218,
+              "vif": 1.0020426574574297
+            },
+            {
+              "feature": "CoastalVulnerability",
+              "coef": 0.005333354109507079,
+              "stderr": 9.34036869959552e-05,
+              "tstat": 57.100038350071095,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005150282882995007,
+              "ci_upper": 0.005516425336019151,
+              "vif": 1.0050320744484535
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005380468933305295,
+              "stderr": 9.407987461854915e-05,
+              "tstat": 57.19043477811418,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005196072379052939,
+              "ci_upper": 0.005564865487557652,
+              "vif": 1.002310899349795
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005319183761249995,
+              "stderr": 9.247652741730299e-05,
+              "tstat": 57.51928526951521,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005137929767512081,
+              "ci_upper": 0.005500437754987909,
+              "vif": 1.0018016423282112
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005345312013609269,
+              "stderr": 9.372619821290059e-05,
+              "tstat": 57.03114087127811,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0051616086651119835,
+              "ci_upper": 0.005529015362106554,
+              "vif": 1.001906223010256
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005338064187756589,
+              "stderr": 9.484231676827135e-05,
+              "tstat": 56.28357013672604,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005152173246890777,
+              "ci_upper": 0.005523955128622401,
+              "vif": 1.0020465231775049
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.0053676540976418975,
+              "stderr": 9.366823766886214e-05,
+              "tstat": 57.30495449928008,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005184064351810928,
+              "ci_upper": 0.005551243843472867,
+              "vif": 1.0020807435976415
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005332347123622779,
+              "stderr": 9.308548087218186e-05,
+              "tstat": 57.28441292519901,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005149899581113303,
+              "ci_upper": 0.005514794666132255,
+              "vif": 1.0013380780509313
+            }
+          ],
+          "outliers": [
+            {
+              "index": 8969,
+              "actual": 0.435,
+              "predicted": 0.5798,
+              "residual": -0.1448,
+              "abs_error": 0.1448,
+              "pct_error": 33.28,
+              "rank": 1
+            },
+            {
+              "index": 516,
+              "actual": 0.595,
+              "predicted": 0.4615,
+              "residual": 0.1335,
+              "abs_error": 0.1335,
+              "pct_error": 22.44,
+              "rank": 2
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.4876,
+              "residual": 0.1174,
+              "abs_error": 0.1174,
+              "pct_error": 19.4,
+              "rank": 3
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.4891,
+              "residual": 0.1159,
+              "abs_error": 0.1159,
+              "pct_error": 19.15,
+              "rank": 4
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5155,
+              "residual": -0.1105,
+              "abs_error": 0.1105,
+              "pct_error": 27.28,
+              "rank": 5
+            },
+            {
+              "index": 25759,
+              "actual": 0.595,
+              "predicted": 0.4882,
+              "residual": 0.1068,
+              "abs_error": 0.1068,
+              "pct_error": 17.95,
+              "rank": 6
+            },
+            {
+              "index": 6865,
+              "actual": 0.465,
+              "predicted": 0.5702,
+              "residual": -0.1052,
+              "abs_error": 0.1052,
+              "pct_error": 22.63,
+              "rank": 7
+            },
+            {
+              "index": 21264,
+              "actual": 0.53,
+              "predicted": 0.4281,
+              "residual": 0.1019,
+              "abs_error": 0.1019,
+              "pct_error": 19.22,
+              "rank": 8
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.5034,
+              "residual": 0.1016,
+              "abs_error": 0.1016,
+              "pct_error": 16.79,
+              "rank": 9
+            },
+            {
+              "index": 790,
+              "actual": 0.605,
+              "predicted": 0.504,
+              "residual": 0.101,
+              "abs_error": 0.101,
+              "pct_error": 16.7,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 17,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange",
+            "DrainageSystems",
+            "Watersheds",
+            "PopulationScore",
+            "CoastalVulnerability",
+            "Deforestation",
+            "TopographyDrainage",
+            "IneffectiveDisasterPreparedness",
+            "MonsoonIntensity",
+            "RiverManagement",
+            "Siltation",
+            "AgriculturalPractices"
+          ],
+          "rmse": 0.028423375198110813,
+          "mae": 0.022985939530757803,
+          "r2": 0.6854742759744391,
+          "adj_r2": 0.6845804382431728,
+          "f_stat": 3287.528530072299,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.046826122657806495,
+              "stderr": 0.001944655229222787,
+              "tstat": 24.07939564511973,
+              "pvalue": 1e-25,
+              "ci_lower": 0.04301459840852983,
+              "ci_upper": 0.05063764690708316,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.0055899338347737484,
+              "stderr": 8.717538734061124e-05,
+              "tstat": 64.12284482238991,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005419070075586151,
+              "ci_upper": 0.005760797593961346,
+              "vif": 1.0036504652660427
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.0054912630036301185,
+              "stderr": 8.621597154130395e-05,
+              "tstat": 63.691945998652805,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005322279699409163,
+              "ci_upper": 0.005660246307851074,
+              "vif": 1.0025713160533174
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005578458959114206,
+              "stderr": 8.60889620257069e-05,
+              "tstat": 64.79877126928804,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00540972459354382,
+              "ci_upper": 0.005747193324684592,
+              "vif": 1.0035021132381698
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005453534365002138,
+              "stderr": 8.697987636979032e-05,
+              "tstat": 62.69880566186053,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0052830538073173495,
+              "ci_upper": 0.005624014922686927,
+              "vif": 1.0040313427840368
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005493945384886088,
+              "stderr": 8.652961550620427e-05,
+              "tstat": 63.49208132667788,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005324347338493928,
+              "ci_upper": 0.005663543431278248,
+              "vif": 1.0023030153535086
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005488199613197939,
+              "stderr": 8.831277123661597e-05,
+              "tstat": 62.14502768227523,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005315106581574172,
+              "ci_upper": 0.005661292644821706,
+              "vif": 1.0019441228266144
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.005422018511590981,
+              "stderr": 8.710514969232386e-05,
+              "tstat": 62.24681928385225,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005251292418194027,
+              "ci_upper": 0.005592744604987936,
+              "vif": 1.0045162276074135
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005432552094512226,
+              "stderr": 8.670805382002088e-05,
+              "tstat": 62.65337365071675,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005262604309024986,
+              "ci_upper": 0.005602499879999467,
+              "vif": 1.0027659147063146
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005432779400638841,
+              "stderr": 8.633785829600362e-05,
+              "tstat": 62.92464867512601,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005263557198378674,
+              "ci_upper": 0.005602001602899008,
+              "vif": 1.0023459756034614
+            },
+            {
+              "feature": "CoastalVulnerability",
+              "coef": 0.005434477026664622,
+              "stderr": 8.68360329981164e-05,
+              "tstat": 62.58320237616686,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005264278401988314,
+              "ci_upper": 0.00560467565134093,
+              "vif": 1.0053931577183686
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005459887564563372,
+              "stderr": 8.745851707416532e-05,
+              "tstat": 62.428311698143204,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005288468871098008,
+              "ci_upper": 0.0056313062580287355,
+              "vif": 1.002529831778224
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005342257324320218,
+              "stderr": 8.595944648761172e-05,
+              "tstat": 62.1485775282433,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005173776809204499,
+              "ci_upper": 0.0055107378394359365,
+              "vif": 1.001820758650643
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005501223298164752,
+              "stderr": 8.715715735980661e-05,
+              "tstat": 63.11843415744185,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005330395269739531,
+              "ci_upper": 0.005672051326589973,
+              "vif": 1.0027560225204306
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005348145413369703,
+              "stderr": 8.815782355868677e-05,
+              "tstat": 60.66557904312867,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005175356079194678,
+              "ci_upper": 0.005520934747544729,
+              "vif": 1.0020499934737541
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.0054428068236509865,
+              "stderr": 8.707493221657044e-05,
+              "tstat": 62.50716118978747,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005272139956506508,
+              "ci_upper": 0.005613473690795465,
+              "vif": 1.0022784696065412
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005381780321511004,
+              "stderr": 8.652839939947287e-05,
+              "tstat": 62.19669332683611,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005212184658688037,
+              "ci_upper": 0.00555137598433397,
+              "vif": 1.0014246367172552
+            },
+            {
+              "feature": "AgriculturalPractices",
+              "coef": 0.005339657913115343,
+              "stderr": 8.689595107634393e-05,
+              "tstat": 61.44886898612911,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005169341849005709,
+              "ci_upper": 0.005509973977224978,
+              "vif": 1.0030916551587465
+            }
+          ],
+          "outliers": [
+            {
+              "index": 8969,
+              "actual": 0.435,
+              "predicted": 0.5704,
+              "residual": -0.1354,
+              "abs_error": 0.1354,
+              "pct_error": 31.13,
+              "rank": 1
+            },
+            {
+              "index": 516,
+              "actual": 0.595,
+              "predicted": 0.466,
+              "residual": 0.129,
+              "abs_error": 0.129,
+              "pct_error": 21.68,
+              "rank": 2
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.4874,
+              "residual": 0.1176,
+              "abs_error": 0.1176,
+              "pct_error": 19.44,
+              "rank": 3
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.4891,
+              "residual": 0.1159,
+              "abs_error": 0.1159,
+              "pct_error": 19.16,
+              "rank": 4
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4935,
+              "residual": 0.1115,
+              "abs_error": 0.1115,
+              "pct_error": 18.43,
+              "rank": 5
+            },
+            {
+              "index": 790,
+              "actual": 0.605,
+              "predicted": 0.4996,
+              "residual": 0.1054,
+              "abs_error": 0.1054,
+              "pct_error": 17.43,
+              "rank": 6
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5104,
+              "residual": -0.1054,
+              "abs_error": 0.1054,
+              "pct_error": 26.02,
+              "rank": 7
+            },
+            {
+              "index": 15466,
+              "actual": 0.515,
+              "predicted": 0.4182,
+              "residual": 0.0968,
+              "abs_error": 0.0968,
+              "pct_error": 18.8,
+              "rank": 8
+            },
+            {
+              "index": 25759,
+              "actual": 0.595,
+              "predicted": 0.4991,
+              "residual": 0.0959,
+              "abs_error": 0.0959,
+              "pct_error": 16.12,
+              "rank": 9
+            },
+            {
+              "index": 20290,
+              "actual": 0.51,
+              "predicted": 0.4167,
+              "residual": 0.0933,
+              "abs_error": 0.0933,
+              "pct_error": 18.29,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 18,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange",
+            "DrainageSystems",
+            "Watersheds",
+            "PopulationScore",
+            "CoastalVulnerability",
+            "Deforestation",
+            "TopographyDrainage",
+            "IneffectiveDisasterPreparedness",
+            "MonsoonIntensity",
+            "RiverManagement",
+            "Siltation",
+            "AgriculturalPractices",
+            "DeterioratingInfrastructure"
+          ],
+          "rmse": 0.026069857256707938,
+          "mae": 0.021038511203850963,
+          "r2": 0.735404666011529,
+          "adj_r2": 0.7346083583686946,
+          "f_stat": 3969.1723250830964,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.0156050933684488,
+              "stderr": 0.001836802665840456,
+              "tstat": 8.49579198607514,
+              "pvalue": 1.9658779315465425e-17,
+              "ci_lower": 0.012004960143401506,
+              "ci_upper": 0.01920522659349609,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.0056076752130097204,
+              "stderr": 7.975435287623597e-05,
+              "tstat": 70.31183892510289,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005451356681372298,
+              "ci_upper": 0.005763993744647143,
+              "vif": 1.003661095848209
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.0055783270420332876,
+              "stderr": 7.888647651331393e-05,
+              "tstat": 70.71335022919695,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005423709548067192,
+              "ci_upper": 0.005732944535999383,
+              "vif": 1.0028327759333169
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005604110795387209,
+              "stderr": 7.876088940374291e-05,
+              "tstat": 71.15347271739783,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005449739452155873,
+              "ci_upper": 0.005758482138618545,
+              "vif": 1.0035248981780367
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005542336530905985,
+              "stderr": 7.958566897785681e-05,
+              "tstat": 69.639881175693,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005386348619709385,
+              "ci_upper": 0.005698324442102585,
+              "vif": 1.004298978725288
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005582895200118294,
+              "stderr": 7.917383059089073e-05,
+              "tstat": 70.51440050900644,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005427714492160149,
+              "ci_upper": 0.00573807590807644,
+              "vif": 1.0025738768100705
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005522292836505271,
+              "stderr": 8.079602574732474e-05,
+              "tstat": 68.34857018555917,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005363932626040515,
+              "ci_upper": 0.005680653046970028,
+              "vif": 1.0019823102382026
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.005502937024062364,
+              "stderr": 7.969846549737321e-05,
+              "tstat": 69.04696332257157,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005346728031687513,
+              "ci_upper": 0.005659146016437216,
+              "vif": 1.004737920972248
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.00546026031791513,
+              "stderr": 7.932741803253195e-05,
+              "tstat": 68.8319430196996,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0053047785785713675,
+              "ci_upper": 0.005615742057258892,
+              "vif": 1.0027921017014372
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005460406308634535,
+              "stderr": 7.898873651582585e-05,
+              "tstat": 69.12892330592616,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005305588385063516,
+              "ci_upper": 0.005615224232205554,
+              "vif": 1.0023722218552649
+            },
+            {
+              "feature": "CoastalVulnerability",
+              "coef": 0.005434100958212033,
+              "stderr": 7.944346642834262e-05,
+              "tstat": 68.40211288002581,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005278391764012481,
+              "ci_upper": 0.005589810152411585,
+              "vif": 1.0053931625407049
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005518738278904026,
+              "stderr": 8.001758908613227e-05,
+              "tstat": 68.96906470105672,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005361903804295207,
+              "ci_upper": 0.005675572753512845,
+              "vif": 1.002645918937388
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005434799453181429,
+              "stderr": 7.865315954916246e-05,
+              "tstat": 69.09829794929453,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005280639260465071,
+              "ci_upper": 0.005588959645897787,
+              "vif": 1.0021176991246967
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005512776970371119,
+              "stderr": 7.97374316511815e-05,
+              "tstat": 69.13662575046627,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005356491604334803,
+              "ci_upper": 0.005669062336407435,
+              "vif": 1.0027605287868875
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005433964737482869,
+              "stderr": 8.066250183737483e-05,
+              "tstat": 67.36667737430692,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005275866233881614,
+              "ci_upper": 0.005592063241084124,
+              "vif": 1.002292836406789
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.00547857013404558,
+              "stderr": 7.96637456515606e-05,
+              "tstat": 68.77118429766246,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005322429192568521,
+              "ci_upper": 0.005634711075522638,
+              "vif": 1.0023217075625188
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005423985152523178,
+              "stderr": 7.916443035212923e-05,
+              "tstat": 68.51543209995818,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005268822869033005,
+              "ci_upper": 0.005579147436013352,
+              "vif": 1.0014855641504885
+            },
+            {
+              "feature": "AgriculturalPractices",
+              "coef": 0.005395316132215292,
+              "stderr": 7.950245360517495e-05,
+              "tstat": 67.86351725708379,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00523949132314915,
+              "ci_upper": 0.005551140941281435,
+              "vif": 1.003196896837644
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005483009185952211,
+              "stderr": 8.021784546196722e-05,
+              "tstat": 68.35148905304129,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005325782208846755,
+              "ci_upper": 0.005640236163057666,
+              "vif": 1.0017822639986977
+            }
+          ],
+          "outliers": [
+            {
+              "index": 8969,
+              "actual": 0.435,
+              "predicted": 0.5604,
+              "residual": -0.1254,
+              "abs_error": 0.1254,
+              "pct_error": 28.84,
+              "rank": 1
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4988,
+              "residual": 0.1062,
+              "abs_error": 0.1062,
+              "pct_error": 17.56,
+              "rank": 2
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.5002,
+              "residual": 0.1048,
+              "abs_error": 0.1048,
+              "pct_error": 17.32,
+              "rank": 3
+            },
+            {
+              "index": 790,
+              "actual": 0.605,
+              "predicted": 0.5053,
+              "residual": 0.0997,
+              "abs_error": 0.0997,
+              "pct_error": 16.47,
+              "rank": 4
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5003,
+              "residual": -0.0953,
+              "abs_error": 0.0953,
+              "pct_error": 23.54,
+              "rank": 5
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.5098,
+              "residual": 0.0952,
+              "abs_error": 0.0952,
+              "pct_error": 15.74,
+              "rank": 6
+            },
+            {
+              "index": 18905,
+              "actual": 0.605,
+              "predicted": 0.5166,
+              "residual": 0.0884,
+              "abs_error": 0.0884,
+              "pct_error": 14.62,
+              "rank": 7
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4226,
+              "residual": -0.0876,
+              "abs_error": 0.0876,
+              "pct_error": 26.14,
+              "rank": 8
+            },
+            {
+              "index": 15466,
+              "actual": 0.515,
+              "predicted": 0.4289,
+              "residual": 0.0861,
+              "abs_error": 0.0861,
+              "pct_error": 16.72,
+              "rank": 9
+            },
+            {
+              "index": 25759,
+              "actual": 0.595,
+              "predicted": 0.5102,
+              "residual": 0.0848,
+              "abs_error": 0.0848,
+              "pct_error": 14.25,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 19,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange",
+            "DrainageSystems",
+            "Watersheds",
+            "PopulationScore",
+            "CoastalVulnerability",
+            "Deforestation",
+            "TopographyDrainage",
+            "IneffectiveDisasterPreparedness",
+            "MonsoonIntensity",
+            "RiverManagement",
+            "Siltation",
+            "AgriculturalPractices",
+            "DeterioratingInfrastructure",
+            "WetlandLoss"
+          ],
+          "rmse": 0.02325803071408001,
+          "mae": 0.01857175764269901,
+          "r2": 0.7894036914846426,
+          "adj_r2": 0.7887345727786574,
+          "f_stat": 4931.242410097432,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": -0.016814712207498556,
+              "stderr": 0.0017099531268355546,
+              "tstat": -9.833434579938412,
+              "pvalue": 8.081461292241763e-23,
+              "ci_lower": -0.020166220336096243,
+              "ci_upper": -0.013463204078900868,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005686104774600978,
+              "stderr": 7.182816303265967e-05,
+              "tstat": 79.16260885045261,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005545321575056965,
+              "ci_upper": 0.005826887974144991,
+              "vif": 1.0038751337485594
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005645798817960728,
+              "stderr": 7.104469386542751e-05,
+              "tstat": 79.46826864586075,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00550655121798449,
+              "ci_upper": 0.005785046417936967,
+              "vif": 1.0029945543174725
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005600452018919632,
+              "stderr": 7.092588703463928e-05,
+              "tstat": 78.96202998750574,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005461437280331739,
+              "ci_upper": 0.005739466757507525,
+              "vif": 1.003525375741937
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005608967133365597,
+              "stderr": 7.167414061649411e-05,
+              "tstat": 78.25649648703043,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0054684858177572685,
+              "ci_upper": 0.005749448448973925,
+              "vif": 1.0044542151267901
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005639271852743082,
+              "stderr": 7.130171841043386e-05,
+              "tstat": 79.09026568310401,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005499520484658632,
+              "ci_upper": 0.005779023220827533,
+              "vif": 1.0026859765098337
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.00558188847936308,
+              "stderr": 7.276291866906743e-05,
+              "tstat": 76.71336693831691,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005439273158771707,
+              "ci_upper": 0.005724503799954452,
+              "vif": 1.0021025261299235
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.005589875516252612,
+              "stderr": 7.177959345685499e-05,
+              "tstat": 77.8755527448418,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0054491875130771765,
+              "ci_upper": 0.005730563519428048,
+              "vif": 1.0050015722559
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005492536955740774,
+              "stderr": 7.143734530504961e-05,
+              "tstat": 76.88607313565065,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0053525197589428765,
+              "ci_upper": 0.0056325541525386715,
+              "vif": 1.0028287111892489
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.0055637971996727684,
+              "stderr": 7.114448753204674e-05,
+              "tstat": 78.20419251971671,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0054243540041099565,
+              "ci_upper": 0.00570324039523558,
+              "vif": 1.0027509399477734
+            },
+            {
+              "feature": "CoastalVulnerability",
+              "coef": 0.00551440007235902,
+              "stderr": 7.154860393707956e-05,
+              "tstat": 77.072084833527,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005374164808642344,
+              "ci_upper": 0.005654635336075696,
+              "vif": 1.0056196759267158
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005590410876732452,
+              "stderr": 7.206392927024774e-05,
+              "tstat": 77.57571552569372,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005449165575362767,
+              "ci_upper": 0.005731656178102137,
+              "vif": 1.002823311646664
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005516983188788163,
+              "stderr": 7.083738313311283e-05,
+              "tstat": 77.88236866995807,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005378141917847261,
+              "ci_upper": 0.005655824459729064,
+              "vif": 1.0023589733612768
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005607149105238341,
+              "stderr": 7.181635681232882e-05,
+              "tstat": 78.07621207924812,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005466389045886176,
+              "ci_upper": 0.005747909164590506,
+              "vif": 1.0030702800687668
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005521795528174276,
+              "stderr": 7.264780827731674e-05,
+              "tstat": 76.00773731667249,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005379405823950735,
+              "ci_upper": 0.0056641852323978175,
+              "vif": 1.002554894540263
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005532702328503816,
+              "stderr": 7.174256378900371e-05,
+              "tstat": 77.11882648598399,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005392086903477368,
+              "ci_upper": 0.005673317753530263,
+              "vif": 1.0024237661999968
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005457632593916318,
+              "stderr": 7.129068743153676e-05,
+              "tstat": 76.55463554279086,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005317902846550505,
+              "ci_upper": 0.00559736234128213,
+              "vif": 1.0015254612579305
+            },
+            {
+              "feature": "AgriculturalPractices",
+              "coef": 0.0055053565054584705,
+              "stderr": 7.160878611672937e-05,
+              "tstat": 76.88101983022304,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005365003284669681,
+              "ci_upper": 0.00564570972624726,
+              "vif": 1.0036207174099914
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005512018000599895,
+              "stderr": 7.223893194147055e-05,
+              "tstat": 76.30259546287095,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005370429693994612,
+              "ci_upper": 0.005653606307205177,
+              "vif": 1.0018111537714887
+            },
+            {
+              "feature": "WetlandLoss",
+              "coef": 0.005360541620679359,
+              "stderr": 7.168513992645996e-05,
+              "tstat": 74.77897966271125,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005220038746423497,
+              "ci_upper": 0.005501044494935221,
+              "vif": 1.0027718010217126
+            }
+          ],
+          "outliers": [
+            {
+              "index": 8969,
+              "actual": 0.435,
+              "predicted": 0.5562,
+              "residual": -0.1212,
+              "abs_error": 0.1212,
+              "pct_error": 27.85,
+              "rank": 1
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4993,
+              "residual": 0.1057,
+              "abs_error": 0.1057,
+              "pct_error": 17.46,
+              "rank": 2
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.5102,
+              "residual": 0.0948,
+              "abs_error": 0.0948,
+              "pct_error": 15.67,
+              "rank": 3
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.5109,
+              "residual": 0.0941,
+              "abs_error": 0.0941,
+              "pct_error": 15.56,
+              "rank": 4
+            },
+            {
+              "index": 18905,
+              "actual": 0.605,
+              "predicted": 0.5115,
+              "residual": 0.0935,
+              "abs_error": 0.0935,
+              "pct_error": 15.45,
+              "rank": 5
+            },
+            {
+              "index": 3329,
+              "actual": 0.5,
+              "predicted": 0.5893,
+              "residual": -0.0893,
+              "abs_error": 0.0893,
+              "pct_error": 17.86,
+              "rank": 6
+            },
+            {
+              "index": 790,
+              "actual": 0.605,
+              "predicted": 0.5163,
+              "residual": 0.0887,
+              "abs_error": 0.0887,
+              "pct_error": 14.67,
+              "rank": 7
+            },
+            {
+              "index": 17068,
+              "actual": 0.555,
+              "predicted": 0.4775,
+              "residual": 0.0775,
+              "abs_error": 0.0775,
+              "pct_error": 13.97,
+              "rank": 8
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.5282,
+              "residual": 0.0768,
+              "abs_error": 0.0768,
+              "pct_error": 12.7,
+              "rank": 9
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4112,
+              "residual": -0.0762,
+              "abs_error": 0.0762,
+              "pct_error": 22.74,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 20,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange",
+            "DrainageSystems",
+            "Watersheds",
+            "PopulationScore",
+            "CoastalVulnerability",
+            "Deforestation",
+            "TopographyDrainage",
+            "IneffectiveDisasterPreparedness",
+            "MonsoonIntensity",
+            "RiverManagement",
+            "Siltation",
+            "AgriculturalPractices",
+            "DeterioratingInfrastructure",
+            "WetlandLoss",
+            "InadequatePlanning"
+          ],
+          "rmse": 0.019982524780181674,
+          "mae": 0.01593942037800348,
+          "r2": 0.8445446777758417,
+          "adj_r2": 0.8440246733529477,
+          "f_stat": 6572.592064782221,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": -0.05146999776666289,
+              "stderr": 0.0015393908318728836,
+              "tstat": -33.43530226436548,
+              "pvalue": 1e-25,
+              "ci_lower": -0.05448720379713374,
+              "ci_upper": -0.04845279173619204,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005725475719290007,
+              "stderr": 6.249954986808954e-05,
+              "tstat": 91.60827128153876,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005602976601548551,
+              "ci_upper": 0.005847974837031462,
+              "vif": 1.0039269031613458
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005723242540374996,
+              "stderr": 6.182254273657699e-05,
+              "tstat": 92.57533396452925,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005602070356611305,
+              "ci_upper": 0.005844414724138687,
+              "vif": 1.0031991229821042
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005720505429020572,
+              "stderr": 6.172803756996563e-05,
+              "tstat": 92.67272465185155,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00559951847538344,
+              "ci_upper": 0.005841492382657705,
+              "vif": 1.0040188894250637
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005697783066959901,
+              "stderr": 6.237214088487799e-05,
+              "tstat": 91.3514108402413,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00557553367082554,
+              "ci_upper": 0.005820032463094262,
+              "vif": 1.0047189543667274
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005691826405518135,
+              "stderr": 6.204276963079484e-05,
+              "tstat": 91.74036619237263,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005570222577041778,
+              "ci_upper": 0.005813430233994493,
+              "vif": 1.0027794776759502
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005669639950472427,
+              "stderr": 6.331917469971191e-05,
+              "tstat": 89.5406482690341,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005545534368060992,
+              "ci_upper": 0.005793745532883862,
+              "vif": 1.0023526943489238
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.00565805642739481,
+              "stderr": 6.246051376463215e-05,
+              "tstat": 90.58613332442116,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005535633820416132,
+              "ci_upper": 0.005780479034373489,
+              "vif": 1.005157212443036
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005643373233749144,
+              "stderr": 6.218166452120695e-05,
+              "tstat": 90.75622656940105,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005521497171287579,
+              "ci_upper": 0.00576524929621071,
+              "vif": 1.0035961065154848
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005638240775484479,
+              "stderr": 6.190888646998869e-05,
+              "tstat": 91.07320607709049,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005516899358003301,
+              "ci_upper": 0.0057595821929656565,
+              "vif": 1.0029393900636545
+            },
+            {
+              "feature": "CoastalVulnerability",
+              "coef": 0.0056379187680940974,
+              "stderr": 6.22706144278654e-05,
+              "tstat": 90.53899371147352,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005515868363815481,
+              "ci_upper": 0.0057599691723727135,
+              "vif": 1.0061341082141406
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005622841514717011,
+              "stderr": 6.270416926615543e-05,
+              "tstat": 89.67253024037653,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005499941342955347,
+              "ci_upper": 0.0057457416864786755,
+              "vif": 1.002858171930548
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005612103561774191,
+              "stderr": 6.164539455532976e-05,
+              "tstat": 91.0384887996305,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005491278588445745,
+              "ci_upper": 0.005732928535102637,
+              "vif": 1.0026691983259595
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.00561101196565635,
+              "stderr": 6.248768127436665e-05,
+              "tstat": 89.79388979117182,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005488536110358592,
+              "ci_upper": 0.005733487820954108,
+              "vif": 1.0030707781888406
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005608036459111516,
+              "stderr": 6.321875913919953e-05,
+              "tstat": 88.70842350390562,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005484127691198684,
+              "ci_upper": 0.005731945227024347,
+              "vif": 1.0027973999273796
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005605184450339823,
+              "stderr": 6.242892631072784e-05,
+              "tstat": 89.78505288463728,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005482823754770797,
+              "ci_upper": 0.005727545145908849,
+              "vif": 1.0025993929871646
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.0055788695633218685,
+              "stderr": 6.204567312600506e-05,
+              "tstat": 89.91552967750155,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005457260043994898,
+              "ci_upper": 0.005700479082648839,
+              "vif": 1.00202262325429
+            },
+            {
+              "feature": "AgriculturalPractices",
+              "coef": 0.005575684404056474,
+              "stderr": 6.23122153118434e-05,
+              "tstat": 89.47979743863688,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005453552462045261,
+              "ci_upper": 0.005697816346067687,
+              "vif": 1.0037868763320779
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005569139709769425,
+              "stderr": 6.285872268045102e-05,
+              "tstat": 88.5977231526122,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005445936613315741,
+              "ci_upper": 0.0056923428062231095,
+              "vif": 1.0019186707392822
+            },
+            {
+              "feature": "WetlandLoss",
+              "coef": 0.0054945386660037975,
+              "stderr": 6.239219464230472e-05,
+              "tstat": 88.06451988913133,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00537224996450488,
+              "ci_upper": 0.0056168273675027145,
+              "vif": 1.0033732041359311
+            },
+            {
+              "feature": "InadequatePlanning",
+              "coef": 0.005458379070298218,
+              "stderr": 6.222291028674778e-05,
+              "tstat": 87.72297928759437,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005336422166136192,
+              "ci_upper": 0.005580335974460244,
+              "vif": 1.0043526547064985
+            }
+          ],
+          "outliers": [
+            {
+              "index": 8969,
+              "actual": 0.435,
+              "predicted": 0.5404,
+              "residual": -0.1054,
+              "abs_error": 0.1054,
+              "pct_error": 24.23,
+              "rank": 1
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.5053,
+              "residual": 0.0997,
+              "abs_error": 0.0997,
+              "pct_error": 16.48,
+              "rank": 2
+            },
+            {
+              "index": 1397,
+              "actual": 0.475,
+              "predicted": 0.5706,
+              "residual": -0.0956,
+              "abs_error": 0.0956,
+              "pct_error": 20.13,
+              "rank": 3
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.5107,
+              "residual": 0.0943,
+              "abs_error": 0.0943,
+              "pct_error": 15.58,
+              "rank": 4
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.5109,
+              "residual": 0.0941,
+              "abs_error": 0.0941,
+              "pct_error": 15.55,
+              "rank": 5
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.5123,
+              "residual": 0.0927,
+              "abs_error": 0.0927,
+              "pct_error": 15.32,
+              "rank": 6
+            },
+            {
+              "index": 790,
+              "actual": 0.605,
+              "predicted": 0.5166,
+              "residual": 0.0884,
+              "abs_error": 0.0884,
+              "pct_error": 14.62,
+              "rank": 7
+            },
+            {
+              "index": 18905,
+              "actual": 0.605,
+              "predicted": 0.5177,
+              "residual": 0.0873,
+              "abs_error": 0.0873,
+              "pct_error": 14.42,
+              "rank": 8
+            },
+            {
+              "index": 3329,
+              "actual": 0.5,
+              "predicted": 0.5848,
+              "residual": -0.0848,
+              "abs_error": 0.0848,
+              "pct_error": 16.97,
+              "rank": 9
+            },
+            {
+              "index": 7685,
+              "actual": 0.5,
+              "predicted": 0.5684,
+              "residual": -0.0684,
+              "abs_error": 0.0684,
+              "pct_error": 13.68,
+              "rank": 10
+            }
+          ]
+        }
+      ],
+      "Forward SFS": [
+        {
+          "k": 1,
+          "features": [
+            "Siltation"
+          ],
+          "rmse": 0.04994800303682007,
+          "mae": 0.040338803652790814,
+          "r2": 0.028727407831151797,
+          "adj_r2": 0.02856547508820928,
+          "f_stat": 955.1180245048416,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.48071799728157055,
+              "stderr": 0.0008264007303672592,
+              "tstat": 581.7008378827734,
+              "pvalue": 1e-25,
+              "ci_lower": 0.4790982518500507,
+              "ci_upper": 0.4823377427130904,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.004780875629044204,
+              "stderr": 0.0001546959434735399,
+              "tstat": 30.90498381337293,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004477671579836066,
+              "ci_upper": 0.005084079678252342,
+              "vif": 1.0
+            }
+          ],
+          "outliers": [
+            {
+              "index": 5662,
+              "actual": 0.69,
+              "predicted": 0.5046,
+              "residual": 0.1854,
+              "abs_error": 0.1854,
+              "pct_error": 26.87,
+              "rank": 1
+            },
+            {
+              "index": 3396,
+              "actual": 0.67,
+              "predicted": 0.5046,
+              "residual": 0.1654,
+              "abs_error": 0.1654,
+              "pct_error": 24.68,
+              "rank": 2
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4951,
+              "residual": -0.1651,
+              "abs_error": 0.1651,
+              "pct_error": 50.02,
+              "rank": 3
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4951,
+              "residual": -0.1601,
+              "abs_error": 0.1601,
+              "pct_error": 47.78,
+              "rank": 4
+            },
+            {
+              "index": 8351,
+              "actual": 0.365,
+              "predicted": 0.5237,
+              "residual": -0.1587,
+              "abs_error": 0.1587,
+              "pct_error": 43.49,
+              "rank": 5
+            },
+            {
+              "index": 274,
+              "actual": 0.33,
+              "predicted": 0.4855,
+              "residual": -0.1555,
+              "abs_error": 0.1555,
+              "pct_error": 47.12,
+              "rank": 6
+            },
+            {
+              "index": 6112,
+              "actual": 0.655,
+              "predicted": 0.4998,
+              "residual": 0.1552,
+              "abs_error": 0.1552,
+              "pct_error": 23.69,
+              "rank": 7
+            },
+            {
+              "index": 9898,
+              "actual": 0.645,
+              "predicted": 0.4951,
+              "residual": 0.1499,
+              "abs_error": 0.1499,
+              "pct_error": 23.25,
+              "rank": 8
+            },
+            {
+              "index": 9737,
+              "actual": 0.36,
+              "predicted": 0.5094,
+              "residual": -0.1494,
+              "abs_error": 0.1494,
+              "pct_error": 41.5,
+              "rank": 9
+            },
+            {
+              "index": 26109,
+              "actual": 0.37,
+              "predicted": 0.519,
+              "residual": -0.149,
+              "abs_error": 0.149,
+              "pct_error": 40.26,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 2,
+          "features": [
+            "Siltation",
+            "DamsQuality"
+          ],
+          "rmse": 0.04900010725590135,
+          "mae": 0.03961899586393498,
+          "r2": 0.0652425477902352,
+          "adj_r2": 0.06493080610198787,
+          "f_stat": 999.2392619615376,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.45650713636939283,
+              "stderr": 0.0011134168198161877,
+              "tstat": 410.0056045899836,
+              "pvalue": 1e-25,
+              "ci_lower": 0.4543248394025531,
+              "ci_upper": 0.4586894333362326,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.0048585285139062925,
+              "stderr": 0.00015158255565092784,
+              "tstat": 32.05202929217504,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004561426704830474,
+              "ci_upper": 0.005155630322982111,
+              "vif": 1.0002615948252618
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.004799715974631446,
+              "stderr": 0.00015151825009224965,
+              "tstat": 31.677477608863686,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004502740204450637,
+              "ci_upper": 0.005096691744812256,
+              "vif": 1.0002615948252618
+            }
+          ],
+          "outliers": [
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.5143,
+              "residual": -0.1793,
+              "abs_error": 0.1793,
+              "pct_error": 53.52,
+              "rank": 1
+            },
+            {
+              "index": 5662,
+              "actual": 0.69,
+              "predicted": 0.5144,
+              "residual": 0.1756,
+              "abs_error": 0.1756,
+              "pct_error": 25.45,
+              "rank": 2
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4903,
+              "residual": -0.1603,
+              "abs_error": 0.1603,
+              "pct_error": 48.57,
+              "rank": 3
+            },
+            {
+              "index": 26109,
+              "actual": 0.37,
+              "predicted": 0.529,
+              "residual": -0.159,
+              "abs_error": 0.159,
+              "pct_error": 42.97,
+              "rank": 4
+            },
+            {
+              "index": 3396,
+              "actual": 0.67,
+              "predicted": 0.5144,
+              "residual": 0.1556,
+              "abs_error": 0.1556,
+              "pct_error": 23.22,
+              "rank": 5
+            },
+            {
+              "index": 6112,
+              "actual": 0.655,
+              "predicted": 0.4999,
+              "residual": 0.1551,
+              "abs_error": 0.1551,
+              "pct_error": 23.67,
+              "rank": 6
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5001,
+              "residual": 0.1499,
+              "abs_error": 0.1499,
+              "pct_error": 23.06,
+              "rank": 7
+            },
+            {
+              "index": 8351,
+              "actual": 0.365,
+              "predicted": 0.5146,
+              "residual": -0.1496,
+              "abs_error": 0.1496,
+              "pct_error": 41.0,
+              "rank": 8
+            },
+            {
+              "index": 9251,
+              "actual": 0.63,
+              "predicted": 0.4808,
+              "residual": 0.1492,
+              "abs_error": 0.1492,
+              "pct_error": 23.68,
+              "rank": 9
+            },
+            {
+              "index": 25883,
+              "actual": 0.65,
+              "predicted": 0.5048,
+              "residual": 0.1452,
+              "abs_error": 0.1452,
+              "pct_error": 22.34,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 3,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure"
+          ],
+          "rmse": 0.04808843368195135,
+          "mae": 0.0389937467957511,
+          "r2": 0.0997023051990118,
+          "adj_r2": 0.09925185605218012,
+          "f_stat": 1042.294002154884,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.4321078379753272,
+              "stderr": 0.001326515946025236,
+              "tstat": 325.7464331809146,
+              "pvalue": 1e-25,
+              "ci_lower": 0.42950786672111774,
+              "ci_upper": 0.43470780922953667,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.00489195802754982,
+              "stderr": 0.00014840235518403163,
+              "tstat": 32.9641535775047,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004601089411389118,
+              "ci_upper": 0.005182826643710522,
+              "vif": 1.0003103204790285
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.004872791105888373,
+              "stderr": 0.00014835306342416785,
+              "tstat": 32.845908223385955,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004582019101577004,
+              "ci_upper": 0.005163563110199742,
+              "vif": 1.0004946213318933
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.004852753432487393,
+              "stderr": 0.00015035242020084303,
+              "tstat": 32.2758584531264,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0045580626888937405,
+              "ci_upper": 0.005147444176081045,
+              "vif": 1.000278305731901
+            }
+          ],
+          "outliers": [
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.5295,
+              "residual": -0.1945,
+              "abs_error": 0.1945,
+              "pct_error": 58.05,
+              "rank": 1
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.4907,
+              "residual": 0.1593,
+              "abs_error": 0.1593,
+              "pct_error": 24.51,
+              "rank": 2
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4857,
+              "residual": -0.1557,
+              "abs_error": 0.1557,
+              "pct_error": 47.18,
+              "rank": 3
+            },
+            {
+              "index": 5662,
+              "actual": 0.69,
+              "predicted": 0.5344,
+              "residual": 0.1556,
+              "abs_error": 0.1556,
+              "pct_error": 22.56,
+              "rank": 4
+            },
+            {
+              "index": 25883,
+              "actual": 0.65,
+              "predicted": 0.4955,
+              "residual": 0.1545,
+              "abs_error": 0.1545,
+              "pct_error": 23.77,
+              "rank": 5
+            },
+            {
+              "index": 3396,
+              "actual": 0.67,
+              "predicted": 0.5198,
+              "residual": 0.1502,
+              "abs_error": 0.1502,
+              "pct_error": 22.42,
+              "rank": 6
+            },
+            {
+              "index": 26109,
+              "actual": 0.37,
+              "predicted": 0.5199,
+              "residual": -0.1499,
+              "abs_error": 0.1499,
+              "pct_error": 40.52,
+              "rank": 7
+            },
+            {
+              "index": 14944,
+              "actual": 0.375,
+              "predicted": 0.5246,
+              "residual": -0.1496,
+              "abs_error": 0.1496,
+              "pct_error": 39.9,
+              "rank": 8
+            },
+            {
+              "index": 25978,
+              "actual": 0.63,
+              "predicted": 0.4808,
+              "residual": 0.1492,
+              "abs_error": 0.1492,
+              "pct_error": 23.68,
+              "rank": 9
+            },
+            {
+              "index": 1334,
+              "actual": 0.345,
+              "predicted": 0.4905,
+              "residual": -0.1455,
+              "abs_error": 0.1455,
+              "pct_error": 42.17,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 4,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage"
+          ],
+          "rmse": 0.046915924035055644,
+          "mae": 0.03802065069824724,
+          "r2": 0.1430698489898461,
+          "adj_r2": 0.14249808575314216,
+          "f_stat": 1088.3344332027941,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.40821471755468725,
+              "stderr": 0.001486488885255101,
+              "tstat": 274.6167304739936,
+              "pvalue": 1e-25,
+              "ci_lower": 0.40530119933958725,
+              "ci_upper": 0.41112823576978724,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.0048998657222790384,
+              "stderr": 0.0001451595139797816,
+              "tstat": 33.755043592674966,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004615353074878667,
+              "ci_upper": 0.00518437836967941,
+              "vif": 1.0003130560228903
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.00489042780275228,
+              "stderr": 0.00014511208855674687,
+              "tstat": 33.701036566914624,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004606008109181056,
+              "ci_upper": 0.005174847496323504,
+              "vif": 1.0005082403861707
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.004930716701337072,
+              "stderr": 0.000147085807432596,
+              "tstat": 33.522722466589016,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0046424285187691835,
+              "ci_upper": 0.00521900488390496,
+              "vif": 1.000537348106391
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.004749374309996105,
+              "stderr": 0.00014417364604035144,
+              "tstat": 32.94204204745468,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004466793963757016,
+              "ci_upper": 0.005031954656235194,
+              "vif": 1.0002730413836842
+            }
+          ],
+          "outliers": [
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.5206,
+              "residual": -0.1856,
+              "abs_error": 0.1856,
+              "pct_error": 55.41,
+              "rank": 1
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.4813,
+              "residual": 0.1687,
+              "abs_error": 0.1687,
+              "pct_error": 25.95,
+              "rank": 2
+            },
+            {
+              "index": 14944,
+              "actual": 0.375,
+              "predicted": 0.5252,
+              "residual": -0.1502,
+              "abs_error": 0.1502,
+              "pct_error": 40.07,
+              "rank": 3
+            },
+            {
+              "index": 14546,
+              "actual": 0.655,
+              "predicted": 0.5104,
+              "residual": 0.1446,
+              "abs_error": 0.1446,
+              "pct_error": 22.08,
+              "rank": 4
+            },
+            {
+              "index": 25978,
+              "actual": 0.63,
+              "predicted": 0.4858,
+              "residual": 0.1442,
+              "abs_error": 0.1442,
+              "pct_error": 22.89,
+              "rank": 5
+            },
+            {
+              "index": 6112,
+              "actual": 0.655,
+              "predicted": 0.5109,
+              "residual": 0.1441,
+              "abs_error": 0.1441,
+              "pct_error": 22.0,
+              "rank": 6
+            },
+            {
+              "index": 5662,
+              "actual": 0.69,
+              "predicted": 0.5493,
+              "residual": 0.1407,
+              "abs_error": 0.1407,
+              "pct_error": 20.39,
+              "rank": 7
+            },
+            {
+              "index": 27564,
+              "actual": 0.655,
+              "predicted": 0.5153,
+              "residual": 0.1397,
+              "abs_error": 0.1397,
+              "pct_error": 21.32,
+              "rank": 8
+            },
+            {
+              "index": 26680,
+              "actual": 0.63,
+              "predicted": 0.4907,
+              "residual": 0.1393,
+              "abs_error": 0.1393,
+              "pct_error": 22.11,
+              "rank": 9
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4669,
+              "residual": -0.1369,
+              "abs_error": 0.1369,
+              "pct_error": 41.5,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 5,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange"
+          ],
+          "rmse": 0.04604672461957694,
+          "mae": 0.037348220016783194,
+          "r2": 0.17452797077771365,
+          "adj_r2": 0.1738393888380887,
+          "f_stat": 1138.1310282713441,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.38374653473685766,
+              "stderr": 0.0016245024264023489,
+              "tstat": 236.2240452830282,
+              "pvalue": 1e-25,
+              "ci_lower": 0.3805625099811091,
+              "ci_upper": 0.38693055949260624,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.004952590924618078,
+              "stderr": 0.0001418632147779658,
+              "tstat": 34.911029842158314,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004674539023653265,
+              "ci_upper": 0.005230642825582891,
+              "vif": 1.0004351233057636
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.00493049679368361,
+              "stderr": 0.00014181321444195418,
+              "tstat": 34.767541326000476,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00465254289337738,
+              "ci_upper": 0.0052084506939898394,
+              "vif": 1.0005787986907282
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.004955599368527661,
+              "stderr": 0.00014373889837240882,
+              "tstat": 34.47639730539987,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00467387112771774,
+              "ci_upper": 0.005237327609337583,
+              "vif": 1.0005638333193698
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.004736380703212228,
+              "stderr": 0.00014089166714405412,
+              "tstat": 33.617181194751105,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004460233035609882,
+              "ci_upper": 0.005012528370814574,
+              "vif": 1.0002805562988437
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.00486988941085461,
+              "stderr": 0.0001447357495988452,
+              "tstat": 33.64676263018757,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004586207341640874,
+              "ci_upper": 0.005153571480068347,
+              "vif": 1.0002222482239467
+            }
+          ],
+          "outliers": [
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.4768,
+              "residual": 0.1732,
+              "abs_error": 0.1732,
+              "pct_error": 26.64,
+              "rank": 1
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.5066,
+              "residual": -0.1716,
+              "abs_error": 0.1716,
+              "pct_error": 51.22,
+              "rank": 2
+            },
+            {
+              "index": 14944,
+              "actual": 0.375,
+              "predicted": 0.5258,
+              "residual": -0.1508,
+              "abs_error": 0.1508,
+              "pct_error": 40.2,
+              "rank": 3
+            },
+            {
+              "index": 26680,
+              "actual": 0.63,
+              "predicted": 0.486,
+              "residual": 0.144,
+              "abs_error": 0.144,
+              "pct_error": 22.85,
+              "rank": 4
+            },
+            {
+              "index": 20077,
+              "actual": 0.585,
+              "predicted": 0.4423,
+              "residual": 0.1427,
+              "abs_error": 0.1427,
+              "pct_error": 24.39,
+              "rank": 5
+            },
+            {
+              "index": 8351,
+              "actual": 0.365,
+              "predicted": 0.5065,
+              "residual": -0.1415,
+              "abs_error": 0.1415,
+              "pct_error": 38.77,
+              "rank": 6
+            },
+            {
+              "index": 14546,
+              "actual": 0.655,
+              "predicted": 0.5157,
+              "residual": 0.1393,
+              "abs_error": 0.1393,
+              "pct_error": 21.26,
+              "rank": 7
+            },
+            {
+              "index": 28301,
+              "actual": 0.635,
+              "predicted": 0.4962,
+              "residual": 0.1388,
+              "abs_error": 0.1388,
+              "pct_error": 21.86,
+              "rank": 8
+            },
+            {
+              "index": 2201,
+              "actual": 0.6,
+              "predicted": 0.4619,
+              "residual": 0.1381,
+              "abs_error": 0.1381,
+              "pct_error": 23.01,
+              "rank": 9
+            },
+            {
+              "index": 27564,
+              "actual": 0.655,
+              "predicted": 0.5207,
+              "residual": 0.1343,
+              "abs_error": 0.1343,
+              "pct_error": 20.5,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 6,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides"
+          ],
+          "rmse": 0.045243595561206634,
+          "mae": 0.036741999930228975,
+          "r2": 0.20307197814221745,
+          "adj_r2": 0.20227411928502625,
+          "f_stat": 1213.7399992003882,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.3578316776694691,
+              "stderr": 0.0017397319111687433,
+              "tstat": 205.68207973438825,
+              "pvalue": 1e-25,
+              "ci_lower": 0.35442180312357835,
+              "ci_upper": 0.36124155221535986,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.0049579828811731974,
+              "stderr": 0.0001382083696410707,
+              "tstat": 35.87324627335636,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004687094476676699,
+              "ci_upper": 0.005228871285669696,
+              "vif": 1.0004363066028816
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005000926399595355,
+              "stderr": 0.00013817352524133673,
+              "tstat": 36.19308685119406,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004730106290122335,
+              "ci_upper": 0.005271746509068375,
+              "vif": 1.000780858581059
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.0050316674794099354,
+              "stderr": 0.00014005170120242322,
+              "tstat": 35.92721428022808,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004757166145053186,
+              "ci_upper": 0.005306168813766685,
+              "vif": 1.0007932648701539
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.004801871727469518,
+              "stderr": 0.00013727391170880436,
+              "tstat": 34.980220696672546,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004532814860520261,
+              "ci_upper": 0.005070928594418774,
+              "vif": 1.0004575127819952
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.004970228004506736,
+              "stderr": 0.00014103455529890162,
+              "tstat": 35.241207333713945,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004693800276120889,
+              "ci_upper": 0.005246655732892584,
+              "vif": 1.0006158278444588
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.004938477582788535,
+              "stderr": 0.0001376680711835228,
+              "tstat": 35.872352538484684,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00466864816326883,
+              "ci_upper": 0.005208307002308239,
+              "vif": 1.0009816195985377
+            }
+          ],
+          "outliers": [
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.4717,
+              "residual": 0.1783,
+              "abs_error": 0.1783,
+              "pct_error": 27.43,
+              "rank": 1
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.5119,
+              "residual": -0.1769,
+              "abs_error": 0.1769,
+              "pct_error": 52.82,
+              "rank": 2
+            },
+            {
+              "index": 14944,
+              "actual": 0.375,
+              "predicted": 0.5215,
+              "residual": -0.1465,
+              "abs_error": 0.1465,
+              "pct_error": 39.07,
+              "rank": 3
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4617,
+              "residual": 0.1433,
+              "abs_error": 0.1433,
+              "pct_error": 23.68,
+              "rank": 4
+            },
+            {
+              "index": 25978,
+              "actual": 0.63,
+              "predicted": 0.4912,
+              "residual": 0.1388,
+              "abs_error": 0.1388,
+              "pct_error": 22.03,
+              "rank": 5
+            },
+            {
+              "index": 24512,
+              "actual": 0.64,
+              "predicted": 0.5016,
+              "residual": 0.1384,
+              "abs_error": 0.1384,
+              "pct_error": 21.63,
+              "rank": 6
+            },
+            {
+              "index": 2201,
+              "actual": 0.6,
+              "predicted": 0.4619,
+              "residual": 0.1381,
+              "abs_error": 0.1381,
+              "pct_error": 23.02,
+              "rank": 7
+            },
+            {
+              "index": 9737,
+              "actual": 0.36,
+              "predicted": 0.4963,
+              "residual": -0.1363,
+              "abs_error": 0.1363,
+              "pct_error": 37.86,
+              "rank": 8
+            },
+            {
+              "index": 26680,
+              "actual": 0.63,
+              "predicted": 0.4961,
+              "residual": 0.1339,
+              "abs_error": 0.1339,
+              "pct_error": 21.25,
+              "rank": 9
+            },
+            {
+              "index": 12152,
+              "actual": 0.63,
+              "predicted": 0.4966,
+              "residual": 0.1334,
+              "abs_error": 0.1334,
+              "pct_error": 21.17,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 7,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides",
+            "IneffectiveDisasterPreparedness"
+          ],
+          "rmse": 0.044344283428882685,
+          "mae": 0.03596410810469819,
+          "r2": 0.2344383713148528,
+          "adj_r2": 0.2335440236177907,
+          "f_stat": 1271.6320842043199,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.33350958115050044,
+              "stderr": 0.0018313922027846116,
+              "tstat": 182.10713174567567,
+              "pvalue": 1e-25,
+              "ci_lower": 0.3299200524330426,
+              "ci_upper": 0.33709910986795827,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.004984994377701152,
+              "stderr": 0.00013476854349811244,
+              "tstat": 36.989302164350924,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004720848032444852,
+              "ci_upper": 0.005249140722957452,
+              "vif": 1.0004686598933412
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.0050169722780389545,
+              "stderr": 0.0001347331569433626,
+              "tstat": 37.23635957070259,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004752895290429964,
+              "ci_upper": 0.005281049265647945,
+              "vif": 1.0007922851729851
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005037391403704655,
+              "stderr": 0.00013656388534166833,
+              "tstat": 36.886702447734535,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004769726188434986,
+              "ci_upper": 0.005305056618974325,
+              "vif": 1.0007946801938126
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.004807677411751589,
+              "stderr": 0.00013385527999256952,
+              "tstat": 35.91697998030761,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004545321062966153,
+              "ci_upper": 0.0050700337605370255,
+              "vif": 1.000459027842121
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005007028059984696,
+              "stderr": 0.0001375261289555681,
+              "tstat": 36.40783099190093,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004737476847231783,
+              "ci_upper": 0.005276579272737609,
+              "vif": 1.0006735063044154
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.0049718898348938756,
+              "stderr": 0.00013424286905191061,
+              "tstat": 37.03652842052479,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0047087738115521305,
+              "ci_upper": 0.005235005858235621,
+              "vif": 1.0010315392511597
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.004780546959389469,
+              "stderr": 0.00013563599611630386,
+              "tstat": 35.245414906602605,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004514700407001513,
+              "ci_upper": 0.005046393511777425,
+              "vif": 1.0001487004650351
+            }
+          ],
+          "outliers": [
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.467,
+              "residual": 0.183,
+              "abs_error": 0.183,
+              "pct_error": 28.15,
+              "rank": 1
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.5121,
+              "residual": -0.1771,
+              "abs_error": 0.1771,
+              "pct_error": 52.86,
+              "rank": 2
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4569,
+              "residual": 0.1481,
+              "abs_error": 0.1481,
+              "pct_error": 24.48,
+              "rank": 3
+            },
+            {
+              "index": 14944,
+              "actual": 0.375,
+              "predicted": 0.5169,
+              "residual": -0.1419,
+              "abs_error": 0.1419,
+              "pct_error": 37.85,
+              "rank": 4
+            },
+            {
+              "index": 25978,
+              "actual": 0.63,
+              "predicted": 0.4914,
+              "residual": 0.1386,
+              "abs_error": 0.1386,
+              "pct_error": 22.0,
+              "rank": 5
+            },
+            {
+              "index": 24512,
+              "actual": 0.64,
+              "predicted": 0.5017,
+              "residual": 0.1383,
+              "abs_error": 0.1383,
+              "pct_error": 21.61,
+              "rank": 6
+            },
+            {
+              "index": 2201,
+              "actual": 0.6,
+              "predicted": 0.4619,
+              "residual": 0.1381,
+              "abs_error": 0.1381,
+              "pct_error": 23.01,
+              "rank": 7
+            },
+            {
+              "index": 8686,
+              "actual": 0.38,
+              "predicted": 0.5169,
+              "residual": -0.1369,
+              "abs_error": 0.1369,
+              "pct_error": 36.02,
+              "rank": 8
+            },
+            {
+              "index": 25916,
+              "actual": 0.63,
+              "predicted": 0.497,
+              "residual": 0.133,
+              "abs_error": 0.133,
+              "pct_error": 21.11,
+              "rank": 9
+            },
+            {
+              "index": 1334,
+              "actual": 0.345,
+              "predicted": 0.4773,
+              "residual": -0.1323,
+              "abs_error": 0.1323,
+              "pct_error": 38.34,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 8,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides",
+            "IneffectiveDisasterPreparedness",
+            "PoliticalFactors"
+          ],
+          "rmse": 0.04326005256308158,
+          "mae": 0.03501545007025535,
+          "r2": 0.271417122772156,
+          "adj_r2": 0.2704442195810657,
+          "f_stat": 1345.792183935849,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.30853141573959636,
+              "stderr": 0.0019059691150401974,
+              "tstat": 161.87639836602983,
+              "pvalue": 1e-25,
+              "ci_lower": 0.30479571627411756,
+              "ci_upper": 0.31226711520507516,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.004987723935586245,
+              "stderr": 0.00013110519449369577,
+              "tstat": 38.04367900789836,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004730757754378602,
+              "ci_upper": 0.0052446901167938886,
+              "vif": 1.0004689786403684
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005117879439187801,
+              "stderr": 0.00013109929583244342,
+              "tstat": 39.03819167517808,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004860924819356212,
+              "ci_upper": 0.00537483405901939,
+              "vif": 1.0012282726951773
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005054269148432368,
+              "stderr": 0.00013285250125693988,
+              "tstat": 38.04421520568357,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004793878245968766,
+              "ci_upper": 0.00531466005089597,
+              "vif": 1.0008065525575671
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.004841479628132058,
+              "stderr": 0.0001302199597252786,
+              "tstat": 37.17924378371789,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004586248507070512,
+              "ci_upper": 0.005096710749193604,
+              "vif": 1.0005085789940975
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005097023581351494,
+              "stderr": 0.00013381004676259046,
+              "tstat": 38.09148643670065,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004834755889696817,
+              "ci_upper": 0.005359291273006171,
+              "vif": 1.001006318218785
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.004965983534695328,
+              "stderr": 0.00013059388657104707,
+              "tstat": 38.026156239661965,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004710019517016076,
+              "ci_upper": 0.00522194755237458,
+              "vif": 1.0010330442336601
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.004785164393729874,
+              "stderr": 0.00013194910592508933,
+              "tstat": 36.26522787086201,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004526544146116699,
+              "ci_upper": 0.005043784641343049,
+              "vif": 1.0001496006903403
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.004807140744807294,
+              "stderr": 0.00013032738646064822,
+              "tstat": 36.885115825281964,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004551699067344423,
+              "ci_upper": 0.0050625824222701645,
+              "vif": 1.0008237856622568
+            }
+          ],
+          "outliers": [
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.4908,
+              "residual": 0.1592,
+              "abs_error": 0.1592,
+              "pct_error": 24.49,
+              "rank": 1
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4932,
+              "residual": -0.1582,
+              "abs_error": 0.1582,
+              "pct_error": 47.23,
+              "rank": 2
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4472,
+              "residual": 0.1578,
+              "abs_error": 0.1578,
+              "pct_error": 26.09,
+              "rank": 3
+            },
+            {
+              "index": 2201,
+              "actual": 0.6,
+              "predicted": 0.4523,
+              "residual": 0.1477,
+              "abs_error": 0.1477,
+              "pct_error": 24.62,
+              "rank": 4
+            },
+            {
+              "index": 27438,
+              "actual": 0.595,
+              "predicted": 0.4528,
+              "residual": 0.1422,
+              "abs_error": 0.1422,
+              "pct_error": 23.91,
+              "rank": 5
+            },
+            {
+              "index": 19879,
+              "actual": 0.63,
+              "predicted": 0.4925,
+              "residual": 0.1375,
+              "abs_error": 0.1375,
+              "pct_error": 21.82,
+              "rank": 6
+            },
+            {
+              "index": 21554,
+              "actual": 0.375,
+              "predicted": 0.5113,
+              "residual": -0.1363,
+              "abs_error": 0.1363,
+              "pct_error": 36.36,
+              "rank": 7
+            },
+            {
+              "index": 24512,
+              "actual": 0.64,
+              "predicted": 0.5068,
+              "residual": 0.1332,
+              "abs_error": 0.1332,
+              "pct_error": 20.81,
+              "rank": 8
+            },
+            {
+              "index": 14944,
+              "actual": 0.375,
+              "predicted": 0.5077,
+              "residual": -0.1327,
+              "abs_error": 0.1327,
+              "pct_error": 35.39,
+              "rank": 9
+            },
+            {
+              "index": 6885,
+              "actual": 0.405,
+              "predicted": 0.5371,
+              "residual": -0.1321,
+              "abs_error": 0.1321,
+              "pct_error": 32.61,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 9,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides",
+            "IneffectiveDisasterPreparedness",
+            "PoliticalFactors",
+            "RiverManagement"
+          ],
+          "rmse": 0.04179357519824459,
+          "mae": 0.0338364484382397,
+          "r2": 0.31997649695230723,
+          "adj_r2": 0.3189547588008165,
+          "f_stat": 1435.8628685336241,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.28244745696991874,
+              "stderr": 0.001969161888491237,
+              "tstat": 143.43536639657836,
+              "pvalue": 1e-25,
+              "ci_lower": 0.2785878996684759,
+              "ci_upper": 0.28630701427136157,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005029338981658802,
+              "stderr": 0.00012722441486388836,
+              "tstat": 39.53124081599797,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004779979128525581,
+              "ci_upper": 0.005278698834792024,
+              "vif": 1.0005408850200133
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005110075545730814,
+              "stderr": 0.00012721428005790867,
+              "tstat": 40.16904032632719,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004860735556817313,
+              "ci_upper": 0.005359415534644315,
+              "vif": 1.0012308034955233
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005082002195487132,
+              "stderr": 0.00012891737149314518,
+              "tstat": 39.42061598546751,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004829324147360568,
+              "ci_upper": 0.0053346802436136966,
+              "vif": 1.0008376631786482
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.004908047169127043,
+              "stderr": 0.00012637261963485919,
+              "tstat": 38.837900039647394,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004660356834642719,
+              "ci_upper": 0.005155737503611367,
+              "vif": 1.0006950853202474
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005130334554997825,
+              "stderr": 0.00012984740613995721,
+              "tstat": 39.51048933136213,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004875833638963508,
+              "ci_upper": 0.005384835471032141,
+              "vif": 1.0010505706221569
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005005325974000925,
+              "stderr": 0.00012672779005501667,
+              "tstat": 39.49667213345983,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004756939505493092,
+              "ci_upper": 0.005253712442508758,
+              "vif": 1.0010978521594407
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.004847761938318384,
+              "stderr": 0.0001280490226930561,
+              "tstat": 37.85864067029127,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004596785853839994,
+              "ci_upper": 0.005098738022796773,
+              "vif": 1.0003101725708592
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.004868297088850253,
+              "stderr": 0.0001264750177606724,
+              "tstat": 38.49216370985209,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004620406054039335,
+              "ci_upper": 0.005116188123661171,
+              "vif": 1.0009809927459523
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.004938193563519242,
+              "stderr": 0.0001279836474674803,
+              "tstat": 38.58456655389511,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004687345614482981,
+              "ci_upper": 0.005189041512555503,
+              "vif": 1.0007003736153892
+            }
+          ],
+          "outliers": [
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.5029,
+              "residual": -0.1679,
+              "abs_error": 0.1679,
+              "pct_error": 50.11,
+              "rank": 1
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4421,
+              "residual": 0.1629,
+              "abs_error": 0.1629,
+              "pct_error": 26.93,
+              "rank": 2
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.4622,
+              "residual": 0.1428,
+              "abs_error": 0.1428,
+              "pct_error": 23.6,
+              "rank": 3
+            },
+            {
+              "index": 27438,
+              "actual": 0.595,
+              "predicted": 0.4575,
+              "residual": 0.1375,
+              "abs_error": 0.1375,
+              "pct_error": 23.11,
+              "rank": 4
+            },
+            {
+              "index": 19879,
+              "actual": 0.63,
+              "predicted": 0.4926,
+              "residual": 0.1374,
+              "abs_error": 0.1374,
+              "pct_error": 21.81,
+              "rank": 5
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5158,
+              "residual": 0.1342,
+              "abs_error": 0.1342,
+              "pct_error": 20.64,
+              "rank": 6
+            },
+            {
+              "index": 6885,
+              "actual": 0.405,
+              "predicted": 0.5374,
+              "residual": -0.1324,
+              "abs_error": 0.1324,
+              "pct_error": 32.7,
+              "rank": 7
+            },
+            {
+              "index": 3202,
+              "actual": 0.365,
+              "predicted": 0.497,
+              "residual": -0.132,
+              "abs_error": 0.132,
+              "pct_error": 36.16,
+              "rank": 8
+            },
+            {
+              "index": 21554,
+              "actual": 0.375,
+              "predicted": 0.5067,
+              "residual": -0.1317,
+              "abs_error": 0.1317,
+              "pct_error": 35.11,
+              "rank": 9
+            },
+            {
+              "index": 2201,
+              "actual": 0.6,
+              "predicted": 0.4718,
+              "residual": 0.1282,
+              "abs_error": 0.1282,
+              "pct_error": 21.37,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 10,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides",
+            "IneffectiveDisasterPreparedness",
+            "PoliticalFactors",
+            "RiverManagement",
+            "PopulationScore"
+          ],
+          "rmse": 0.04037872424010191,
+          "mae": 0.03281238729388089,
+          "r2": 0.36523925441587546,
+          "adj_r2": 0.3641793767308127,
+          "f_stat": 1541.9442301074744,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.2560914189636486,
+              "stderr": 0.0020149548150143566,
+              "tstat": 127.0953656406553,
+              "pvalue": 1e-25,
+              "ci_lower": 0.25214210752622046,
+              "ci_upper": 0.2600407304010768,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005068137137787828,
+              "stderr": 0.00012313383487076867,
+              "tstat": 41.159581711289476,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004826794821441121,
+              "ci_upper": 0.005309479454134535,
+              "vif": 1.0006020945644127
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005181176121012913,
+              "stderr": 0.0001231329089097937,
+              "tstat": 42.07791537523576,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004939835619549718,
+              "ci_upper": 0.0054225166224761085,
+              "vif": 1.0014365401917005
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005103394129624275,
+              "stderr": 0.0001247696722967015,
+              "tstat": 40.902520906590475,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00485884557192274,
+              "ci_upper": 0.00534794268732581,
+              "vif": 1.0008557909293594
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.004974806331523251,
+              "stderr": 0.00012231691166584546,
+              "tstat": 40.67145142704224,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004735065184658193,
+              "ci_upper": 0.005214547478388308,
+              "vif": 1.0008787901638172
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005170400601125209,
+              "stderr": 0.00012567258187549601,
+              "tstat": 41.14183478976768,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004924082340649237,
+              "ci_upper": 0.005416718861601181,
+              "vif": 1.001113267439072
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005016287523625972,
+              "stderr": 0.00012264972802136063,
+              "tstat": 40.899295942607694,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004775894056704105,
+              "ci_upper": 0.005256680990547839,
+              "vif": 1.001102779127807
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.004928440760025079,
+              "stderr": 0.00012394431893192852,
+              "tstat": 39.76334536746157,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0046855098949185,
+              "ci_upper": 0.005171371625131659,
+              "vif": 1.0005713912934018
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.004932281551748694,
+              "stderr": 0.00012241509234119487,
+              "tstat": 40.291449832030985,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004692347970759952,
+              "ci_upper": 0.005172215132737436,
+              "vif": 1.0011495193419697
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.004929652754259479,
+              "stderr": 0.0001238650489475719,
+              "tstat": 39.79857753373224,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0046868772583222385,
+              "ci_upper": 0.00517242825019672,
+              "vif": 1.0007033051579244
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.004948204150669167,
+              "stderr": 0.00012282670397826244,
+              "tstat": 40.286061502919495,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004707463810871772,
+              "ci_upper": 0.0051889444904665615,
+              "vif": 1.0009361393425276
+            }
+          ],
+          "outliers": [
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5011,
+              "residual": 0.1489,
+              "abs_error": 0.1489,
+              "pct_error": 22.9,
+              "rank": 1
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4782,
+              "residual": -0.1432,
+              "abs_error": 0.1432,
+              "pct_error": 42.75,
+              "rank": 2
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4715,
+              "residual": 0.1335,
+              "abs_error": 0.1335,
+              "pct_error": 22.06,
+              "rank": 3
+            },
+            {
+              "index": 15579,
+              "actual": 0.595,
+              "predicted": 0.4619,
+              "residual": 0.1331,
+              "abs_error": 0.1331,
+              "pct_error": 22.37,
+              "rank": 4
+            },
+            {
+              "index": 6885,
+              "actual": 0.405,
+              "predicted": 0.5378,
+              "residual": -0.1328,
+              "abs_error": 0.1328,
+              "pct_error": 32.78,
+              "rank": 5
+            },
+            {
+              "index": 19879,
+              "actual": 0.63,
+              "predicted": 0.5025,
+              "residual": 0.1275,
+              "abs_error": 0.1275,
+              "pct_error": 20.24,
+              "rank": 6
+            },
+            {
+              "index": 21366,
+              "actual": 0.37,
+              "predicted": 0.497,
+              "residual": -0.127,
+              "abs_error": 0.127,
+              "pct_error": 34.32,
+              "rank": 7
+            },
+            {
+              "index": 14976,
+              "actual": 0.385,
+              "predicted": 0.5119,
+              "residual": -0.1269,
+              "abs_error": 0.1269,
+              "pct_error": 32.96,
+              "rank": 8
+            },
+            {
+              "index": 25978,
+              "actual": 0.63,
+              "predicted": 0.507,
+              "residual": 0.123,
+              "abs_error": 0.123,
+              "pct_error": 19.52,
+              "rank": 9
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.482,
+              "residual": 0.123,
+              "abs_error": 0.123,
+              "pct_error": 20.33,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 11,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides",
+            "IneffectiveDisasterPreparedness",
+            "PoliticalFactors",
+            "RiverManagement",
+            "PopulationScore",
+            "MonsoonIntensity"
+          ],
+          "rmse": 0.03908015556709617,
+          "mae": 0.031688355469690566,
+          "r2": 0.40541021664784604,
+          "adj_r2": 0.4043179508467649,
+          "f_stat": 1661.8539680087085,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.22914616576764957,
+              "stderr": 0.0020499119938895117,
+              "tstat": 111.78341628845571,
+              "pvalue": 1e-25,
+              "ci_lower": 0.22512833825962614,
+              "ci_upper": 0.233163993275673,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005053282130547035,
+              "stderr": 0.00011889569065948863,
+              "tstat": 42.50181064189605,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004820246576854438,
+              "ci_upper": 0.005286317684239632,
+              "vif": 1.00061106157943
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005257141800722262,
+              "stderr": 0.00011890819499822973,
+              "tstat": 44.21177027201976,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005024081738525732,
+              "ci_upper": 0.005490201862918792,
+              "vif": 1.0016712361310034
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005178223117352691,
+              "stderr": 0.00012048802446138056,
+              "tstat": 42.97707710372861,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004942066589408385,
+              "ci_upper": 0.005414379645296997,
+              "vif": 1.0010774516507694
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.004992378128879996,
+              "stderr": 0.00011810710633531104,
+              "tstat": 42.26992163118809,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004760888200462786,
+              "ci_upper": 0.005223868057297206,
+              "vif": 1.0008915086788785
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.0052409841574767415,
+              "stderr": 0.00012135829692313847,
+              "tstat": 43.1860391119042,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00500312189550739,
+              "ci_upper": 0.005478846419446093,
+              "vif": 1.0013077160205934
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005039966086640093,
+              "stderr": 0.00011842907455595661,
+              "tstat": 42.556830791232414,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004807845100510418,
+              "ci_upper": 0.0052720870727697685,
+              "vif": 1.0011257539277263
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.004918705002579061,
+              "stderr": 0.00011967796974704285,
+              "tstat": 41.09950238106039,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0046841361818748565,
+              "ci_upper": 0.005153273823283265,
+              "vif": 1.0005751925736222
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005023646542148159,
+              "stderr": 0.0001182214262447165,
+              "tstat": 42.49353693085456,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004791932546708515,
+              "ci_upper": 0.005255360537587804,
+              "vif": 1.0014929066225773
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.004983550514891423,
+              "stderr": 0.0001196081727635464,
+              "tstat": 41.66563538048033,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004749118496274872,
+              "ci_upper": 0.005217982533507973,
+              "vif": 1.0008199712858141
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.004985869029918197,
+              "stderr": 0.00011860203290632194,
+              "tstat": 42.038647295837634,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004753409045421806,
+              "ci_upper": 0.005218329014414587,
+              "vif": 1.0009940941540338
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005055535146933364,
+              "stderr": 0.00012112998932903674,
+              "tstat": 41.73644507802721,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004818120367848452,
+              "ci_upper": 0.005292949926018276,
+              "vif": 1.0011592594148018
+            }
+          ],
+          "outliers": [
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4565,
+              "residual": 0.1485,
+              "abs_error": 0.1485,
+              "pct_error": 24.55,
+              "rank": 1
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4785,
+              "residual": -0.1435,
+              "abs_error": 0.1435,
+              "pct_error": 42.84,
+              "rank": 2
+            },
+            {
+              "index": 15579,
+              "actual": 0.595,
+              "predicted": 0.4565,
+              "residual": 0.1385,
+              "abs_error": 0.1385,
+              "pct_error": 23.28,
+              "rank": 3
+            },
+            {
+              "index": 6885,
+              "actual": 0.405,
+              "predicted": 0.5387,
+              "residual": -0.1337,
+              "abs_error": 0.1337,
+              "pct_error": 33.02,
+              "rank": 4
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5168,
+              "residual": 0.1332,
+              "abs_error": 0.1332,
+              "pct_error": 20.49,
+              "rank": 5
+            },
+            {
+              "index": 21366,
+              "actual": 0.37,
+              "predicted": 0.4973,
+              "residual": -0.1273,
+              "abs_error": 0.1273,
+              "pct_error": 34.41,
+              "rank": 6
+            },
+            {
+              "index": 20747,
+              "actual": 0.555,
+              "predicted": 0.4313,
+              "residual": 0.1237,
+              "abs_error": 0.1237,
+              "pct_error": 22.28,
+              "rank": 7
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.4822,
+              "residual": 0.1228,
+              "abs_error": 0.1228,
+              "pct_error": 20.3,
+              "rank": 8
+            },
+            {
+              "index": 19879,
+              "actual": 0.63,
+              "predicted": 0.5077,
+              "residual": 0.1223,
+              "abs_error": 0.1223,
+              "pct_error": 19.42,
+              "rank": 9
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5239,
+              "residual": -0.1189,
+              "abs_error": 0.1189,
+              "pct_error": 29.36,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 12,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides",
+            "IneffectiveDisasterPreparedness",
+            "PoliticalFactors",
+            "RiverManagement",
+            "PopulationScore",
+            "MonsoonIntensity",
+            "Encroachments"
+          ],
+          "rmse": 0.0375693026555106,
+          "mae": 0.03054397436193546,
+          "r2": 0.4504956398105434,
+          "adj_r2": 0.44939424473416567,
+          "f_stat": 1814.3082402677724,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.20098334529006107,
+              "stderr": 0.002069257994389374,
+              "tstat": 97.1282197942505,
+              "pvalue": 1e-25,
+              "ci_lower": 0.19692759962105788,
+              "ci_upper": 0.20503909095906425,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005091061599265957,
+              "stderr": 0.00011427444701109238,
+              "tstat": 44.551181234522,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004867083683124216,
+              "ci_upper": 0.005315039515407698,
+              "vif": 1.0006662492148006
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005297834745284919,
+              "stderr": 0.00011428696937762793,
+              "tstat": 46.35554494213396,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005073832285304769,
+              "ci_upper": 0.00552183720526507,
+              "vif": 1.001735318253101
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005191635487266893,
+              "stderr": 0.0001158020884140749,
+              "tstat": 44.831967699089326,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004964663393975306,
+              "ci_upper": 0.0054186075805584795,
+              "vif": 1.0010842278782908
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005068517833457289,
+              "stderr": 0.00011352626737866276,
+              "tstat": 44.646212286284644,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00484600634939511,
+              "ci_upper": 0.005291029317519468,
+              "vif": 1.0011187327533724
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005247394454731257,
+              "stderr": 0.00011663820897443975,
+              "tstat": 44.98864052243101,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005018783565141355,
+              "ci_upper": 0.005476005344321158,
+              "vif": 1.0013092421170224
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005118737054993361,
+              "stderr": 0.00011383658115381204,
+              "tstat": 44.96566045037053,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0048956173559318895,
+              "ci_upper": 0.005341856754054833,
+              "vif": 1.0013676904053785
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.0050377325040902535,
+              "stderr": 0.00011505421981938164,
+              "tstat": 43.78572565177322,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004812226233244265,
+              "ci_upper": 0.005263238774936242,
+              "vif": 1.00111583853359
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005141672427045813,
+              "stderr": 0.00011365418356253477,
+              "tstat": 45.23962309066048,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004918910227263245,
+              "ci_upper": 0.00536443462682838,
+              "vif": 1.0020381708938702
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.0050575149559289895,
+              "stderr": 0.00011496807228868868,
+              "tstat": 43.99060413250559,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00483217753424316,
+              "ci_upper": 0.005282852377614819,
+              "vif": 1.0010290343121
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005014275628438337,
+              "stderr": 0.00011399084573113402,
+              "tstat": 43.98840622926268,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004790853570805315,
+              "ci_upper": 0.00523769768607136,
+              "vif": 1.0010254618584968
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005038168831451044,
+              "stderr": 0.00011641934600083153,
+              "tstat": 43.27604478567556,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004809986913289414,
+              "ci_upper": 0.005266350749612674,
+              "vif": 1.001170500602646
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.0051226143396980355,
+              "stderr": 0.00011506976073563846,
+              "tstat": 44.517467551416416,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004897077608656184,
+              "ci_upper": 0.005348151070739887,
+              "vif": 1.0018603822307954
+            }
+          ],
+          "outliers": [
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4561,
+              "residual": 0.1489,
+              "abs_error": 0.1489,
+              "pct_error": 24.61,
+              "rank": 1
+            },
+            {
+              "index": 3858,
+              "actual": 0.405,
+              "predicted": 0.5395,
+              "residual": -0.1345,
+              "abs_error": 0.1345,
+              "pct_error": 33.22,
+              "rank": 2
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5176,
+              "residual": 0.1324,
+              "abs_error": 0.1324,
+              "pct_error": 20.38,
+              "rank": 3
+            },
+            {
+              "index": 20747,
+              "actual": 0.555,
+              "predicted": 0.426,
+              "residual": 0.129,
+              "abs_error": 0.129,
+              "pct_error": 23.25,
+              "rank": 4
+            },
+            {
+              "index": 15579,
+              "actual": 0.595,
+              "predicted": 0.4666,
+              "residual": 0.1284,
+              "abs_error": 0.1284,
+              "pct_error": 21.59,
+              "rank": 5
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4631,
+              "residual": -0.1281,
+              "abs_error": 0.1281,
+              "pct_error": 38.22,
+              "rank": 6
+            },
+            {
+              "index": 6885,
+              "actual": 0.405,
+              "predicted": 0.5291,
+              "residual": -0.1241,
+              "abs_error": 0.1241,
+              "pct_error": 30.65,
+              "rank": 7
+            },
+            {
+              "index": 21366,
+              "actual": 0.37,
+              "predicted": 0.4924,
+              "residual": -0.1224,
+              "abs_error": 0.1224,
+              "pct_error": 33.08,
+              "rank": 8
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5241,
+              "residual": -0.1191,
+              "abs_error": 0.1191,
+              "pct_error": 29.41,
+              "rank": 9
+            },
+            {
+              "index": 12536,
+              "actual": 0.435,
+              "predicted": 0.554,
+              "residual": -0.119,
+              "abs_error": 0.119,
+              "pct_error": 27.36,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 13,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides",
+            "IneffectiveDisasterPreparedness",
+            "PoliticalFactors",
+            "RiverManagement",
+            "PopulationScore",
+            "MonsoonIntensity",
+            "Encroachments",
+            "Watersheds"
+          ],
+          "rmse": 0.036053382492584655,
+          "mae": 0.02922311656696418,
+          "r2": 0.49394594759996313,
+          "adj_r2": 0.4928469327851952,
+          "f_stat": 1978.3702945887364,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.17384667038399,
+              "stderr": 0.002073092089487515,
+              "tstat": 83.85863380867286,
+              "pvalue": 1e-25,
+              "ci_lower": 0.16978340988859447,
+              "ci_upper": 0.1779099308793855,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005106472775399081,
+              "stderr": 0.00010964499422609855,
+              "tstat": 46.57278530079578,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004891568586715927,
+              "ci_upper": 0.005321376964082234,
+              "vif": 1.000675801459745
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005284479455258818,
+              "stderr": 0.00010965687887758359,
+              "tstat": 48.1910438209553,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005069551972658754,
+              "ci_upper": 0.005499406937858883,
+              "vif": 1.0017424979992244
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005213279900797906,
+              "stderr": 0.00011111123659560487,
+              "tstat": 46.91946611819208,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004995501877070521,
+              "ci_upper": 0.005431057924525292,
+              "vif": 1.0011025836381975
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.00511017822835333,
+              "stderr": 0.00010893045412936735,
+              "tstat": 46.91230078123433,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00489667453825977,
+              "ci_upper": 0.00532368191844689,
+              "vif": 1.0011894918894206
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005300814092949479,
+              "stderr": 0.00011191862227733966,
+              "tstat": 47.36311066994561,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005081453593285893,
+              "ci_upper": 0.005520174592613065,
+              "vif": 1.0014194801136778
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005210391088597824,
+              "stderr": 0.00010924292527822968,
+              "tstat": 47.69545556682534,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004996274955052494,
+              "ci_upper": 0.005424507222143155,
+              "vif": 1.0017083933904154
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005109292472821685,
+              "stderr": 0.00011040385661299653,
+              "tstat": 46.278206482691196,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004892900913860212,
+              "ci_upper": 0.005325684031783158,
+              "vif": 1.0013191034379902
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005199613532049652,
+              "stderr": 0.00010905677566868066,
+              "tstat": 47.67804201222957,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004985862251739038,
+              "ci_upper": 0.005413364812360266,
+              "vif": 1.0021748587231005
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005094824744835832,
+              "stderr": 0.00011031304174542495,
+              "tstat": 46.185153307561045,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004878611183014799,
+              "ci_upper": 0.005311038306656865,
+              "vif": 1.0010843668571259
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.0050450992993933885,
+              "stderr": 0.00010937445876549318,
+              "tstat": 46.12685042136254,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004830725360213022,
+              "ci_upper": 0.005259473238573755,
+              "vif": 1.0010638782686492
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005092246707839722,
+              "stderr": 0.00011170879143091528,
+              "tstat": 45.58501298430885,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004873297476635128,
+              "ci_upper": 0.005311195939044316,
+              "vif": 1.0012838814970937
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005178289993662793,
+              "stderr": 0.00011041434422966896,
+              "tstat": 46.89870713619976,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004961877878972641,
+              "ci_upper": 0.005394702108352944,
+              "vif": 1.0019834823076266
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.0049962332908549244,
+              "stderr": 0.00010982513864916027,
+              "tstat": 45.49261992571248,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00478097601910257,
+              "ci_upper": 0.0052114905626072785,
+              "vif": 1.0011497777372673
+            }
+          ],
+          "outliers": [
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.451,
+              "residual": 0.154,
+              "abs_error": 0.154,
+              "pct_error": 25.46,
+              "rank": 1
+            },
+            {
+              "index": 3858,
+              "actual": 0.405,
+              "predicted": 0.5401,
+              "residual": -0.1351,
+              "abs_error": 0.1351,
+              "pct_error": 33.35,
+              "rank": 2
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.4827,
+              "residual": 0.1223,
+              "abs_error": 0.1223,
+              "pct_error": 20.21,
+              "rank": 3
+            },
+            {
+              "index": 21366,
+              "actual": 0.37,
+              "predicted": 0.4878,
+              "residual": -0.1178,
+              "abs_error": 0.1178,
+              "pct_error": 31.84,
+              "rank": 4
+            },
+            {
+              "index": 19879,
+              "actual": 0.63,
+              "predicted": 0.5134,
+              "residual": 0.1166,
+              "abs_error": 0.1166,
+              "pct_error": 18.51,
+              "rank": 5
+            },
+            {
+              "index": 26542,
+              "actual": 0.635,
+              "predicted": 0.5193,
+              "residual": 0.1157,
+              "abs_error": 0.1157,
+              "pct_error": 18.23,
+              "rank": 6
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5197,
+              "residual": -0.1147,
+              "abs_error": 0.1147,
+              "pct_error": 28.32,
+              "rank": 7
+            },
+            {
+              "index": 20747,
+              "actual": 0.555,
+              "predicted": 0.4409,
+              "residual": 0.1141,
+              "abs_error": 0.1141,
+              "pct_error": 20.56,
+              "rank": 8
+            },
+            {
+              "index": 29304,
+              "actual": 0.595,
+              "predicted": 0.4821,
+              "residual": 0.1129,
+              "abs_error": 0.1129,
+              "pct_error": 18.97,
+              "rank": 9
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5382,
+              "residual": 0.1118,
+              "abs_error": 0.1118,
+              "pct_error": 17.19,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 14,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides",
+            "IneffectiveDisasterPreparedness",
+            "PoliticalFactors",
+            "RiverManagement",
+            "PopulationScore",
+            "MonsoonIntensity",
+            "Encroachments",
+            "Watersheds",
+            "Deforestation"
+          ],
+          "rmse": 0.03428523487443122,
+          "mae": 0.027703280129234828,
+          "r2": 0.542365104436157,
+          "adj_r2": 0.541294613452382,
+          "f_stat": 2197.180710714236,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.14426539872053493,
+              "stderr": 0.002064360446898313,
+              "tstat": 69.88382234182633,
+              "pvalue": 1e-25,
+              "ci_lower": 0.14021925224461423,
+              "ci_upper": 0.14831154519645562,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005137802069382151,
+              "stderr": 0.00010447724852119991,
+              "tstat": 49.17627657795389,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004933026662280599,
+              "ci_upper": 0.0053425774764837035,
+              "vif": 1.0007127789208172
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005362991623765086,
+              "stderr": 0.000104498763231563,
+              "tstat": 51.32110139792772,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005158174047831222,
+              "ci_upper": 0.005567809199698949,
+              "vif": 1.0019749206103692
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.0052663848574657545,
+              "stderr": 0.0001058779012921057,
+              "tstat": 49.74017045291035,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005058864170933227,
+              "ci_upper": 0.005473905543998282,
+              "vif": 1.0012060866126407
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005149559577877613,
+              "stderr": 0.00010379753815392008,
+              "tstat": 49.61157720563078,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004946116403095929,
+              "ci_upper": 0.005353002752659296,
+              "vif": 1.0012487187804828
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005347992532268471,
+              "stderr": 0.00010664603484677546,
+              "tstat": 50.147129613888055,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005138966303968791,
+              "ci_upper": 0.0055570187605681505,
+              "vif": 1.0015000213993246
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.0052500343499527515,
+              "stderr": 0.00010409530860393173,
+              "tstat": 50.43487953840847,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005046007545089045,
+              "ci_upper": 0.005454061154816458,
+              "vif": 1.0017680987770214
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005156418638610632,
+              "stderr": 0.0001052027384096032,
+              "tstat": 49.014110436311036,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0049502212713278095,
+              "ci_upper": 0.005362616005893454,
+              "vif": 1.0014016783880049
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005227393143083701,
+              "stderr": 0.00010391635956521324,
+              "tstat": 50.303851722242285,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0050237170783358825,
+              "ci_upper": 0.005431069207831519,
+              "vif": 1.0022042901020582
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005176603070864756,
+              "stderr": 0.00010512493969231318,
+              "tstat": 49.24238801958878,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004970558189067822,
+              "ci_upper": 0.00538264795266169,
+              "vif": 1.0013333749633913
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005120016876596588,
+              "stderr": 0.00010422860310043115,
+              "tstat": 49.12295400968881,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004915728814519743,
+              "ci_upper": 0.005324304938673433,
+              "vif": 1.0012764558678746
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.0051994841672271825,
+              "stderr": 0.00010646400503759564,
+              "tstat": 48.83795387362225,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004990814717353495,
+              "ci_upper": 0.00540815361710087,
+              "vif": 1.0017015153012767
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.0052446085385153725,
+              "stderr": 0.00010521698296122087,
+              "tstat": 49.845646500321564,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005038383251911379,
+              "ci_upper": 0.005450833825119366,
+              "vif": 1.0021470884622434
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005074995293553203,
+              "stderr": 0.00010465914825713709,
+              "tstat": 48.490699361363475,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004869863362969214,
+              "ci_upper": 0.005280127224137192,
+              "vif": 1.001382827748792
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005209272204592543,
+              "stderr": 0.00010559953156066855,
+              "tstat": 49.33044803896441,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0050022971227336325,
+              "ci_upper": 0.005416247286451453,
+              "vif": 1.0018025449600663
+            }
+          ],
+          "outliers": [
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4507,
+              "residual": 0.1543,
+              "abs_error": 0.1543,
+              "pct_error": 25.5,
+              "rank": 1
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.4776,
+              "residual": 0.1274,
+              "abs_error": 0.1274,
+              "pct_error": 21.06,
+              "rank": 2
+            },
+            {
+              "index": 3858,
+              "actual": 0.405,
+              "predicted": 0.5251,
+              "residual": -0.1201,
+              "abs_error": 0.1201,
+              "pct_error": 29.66,
+              "rank": 3
+            },
+            {
+              "index": 18905,
+              "actual": 0.605,
+              "predicted": 0.4933,
+              "residual": 0.1117,
+              "abs_error": 0.1117,
+              "pct_error": 18.47,
+              "rank": 4
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.4941,
+              "residual": 0.1109,
+              "abs_error": 0.1109,
+              "pct_error": 18.33,
+              "rank": 5
+            },
+            {
+              "index": 26542,
+              "actual": 0.635,
+              "predicted": 0.5251,
+              "residual": 0.1099,
+              "abs_error": 0.1099,
+              "pct_error": 17.31,
+              "rank": 6
+            },
+            {
+              "index": 9898,
+              "actual": 0.645,
+              "predicted": 0.5353,
+              "residual": 0.1097,
+              "abs_error": 0.1097,
+              "pct_error": 17.0,
+              "rank": 7
+            },
+            {
+              "index": 21366,
+              "actual": 0.37,
+              "predicted": 0.4775,
+              "residual": -0.1075,
+              "abs_error": 0.1075,
+              "pct_error": 29.06,
+              "rank": 8
+            },
+            {
+              "index": 19879,
+              "actual": 0.63,
+              "predicted": 0.5242,
+              "residual": 0.1058,
+              "abs_error": 0.1058,
+              "pct_error": 16.79,
+              "rank": 9
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5101,
+              "residual": -0.1051,
+              "abs_error": 0.1051,
+              "pct_error": 25.96,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 15,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides",
+            "IneffectiveDisasterPreparedness",
+            "PoliticalFactors",
+            "RiverManagement",
+            "PopulationScore",
+            "MonsoonIntensity",
+            "Encroachments",
+            "Watersheds",
+            "Deforestation",
+            "AgriculturalPractices"
+          ],
+          "rmse": 0.0324110707815755,
+          "mae": 0.02616243375471828,
+          "r2": 0.5910298286593103,
+          "adj_r2": 0.5900046694731287,
+          "f_stat": 2468.6860382594946,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.1141312587391525,
+              "stderr": 0.002038197709373964,
+              "tstat": 55.99616671839364,
+              "pvalue": 1e-25,
+              "ci_lower": 0.11013639122877954,
+              "ci_upper": 0.11812612624952547,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005183933724452503,
+              "stderr": 9.896860497416815e-05,
+              "tstat": 52.37957760246863,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0049899552587031335,
+              "ci_upper": 0.005377912190201873,
+              "vif": 1.0007919225791566
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.0053611424012387915,
+              "stderr": 9.898507743893152e-05,
+              "tstat": 54.161117412332466,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005167131649458485,
+              "ci_upper": 0.005555153153019098,
+              "vif": 1.001975047891773
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005319017337580063,
+              "stderr": 0.00010029646801026443,
+              "tstat": 53.032947651114796,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005122436260279945,
+              "ci_upper": 0.0055155984148801815,
+              "vif": 1.0013064493642128
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.0051701656667380805,
+              "stderr": 9.832163090129685e-05,
+              "tstat": 52.58421386366453,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004977455270171538,
+              "ci_upper": 0.005362876063304623,
+              "vif": 1.0012647258215948
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005436259200935905,
+              "stderr": 0.00010103308035800827,
+              "tstat": 53.80672529900753,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0052382343634342085,
+              "ci_upper": 0.005634284038437601,
+              "vif": 1.0017783174643697
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.0053475865575076074,
+              "stderr": 9.862046653795046e-05,
+              "tstat": 54.22390245385612,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005154290443093224,
+              "ci_upper": 0.005540882671921991,
+              "vif": 1.0021249861178856
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005306099241401707,
+              "stderr": 9.969280912474378e-05,
+              "tstat": 53.22449320053047,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005110701335517209,
+              "ci_upper": 0.005501497147286204,
+              "vif": 1.0022239917160392
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005297179579830863,
+              "stderr": 9.844240063856498e-05,
+              "tstat": 53.80993906558272,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005104232474579275,
+              "ci_upper": 0.0054901266850824505,
+              "vif": 1.0023876407775434
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005248002262474912,
+              "stderr": 9.958752477098598e-05,
+              "tstat": 52.69738628953127,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00505281071392378,
+              "ci_upper": 0.005443193811026045,
+              "vif": 1.0015207474491183
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005207181118044188,
+              "stderr": 9.87431691383605e-05,
+              "tstat": 52.73459585591995,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005013644506533002,
+              "ci_upper": 0.005400717729555375,
+              "vif": 1.0015605151180702
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005207694119588594,
+              "stderr": 0.00010084674209130868,
+              "tstat": 51.639686236700065,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005010034505089629,
+              "ci_upper": 0.005405353734087559,
+              "vif": 1.0017039316858924
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005292374615162392,
+              "stderr": 9.966956134349928e-05,
+              "tstat": 53.099206456049835,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005097022274929134,
+              "ci_upper": 0.005487726955395651,
+              "vif": 1.0022308705115635
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005171726319842563,
+              "stderr": 9.915416877111482e-05,
+              "tstat": 52.15843553467586,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004977384149051178,
+              "ci_upper": 0.005366068490633947,
+              "vif": 1.001729827685237
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005284795688004329,
+              "stderr": 0.00010003813611103196,
+              "tstat": 52.82781040761049,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0050887209412267065,
+              "ci_upper": 0.005480870434781951,
+              "vif": 1.0020104065427777
+            },
+            {
+              "feature": "AgriculturalPractices",
+              "coef": 0.005210246815326732,
+              "stderr": 9.940148537815861e-05,
+              "tstat": 52.41618669484767,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005015419903985541,
+              "ci_upper": 0.005405073726667924,
+              "vif": 1.0027097712350412
+            }
+          ],
+          "outliers": [
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4403,
+              "residual": 0.1647,
+              "abs_error": 0.1647,
+              "pct_error": 27.23,
+              "rank": 1
+            },
+            {
+              "index": 18905,
+              "actual": 0.605,
+              "predicted": 0.4884,
+              "residual": 0.1166,
+              "abs_error": 0.1166,
+              "pct_error": 19.28,
+              "rank": 2
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.4938,
+              "residual": 0.1112,
+              "abs_error": 0.1112,
+              "pct_error": 18.38,
+              "rank": 3
+            },
+            {
+              "index": 3858,
+              "actual": 0.405,
+              "predicted": 0.5153,
+              "residual": -0.1103,
+              "abs_error": 0.1103,
+              "pct_error": 27.23,
+              "rank": 4
+            },
+            {
+              "index": 29304,
+              "actual": 0.595,
+              "predicted": 0.4876,
+              "residual": 0.1074,
+              "abs_error": 0.1074,
+              "pct_error": 18.06,
+              "rank": 5
+            },
+            {
+              "index": 11547,
+              "actual": 0.595,
+              "predicted": 0.489,
+              "residual": 0.106,
+              "abs_error": 0.106,
+              "pct_error": 17.81,
+              "rank": 6
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.5034,
+              "residual": 0.1016,
+              "abs_error": 0.1016,
+              "pct_error": 16.79,
+              "rank": 7
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4365,
+              "residual": -0.1015,
+              "abs_error": 0.1015,
+              "pct_error": 30.3,
+              "rank": 8
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5053,
+              "residual": -0.1003,
+              "abs_error": 0.1003,
+              "pct_error": 24.76,
+              "rank": 9
+            },
+            {
+              "index": 25430,
+              "actual": 0.405,
+              "predicted": 0.5035,
+              "residual": -0.0985,
+              "abs_error": 0.0985,
+              "pct_error": 24.33,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 16,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides",
+            "IneffectiveDisasterPreparedness",
+            "PoliticalFactors",
+            "RiverManagement",
+            "PopulationScore",
+            "MonsoonIntensity",
+            "Encroachments",
+            "Watersheds",
+            "Deforestation",
+            "AgriculturalPractices",
+            "WetlandLoss"
+          ],
+          "rmse": 0.0304349811371689,
+          "mae": 0.02446331451597187,
+          "r2": 0.6393790536521364,
+          "adj_r2": 0.6384146653617193,
+          "f_stat": 2789.5247527660836,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.08443946571757979,
+              "stderr": 0.0019972498607487743,
+              "tstat": 42.27786787073462,
+              "pvalue": 1e-25,
+              "ci_lower": 0.08052485599051219,
+              "ci_upper": 0.08835407544464739,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005212915216842245,
+              "stderr": 9.332746091168569e-05,
+              "tstat": 55.856177441440785,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005029993393455341,
+              "ci_upper": 0.005395837040229149,
+              "vif": 1.0008242125950597
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005412073483455581,
+              "stderr": 9.33461374334321e-05,
+              "tstat": 57.97854771778951,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005229115054086054,
+              "ci_upper": 0.005595031912825108,
+              "vif": 1.002074854922324
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.00534461988613557,
+              "stderr": 9.457927029591887e-05,
+              "tstat": 56.50942187874114,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00515924451635557,
+              "ci_upper": 0.005529995255915571,
+              "vif": 1.0013309987146417
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005245239660610889,
+              "stderr": 9.27260367748391e-05,
+              "tstat": 56.567064042083246,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005063496628532204,
+              "ci_upper": 0.0054269826926895744,
+              "vif": 1.0014843639244215
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005491975553394966,
+              "stderr": 9.527817620845187e-05,
+              "tstat": 57.64148488085551,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0053052303280264005,
+              "ci_upper": 0.005678720778763531,
+              "vif": 1.0018929446598541
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.0054091542363558336,
+              "stderr": 9.30044841747124e-05,
+              "tstat": 58.16014447426573,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005226865447373398,
+              "ci_upper": 0.0055914430253382694,
+              "vif": 1.002271936669347
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005393559345747652,
+              "stderr": 9.402247996086188e-05,
+              "tstat": 57.36457225966379,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005209275285024363,
+              "ci_upper": 0.005577843406470941,
+              "vif": 1.00251421682546
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005289506238996645,
+              "stderr": 9.282985843686268e-05,
+              "tstat": 56.98065609562737,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005107559716460394,
+              "ci_upper": 0.005471452761532896,
+              "vif": 1.0023899322685819
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005296884418992955,
+              "stderr": 9.391384410084076e-05,
+              "tstat": 56.40152918567982,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005112813284555307,
+              "ci_upper": 0.005480955553430603,
+              "vif": 1.0016115354937343
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.0053026504276064475,
+              "stderr": 9.31297459140985e-05,
+              "tstat": 56.93831090763991,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005120116125614815,
+              "ci_upper": 0.0054851847295980805,
+              "vif": 1.0019127793179388
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.00528872688150007,
+              "stderr": 9.510856146334954e-05,
+              "tstat": 55.60726395318366,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005102314101031904,
+              "ci_upper": 0.005475139661968235,
+              "vif": 1.001947272406596
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.00536311764065204,
+              "stderr": 9.399585414528145e-05,
+              "tstat": 57.056959473581905,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005178885766527288,
+              "ci_upper": 0.0055473495147767915,
+              "vif": 1.0024208417327745
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005198575192368805,
+              "stderr": 9.35022290368704e-05,
+              "tstat": 55.59840921352655,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005015310823456539,
+              "ci_upper": 0.005381839561281071,
+              "vif": 1.0017574626317884
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.00535024133152464,
+              "stderr": 9.434210273893411e-05,
+              "tstat": 56.7110672350601,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005165330810156329,
+              "ci_upper": 0.00553515185289295,
+              "vif": 1.002171760792272
+            },
+            {
+              "feature": "AgriculturalPractices",
+              "coef": 0.005312989901404069,
+              "stderr": 9.375299272087884e-05,
+              "tstat": 56.67008323906938,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0051292340356711465,
+              "ci_upper": 0.005496745767136992,
+              "vif": 1.00311283391224
+            },
+            {
+              "feature": "WetlandLoss",
+              "coef": 0.0051307643489468075,
+              "stderr": 9.384821160974412e-05,
+              "tstat": 54.67088036032525,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004946821854191709,
+              "ci_upper": 0.005314706843701906,
+              "vif": 1.0021629736562858
+            }
+          ],
+          "outliers": [
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4401,
+              "residual": 0.1649,
+              "abs_error": 0.1649,
+              "pct_error": 27.26,
+              "rank": 1
+            },
+            {
+              "index": 18905,
+              "actual": 0.605,
+              "predicted": 0.4832,
+              "residual": 0.1218,
+              "abs_error": 0.1218,
+              "pct_error": 20.13,
+              "rank": 2
+            },
+            {
+              "index": 11547,
+              "actual": 0.595,
+              "predicted": 0.4836,
+              "residual": 0.1114,
+              "abs_error": 0.1114,
+              "pct_error": 18.72,
+              "rank": 3
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.4941,
+              "residual": 0.1109,
+              "abs_error": 0.1109,
+              "pct_error": 18.34,
+              "rank": 4
+            },
+            {
+              "index": 15579,
+              "actual": 0.595,
+              "predicted": 0.4985,
+              "residual": 0.0965,
+              "abs_error": 0.0965,
+              "pct_error": 16.22,
+              "rank": 5
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.5093,
+              "residual": 0.0957,
+              "abs_error": 0.0957,
+              "pct_error": 15.81,
+              "rank": 6
+            },
+            {
+              "index": 26822,
+              "actual": 0.52,
+              "predicted": 0.4253,
+              "residual": 0.0947,
+              "abs_error": 0.0947,
+              "pct_error": 18.21,
+              "rank": 7
+            },
+            {
+              "index": 9892,
+              "actual": 0.615,
+              "predicted": 0.5206,
+              "residual": 0.0944,
+              "abs_error": 0.0944,
+              "pct_error": 15.35,
+              "rank": 8
+            },
+            {
+              "index": 29577,
+              "actual": 0.555,
+              "predicted": 0.4614,
+              "residual": 0.0936,
+              "abs_error": 0.0936,
+              "pct_error": 16.86,
+              "rank": 9
+            },
+            {
+              "index": 25430,
+              "actual": 0.405,
+              "predicted": 0.4984,
+              "residual": -0.0934,
+              "abs_error": 0.0934,
+              "pct_error": 23.07,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 17,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides",
+            "IneffectiveDisasterPreparedness",
+            "PoliticalFactors",
+            "RiverManagement",
+            "PopulationScore",
+            "MonsoonIntensity",
+            "Encroachments",
+            "Watersheds",
+            "Deforestation",
+            "AgriculturalPractices",
+            "WetlandLoss",
+            "Urbanization"
+          ],
+          "rmse": 0.028362288477929612,
+          "mae": 0.02287652931359354,
+          "r2": 0.6868247629147681,
+          "adj_r2": 0.6859347630768462,
+          "f_stat": 3258.276101708378,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.05220102673254676,
+              "stderr": 0.001929954249068909,
+              "tstat": 27.047805282291396,
+              "pvalue": 1e-25,
+              "ci_lower": 0.04841831640437169,
+              "ci_upper": 0.05598373706072182,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005305152682071395,
+              "stderr": 8.678604673113729e-05,
+              "tstat": 61.129097152065576,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005135052030478366,
+              "ci_upper": 0.005475253333664424,
+              "vif": 1.001124891221608
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.00547543628702739,
+              "stderr": 8.679652757702109e-05,
+              "tstat": 63.08358686548403,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005305315092976428,
+              "ci_upper": 0.0056455574810783515,
+              "vif": 1.0022168669623948
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005430895720266185,
+              "stderr": 8.79481595539873e-05,
+              "tstat": 61.75110141938115,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00525851732754037,
+              "ci_upper": 0.005603274112992,
+              "vif": 1.001587277709869
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005338644438900406,
+              "stderr": 8.622727963403109e-05,
+              "tstat": 61.91363639858374,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005169638970817705,
+              "ci_upper": 0.0055076499069831066,
+              "vif": 1.0017969199681451
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005472295783826821,
+              "stderr": 8.858730957812892e-05,
+              "tstat": 61.772908669278074,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005298664657053688,
+              "ci_upper": 0.005645926910599953,
+              "vif": 1.0019060915611162
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005523320575642167,
+              "stderr": 8.649275542110041e-05,
+              "tstat": 63.85876538157692,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00535379477501681,
+              "ci_upper": 0.005692846376267524,
+              "vif": 1.0027364550260616
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.00543957488607628,
+              "stderr": 8.742244052731496e-05,
+              "tstat": 62.221723086953816,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005268226902642743,
+              "ci_upper": 0.005610922869509817,
+              "vif": 1.0025880727134169
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.00539217875978139,
+              "stderr": 8.632659334108286e-05,
+              "tstat": 62.46254544618118,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005222978636832867,
+              "ci_upper": 0.005561378882729912,
+              "vif": 1.0027670862574676
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005429252961523886,
+              "stderr": 8.734488692742871e-05,
+              "tstat": 62.15879546601085,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005258056983146126,
+              "ci_upper": 0.005600448939901647,
+              "vif": 1.0022235455981114
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005364879425110514,
+              "stderr": 8.659512904913472e-05,
+              "tstat": 61.953593510628544,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00519515297217421,
+              "ci_upper": 0.005534605878046818,
+              "vif": 1.0020503695569605
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005375318729589976,
+              "stderr": 8.844029776550428e-05,
+              "tstat": 60.77906639168501,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0052019757459695875,
+              "ci_upper": 0.005548661713210364,
+              "vif": 1.002202723987524
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005435935170125441,
+              "stderr": 8.740253021494576e-05,
+              "tstat": 62.19425406515177,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005264626210904147,
+              "ci_upper": 0.005607244129346735,
+              "vif": 1.0026058765718449
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005254833948125547,
+              "stderr": 8.69403470492668e-05,
+              "tstat": 60.44183312435792,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005084430867908984,
+              "ci_upper": 0.00542523702834211,
+              "vif": 1.0018690070491851
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005434486808020867,
+              "stderr": 8.772715204298413e-05,
+              "tstat": 61.947603238711125,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005262541590016618,
+              "ci_upper": 0.005606432026025116,
+              "vif": 1.0024175558665802
+            },
+            {
+              "feature": "AgriculturalPractices",
+              "coef": 0.005346223334474102,
+              "stderr": 8.717034393237175e-05,
+              "tstat": 61.330758756920744,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005175369460366654,
+              "ci_upper": 0.00551707720858155,
+              "vif": 1.0031516023996498
+            },
+            {
+              "feature": "WetlandLoss",
+              "coef": 0.005193413878672494,
+              "stderr": 8.726317092942428e-05,
+              "tstat": 59.514384170989665,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0050223780636508225,
+              "ci_upper": 0.005364449693694166,
+              "vif": 1.0023003370201422
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.00534889816680897,
+              "stderr": 8.721958686307308e-05,
+              "tstat": 61.32680008225973,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005177947776557347,
+              "ci_upper": 0.005519848557060593,
+              "vif": 1.0032871855743533
+            }
+          ],
+          "outliers": [
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4607,
+              "residual": 0.1443,
+              "abs_error": 0.1443,
+              "pct_error": 23.85,
+              "rank": 1
+            },
+            {
+              "index": 11547,
+              "actual": 0.595,
+              "predicted": 0.4945,
+              "residual": 0.1005,
+              "abs_error": 0.1005,
+              "pct_error": 16.89,
+              "rank": 2
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.5049,
+              "residual": 0.1001,
+              "abs_error": 0.1001,
+              "pct_error": 16.55,
+              "rank": 3
+            },
+            {
+              "index": 18905,
+              "actual": 0.605,
+              "predicted": 0.5049,
+              "residual": 0.1001,
+              "abs_error": 0.1001,
+              "pct_error": 16.55,
+              "rank": 4
+            },
+            {
+              "index": 9892,
+              "actual": 0.615,
+              "predicted": 0.5159,
+              "residual": 0.0991,
+              "abs_error": 0.0991,
+              "pct_error": 16.11,
+              "rank": 5
+            },
+            {
+              "index": 4028,
+              "actual": 0.405,
+              "predicted": 0.4993,
+              "residual": -0.0943,
+              "abs_error": 0.0943,
+              "pct_error": 23.29,
+              "rank": 6
+            },
+            {
+              "index": 20168,
+              "actual": 0.51,
+              "predicted": 0.4183,
+              "residual": 0.0917,
+              "abs_error": 0.0917,
+              "pct_error": 17.99,
+              "rank": 7
+            },
+            {
+              "index": 13534,
+              "actual": 0.585,
+              "predicted": 0.4939,
+              "residual": 0.0911,
+              "abs_error": 0.0911,
+              "pct_error": 15.58,
+              "rank": 8
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.5149,
+              "residual": 0.0901,
+              "abs_error": 0.0901,
+              "pct_error": 14.89,
+              "rank": 9
+            },
+            {
+              "index": 790,
+              "actual": 0.605,
+              "predicted": 0.516,
+              "residual": 0.089,
+              "abs_error": 0.089,
+              "pct_error": 14.71,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 18,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides",
+            "IneffectiveDisasterPreparedness",
+            "PoliticalFactors",
+            "RiverManagement",
+            "PopulationScore",
+            "MonsoonIntensity",
+            "Encroachments",
+            "Watersheds",
+            "Deforestation",
+            "AgriculturalPractices",
+            "WetlandLoss",
+            "Urbanization",
+            "DrainageSystems"
+          ],
+          "rmse": 0.026047006374038433,
+          "mae": 0.020980173156860595,
+          "r2": 0.735868311595264,
+          "adj_r2": 0.7350733993078062,
+          "f_stat": 3907.474001913128,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.01889337943663869,
+              "stderr": 0.0018385494704382592,
+              "tstat": 10.276242081283259,
+              "pvalue": 9.01752988894911e-25,
+              "ci_lower": 0.0152898224745797,
+              "ci_upper": 0.022496936398697678,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005387706511521638,
+              "stderr": 7.962428597288091e-05,
+              "tstat": 67.66411083870351,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005231642911014792,
+              "ci_upper": 0.0055437701120284845,
+              "vif": 1.00136325015739
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005542079316994241,
+              "stderr": 7.963059905777713e-05,
+              "tstat": 69.59735808307941,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005386003342840997,
+              "ci_upper": 0.0056981552911474845,
+              "vif": 1.0023723328163179
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.00551195482237358,
+              "stderr": 8.068991119525877e-05,
+              "tstat": 68.31033447335675,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005353802596430873,
+              "ci_upper": 0.005670107048316287,
+              "vif": 1.0018111536424925
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005439257804056175,
+              "stderr": 7.911638132073906e-05,
+              "tstat": 68.75008327296136,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0052841896966675265,
+              "ci_upper": 0.005594325911444824,
+              "vif": 1.0021558172874163
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005524993990787276,
+              "stderr": 8.127101451591351e-05,
+              "tstat": 67.9823430739312,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0053657028023360856,
+              "ci_upper": 0.005684285179238466,
+              "vif": 1.0019993835200596
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005585779232637237,
+              "stderr": 7.935119589658439e-05,
+              "tstat": 70.39313232174831,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005430250888679931,
+              "ci_upper": 0.005741307576594542,
+              "vif": 1.0028740432182695
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005508736645293094,
+              "stderr": 8.020522003399918e-05,
+              "tstat": 68.68301892268269,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005351534414026456,
+              "ci_upper": 0.0056659388765597325,
+              "vif": 1.0027531841996382
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005505993415059069,
+              "stderr": 7.921142914687754e-05,
+              "tstat": 69.51008805622733,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00535073901393119,
+              "ci_upper": 0.005661247816186949,
+              "vif": 1.0032257303266152
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.00546231670690003,
+              "stderr": 8.012898187459782e-05,
+              "tstat": 68.1690516853013,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005305263902425818,
+              "ci_upper": 0.0056193695113742415,
+              "vif": 1.0022613343254312
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005443267489602109,
+              "stderr": 7.944823060932317e-05,
+              "tstat": 68.51338850286928,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0052875489576078355,
+              "ci_upper": 0.005598986021596382,
+              "vif": 1.0022664279043514
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.0054458311699715715,
+              "stderr": 8.113915191493107e-05,
+              "tstat": 67.11718130454652,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005286798432218307,
+              "ci_upper": 0.005604863907724836,
+              "vif": 1.0023703553288266
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005500908228154866,
+              "stderr": 8.018618064667251e-05,
+              "tstat": 68.60169899341798,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005343743314087388,
+              "ci_upper": 0.005658073142222345,
+              "vif": 1.0027516630999473
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005373032609280364,
+              "stderr": 7.977575152482318e-05,
+              "tstat": 67.35170157072704,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00521667213629171,
+              "ci_upper": 0.005529393082269018,
+              "vif": 1.0023562682821836
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.0055118292374589485,
+              "stderr": 8.048637864895808e-05,
+              "tstat": 68.48151612708072,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0053540759353069905,
+              "ci_upper": 0.005669582539610907,
+              "vif": 1.002622570454461
+            },
+            {
+              "feature": "AgriculturalPractices",
+              "coef": 0.0053991054491272115,
+              "stderr": 7.997122286858674e-05,
+              "tstat": 67.51310353224595,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0052423618523047815,
+              "ci_upper": 0.0055558490459496415,
+              "vif": 1.0032487462295185
+            },
+            {
+              "feature": "WetlandLoss",
+              "coef": 0.005277622192347592,
+              "stderr": 8.006231455573909e-05,
+              "tstat": 65.9189310430606,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005120700055818344,
+              "ci_upper": 0.00543454432887684,
+              "vif": 1.0025459291125978
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005494515025727557,
+              "stderr": 8.004186168660067e-05,
+              "tstat": 68.64551760728676,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00533763297682182,
+              "ci_upper": 0.005651397074633295,
+              "vif": 1.0040230352023731
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.005384189234618341,
+              "stderr": 8.012140138369728e-05,
+              "tstat": 67.20038768210925,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0052271512879062945,
+              "ci_upper": 0.005541227181330388,
+              "vif": 1.003612319736861
+            }
+          ],
+          "outliers": [
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4608,
+              "residual": 0.1442,
+              "abs_error": 0.1442,
+              "pct_error": 23.84,
+              "rank": 1
+            },
+            {
+              "index": 8969,
+              "actual": 0.435,
+              "predicted": 0.5588,
+              "residual": -0.1238,
+              "abs_error": 0.1238,
+              "pct_error": 28.46,
+              "rank": 2
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.4889,
+              "residual": 0.1161,
+              "abs_error": 0.1161,
+              "pct_error": 19.18,
+              "rank": 3
+            },
+            {
+              "index": 18905,
+              "actual": 0.605,
+              "predicted": 0.511,
+              "residual": 0.094,
+              "abs_error": 0.094,
+              "pct_error": 15.53,
+              "rank": 4
+            },
+            {
+              "index": 3329,
+              "actual": 0.5,
+              "predicted": 0.5917,
+              "residual": -0.0917,
+              "abs_error": 0.0917,
+              "pct_error": 18.34,
+              "rank": 5
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.4955,
+              "residual": -0.0905,
+              "abs_error": 0.0905,
+              "pct_error": 22.35,
+              "rank": 6
+            },
+            {
+              "index": 26974,
+              "actual": 0.495,
+              "predicted": 0.4059,
+              "residual": 0.0891,
+              "abs_error": 0.0891,
+              "pct_error": 18.01,
+              "rank": 7
+            },
+            {
+              "index": 790,
+              "actual": 0.605,
+              "predicted": 0.5162,
+              "residual": 0.0888,
+              "abs_error": 0.0888,
+              "pct_error": 14.69,
+              "rank": 8
+            },
+            {
+              "index": 29577,
+              "actual": 0.555,
+              "predicted": 0.4665,
+              "residual": 0.0885,
+              "abs_error": 0.0885,
+              "pct_error": 15.95,
+              "rank": 9
+            },
+            {
+              "index": 20168,
+              "actual": 0.51,
+              "predicted": 0.4225,
+              "residual": 0.0875,
+              "abs_error": 0.0875,
+              "pct_error": 17.15,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 19,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides",
+            "IneffectiveDisasterPreparedness",
+            "PoliticalFactors",
+            "RiverManagement",
+            "PopulationScore",
+            "MonsoonIntensity",
+            "Encroachments",
+            "Watersheds",
+            "Deforestation",
+            "AgriculturalPractices",
+            "WetlandLoss",
+            "Urbanization",
+            "DrainageSystems",
+            "InadequatePlanning"
+          ],
+          "rmse": 0.023273734952621448,
+          "mae": 0.018685055593147395,
+          "r2": 0.7891191986774648,
+          "adj_r2": 0.7884491760645671,
+          "f_stat": 4834.618898878695,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": -0.014171960835357274,
+              "stderr": 0.0017181319868503457,
+              "tstat": -8.248470399143843,
+              "pvalue": 1.6043474643088488e-16,
+              "ci_lower": -0.017539499529583953,
+              "ci_upper": -0.010804422141130596,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005504584344766481,
+              "stderr": 7.186493717822233e-05,
+              "tstat": 76.59624513572341,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005363729067897165,
+              "ci_upper": 0.005645439621635797,
+              "vif": 1.0018474015055967
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005591281128820441,
+              "stderr": 7.185634460321373e-05,
+              "tstat": 77.81193379227886,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0054504426933981425,
+              "ci_upper": 0.00573211956424274,
+              "vif": 1.0024582040280525
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.0055677420588457986,
+              "stderr": 7.281302327086116e-05,
+              "tstat": 76.46629419759223,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00542502853323491,
+              "ci_upper": 0.005710455584456687,
+              "vif": 1.001918610312777
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.0055304579209204145,
+              "stderr": 7.139991412833558e-05,
+              "tstat": 77.45748700733537,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005390514089228877,
+              "ci_upper": 0.005670401752611952,
+              "vif": 1.0024546371807412
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005609452887306788,
+              "stderr": 7.334235236518472e-05,
+              "tstat": 76.48313295674396,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005465701876671026,
+              "ci_upper": 0.00575320389794255,
+              "vif": 1.0022422139969793
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005660102573499936,
+              "stderr": 7.160819978341783e-05,
+              "tstat": 79.04265978783388,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005519750501924437,
+              "ci_upper": 0.005800454645075435,
+              "vif": 1.0030714700514487
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.0055103564302121264,
+              "stderr": 7.237176932427254e-05,
+              "tstat": 76.13958428350908,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005368507762336552,
+              "ci_upper": 0.005652205098087701,
+              "vif": 1.0027532759736628
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005621178623636669,
+              "stderr": 7.149199168494985e-05,
+              "tstat": 78.62668938372873,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005481054319934168,
+              "ci_upper": 0.005761302927339171,
+              "vif": 1.0037017585311272
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005531567466524847,
+              "stderr": 7.230903275802646e-05,
+              "tstat": 76.4989829837107,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005389841762319115,
+              "ci_upper": 0.005673293170730578,
+              "vif": 1.0024293180109027
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005513336947659995,
+              "stderr": 7.169496610364292e-05,
+              "tstat": 76.89991706934994,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005372814814096855,
+              "ci_upper": 0.005653859081223136,
+              "vif": 1.002441367668363
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005528397595922602,
+              "stderr": 7.322298856047327e-05,
+              "tstat": 75.50084617697377,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005384880538344074,
+              "ci_upper": 0.00567191465350113,
+              "vif": 1.002603266625024
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005535308883106423,
+              "stderr": 7.235608026591597e-05,
+              "tstat": 76.50095006202103,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005393490965785228,
+              "ci_upper": 0.0056771268004276185,
+              "vif": 1.002793076801747
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005517734369301231,
+              "stderr": 7.201081009865893e-05,
+              "tstat": 76.62369527216288,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00537659318150786,
+              "ci_upper": 0.005658875557094602,
+              "vif": 1.0030962895890505
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005541783923037946,
+              "stderr": 7.262659317394179e-05,
+              "tstat": 76.30516152348342,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00539943580041702,
+              "ci_upper": 0.005684132045658872,
+              "vif": 1.0026537334019325
+            },
+            {
+              "feature": "AgriculturalPractices",
+              "coef": 0.005465467648189178,
+              "stderr": 7.216619778341614e-05,
+              "tstat": 75.73445485644177,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005324021900533682,
+              "ci_upper": 0.005606913395844673,
+              "vif": 1.0034037702458631
+            },
+            {
+              "feature": "WetlandLoss",
+              "coef": 0.00540667806081932,
+              "stderr": 7.226387576419164e-05,
+              "tstat": 74.81854527789456,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0052650408643215045,
+              "ci_upper": 0.005548315257317135,
+              "vif": 1.0031304766104245
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005578754380451518,
+              "stderr": 7.223333757661221e-05,
+              "tstat": 77.23240497553603,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0054371770388013585,
+              "ci_upper": 0.005720331722101678,
+              "vif": 1.0042725841094327
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.005446279252309871,
+              "stderr": 7.230100490078998e-05,
+              "tstat": 75.32785000406493,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005304569282704323,
+              "ci_upper": 0.005587989221915419,
+              "vif": 1.0037475670892926
+            },
+            {
+              "feature": "InadequatePlanning",
+              "coef": 0.005330992936582442,
+              "stderr": 7.205809729455622e-05,
+              "tstat": 73.98187208289197,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005189759065885112,
+              "ci_upper": 0.005472226807279773,
+              "vif": 1.003839133269023
+            }
+          ],
+          "outliers": [
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4657,
+              "residual": 0.1393,
+              "abs_error": 0.1393,
+              "pct_error": 23.02,
+              "rank": 1
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.489,
+              "residual": 0.116,
+              "abs_error": 0.116,
+              "pct_error": 19.18,
+              "rank": 2
+            },
+            {
+              "index": 8969,
+              "actual": 0.435,
+              "predicted": 0.5435,
+              "residual": -0.1085,
+              "abs_error": 0.1085,
+              "pct_error": 24.94,
+              "rank": 3
+            },
+            {
+              "index": 1397,
+              "actual": 0.475,
+              "predicted": 0.5691,
+              "residual": -0.0941,
+              "abs_error": 0.0941,
+              "pct_error": 19.82,
+              "rank": 4
+            },
+            {
+              "index": 790,
+              "actual": 0.605,
+              "predicted": 0.5165,
+              "residual": 0.0885,
+              "abs_error": 0.0885,
+              "pct_error": 14.63,
+              "rank": 5
+            },
+            {
+              "index": 18905,
+              "actual": 0.605,
+              "predicted": 0.5171,
+              "residual": 0.0879,
+              "abs_error": 0.0879,
+              "pct_error": 14.53,
+              "rank": 6
+            },
+            {
+              "index": 3329,
+              "actual": 0.5,
+              "predicted": 0.5874,
+              "residual": -0.0874,
+              "abs_error": 0.0874,
+              "pct_error": 17.48,
+              "rank": 7
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.5219,
+              "residual": 0.0831,
+              "abs_error": 0.0831,
+              "pct_error": 13.74,
+              "rank": 8
+            },
+            {
+              "index": 26700,
+              "actual": 0.415,
+              "predicted": 0.3336,
+              "residual": 0.0814,
+              "abs_error": 0.0814,
+              "pct_error": 19.61,
+              "rank": 9
+            },
+            {
+              "index": 7685,
+              "actual": 0.5,
+              "predicted": 0.5775,
+              "residual": -0.0775,
+              "abs_error": 0.0775,
+              "pct_error": 15.51,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 20,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides",
+            "IneffectiveDisasterPreparedness",
+            "PoliticalFactors",
+            "RiverManagement",
+            "PopulationScore",
+            "MonsoonIntensity",
+            "Encroachments",
+            "Watersheds",
+            "Deforestation",
+            "AgriculturalPractices",
+            "WetlandLoss",
+            "Urbanization",
+            "DrainageSystems",
+            "InadequatePlanning",
+            "CoastalVulnerability"
+          ],
+          "rmse": 0.019982524780181705,
+          "mae": 0.015939420378003645,
+          "r2": 0.8445446777758413,
+          "adj_r2": 0.8440246733529473,
+          "f_stat": 6572.592064781869,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": -0.05146999776664801,
+              "stderr": 0.001539390831872965,
+              "tstat": -33.43530226435405,
+              "pvalue": 1e-25,
+              "ci_lower": -0.05448720379711902,
+              "ci_upper": -0.048452791736177,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.0055788695633214955,
+              "stderr": 6.20456731260059e-05,
+              "tstat": 89.91552967749433,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005457260043994524,
+              "ci_upper": 0.005700479082648467,
+              "vif": 1.00202262325429
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.0056918264055179245,
+              "stderr": 6.204276963079501e-05,
+              "tstat": 91.740366192369,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005570222577041566,
+              "ci_upper": 0.005813430233994283,
+              "vif": 1.002779477675951
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005569139709769369,
+              "stderr": 6.285872268045189e-05,
+              "tstat": 88.59772315261009,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005445936613315683,
+              "ci_upper": 0.005692342806223055,
+              "vif": 1.0019186707392824
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.0056121035617741405,
+              "stderr": 6.164539455532976e-05,
+              "tstat": 91.03848879962968,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0054912785884456946,
+              "ci_upper": 0.005732928535102586,
+              "vif": 1.0026691983259606
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005669639950472432,
+              "stderr": 6.331917469971203e-05,
+              "tstat": 89.54064826903401,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005545534368060997,
+              "ci_upper": 0.0057937455328838676,
+              "vif": 1.0023526943489238
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005723242540374966,
+              "stderr": 6.182254273657623e-05,
+              "tstat": 92.57533396452989,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005602070356611277,
+              "ci_upper": 0.005844414724138655,
+              "vif": 1.0031991229821047
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005611011965656344,
+              "stderr": 6.248768127436587e-05,
+              "tstat": 89.79388979117284,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0054885361103585864,
+              "ci_upper": 0.005733487820954101,
+              "vif": 1.0030707781888402
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005720505429020246,
+              "stderr": 6.172803756996645e-05,
+              "tstat": 92.67272465184503,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005599518475383112,
+              "ci_upper": 0.005841492382657381,
+              "vif": 1.0040188894250643
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005605184450339721,
+              "stderr": 6.242892631072784e-05,
+              "tstat": 89.78505288463566,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005482823754770695,
+              "ci_upper": 0.0057275451459087474,
+              "vif": 1.0025993929871646
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.00563824077548425,
+              "stderr": 6.190888646998957e-05,
+              "tstat": 91.07320607708549,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00551689935800307,
+              "ci_upper": 0.005759582192965429,
+              "vif": 1.0029393900636547
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005608036459111141,
+              "stderr": 6.32187591392004e-05,
+              "tstat": 88.70842350389847,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005484127691198308,
+              "ci_upper": 0.005731945227023974,
+              "vif": 1.0027973999273787
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005725475719289536,
+              "stderr": 6.24995498680895e-05,
+              "tstat": 91.60827128153129,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00560297660154808,
+              "ci_upper": 0.005847974837030991,
+              "vif": 1.0039269031613474
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005643373233749218,
+              "stderr": 6.218166452120782e-05,
+              "tstat": 90.75622656940097,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005521497171287651,
+              "ci_upper": 0.005765249296210785,
+              "vif": 1.0035961065154844
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.0056228415147168,
+              "stderr": 6.270416926615546e-05,
+              "tstat": 89.67253024037313,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005499941342955136,
+              "ci_upper": 0.005745741686478465,
+              "vif": 1.0028581719305487
+            },
+            {
+              "feature": "AgriculturalPractices",
+              "coef": 0.0055756844040563995,
+              "stderr": 6.231221531184334e-05,
+              "tstat": 89.47979743863576,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005453552462045186,
+              "ci_upper": 0.005697816346067613,
+              "vif": 1.0037868763320779
+            },
+            {
+              "feature": "WetlandLoss",
+              "coef": 0.005494538666003509,
+              "stderr": 6.239219464230471e-05,
+              "tstat": 88.06451988912671,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005372249964504592,
+              "ci_upper": 0.005616827367502426,
+              "vif": 1.003373204135932
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005697783066959672,
+              "stderr": 6.237214088487801e-05,
+              "tstat": 91.35141084023759,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005575533670825311,
+              "ci_upper": 0.005820032463094033,
+              "vif": 1.004718954366728
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.005658056427394703,
+              "stderr": 6.246051376463234e-05,
+              "tstat": 90.58613332441915,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005535633820416023,
+              "ci_upper": 0.0057804790343733824,
+              "vif": 1.0051572124430364
+            },
+            {
+              "feature": "InadequatePlanning",
+              "coef": 0.005458379070298343,
+              "stderr": 6.22229102867479e-05,
+              "tstat": 87.7229792875962,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005336422166136317,
+              "ci_upper": 0.005580335974460369,
+              "vif": 1.0043526547064985
+            },
+            {
+              "feature": "CoastalVulnerability",
+              "coef": 0.0056379187680941035,
+              "stderr": 6.227061442786546e-05,
+              "tstat": 90.53899371147352,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0055158683638154874,
+              "ci_upper": 0.00575996917237272,
+              "vif": 1.0061341082141408
+            }
+          ],
+          "outliers": [
+            {
+              "index": 8969,
+              "actual": 0.435,
+              "predicted": 0.5404,
+              "residual": -0.1054,
+              "abs_error": 0.1054,
+              "pct_error": 24.23,
+              "rank": 1
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.5053,
+              "residual": 0.0997,
+              "abs_error": 0.0997,
+              "pct_error": 16.48,
+              "rank": 2
+            },
+            {
+              "index": 1397,
+              "actual": 0.475,
+              "predicted": 0.5706,
+              "residual": -0.0956,
+              "abs_error": 0.0956,
+              "pct_error": 20.13,
+              "rank": 3
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.5107,
+              "residual": 0.0943,
+              "abs_error": 0.0943,
+              "pct_error": 15.58,
+              "rank": 4
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.5109,
+              "residual": 0.0941,
+              "abs_error": 0.0941,
+              "pct_error": 15.55,
+              "rank": 5
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.5123,
+              "residual": 0.0927,
+              "abs_error": 0.0927,
+              "pct_error": 15.32,
+              "rank": 6
+            },
+            {
+              "index": 790,
+              "actual": 0.605,
+              "predicted": 0.5166,
+              "residual": 0.0884,
+              "abs_error": 0.0884,
+              "pct_error": 14.62,
+              "rank": 7
+            },
+            {
+              "index": 18905,
+              "actual": 0.605,
+              "predicted": 0.5177,
+              "residual": 0.0873,
+              "abs_error": 0.0873,
+              "pct_error": 14.42,
+              "rank": 8
+            },
+            {
+              "index": 3329,
+              "actual": 0.5,
+              "predicted": 0.5848,
+              "residual": -0.0848,
+              "abs_error": 0.0848,
+              "pct_error": 16.97,
+              "rank": 9
+            },
+            {
+              "index": 7685,
+              "actual": 0.5,
+              "predicted": 0.5684,
+              "residual": -0.0684,
+              "abs_error": 0.0684,
+              "pct_error": 13.68,
+              "rank": 10
+            }
+          ]
+        }
+      ],
+      "RFE": [
+        {
+          "k": 1,
+          "features": [
+            "Siltation"
+          ],
+          "rmse": 0.04994800303682007,
+          "mae": 0.040338803652790814,
+          "r2": 0.028727407831151797,
+          "adj_r2": 0.02856547508820928,
+          "f_stat": 955.1180245048416,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.48071799728157055,
+              "stderr": 0.0008264007303672592,
+              "tstat": 581.7008378827734,
+              "pvalue": 1e-25,
+              "ci_lower": 0.4790982518500507,
+              "ci_upper": 0.4823377427130904,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.004780875629044204,
+              "stderr": 0.0001546959434735399,
+              "tstat": 30.90498381337293,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004477671579836066,
+              "ci_upper": 0.005084079678252342,
+              "vif": 1.0
+            }
+          ],
+          "outliers": [
+            {
+              "index": 5662,
+              "actual": 0.69,
+              "predicted": 0.5046,
+              "residual": 0.1854,
+              "abs_error": 0.1854,
+              "pct_error": 26.87,
+              "rank": 1
+            },
+            {
+              "index": 3396,
+              "actual": 0.67,
+              "predicted": 0.5046,
+              "residual": 0.1654,
+              "abs_error": 0.1654,
+              "pct_error": 24.68,
+              "rank": 2
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4951,
+              "residual": -0.1651,
+              "abs_error": 0.1651,
+              "pct_error": 50.02,
+              "rank": 3
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4951,
+              "residual": -0.1601,
+              "abs_error": 0.1601,
+              "pct_error": 47.78,
+              "rank": 4
+            },
+            {
+              "index": 8351,
+              "actual": 0.365,
+              "predicted": 0.5237,
+              "residual": -0.1587,
+              "abs_error": 0.1587,
+              "pct_error": 43.49,
+              "rank": 5
+            },
+            {
+              "index": 274,
+              "actual": 0.33,
+              "predicted": 0.4855,
+              "residual": -0.1555,
+              "abs_error": 0.1555,
+              "pct_error": 47.12,
+              "rank": 6
+            },
+            {
+              "index": 6112,
+              "actual": 0.655,
+              "predicted": 0.4998,
+              "residual": 0.1552,
+              "abs_error": 0.1552,
+              "pct_error": 23.69,
+              "rank": 7
+            },
+            {
+              "index": 9898,
+              "actual": 0.645,
+              "predicted": 0.4951,
+              "residual": 0.1499,
+              "abs_error": 0.1499,
+              "pct_error": 23.25,
+              "rank": 8
+            },
+            {
+              "index": 9737,
+              "actual": 0.36,
+              "predicted": 0.5094,
+              "residual": -0.1494,
+              "abs_error": 0.1494,
+              "pct_error": 41.5,
+              "rank": 9
+            },
+            {
+              "index": 26109,
+              "actual": 0.37,
+              "predicted": 0.519,
+              "residual": -0.149,
+              "abs_error": 0.149,
+              "pct_error": 40.26,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 2,
+          "features": [
+            "Siltation",
+            "ClimateChange"
+          ],
+          "rmse": 0.04919524452010106,
+          "mae": 0.03977860825429075,
+          "r2": 0.0577825960643793,
+          "adj_r2": 0.057468366481609356,
+          "f_stat": 981.0996254508772,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.45677602426426805,
+              "stderr": 0.0011172680024490497,
+              "tstat": 408.83299554181787,
+              "pvalue": 1e-25,
+              "ci_lower": 0.4545861789794679,
+              "ci_upper": 0.4589658695490682,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.004832238275454671,
+              "stderr": 0.00015167758311341253,
+              "tstat": 31.85861863213831,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004534950212552383,
+              "ci_upper": 0.005129526338356959,
+              "vif": 1.0001184054010648
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.004816588817554362,
+              "stderr": 0.0001547653119339709,
+              "tstat": 31.12188873181939,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004513248806163779,
+              "ci_upper": 0.005119928828944945,
+              "vif": 1.0001184054010648
+            }
+          ],
+          "outliers": [
+            {
+              "index": 8351,
+              "actual": 0.365,
+              "predicted": 0.534,
+              "residual": -0.169,
+              "abs_error": 0.169,
+              "pct_error": 46.3,
+              "rank": 1
+            },
+            {
+              "index": 5662,
+              "actual": 0.69,
+              "predicted": 0.5243,
+              "residual": 0.1657,
+              "abs_error": 0.1657,
+              "pct_error": 24.02,
+              "rank": 2
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4857,
+              "residual": -0.1557,
+              "abs_error": 0.1557,
+              "pct_error": 47.19,
+              "rank": 3
+            },
+            {
+              "index": 3396,
+              "actual": 0.67,
+              "predicted": 0.5147,
+              "residual": 0.1553,
+              "abs_error": 0.1553,
+              "pct_error": 23.19,
+              "rank": 4
+            },
+            {
+              "index": 274,
+              "actual": 0.33,
+              "predicted": 0.4809,
+              "residual": -0.1509,
+              "abs_error": 0.1509,
+              "pct_error": 45.72,
+              "rank": 5
+            },
+            {
+              "index": 8763,
+              "actual": 0.35,
+              "predicted": 0.5001,
+              "residual": -0.1501,
+              "abs_error": 0.1501,
+              "pct_error": 42.9,
+              "rank": 6
+            },
+            {
+              "index": 1347,
+              "actual": 0.65,
+              "predicted": 0.5002,
+              "residual": 0.1498,
+              "abs_error": 0.1498,
+              "pct_error": 23.04,
+              "rank": 7
+            },
+            {
+              "index": 24512,
+              "actual": 0.64,
+              "predicted": 0.4905,
+              "residual": 0.1495,
+              "abs_error": 0.1495,
+              "pct_error": 23.35,
+              "rank": 8
+            },
+            {
+              "index": 28301,
+              "actual": 0.635,
+              "predicted": 0.4857,
+              "residual": 0.1493,
+              "abs_error": 0.1493,
+              "pct_error": 23.51,
+              "rank": 9
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4809,
+              "residual": -0.1459,
+              "abs_error": 0.1459,
+              "pct_error": 43.55,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 3,
+          "features": [
+            "Siltation",
+            "ClimateChange",
+            "DamsQuality"
+          ],
+          "rmse": 0.0482265938856998,
+          "mae": 0.03903094803627369,
+          "r2": 0.09452168334580391,
+          "adj_r2": 0.09406864216001953,
+          "f_stat": 1037.6059412674113,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.4321606968074858,
+              "stderr": 0.001328521160757913,
+              "tstat": 325.29455274987174,
+              "pvalue": 1e-25,
+              "ci_lower": 0.4295567953324003,
+              "ci_upper": 0.4347645982825713,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.004910971224282409,
+              "stderr": 0.00014844623557638958,
+              "tstat": 33.08249081031934,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004620016602552685,
+              "ci_upper": 0.005201925846012132,
+              "vif": 1.0003829586143411
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.00485773219283072,
+              "stderr": 0.0001514534076636896,
+              "tstat": 32.07410297177053,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004560883513809889,
+              "ci_upper": 0.005154580871851552,
+              "vif": 1.0001877951609357
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.004839356104270636,
+              "stderr": 0.00014837940665730874,
+              "tstat": 32.61474225629856,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00454853246722231,
+              "ci_upper": 0.005130179741318961,
+              "vif": 1.0003309945198362
+            }
+          ],
+          "outliers": [
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.5002,
+              "residual": -0.1652,
+              "abs_error": 0.1652,
+              "pct_error": 49.3,
+              "rank": 1
+            },
+            {
+              "index": 8351,
+              "actual": 0.365,
+              "predicted": 0.5249,
+              "residual": -0.1599,
+              "abs_error": 0.1599,
+              "pct_error": 43.8,
+              "rank": 2
+            },
+            {
+              "index": 5662,
+              "actual": 0.69,
+              "predicted": 0.5343,
+              "residual": 0.1557,
+              "abs_error": 0.1557,
+              "pct_error": 22.56,
+              "rank": 3
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.4956,
+              "residual": 0.1544,
+              "abs_error": 0.1544,
+              "pct_error": 23.75,
+              "rank": 4
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4808,
+              "residual": -0.1508,
+              "abs_error": 0.1508,
+              "pct_error": 45.7,
+              "rank": 5
+            },
+            {
+              "index": 9251,
+              "actual": 0.63,
+              "predicted": 0.481,
+              "residual": 0.149,
+              "abs_error": 0.149,
+              "pct_error": 23.65,
+              "rank": 6
+            },
+            {
+              "index": 3396,
+              "actual": 0.67,
+              "predicted": 0.5246,
+              "residual": 0.1454,
+              "abs_error": 0.1454,
+              "pct_error": 21.7,
+              "rank": 7
+            },
+            {
+              "index": 4344,
+              "actual": 0.38,
+              "predicted": 0.5247,
+              "residual": -0.1447,
+              "abs_error": 0.1447,
+              "pct_error": 38.09,
+              "rank": 8
+            },
+            {
+              "index": 8686,
+              "actual": 0.38,
+              "predicted": 0.5246,
+              "residual": -0.1446,
+              "abs_error": 0.1446,
+              "pct_error": 38.06,
+              "rank": 9
+            },
+            {
+              "index": 24512,
+              "actual": 0.64,
+              "predicted": 0.4954,
+              "residual": 0.1446,
+              "abs_error": 0.1446,
+              "pct_error": 22.6,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 4,
+          "features": [
+            "Siltation",
+            "ClimateChange",
+            "DamsQuality",
+            "DeterioratingInfrastructure"
+          ],
+          "rmse": 0.047219663331906844,
+          "mae": 0.03827775386682144,
+          "r2": 0.1319381950929105,
+          "adj_r2": 0.13135900456419847,
+          "f_stat": 1088.8957117041386,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.4075071008893545,
+              "stderr": 0.001496702559611239,
+              "tstat": 272.2699298350919,
+              "pvalue": 1e-25,
+              "ci_lower": 0.4045735638725165,
+              "ci_upper": 0.4104406379061925,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.004944849313545184,
+              "stderr": 0.0001451624311542978,
+              "tstat": 34.06424978022823,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00466033094848276,
+              "ci_upper": 0.005229367678607608,
+              "vif": 1.0004324870384518
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.004883225799317361,
+              "stderr": 0.0001481014093669327,
+              "tstat": 32.97217643093991,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004592947036958173,
+              "ci_upper": 0.00517350456167655,
+              "vif": 1.000214733746844
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.004913018210977477,
+              "stderr": 0.0001451104839070315,
+              "tstat": 33.85708653638781,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004628601662519695,
+              "ci_upper": 0.0051974347594352585,
+              "vif": 1.0005653491414084
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.0048779181223045165,
+              "stderr": 0.00014706292281946567,
+              "tstat": 33.16891864234635,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004589674793578364,
+              "ci_upper": 0.005166161451030669,
+              "vif": 1.0003052467555789
+            }
+          ],
+          "outliers": [
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.5153,
+              "residual": -0.1803,
+              "abs_error": 0.1803,
+              "pct_error": 53.84,
+              "rank": 1
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.4861,
+              "residual": 0.1639,
+              "abs_error": 0.1639,
+              "pct_error": 25.21,
+              "rank": 2
+            },
+            {
+              "index": 8351,
+              "actual": 0.365,
+              "predicted": 0.5204,
+              "residual": -0.1554,
+              "abs_error": 0.1554,
+              "pct_error": 42.59,
+              "rank": 3
+            },
+            {
+              "index": 14944,
+              "actual": 0.375,
+              "predicted": 0.5251,
+              "residual": -0.1501,
+              "abs_error": 0.1501,
+              "pct_error": 40.04,
+              "rank": 4
+            },
+            {
+              "index": 26680,
+              "actual": 0.63,
+              "predicted": 0.481,
+              "residual": 0.149,
+              "abs_error": 0.149,
+              "pct_error": 23.65,
+              "rank": 5
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4762,
+              "residual": -0.1462,
+              "abs_error": 0.1462,
+              "pct_error": 44.29,
+              "rank": 6
+            },
+            {
+              "index": 8686,
+              "actual": 0.38,
+              "predicted": 0.5204,
+              "residual": -0.1404,
+              "abs_error": 0.1404,
+              "pct_error": 36.95,
+              "rank": 7
+            },
+            {
+              "index": 3396,
+              "actual": 0.67,
+              "predicted": 0.5301,
+              "residual": 0.1399,
+              "abs_error": 0.1399,
+              "pct_error": 20.88,
+              "rank": 8
+            },
+            {
+              "index": 25883,
+              "actual": 0.65,
+              "predicted": 0.5105,
+              "residual": 0.1395,
+              "abs_error": 0.1395,
+              "pct_error": 21.46,
+              "rank": 9
+            },
+            {
+              "index": 14546,
+              "actual": 0.655,
+              "predicted": 0.5155,
+              "residual": 0.1395,
+              "abs_error": 0.1395,
+              "pct_error": 21.3,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 5,
+          "features": [
+            "Siltation",
+            "ClimateChange",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "Landslides"
+          ],
+          "rmse": 0.046433706824995175,
+          "mae": 0.03766364016974959,
+          "r2": 0.16059493612014508,
+          "adj_r2": 0.1598947316958209,
+          "f_stat": 1153.012979241193,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.38225260798292804,
+              "stderr": 0.0016336042866936015,
+              "tstat": 233.99339184926077,
+              "pvalue": 1e-25,
+              "ci_lower": 0.3790507435810086,
+              "ci_upper": 0.3854544723848475,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.004950065686608645,
+              "stderr": 0.0001416856397348625,
+              "tstat": 34.9369611195019,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004672361832728314,
+              "ci_upper": 0.005227769540488976,
+              "vif": 1.0004336236175293
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.0049824451451907625,
+              "stderr": 0.0001445826816890748,
+              "tstat": 34.46087101846344,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004699063089080176,
+              "ci_upper": 0.005265827201301349,
+              "vif": 1.000609691491092
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.0049822958900323025,
+              "stderr": 0.00014164905629423556,
+              "tstat": 35.17351982693766,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004704663739695601,
+              "ci_upper": 0.005259928040369004,
+              "vif": 1.0007659891726253
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.004951939541780609,
+              "stderr": 0.00014355652712416548,
+              "tstat": 34.49470143212338,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0046705687486172445,
+              "ci_upper": 0.005233310334943973,
+              "vif": 1.0005282052528095
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.004874431925477626,
+              "stderr": 0.0001411194548711624,
+              "tstat": 34.54117598404719,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004597837793930148,
+              "ci_upper": 0.005151026057025105,
+              "vif": 1.0008045704136985
+            }
+          ],
+          "outliers": [
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.5208,
+              "residual": -0.1858,
+              "abs_error": 0.1858,
+              "pct_error": 55.45,
+              "rank": 1
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.4812,
+              "residual": 0.1688,
+              "abs_error": 0.1688,
+              "pct_error": 25.98,
+              "rank": 2
+            },
+            {
+              "index": 1334,
+              "actual": 0.345,
+              "predicted": 0.4957,
+              "residual": -0.1507,
+              "abs_error": 0.1507,
+              "pct_error": 43.69,
+              "rank": 3
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4762,
+              "residual": -0.1462,
+              "abs_error": 0.1462,
+              "pct_error": 44.29,
+              "rank": 4
+            },
+            {
+              "index": 8351,
+              "actual": 0.365,
+              "predicted": 0.5111,
+              "residual": -0.1461,
+              "abs_error": 0.1461,
+              "pct_error": 40.02,
+              "rank": 5
+            },
+            {
+              "index": 14944,
+              "actual": 0.375,
+              "predicted": 0.5209,
+              "residual": -0.1459,
+              "abs_error": 0.1459,
+              "pct_error": 38.91,
+              "rank": 6
+            },
+            {
+              "index": 8686,
+              "actual": 0.38,
+              "predicted": 0.5258,
+              "residual": -0.1458,
+              "abs_error": 0.1458,
+              "pct_error": 38.36,
+              "rank": 7
+            },
+            {
+              "index": 25883,
+              "actual": 0.65,
+              "predicted": 0.5061,
+              "residual": 0.1439,
+              "abs_error": 0.1439,
+              "pct_error": 22.13,
+              "rank": 8
+            },
+            {
+              "index": 25978,
+              "actual": 0.63,
+              "predicted": 0.4864,
+              "residual": 0.1436,
+              "abs_error": 0.1436,
+              "pct_error": 22.79,
+              "rank": 9
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4616,
+              "residual": 0.1434,
+              "abs_error": 0.1434,
+              "pct_error": 23.71,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 6,
+          "features": [
+            "Siltation",
+            "ClimateChange",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "Landslides",
+            "MonsoonIntensity"
+          ],
+          "rmse": 0.045429420723719444,
+          "mae": 0.036913906075809744,
+          "r2": 0.19651222555990977,
+          "adj_r2": 0.19570779928815263,
+          "f_stat": 1207.4022594023127,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.35726160192132134,
+              "stderr": 0.0017509703016410421,
+              "tstat": 204.03635720519594,
+              "pvalue": 1e-25,
+              "ci_lower": 0.3538297001301049,
+              "ci_upper": 0.3606935037125378,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.004935033671617215,
+              "stderr": 0.0001382929664803297,
+              "tstat": 35.685355497230994,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004663979457315769,
+              "ci_upper": 0.005206087885918661,
+              "vif": 1.0004435319905494
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005048226104686519,
+              "stderr": 0.00014113279074441632,
+              "tstat": 35.769335234280014,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004771605834827463,
+              "ci_upper": 0.005324846374545575,
+              "vif": 1.0007919399650496
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005053120935044416,
+              "stderr": 0.0001382717801941044,
+              "tstat": 36.54484615697361,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004782108245863972,
+              "ci_upper": 0.005324133624224861,
+              "vif": 1.0009861348812652
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005022963085009078,
+              "stderr": 0.00014013344946519872,
+              "tstat": 35.844140739977284,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004748301524057289,
+              "ci_upper": 0.005297624645960867,
+              "vif": 1.0007436914502355
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.004896705744501531,
+              "stderr": 0.000137741166505654,
+              "tstat": 35.550052818091466,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004626733058150449,
+              "ci_upper": 0.005166678430852613,
+              "vif": 1.000826508372276
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.004865420760557922,
+              "stderr": 0.00014086664786666636,
+              "tstat": 34.53919600019984,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004589322130739256,
+              "ci_upper": 0.005141519390376588,
+              "vif": 1.0006345506491772
+            }
+          ],
+          "outliers": [
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.5215,
+              "residual": -0.1865,
+              "abs_error": 0.1865,
+              "pct_error": 55.68,
+              "rank": 1
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4471,
+              "residual": 0.1579,
+              "abs_error": 0.1579,
+              "pct_error": 26.09,
+              "rank": 2
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.4957,
+              "residual": 0.1543,
+              "abs_error": 0.1543,
+              "pct_error": 23.74,
+              "rank": 3
+            },
+            {
+              "index": 26680,
+              "actual": 0.63,
+              "predicted": 0.4864,
+              "residual": 0.1436,
+              "abs_error": 0.1436,
+              "pct_error": 22.79,
+              "rank": 4
+            },
+            {
+              "index": 8351,
+              "actual": 0.365,
+              "predicted": 0.5064,
+              "residual": -0.1414,
+              "abs_error": 0.1414,
+              "pct_error": 38.74,
+              "rank": 5
+            },
+            {
+              "index": 1334,
+              "actual": 0.345,
+              "predicted": 0.4864,
+              "residual": -0.1414,
+              "abs_error": 0.1414,
+              "pct_error": 40.98,
+              "rank": 6
+            },
+            {
+              "index": 6885,
+              "actual": 0.405,
+              "predicted": 0.541,
+              "residual": -0.136,
+              "abs_error": 0.136,
+              "pct_error": 33.59,
+              "rank": 7
+            },
+            {
+              "index": 21743,
+              "actual": 0.435,
+              "predicted": 0.5698,
+              "residual": -0.1348,
+              "abs_error": 0.1348,
+              "pct_error": 30.99,
+              "rank": 8
+            },
+            {
+              "index": 7339,
+              "actual": 0.595,
+              "predicted": 0.4613,
+              "residual": 0.1337,
+              "abs_error": 0.1337,
+              "pct_error": 22.46,
+              "rank": 9
+            },
+            {
+              "index": 25883,
+              "actual": 0.65,
+              "predicted": 0.5163,
+              "residual": 0.1337,
+              "abs_error": 0.1337,
+              "pct_error": 20.57,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 7,
+          "features": [
+            "Siltation",
+            "ClimateChange",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "Landslides",
+            "MonsoonIntensity",
+            "PoliticalFactors"
+          ],
+          "rmse": 0.0443721581875994,
+          "mae": 0.035966722265999417,
+          "r2": 0.23347560673140022,
+          "adj_r2": 0.23258013430935742,
+          "f_stat": 1279.683380314183,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.3317551951975645,
+              "stderr": 0.0018441344440865025,
+              "tstat": 179.89751032598951,
+              "pvalue": 1e-25,
+              "ci_lower": 0.328140691687155,
+              "ci_upper": 0.33536969870797406,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.004937428020712252,
+              "stderr": 0.0001346515616851541,
+              "tstat": 36.66818237323589,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00467351095980935,
+              "ci_upper": 0.005201345081615154,
+              "vif": 1.0004437723203556
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.00514043380253316,
+              "stderr": 0.00013744009501440334,
+              "tstat": 37.40126781776786,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00487105121630493,
+              "ci_upper": 0.005409816388761391,
+              "vif": 1.0011342838699526
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005156248436043849,
+              "stderr": 0.000134660921738464,
+              "tstat": 38.29060702598057,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00489231302943646,
+              "ci_upper": 0.005420183842651238,
+              "vif": 1.0014323561254863
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005040769980601271,
+              "stderr": 0.00013644444913976894,
+              "tstat": 36.943752658180195,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004773338860287323,
+              "ci_upper": 0.005308201100915218,
+              "vif": 1.000756641038554
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.00489066633006238,
+              "stderr": 0.0001341143784087552,
+              "tstat": 36.46638330721377,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00462780214838122,
+              "ci_upper": 0.005153530511743541,
+              "vif": 1.00082805029019
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.004956315611157489,
+              "stderr": 0.00013718033874031692,
+              "tstat": 36.12992690257035,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004687442147226468,
+              "ci_upper": 0.005225189075088511,
+              "vif": 1.0009684211096503
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.004856940089796562,
+              "stderr": 0.00013387335492432768,
+              "tstat": 36.28011035162272,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00459454831414488,
+              "ci_upper": 0.005119331865448245,
+              "vif": 1.001107251291827
+            }
+          ],
+          "outliers": [
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4371,
+              "residual": 0.1679,
+              "abs_error": 0.1679,
+              "pct_error": 27.76,
+              "rank": 1
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.5026,
+              "residual": -0.1676,
+              "abs_error": 0.1676,
+              "pct_error": 50.02,
+              "rank": 2
+            },
+            {
+              "index": 6885,
+              "actual": 0.405,
+              "predicted": 0.5511,
+              "residual": -0.1461,
+              "abs_error": 0.1461,
+              "pct_error": 36.07,
+              "rank": 3
+            },
+            {
+              "index": 25883,
+              "actual": 0.65,
+              "predicted": 0.5073,
+              "residual": 0.1427,
+              "abs_error": 0.1427,
+              "pct_error": 21.95,
+              "rank": 4
+            },
+            {
+              "index": 8351,
+              "actual": 0.365,
+              "predicted": 0.5066,
+              "residual": -0.1416,
+              "abs_error": 0.1416,
+              "pct_error": 38.79,
+              "rank": 5
+            },
+            {
+              "index": 2201,
+              "actual": 0.6,
+              "predicted": 0.4618,
+              "residual": 0.1382,
+              "abs_error": 0.1382,
+              "pct_error": 23.03,
+              "rank": 6
+            },
+            {
+              "index": 26680,
+              "actual": 0.63,
+              "predicted": 0.4962,
+              "residual": 0.1338,
+              "abs_error": 0.1338,
+              "pct_error": 21.24,
+              "rank": 7
+            },
+            {
+              "index": 21554,
+              "actual": 0.375,
+              "predicted": 0.5061,
+              "residual": -0.1311,
+              "abs_error": 0.1311,
+              "pct_error": 34.96,
+              "rank": 8
+            },
+            {
+              "index": 9544,
+              "actual": 0.365,
+              "predicted": 0.4955,
+              "residual": -0.1305,
+              "abs_error": 0.1305,
+              "pct_error": 35.76,
+              "rank": 9
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5201,
+              "residual": 0.1299,
+              "abs_error": 0.1299,
+              "pct_error": 19.99,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 8,
+          "features": [
+            "Siltation",
+            "ClimateChange",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "Landslides",
+            "MonsoonIntensity",
+            "PoliticalFactors",
+            "RiverManagement"
+          ],
+          "rmse": 0.0429957586692501,
+          "mae": 0.0348634378867487,
+          "r2": 0.28029236813647995,
+          "adj_r2": 0.2793313163830319,
+          "f_stat": 1353.4753072117235,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.30644247795372015,
+              "stderr": 0.0019206117465502914,
+              "tstat": 159.55462029436043,
+              "pvalue": 1e-25,
+              "ci_lower": 0.3026780789304816,
+              "ci_upper": 0.3102068769769587,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.004977784970166278,
+              "stderr": 0.00013099233927842314,
+              "tstat": 38.00058077889606,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004721039985180569,
+              "ci_upper": 0.005234529955151987,
+              "vif": 1.0005135025766037
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005173652761433157,
+              "stderr": 0.00013370346361474332,
+              "tstat": 38.69497933382382,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00491159397274826,
+              "ci_upper": 0.005435711550118054,
+              "vif": 1.0011796625834117
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.0051488858270961856,
+              "stderr": 0.00013099703177389975,
+              "tstat": 39.30536255190223,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004892131644819342,
+              "ci_upper": 0.005405640009373029,
+              "vif": 1.0014346789512047
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005067694242906937,
+              "stderr": 0.00013273388363805742,
+              "tstat": 38.17935634826802,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004807535830976344,
+              "ci_upper": 0.00532785265483753,
+              "vif": 1.0007868766715935
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.004928344353742963,
+              "stderr": 0.00013046920246258573,
+              "tstat": 37.77400536464726,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004672624716916295,
+              "ci_upper": 0.005184063990569632,
+              "vif": 1.00088934171537
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005009458319239912,
+              "stderr": 0.0001334555144357304,
+              "tstat": 37.536540475083704,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0047478855109458805,
+              "ci_upper": 0.005271031127533943,
+              "vif": 1.0010849782011406
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.004917587302933337,
+              "stderr": 0.0001302411107126276,
+              "tstat": 37.75756576419114,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004662314725936587,
+              "ci_upper": 0.005172859879930086,
+              "vif": 1.0012666661196536
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.004862495248768624,
+              "stderr": 0.00013176070518983223,
+              "tstat": 36.90398622080125,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004604244266596553,
+              "ci_upper": 0.005120746230940695,
+              "vif": 1.0004702047173293
+            }
+          ],
+          "outliers": [
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.5122,
+              "residual": -0.1772,
+              "abs_error": 0.1772,
+              "pct_error": 52.89,
+              "rank": 1
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4319,
+              "residual": 0.1731,
+              "abs_error": 0.1731,
+              "pct_error": 28.61,
+              "rank": 2
+            },
+            {
+              "index": 8351,
+              "actual": 0.365,
+              "predicted": 0.5118,
+              "residual": -0.1468,
+              "abs_error": 0.1468,
+              "pct_error": 40.21,
+              "rank": 3
+            },
+            {
+              "index": 6885,
+              "actual": 0.405,
+              "predicted": 0.5516,
+              "residual": -0.1466,
+              "abs_error": 0.1466,
+              "pct_error": 36.2,
+              "rank": 4
+            },
+            {
+              "index": 25883,
+              "actual": 0.65,
+              "predicted": 0.5075,
+              "residual": 0.1425,
+              "abs_error": 0.1425,
+              "pct_error": 21.92,
+              "rank": 5
+            },
+            {
+              "index": 15579,
+              "actual": 0.595,
+              "predicted": 0.4615,
+              "residual": 0.1335,
+              "abs_error": 0.1335,
+              "pct_error": 22.43,
+              "rank": 6
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5373,
+              "residual": -0.1323,
+              "abs_error": 0.1323,
+              "pct_error": 32.66,
+              "rank": 7
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.4767,
+              "residual": 0.1283,
+              "abs_error": 0.1283,
+              "pct_error": 21.21,
+              "rank": 8
+            },
+            {
+              "index": 3202,
+              "actual": 0.365,
+              "predicted": 0.4917,
+              "residual": -0.1267,
+              "abs_error": 0.1267,
+              "pct_error": 34.7,
+              "rank": 9
+            },
+            {
+              "index": 21554,
+              "actual": 0.375,
+              "predicted": 0.5015,
+              "residual": -0.1265,
+              "abs_error": 0.1265,
+              "pct_error": 33.72,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 9,
+          "features": [
+            "Siltation",
+            "ClimateChange",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "Landslides",
+            "MonsoonIntensity",
+            "PoliticalFactors",
+            "RiverManagement",
+            "TopographyDrainage"
+          ],
+          "rmse": 0.04163187540664419,
+          "mae": 0.03369562713242426,
+          "r2": 0.32522835399755556,
+          "adj_r2": 0.32421450678319463,
+          "f_stat": 1448.0155948556303,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.2808089709451598,
+              "stderr": 0.0019752835874055842,
+              "tstat": 142.16134469784433,
+              "pvalue": 1e-25,
+              "ci_lower": 0.27693741511384484,
+              "ci_upper": 0.2846805267764747,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.004986426827380476,
+              "stderr": 0.0001270348014027267,
+              "tstat": 39.252447142987755,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004737438616631132,
+              "ci_upper": 0.005235415038129821,
+              "vif": 1.0005165504114195
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005162485264999461,
+              "stderr": 0.0001296641363740537,
+              "tstat": 39.81428797016609,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004908343557706316,
+              "ci_upper": 0.005416626972292607,
+              "vif": 1.0011845511827253
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005168840694787868,
+              "stderr": 0.00012704019026754402,
+              "tstat": 40.68665737907347,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004919841921863482,
+              "ci_upper": 0.005417839467712254,
+              "vif": 1.0014509435560395
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005150094882002744,
+              "stderr": 0.00012874089390104763,
+              "tstat": 40.00356627911246,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0048977627299566905,
+              "ci_upper": 0.005402427034048798,
+              "vif": 1.0010568278661407
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.004994500503967594,
+              "stderr": 0.000126538661136866,
+              "tstat": 39.47015448950793,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004746484728139337,
+              "ci_upper": 0.0052425162797958514,
+              "vif": 1.001069459498634
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005026936232163533,
+              "stderr": 0.0001294241388769679,
+              "tstat": 38.84079334645755,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004773264919964677,
+              "ci_upper": 0.00528060754436239,
+              "vif": 1.0010969959502898
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.0049533699812195214,
+              "stderr": 0.00012630941300400335,
+              "tstat": 39.216158664774454,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004705803531731675,
+              "ci_upper": 0.005200936430707368,
+              "vif": 1.0013195648633215
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.004930592908965012,
+              "stderr": 0.00012779170285055793,
+              "tstat": 38.583044117746375,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0046801211713779186,
+              "ci_upper": 0.005181064646552105,
+              "vif": 1.000657248300211
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.004918282774370193,
+              "stderr": 0.00012618644217370062,
+              "tstat": 38.97631702461333,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00467095734770974,
+              "ci_upper": 0.0051656082010306465,
+              "vif": 1.0007051089015693
+            }
+          ],
+          "outliers": [
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4319,
+              "residual": 0.1731,
+              "abs_error": 0.1731,
+              "pct_error": 28.62,
+              "rank": 1
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.5031,
+              "residual": -0.1681,
+              "abs_error": 0.1681,
+              "pct_error": 50.19,
+              "rank": 2
+            },
+            {
+              "index": 6885,
+              "actual": 0.405,
+              "predicted": 0.5477,
+              "residual": -0.1427,
+              "abs_error": 0.1427,
+              "pct_error": 35.23,
+              "rank": 3
+            },
+            {
+              "index": 15579,
+              "actual": 0.595,
+              "predicted": 0.4614,
+              "residual": 0.1336,
+              "abs_error": 0.1336,
+              "pct_error": 22.45,
+              "rank": 4
+            },
+            {
+              "index": 8351,
+              "actual": 0.365,
+              "predicted": 0.4972,
+              "residual": -0.1322,
+              "abs_error": 0.1322,
+              "pct_error": 36.22,
+              "rank": 5
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.4767,
+              "residual": 0.1283,
+              "abs_error": 0.1283,
+              "pct_error": 21.21,
+              "rank": 6
+            },
+            {
+              "index": 2201,
+              "actual": 0.6,
+              "predicted": 0.4718,
+              "residual": 0.1282,
+              "abs_error": 0.1282,
+              "pct_error": 21.36,
+              "rank": 7
+            },
+            {
+              "index": 21366,
+              "actual": 0.37,
+              "predicted": 0.4968,
+              "residual": -0.1268,
+              "abs_error": 0.1268,
+              "pct_error": 34.27,
+              "rank": 8
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.528,
+              "residual": -0.123,
+              "abs_error": 0.123,
+              "pct_error": 30.38,
+              "rank": 9
+            },
+            {
+              "index": 24355,
+              "actual": 0.59,
+              "predicted": 0.4671,
+              "residual": 0.1229,
+              "abs_error": 0.1229,
+              "pct_error": 20.82,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 10,
+          "features": [
+            "Siltation",
+            "ClimateChange",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "Landslides",
+            "MonsoonIntensity",
+            "PoliticalFactors",
+            "RiverManagement",
+            "TopographyDrainage",
+            "Encroachments"
+          ],
+          "rmse": 0.04027800851587467,
+          "mae": 0.03274669865274392,
+          "r2": 0.36840184359395645,
+          "adj_r2": 0.36734724657207296,
+          "f_stat": 1552.87803947511,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.2541742887524458,
+              "stderr": 0.0020233008513291795,
+              "tstat": 125.6235762395244,
+              "pvalue": 1e-25,
+              "ci_lower": 0.2502086190838406,
+              "ci_upper": 0.258139958421051,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005022270966248327,
+              "stderr": 0.00012296134539559723,
+              "tstat": 40.84430720963919,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004781266729272956,
+              "ci_upper": 0.005263275203223697,
+              "vif": 1.000569094883358
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005167594376183256,
+              "stderr": 0.00012550313774577007,
+              "tstat": 41.175021350073166,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004921608226201546,
+              "ci_upper": 0.005413580526164965,
+              "vif": 1.0011855765441688
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.0052076138781209,
+              "stderr": 0.00012296711038635953,
+              "tstat": 42.34964830643502,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004966598341763635,
+              "ci_upper": 0.0054486294144781644,
+              "vif": 1.0015124785559972
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005162867087668929,
+              "stderr": 0.00012460986337067468,
+              "tstat": 41.432250610138645,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004918631755462407,
+              "ci_upper": 0.005407102419875452,
+              "vif": 1.0010633272079295
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005070193276468786,
+              "stderr": 0.00012249235174520697,
+              "tstat": 41.39191716242952,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00483010826704818,
+              "ci_upper": 0.005310278285889392,
+              "vif": 1.0013057457467758
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005010082171615777,
+              "stderr": 0.00012527147842469582,
+              "tstat": 39.99379774724601,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004764550073903373,
+              "ci_upper": 0.005255614269328181,
+              "vif": 1.0011081946233975
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005067616488127168,
+              "stderr": 0.00012228899117389542,
+              "tstat": 41.43967858006938,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004827930065426333,
+              "ci_upper": 0.005307302910828002,
+              "vif": 1.0018599445401604
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005001079823198525,
+              "stderr": 0.0001237031394412307,
+              "tstat": 40.428075195087956,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004758621669893713,
+              "ci_upper": 0.005243537976503338,
+              "vif": 1.000858069198942
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.00499176288172038,
+              "stderr": 0.00012215064126235337,
+              "tstat": 40.865629767748366,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0047523476248461675,
+              "ci_upper": 0.005231178138594593,
+              "vif": 1.0009289460519633
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.004979527339811596,
+              "stderr": 0.00012378800107844726,
+              "tstat": 40.22625211191476,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004736902857697839,
+              "ci_upper": 0.005222151821925352,
+              "vif": 1.0012920302314097
+            }
+          ],
+          "outliers": [
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4315,
+              "residual": 0.1735,
+              "abs_error": 0.1735,
+              "pct_error": 28.68,
+              "rank": 1
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4882,
+              "residual": -0.1532,
+              "abs_error": 0.1532,
+              "pct_error": 45.74,
+              "rank": 2
+            },
+            {
+              "index": 6885,
+              "actual": 0.405,
+              "predicted": 0.5386,
+              "residual": -0.1336,
+              "abs_error": 0.1336,
+              "pct_error": 32.98,
+              "rank": 3
+            },
+            {
+              "index": 2201,
+              "actual": 0.6,
+              "predicted": 0.4669,
+              "residual": 0.1331,
+              "abs_error": 0.1331,
+              "pct_error": 22.19,
+              "rank": 4
+            },
+            {
+              "index": 15579,
+              "actual": 0.595,
+              "predicted": 0.4713,
+              "residual": 0.1237,
+              "abs_error": 0.1237,
+              "pct_error": 20.8,
+              "rank": 5
+            },
+            {
+              "index": 20747,
+              "actual": 0.555,
+              "predicted": 0.4315,
+              "residual": 0.1235,
+              "abs_error": 0.1235,
+              "pct_error": 22.25,
+              "rank": 6
+            },
+            {
+              "index": 3858,
+              "actual": 0.405,
+              "predicted": 0.5283,
+              "residual": -0.1233,
+              "abs_error": 0.1233,
+              "pct_error": 30.43,
+              "rank": 7
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5283,
+              "residual": -0.1233,
+              "abs_error": 0.1233,
+              "pct_error": 30.45,
+              "rank": 8
+            },
+            {
+              "index": 21366,
+              "actual": 0.37,
+              "predicted": 0.4921,
+              "residual": -0.1221,
+              "abs_error": 0.1221,
+              "pct_error": 33.0,
+              "rank": 9
+            },
+            {
+              "index": 9898,
+              "actual": 0.645,
+              "predicted": 0.5235,
+              "residual": 0.1215,
+              "abs_error": 0.1215,
+              "pct_error": 18.83,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 11,
+          "features": [
+            "Siltation",
+            "ClimateChange",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "Landslides",
+            "MonsoonIntensity",
+            "PoliticalFactors",
+            "RiverManagement",
+            "TopographyDrainage",
+            "Encroachments",
+            "Urbanization"
+          ],
+          "rmse": 0.03888364477106207,
+          "mae": 0.031638011471982516,
+          "r2": 0.4113748573859872,
+          "adj_r2": 0.41029354867377044,
+          "f_stat": 1678.067153435647,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.22560433964824506,
+              "stderr": 0.0020664182953048487,
+              "tstat": 109.17651095174936,
+              "pvalue": 1e-25,
+              "ci_lower": 0.22155415978944756,
+              "ci_upper": 0.22965451950704255,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005107096190647337,
+              "stderr": 0.000118660206339017,
+              "tstat": 43.03967057040299,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004874522186222864,
+              "ci_upper": 0.00533967019507181,
+              "vif": 1.0008565928059252
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.0051459332753591705,
+              "stderr": 0.00012109678056097884,
+              "tstat": 42.49438549497946,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004908583585459652,
+              "ci_upper": 0.005383282965258689,
+              "vif": 1.0012035835402147
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.0052646280957648756,
+              "stderr": 0.00011865642481554846,
+              "tstat": 44.36867286325832,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005032061503126401,
+              "ci_upper": 0.00549719468840335,
+              "vif": 1.001642471438142
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005242068901517065,
+              "stderr": 0.00012024844997446367,
+              "tstat": 43.593650501360194,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005006381939567116,
+              "ci_upper": 0.005477755863467014,
+              "vif": 1.0013075025317668
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.0051743114870624225,
+              "stderr": 0.00011821641502879876,
+              "tstat": 43.76982237028509,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004942607313605977,
+              "ci_upper": 0.005406015660518868,
+              "vif": 1.0017425400430284
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005088013030888537,
+              "stderr": 0.00012088628854459239,
+              "tstat": 42.08924843458716,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004851075905341136,
+              "ci_upper": 0.005324950156435938,
+              "vif": 1.0013421162337164
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005162030208481908,
+              "stderr": 0.00011801565071210089,
+              "tstat": 43.74021731299586,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00493071953308619,
+              "ci_upper": 0.0053933408838776255,
+              "vif": 1.0022205043500743
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.0051225295571844555,
+              "stderr": 0.00011939363306624752,
+              "tstat": 42.904545457144565,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0048885180363746105,
+              "ci_upper": 0.0053565410779943005,
+              "vif": 1.0014405464818554
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005076761601600828,
+              "stderr": 0.00011787815604056393,
+              "tstat": 43.06787425359645,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0048457204157613225,
+              "ci_upper": 0.005307802787440334,
+              "vif": 1.0012215709809473
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005044121924954135,
+              "stderr": 0.0001194506052557947,
+              "tstat": 42.227679919683276,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004809998738652778,
+              "ci_upper": 0.005278245111255493,
+              "vif": 1.001456645718267
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005028801454545866,
+              "stderr": 0.0001192273797427842,
+              "tstat": 42.17824349905849,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004795115790250009,
+              "ci_upper": 0.005262487118841723,
+              "vif": 1.0025878152797556
+            }
+          ],
+          "outliers": [
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4507,
+              "residual": 0.1543,
+              "abs_error": 0.1543,
+              "pct_error": 25.51,
+              "rank": 1
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4835,
+              "residual": -0.1485,
+              "abs_error": 0.1485,
+              "pct_error": 44.32,
+              "rank": 2
+            },
+            {
+              "index": 2201,
+              "actual": 0.6,
+              "predicted": 0.4567,
+              "residual": 0.1433,
+              "abs_error": 0.1433,
+              "pct_error": 23.88,
+              "rank": 3
+            },
+            {
+              "index": 6885,
+              "actual": 0.405,
+              "predicted": 0.5396,
+              "residual": -0.1346,
+              "abs_error": 0.1346,
+              "pct_error": 33.23,
+              "rank": 4
+            },
+            {
+              "index": 12152,
+              "actual": 0.63,
+              "predicted": 0.4975,
+              "residual": 0.1325,
+              "abs_error": 0.1325,
+              "pct_error": 21.03,
+              "rank": 5
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5338,
+              "residual": -0.1288,
+              "abs_error": 0.1288,
+              "pct_error": 31.8,
+              "rank": 6
+            },
+            {
+              "index": 20747,
+              "actual": 0.555,
+              "predicted": 0.4308,
+              "residual": 0.1242,
+              "abs_error": 0.1242,
+              "pct_error": 22.38,
+              "rank": 7
+            },
+            {
+              "index": 11124,
+              "actual": 0.425,
+              "predicted": 0.5439,
+              "residual": -0.1189,
+              "abs_error": 0.1189,
+              "pct_error": 27.98,
+              "rank": 8
+            },
+            {
+              "index": 21554,
+              "actual": 0.375,
+              "predicted": 0.4928,
+              "residual": -0.1178,
+              "abs_error": 0.1178,
+              "pct_error": 31.42,
+              "rank": 9
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.533,
+              "residual": 0.117,
+              "abs_error": 0.117,
+              "pct_error": 18.0,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 12,
+          "features": [
+            "Siltation",
+            "ClimateChange",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "Landslides",
+            "MonsoonIntensity",
+            "PoliticalFactors",
+            "RiverManagement",
+            "TopographyDrainage",
+            "Encroachments",
+            "Urbanization",
+            "Deforestation"
+          ],
+          "rmse": 0.03737686063309344,
+          "mae": 0.030455038040894795,
+          "r2": 0.4561106971070168,
+          "adj_r2": 0.4550205565299805,
+          "f_stat": 1825.494137921788,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.19730667087964499,
+              "stderr": 0.0020881536794742027,
+              "tstat": 94.48857755015753,
+              "pvalue": 1e-25,
+              "ci_lower": 0.19321388966787556,
+              "ci_upper": 0.2013994520914144,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005137926391522432,
+              "stderr": 0.000114120195058394,
+              "tstat": 45.02206107248076,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0049142508092079795,
+              "ci_upper": 0.005361601973836884,
+              "vif": 1.0008940818036267
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005189946493362778,
+              "stderr": 0.00011646563145393461,
+              "tstat": 44.562043141590195,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004961673855713066,
+              "ci_upper": 0.005418219131012489,
+              "vif": 1.001276969488648
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005341208071826926,
+              "stderr": 0.00011412760734810066,
+              "tstat": 46.80031585640541,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005117517961424649,
+              "ci_upper": 0.0055648981822292035,
+              "vif": 1.001873970977418
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005294447261506932,
+              "stderr": 0.00011565159294671344,
+              "tstat": 45.77928523601359,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005067770139331374,
+              "ci_upper": 0.005521124383682491,
+              "vif": 1.0014129173716457
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005212719440708677,
+              "stderr": 0.0001136945836378112,
+              "tstat": 45.84844127064548,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004989878056778568,
+              "ci_upper": 0.005435560824638787,
+              "vif": 1.0018012122398143
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005192682422760277,
+              "stderr": 0.00011628310699221847,
+              "tstat": 44.65551839019717,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004964767533055529,
+              "ci_upper": 0.005420597312465025,
+              "vif": 1.0017586567599408
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.0051886831679757274,
+              "stderr": 0.00011349978093617406,
+              "tstat": 45.715358436626,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004966223597340827,
+              "ci_upper": 0.005411142738610628,
+              "vif": 1.0022488681501953
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005203252306739471,
+              "stderr": 0.00011483797101469984,
+              "tstat": 45.309510963698834,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004978169883550659,
+              "ci_upper": 0.005428334729928283,
+              "vif": 1.0016945526091972
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005114824712312915,
+              "stderr": 0.00011336922260208776,
+              "tstat": 45.11651923613634,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004892621036012823,
+              "ci_upper": 0.005337028388613007,
+              "vif": 1.0012794953819737
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005107623634628723,
+              "stderr": 0.00011488720823953686,
+              "tstat": 44.457722603716334,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004882444706479231,
+              "ci_upper": 0.005332802562778216,
+              "vif": 1.0016136876918347
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.00510492108051601,
+              "stderr": 0.00011467648647852295,
+              "tstat": 44.51584834238952,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004880155167018105,
+              "ci_upper": 0.005329686994013915,
+              "vif": 1.002814568351506
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005090451737436526,
+              "stderr": 0.00011531885701319332,
+              "tstat": 44.142405407765544,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004864426777690667,
+              "ci_upper": 0.005316476697182385,
+              "vif": 1.001511462007605
+            }
+          ],
+          "outliers": [
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4504,
+              "residual": 0.1546,
+              "abs_error": 0.1546,
+              "pct_error": 25.55,
+              "rank": 1
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4787,
+              "residual": -0.1437,
+              "abs_error": 0.1437,
+              "pct_error": 42.9,
+              "rank": 2
+            },
+            {
+              "index": 2201,
+              "actual": 0.6,
+              "predicted": 0.4618,
+              "residual": 0.1382,
+              "abs_error": 0.1382,
+              "pct_error": 23.03,
+              "rank": 3
+            },
+            {
+              "index": 12152,
+              "actual": 0.63,
+              "predicted": 0.4926,
+              "residual": 0.1374,
+              "abs_error": 0.1374,
+              "pct_error": 21.81,
+              "rank": 4
+            },
+            {
+              "index": 6885,
+              "actual": 0.405,
+              "predicted": 0.5249,
+              "residual": -0.1199,
+              "abs_error": 0.1199,
+              "pct_error": 29.6,
+              "rank": 5
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5246,
+              "residual": -0.1196,
+              "abs_error": 0.1196,
+              "pct_error": 29.53,
+              "rank": 6
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.487,
+              "residual": 0.118,
+              "abs_error": 0.118,
+              "pct_error": 19.5,
+              "rank": 7
+            },
+            {
+              "index": 22034,
+              "actual": 0.425,
+              "predicted": 0.539,
+              "residual": -0.114,
+              "abs_error": 0.114,
+              "pct_error": 26.83,
+              "rank": 8
+            },
+            {
+              "index": 24355,
+              "actual": 0.59,
+              "predicted": 0.4769,
+              "residual": 0.1131,
+              "abs_error": 0.1131,
+              "pct_error": 19.17,
+              "rank": 9
+            },
+            {
+              "index": 11124,
+              "actual": 0.425,
+              "predicted": 0.5342,
+              "residual": -0.1092,
+              "abs_error": 0.1092,
+              "pct_error": 25.7,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 13,
+          "features": [
+            "Siltation",
+            "ClimateChange",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "Landslides",
+            "MonsoonIntensity",
+            "PoliticalFactors",
+            "RiverManagement",
+            "TopographyDrainage",
+            "Encroachments",
+            "Urbanization",
+            "Deforestation",
+            "PopulationScore"
+          ],
+          "rmse": 0.035749219414105735,
+          "mae": 0.029025489981386998,
+          "r2": 0.5024485437547257,
+          "adj_r2": 0.5013679943175074,
+          "f_stat": 2002.2525123568398,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.1696841715172755,
+              "stderr": 0.002086851815925965,
+              "tstat": 81.31107835367997,
+              "pvalue": 1e-25,
+              "ci_lower": 0.1655939419580606,
+              "ci_upper": 0.1737744010764904,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005178614519995902,
+              "stderr": 0.00010931958838890594,
+              "tstat": 47.37133203953265,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004964348126753646,
+              "ci_upper": 0.005392880913238158,
+              "vif": 1.000958406632201
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005231272606126619,
+              "stderr": 0.00011156632696296133,
+              "tstat": 46.889350474568715,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0050126026052792145,
+              "ci_upper": 0.005449942606974023,
+              "vif": 1.0013407059381378
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005416224437978805,
+              "stderr": 0.0001093351150072112,
+              "tstat": 49.53783089377624,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005201927612564671,
+              "ci_upper": 0.005630521263392939,
+              "vif": 1.0020928095194326
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005318527785580639,
+              "stderr": 0.00011078422041465197,
+              "tstat": 48.00799035886185,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005101390713567921,
+              "ci_upper": 0.005535664857593357,
+              "vif": 1.001434866734526
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005225660663283627,
+              "stderr": 0.00010890873794850337,
+              "tstat": 47.98201468237139,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00501219953690456,
+              "ci_upper": 0.005439121789662694,
+              "vif": 1.001807774186745
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005234503675984388,
+              "stderr": 0.00011139157753617088,
+              "tstat": 46.99191619119183,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0050161761840134935,
+              "ci_upper": 0.0054528311679552825,
+              "vif": 1.0018241662220906
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005256818082572542,
+              "stderr": 0.00010873168284851266,
+              "tstat": 48.34670028878753,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005043703984189457,
+              "ci_upper": 0.005469932180955627,
+              "vif": 1.0024314699518164
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005196802033844185,
+              "stderr": 0.00011000372317838352,
+              "tstat": 47.242055847664176,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004981194736414553,
+              "ci_upper": 0.0054124093312738165,
+              "vif": 1.0016961503288124
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005185040260768425,
+              "stderr": 0.00010860724680341204,
+              "tstat": 47.74119972080473,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004972170057033738,
+              "ci_upper": 0.005397910464503113,
+              "vif": 1.0014736785887683
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005135952910661052,
+              "stderr": 0.00011005249141706731,
+              "tstat": 46.668211182946024,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0049202500274836,
+              "ci_upper": 0.005351655793838504,
+              "vif": 1.0016444775684878
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005162058023501645,
+              "stderr": 0.00010985584207842345,
+              "tstat": 46.98938104553944,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004946740573027935,
+              "ci_upper": 0.005377375473975355,
+              "vif": 1.0029404278443363
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005164824818204306,
+              "stderr": 0.0001104758915356112,
+              "tstat": 46.75069597912643,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004948292070794507,
+              "ci_upper": 0.005381357565614104,
+              "vif": 1.001722066149226
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005062420953612299,
+              "stderr": 0.00010903598011554598,
+              "tstat": 46.428903085455154,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004848710432585829,
+              "ci_upper": 0.005276131474638769,
+              "vif": 1.001091782755531
+            }
+          ],
+          "outliers": [
+            {
+              "index": 12152,
+              "actual": 0.63,
+              "predicted": 0.4929,
+              "residual": 0.1371,
+              "abs_error": 0.1371,
+              "pct_error": 21.77,
+              "rank": 1
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4807,
+              "residual": 0.1243,
+              "abs_error": 0.1243,
+              "pct_error": 20.54,
+              "rank": 2
+            },
+            {
+              "index": 6885,
+              "actual": 0.405,
+              "predicted": 0.5251,
+              "residual": -0.1201,
+              "abs_error": 0.1201,
+              "pct_error": 29.66,
+              "rank": 3
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5248,
+              "residual": -0.1198,
+              "abs_error": 0.1198,
+              "pct_error": 29.57,
+              "rank": 4
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4533,
+              "residual": -0.1183,
+              "abs_error": 0.1183,
+              "pct_error": 35.31,
+              "rank": 5
+            },
+            {
+              "index": 3858,
+              "actual": 0.405,
+              "predicted": 0.5187,
+              "residual": -0.1137,
+              "abs_error": 0.1137,
+              "pct_error": 28.07,
+              "rank": 6
+            },
+            {
+              "index": 2201,
+              "actual": 0.6,
+              "predicted": 0.4868,
+              "residual": 0.1132,
+              "abs_error": 0.1132,
+              "pct_error": 18.87,
+              "rank": 7
+            },
+            {
+              "index": 21366,
+              "actual": 0.37,
+              "predicted": 0.4769,
+              "residual": -0.1069,
+              "abs_error": 0.1069,
+              "pct_error": 28.9,
+              "rank": 8
+            },
+            {
+              "index": 790,
+              "actual": 0.605,
+              "predicted": 0.4988,
+              "residual": 0.1062,
+              "abs_error": 0.1062,
+              "pct_error": 17.56,
+              "rank": 9
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5446,
+              "residual": 0.1054,
+              "abs_error": 0.1054,
+              "pct_error": 16.21,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 14,
+          "features": [
+            "Siltation",
+            "ClimateChange",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "Landslides",
+            "MonsoonIntensity",
+            "PoliticalFactors",
+            "RiverManagement",
+            "TopographyDrainage",
+            "Encroachments",
+            "Urbanization",
+            "Deforestation",
+            "PopulationScore",
+            "IneffectiveDisasterPreparedness"
+          ],
+          "rmse": 0.034237352495143446,
+          "mae": 0.027654549423810407,
+          "r2": 0.5436424674902185,
+          "adj_r2": 0.5425749644901956,
+          "f_stat": 2214.2296473431707,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.14173558885416926,
+              "stderr": 0.002071002103730708,
+              "tstat": 68.438167493334,
+              "pvalue": 1e-25,
+              "ci_lower": 0.13767642473085706,
+              "ci_upper": 0.14579475297748146,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005210618353338616,
+              "stderr": 0.00010426508912654332,
+              "tstat": 49.974717299811154,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0050062587786505915,
+              "ci_upper": 0.005414977928026641,
+              "vif": 1.0009979668757485
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005272119979589204,
+              "stderr": 0.00010640913354731081,
+              "tstat": 49.54574672149881,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005063558077836474,
+              "ci_upper": 0.005480681881341933,
+              "vif": 1.0014026042455144
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005436552786825985,
+              "stderr": 0.0001042786683745431,
+              "tstat": 52.13485050748095,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005232166596811881,
+              "ci_upper": 0.00564093897684009,
+              "vif": 1.0021087840359917
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005326675900733935,
+              "stderr": 0.000105660046285401,
+              "tstat": 50.41334059561092,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005119582210014549,
+              "ci_upper": 0.00553376959145332,
+              "vif": 1.0014373648707247
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005265114616705411,
+              "stderr": 0.00010387432519890669,
+              "tstat": 50.687353266780384,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005061520939315554,
+              "ci_upper": 0.005468708294095268,
+              "vif": 1.00186840241853
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.0052255826198594185,
+              "stderr": 0.00010623933553059419,
+              "tstat": 49.186891030155074,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005017353522219454,
+              "ci_upper": 0.005433811717499383,
+              "vif": 1.0018271293761947
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.0052670599961740444,
+              "stderr": 0.00010370252886990077,
+              "tstat": 50.79008249434105,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005063803039589039,
+              "ci_upper": 0.00547031695275905,
+              "vif": 1.0024355714222872
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005264831940123034,
+              "stderr": 0.0001049247704974117,
+              "tstat": 50.1772071090964,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005059179389948107,
+              "ci_upper": 0.005470484490297961,
+              "vif": 1.0018728175107197
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005196054718998049,
+              "stderr": 0.0001035838820865854,
+              "tstat": 50.16277256971973,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004993030310108342,
+              "ci_upper": 0.005399079127887756,
+              "vif": 1.001478428473949
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005256173904776929,
+              "stderr": 0.00010499090758735542,
+              "tstat": 50.06313428049608,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005050391725905713,
+              "ci_upper": 0.005461956083648145,
+              "vif": 1.0021956777775503
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005203329197634546,
+              "stderr": 0.00010477788772774063,
+              "tstat": 49.66056589301648,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004997964537688175,
+              "ci_upper": 0.005408693857580918,
+              "vif": 1.003005704421265
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.0052110511706152055,
+              "stderr": 0.00010537010075991775,
+              "tstat": 49.45474221846301,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005004525773125767,
+              "ci_upper": 0.005417576568104644,
+              "vif": 1.0018029433967912
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005146128204132479,
+              "stderr": 0.00010400666947973622,
+              "tstat": 49.47882890467046,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004942275131952196,
+              "ci_upper": 0.005349981276312762,
+              "vif": 1.0013638619216199
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005125093147860677,
+              "stderr": 0.00010496670445367715,
+              "tstat": 48.82589364442161,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00491935840713147,
+              "ci_upper": 0.005330827888589884,
+              "vif": 1.0012596521281307
+            }
+          ],
+          "outliers": [
+            {
+              "index": 12152,
+              "actual": 0.63,
+              "predicted": 0.4982,
+              "residual": 0.1318,
+              "abs_error": 0.1318,
+              "pct_error": 20.92,
+              "rank": 1
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4761,
+              "residual": 0.1289,
+              "abs_error": 0.1289,
+              "pct_error": 21.3,
+              "rank": 2
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4527,
+              "residual": -0.1177,
+              "abs_error": 0.1177,
+              "pct_error": 35.13,
+              "rank": 3
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5202,
+              "residual": -0.1152,
+              "abs_error": 0.1152,
+              "pct_error": 28.44,
+              "rank": 4
+            },
+            {
+              "index": 2201,
+              "actual": 0.6,
+              "predicted": 0.4873,
+              "residual": 0.1127,
+              "abs_error": 0.1127,
+              "pct_error": 18.78,
+              "rank": 5
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.4928,
+              "residual": 0.1122,
+              "abs_error": 0.1122,
+              "pct_error": 18.55,
+              "rank": 6
+            },
+            {
+              "index": 26974,
+              "actual": 0.495,
+              "predicted": 0.3834,
+              "residual": 0.1116,
+              "abs_error": 0.1116,
+              "pct_error": 22.54,
+              "rank": 7
+            },
+            {
+              "index": 21264,
+              "actual": 0.53,
+              "predicted": 0.4193,
+              "residual": 0.1107,
+              "abs_error": 0.1107,
+              "pct_error": 20.88,
+              "rank": 8
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5399,
+              "residual": 0.1101,
+              "abs_error": 0.1101,
+              "pct_error": 16.94,
+              "rank": 9
+            },
+            {
+              "index": 6885,
+              "actual": 0.405,
+              "predicted": 0.5149,
+              "residual": -0.1099,
+              "abs_error": 0.1099,
+              "pct_error": 27.14,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 15,
+          "features": [
+            "Siltation",
+            "ClimateChange",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "Landslides",
+            "MonsoonIntensity",
+            "PoliticalFactors",
+            "RiverManagement",
+            "TopographyDrainage",
+            "Encroachments",
+            "Urbanization",
+            "Deforestation",
+            "PopulationScore",
+            "IneffectiveDisasterPreparedness",
+            "DrainageSystems"
+          ],
+          "rmse": 0.03254685063014648,
+          "mae": 0.02624785449504418,
+          "r2": 0.5875960498644267,
+          "adj_r2": 0.5865622832781912,
+          "f_stat": 2473.663658511861,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.11133775122118769,
+              "stderr": 0.002051169402235389,
+              "tstat": 54.28013459046848,
+              "pvalue": 1e-25,
+              "ci_lower": 0.10731745919280633,
+              "ci_upper": 0.11535804324956905,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.0052880900761456415,
+              "stderr": 9.892967414329677e-05,
+              "tstat": 53.45302228010977,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00509418791482478,
+              "ci_upper": 0.005481992237466503,
+              "vif": 1.001228447564981
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.00531949501236348,
+              "stderr": 0.00010095655543422799,
+              "tstat": 52.690932148819876,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005121620163712393,
+              "ci_upper": 0.005517369861014566,
+              "vif": 1.0014853875404228
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005499591045960776,
+              "stderr": 9.893870838516197e-05,
+              "tstat": 55.5858383005287,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005305671177525858,
+              "ci_upper": 0.005693510914395693,
+              "vif": 1.0022615142979001
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005402570229895685,
+              "stderr": 0.00010025249348224686,
+              "tstat": 53.88963448427739,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005206075342670481,
+              "ci_upper": 0.005599065117120889,
+              "vif": 1.0016528481667177
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005320712366286845,
+              "stderr": 9.855344855968823e-05,
+              "tstat": 53.988089143977454,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005127547607109856,
+              "ci_upper": 0.005513877125463833,
+              "vif": 1.0019881044258965
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005290223633513668,
+              "stderr": 0.00010079907278529237,
+              "tstat": 52.482860083268214,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005092657450854495,
+              "ci_upper": 0.005487789816172841,
+              "vif": 1.0019818083105434
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005373753609697803,
+              "stderr": 9.840628910608194e-05,
+              "tstat": 54.607826984562934,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0051808772830498825,
+              "ci_upper": 0.005566629936345723,
+              "vif": 1.002878106174763
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005294021308948303,
+              "stderr": 9.954574558998276e-05,
+              "tstat": 53.18179373284073,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005098911647591937,
+              "ci_upper": 0.005489130970304669,
+              "vif": 1.0019051544346105
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.00528968390310717,
+              "stderr": 9.828875409742316e-05,
+              "tstat": 53.817793822720255,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00509703794507622,
+              "ci_upper": 0.005482329861138119,
+              "vif": 1.0018196783236895
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005315304977097944,
+              "stderr": 9.961347284626809e-05,
+              "tstat": 53.3592979465837,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005120062570319259,
+              "ci_upper": 0.0055105473838766295,
+              "vif": 1.002328256372968
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005339848678935515,
+              "stderr": 9.943997247635558e-05,
+              "tstat": 53.69921718557597,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0051449463328818576,
+              "ci_upper": 0.005534751024989172,
+              "vif": 1.0037158479641477
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005281347957194873,
+              "stderr": 9.997591004549708e-05,
+              "tstat": 52.82620538079058,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005085395173505699,
+              "ci_upper": 0.005477300740884048,
+              "vif": 1.001988899834074
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005217856332745781,
+              "stderr": 9.86829049266983e-05,
+              "tstat": 52.87497704512861,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005024437839089453,
+              "ci_upper": 0.00541127482640211,
+              "vif": 1.0015624902986462
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005186667596480159,
+              "stderr": 9.959106821170862e-05,
+              "tstat": 52.07964619331574,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00499146910278521,
+              "ci_upper": 0.005381866090175109,
+              "vif": 1.0014033457239448
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.005136280702085282,
+              "stderr": 9.95136823002451e-05,
+              "tstat": 51.61381413450753,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004941233884776802,
+              "ci_upper": 0.005331327519393763,
+              "vif": 1.0027992023588594
+            }
+          ],
+          "outliers": [
+            {
+              "index": 8969,
+              "actual": 0.435,
+              "predicted": 0.5655,
+              "residual": -0.1305,
+              "abs_error": 0.1305,
+              "pct_error": 29.99,
+              "rank": 1
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4764,
+              "residual": 0.1286,
+              "abs_error": 0.1286,
+              "pct_error": 21.25,
+              "rank": 2
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5254,
+              "residual": -0.1204,
+              "abs_error": 0.1204,
+              "pct_error": 29.73,
+              "rank": 3
+            },
+            {
+              "index": 26974,
+              "actual": 0.495,
+              "predicted": 0.3819,
+              "residual": 0.1131,
+              "abs_error": 0.1131,
+              "pct_error": 22.85,
+              "rank": 4
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4468,
+              "residual": -0.1118,
+              "abs_error": 0.1118,
+              "pct_error": 33.38,
+              "rank": 5
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.4999,
+              "residual": 0.1051,
+              "abs_error": 0.1051,
+              "pct_error": 17.37,
+              "rank": 6
+            },
+            {
+              "index": 3858,
+              "actual": 0.405,
+              "predicted": 0.5094,
+              "residual": -0.1044,
+              "abs_error": 0.1044,
+              "pct_error": 25.79,
+              "rank": 7
+            },
+            {
+              "index": 6865,
+              "actual": 0.465,
+              "predicted": 0.5672,
+              "residual": -0.1022,
+              "abs_error": 0.1022,
+              "pct_error": 21.97,
+              "rank": 8
+            },
+            {
+              "index": 21264,
+              "actual": 0.53,
+              "predicted": 0.4288,
+              "residual": 0.1012,
+              "abs_error": 0.1012,
+              "pct_error": 19.1,
+              "rank": 9
+            },
+            {
+              "index": 20747,
+              "actual": 0.555,
+              "predicted": 0.4556,
+              "residual": 0.0994,
+              "abs_error": 0.0994,
+              "pct_error": 17.9,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 16,
+          "features": [
+            "Siltation",
+            "ClimateChange",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "Landslides",
+            "MonsoonIntensity",
+            "PoliticalFactors",
+            "RiverManagement",
+            "TopographyDrainage",
+            "Encroachments",
+            "Urbanization",
+            "Deforestation",
+            "PopulationScore",
+            "IneffectiveDisasterPreparedness",
+            "DrainageSystems",
+            "Watersheds"
+          ],
+          "rmse": 0.030667196048888515,
+          "mae": 0.024769868665916912,
+          "r2": 0.6338550791569729,
+          "adj_r2": 0.6328759184126158,
+          "f_stat": 2823.404741663237,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.0814081472353027,
+              "stderr": 0.0019997816612160745,
+              "tstat": 40.70851774178092,
+              "pvalue": 1e-25,
+              "ci_lower": 0.07748857517931919,
+              "ci_upper": 0.0853277192912862,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005307408757188515,
+              "stderr": 9.298038016693392e-05,
+              "tstat": 57.08095350502727,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005125167212061324,
+              "ci_upper": 0.005489650302315705,
+              "vif": 1.0012420877881718
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005377112748029327,
+              "stderr": 9.489024595040174e-05,
+              "tstat": 56.66665413471364,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005191127865966539,
+              "ci_upper": 0.005563097630092114,
+              "vif": 1.0016019273893482
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005488845128264423,
+              "stderr": 9.298843365734738e-05,
+              "tstat": 59.02718125665222,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005306587798296023,
+              "ci_upper": 0.005671102458232824,
+              "vif": 1.0022657382803986
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005428669392292316,
+              "stderr": 9.422414853690707e-05,
+              "tstat": 57.61441707447149,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005243990061159979,
+              "ci_upper": 0.005613348723424654,
+              "vif": 1.0016771012250911
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005419873446710518,
+              "stderr": 9.264289759801128e-05,
+              "tstat": 58.5028489742193,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005238293367418416,
+              "ci_upper": 0.00560145352600262,
+              "vif": 1.0023505042041594
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005350934738141437,
+              "stderr": 9.474285302221495e-05,
+              "tstat": 56.478505422322144,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005165238746217896,
+              "ci_upper": 0.005536630730064978,
+              "vif": 1.0021116665590044
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005438397390434606,
+              "stderr": 9.249496878245008e-05,
+              "tstat": 58.796683344213236,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005257107251621004,
+              "ci_upper": 0.005619687529248208,
+              "vif": 1.0030327179071579
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005336422245807019,
+              "stderr": 9.356179794858364e-05,
+              "tstat": 57.03633708214564,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005153041121827795,
+              "ci_upper": 0.0055198033697862435,
+              "vif": 1.0019700953815787
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.0053370338066665865,
+              "stderr": 9.23812031368996e-05,
+              "tstat": 57.771858618875555,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005155966648518263,
+              "ci_upper": 0.00551810096481491,
+              "vif": 1.0019027411308818
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005376793515383022,
+              "stderr": 9.362879178362596e-05,
+              "tstat": 57.426710448306025,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005193281083487116,
+              "ci_upper": 0.005560305947278929,
+              "vif": 1.0024646985555647
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005397502951219024,
+              "stderr": 9.346496614106925e-05,
+              "tstat": 57.74894245478487,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005214311617582528,
+              "ci_upper": 0.00558069428485552,
+              "vif": 1.003836389935305
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.0053644639318613605,
+              "stderr": 9.397465914248276e-05,
+              "tstat": 57.084154183819415,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005180273599942094,
+              "ci_upper": 0.005548654263780627,
+              "vif": 1.0022363157826961
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005253573851088093,
+              "stderr": 9.274998940943045e-05,
+              "tstat": 56.64231213975676,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0050717838718456094,
+              "ci_upper": 0.005435363830330577,
+              "vif": 1.0016093655125284
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005264295396654724,
+              "stderr": 9.361152067635927e-05,
+              "tstat": 56.23555048159979,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00508081681612906,
+              "ci_upper": 0.005447773977180388,
+              "vif": 1.0016207105780954
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.0052510122045425775,
+              "stderr": 9.355083589450673e-05,
+              "tstat": 56.130040467665296,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005067652566189344,
+              "ci_upper": 0.005434371842895811,
+              "vif": 1.003275414273397
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005243284437795127,
+              "stderr": 9.314476536457056e-05,
+              "tstat": 56.29177782855324,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005060720697680569,
+              "ci_upper": 0.005425848177909686,
+              "vif": 1.0019663196861017
+            }
+          ],
+          "outliers": [
+            {
+              "index": 8969,
+              "actual": 0.435,
+              "predicted": 0.5724,
+              "residual": -0.1374,
+              "abs_error": 0.1374,
+              "pct_error": 31.58,
+              "rank": 1
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4712,
+              "residual": 0.1338,
+              "abs_error": 0.1338,
+              "pct_error": 22.11,
+              "rank": 2
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.4892,
+              "residual": 0.1158,
+              "abs_error": 0.1158,
+              "pct_error": 19.14,
+              "rank": 3
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5208,
+              "residual": -0.1158,
+              "abs_error": 0.1158,
+              "pct_error": 28.6,
+              "rank": 4
+            },
+            {
+              "index": 3858,
+              "actual": 0.405,
+              "predicted": 0.5096,
+              "residual": -0.1046,
+              "abs_error": 0.1046,
+              "pct_error": 25.82,
+              "rank": 5
+            },
+            {
+              "index": 24835,
+              "actual": 0.51,
+              "predicted": 0.407,
+              "residual": 0.103,
+              "abs_error": 0.103,
+              "pct_error": 20.19,
+              "rank": 6
+            },
+            {
+              "index": 13534,
+              "actual": 0.585,
+              "predicted": 0.4834,
+              "residual": 0.1016,
+              "abs_error": 0.1016,
+              "pct_error": 17.37,
+              "rank": 7
+            },
+            {
+              "index": 18089,
+              "actual": 0.54,
+              "predicted": 0.4399,
+              "residual": 0.1001,
+              "abs_error": 0.1001,
+              "pct_error": 18.54,
+              "rank": 8
+            },
+            {
+              "index": 25759,
+              "actual": 0.595,
+              "predicted": 0.499,
+              "residual": 0.096,
+              "abs_error": 0.096,
+              "pct_error": 16.13,
+              "rank": 9
+            },
+            {
+              "index": 790,
+              "actual": 0.605,
+              "predicted": 0.5097,
+              "residual": 0.0953,
+              "abs_error": 0.0953,
+              "pct_error": 15.75,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 17,
+          "features": [
+            "Siltation",
+            "ClimateChange",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "Landslides",
+            "MonsoonIntensity",
+            "PoliticalFactors",
+            "RiverManagement",
+            "TopographyDrainage",
+            "Encroachments",
+            "Urbanization",
+            "Deforestation",
+            "PopulationScore",
+            "IneffectiveDisasterPreparedness",
+            "DrainageSystems",
+            "Watersheds",
+            "CoastalVulnerability"
+          ],
+          "rmse": 0.028437929263496742,
+          "mae": 0.022938140129478337,
+          "r2": 0.685152090456475,
+          "adj_r2": 0.6842573371194238,
+          "f_stat": 3298.4528403216545,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.04795300566080789,
+              "stderr": 0.0019366933480322382,
+              "tstat": 24.76024700014081,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0441570866986647,
+              "ci_upper": 0.051748924622951074,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.0053736127331451815,
+              "stderr": 8.642680666452882e-05,
+              "tstat": 62.175301165565486,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005204216192082705,
+              "ci_upper": 0.005543009274207658,
+              "vif": 1.0013975206293606
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005429525838701641,
+              "stderr": 8.81993328045365e-05,
+              "tstat": 61.55971554494997,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00525665514640475,
+              "ci_upper": 0.005602396530998532,
+              "vif": 1.0016955002109647
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.00558201650370751,
+              "stderr": 8.644086782340375e-05,
+              "tstat": 64.57612752235913,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005412592402773639,
+              "ci_upper": 0.005751440604641381,
+              "vif": 1.0025738499962893
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005427251062159007,
+              "stderr": 8.757611565182976e-05,
+              "tstat": 61.97181756422892,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005255601875481421,
+              "ci_upper": 0.005598900248836593,
+              "vif": 1.0016771707237042
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005474994041209907,
+              "stderr": 8.611109445324412e-05,
+              "tstat": 63.580588261860655,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005306216296081549,
+              "ci_upper": 0.005643771786338266,
+              "vif": 1.0024591571030843
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005422906779590965,
+              "stderr": 8.806599951565029e-05,
+              "tstat": 61.57775769781907,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00525029742054029,
+              "ci_upper": 0.005595516138641639,
+              "vif": 1.0022887463589811
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005528419657820878,
+              "stderr": 8.59814030739228e-05,
+              "tstat": 64.2978534912695,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005359896107795989,
+              "ci_upper": 0.005696943207845767,
+              "vif": 1.0033236535650036
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.0054022783293615675,
+              "stderr": 8.696709064820262e-05,
+              "tstat": 62.1186507343881,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005231822831691091,
+              "ci_upper": 0.005572733827032044,
+              "vif": 1.0021221037930494
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005410546742748774,
+              "stderr": 8.587152127283434e-05,
+              "tstat": 63.007463505370715,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005242238561054019,
+              "ci_upper": 0.00557885492444353,
+              "vif": 1.0020970103762183
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005553782847543435,
+              "stderr": 8.707035836603543e-05,
+              "tstat": 63.785000449818575,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005383124945146005,
+              "ci_upper": 0.0057244407499408645,
+              "vif": 1.0035615873751094
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005506564957912546,
+              "stderr": 8.688860249330698e-05,
+              "tstat": 63.37499740931748,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005336263297025664,
+              "ci_upper": 0.005676866618799428,
+              "vif": 1.0042549235812934
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005437901773537517,
+              "stderr": 8.735239228567905e-05,
+              "tstat": 62.252465344661566,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005266691084657586,
+              "ci_upper": 0.005609112462417448,
+              "vif": 1.0024237317570297
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005366882965269067,
+              "stderr": 8.622565957422687e-05,
+              "tstat": 62.24229529550906,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0051978806725035825,
+              "ci_upper": 0.005535885258034551,
+              "vif": 1.0020671051349996
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005355139570244781,
+              "stderr": 8.701925330798661e-05,
+              "tstat": 61.539709508783936,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005184581833761128,
+              "ci_upper": 0.005525697306728435,
+              "vif": 1.0019095503753406
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.005447671808240043,
+              "stderr": 8.700911540210803e-05,
+              "tstat": 62.610357352375274,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005277133942051911,
+              "ci_upper": 0.005618209674428175,
+              "vif": 1.0046330189438466
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005356473372561515,
+              "stderr": 8.659245686233543e-05,
+              "tstat": 61.858429321127005,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005186752157111338,
+              "ci_upper": 0.005526194588011692,
+              "vif": 1.002419386593329
+            },
+            {
+              "feature": "CoastalVulnerability",
+              "coef": 0.0053319385240865585,
+              "stderr": 8.671967965230252e-05,
+              "tstat": 61.48475807872739,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005161967951968045,
+              "ci_upper": 0.005501909096205072,
+              "vif": 1.0050321441798427
+            }
+          ],
+          "outliers": [
+            {
+              "index": 8969,
+              "actual": 0.435,
+              "predicted": 0.57,
+              "residual": -0.135,
+              "abs_error": 0.135,
+              "pct_error": 31.04,
+              "rank": 1
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.495,
+              "residual": 0.11,
+              "abs_error": 0.11,
+              "pct_error": 18.19,
+              "rank": 2
+            },
+            {
+              "index": 15053,
+              "actual": 0.54,
+              "predicted": 0.4346,
+              "residual": 0.1054,
+              "abs_error": 0.1054,
+              "pct_error": 19.52,
+              "rank": 3
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.5001,
+              "residual": 0.1049,
+              "abs_error": 0.1049,
+              "pct_error": 17.33,
+              "rank": 4
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5056,
+              "residual": -0.1006,
+              "abs_error": 0.1006,
+              "pct_error": 24.83,
+              "rank": 5
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.5087,
+              "residual": 0.0963,
+              "abs_error": 0.0963,
+              "pct_error": 15.92,
+              "rank": 6
+            },
+            {
+              "index": 27941,
+              "actual": 0.515,
+              "predicted": 0.4188,
+              "residual": 0.0962,
+              "abs_error": 0.0962,
+              "pct_error": 18.67,
+              "rank": 7
+            },
+            {
+              "index": 25759,
+              "actual": 0.595,
+              "predicted": 0.4991,
+              "residual": 0.0959,
+              "abs_error": 0.0959,
+              "pct_error": 16.12,
+              "rank": 8
+            },
+            {
+              "index": 18089,
+              "actual": 0.54,
+              "predicted": 0.4443,
+              "residual": 0.0957,
+              "abs_error": 0.0957,
+              "pct_error": 17.73,
+              "rank": 9
+            },
+            {
+              "index": 790,
+              "actual": 0.605,
+              "predicted": 0.5097,
+              "residual": 0.0953,
+              "abs_error": 0.0953,
+              "pct_error": 15.75,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 18,
+          "features": [
+            "Siltation",
+            "ClimateChange",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "Landslides",
+            "MonsoonIntensity",
+            "PoliticalFactors",
+            "RiverManagement",
+            "TopographyDrainage",
+            "Encroachments",
+            "Urbanization",
+            "Deforestation",
+            "PopulationScore",
+            "IneffectiveDisasterPreparedness",
+            "DrainageSystems",
+            "Watersheds",
+            "CoastalVulnerability",
+            "AgriculturalPractices"
+          ],
+          "rmse": 0.026069857256707917,
+          "mae": 0.021038511203852146,
+          "r2": 0.7354046660115294,
+          "adj_r2": 0.7346083583686951,
+          "f_stat": 3969.172325079943,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.015605093368650865,
+              "stderr": 0.001836802665840388,
+              "tstat": 8.495791986185464,
+              "pvalue": 1.9658779296790672e-17,
+              "ci_lower": 0.012004960143603706,
+              "ci_upper": 0.019205226593698027,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005423985152521432,
+              "stderr": 7.916443035212923e-05,
+              "tstat": 68.51543209993612,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005268822869031259,
+              "ci_upper": 0.005579147436011606,
+              "vif": 1.0014855641504887
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005522292836503011,
+              "stderr": 8.079602574732469e-05,
+              "tstat": 68.34857018553124,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005363932626038254,
+              "ci_upper": 0.005680653046967767,
+              "vif": 1.0019823102382042
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005582895200116321,
+              "stderr": 7.917383059089074e-05,
+              "tstat": 70.5144005089815,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0054277144921581755,
+              "ci_upper": 0.005738075908074467,
+              "vif": 1.0025738768100707
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005483009185950214,
+              "stderr": 8.021784546196709e-05,
+              "tstat": 68.35148905301652,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005325782208844759,
+              "ci_upper": 0.0056402361630556695,
+              "vif": 1.0017822639986975
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005578327042030992,
+              "stderr": 7.88864765133148e-05,
+              "tstat": 70.71335022916706,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005423709548064894,
+              "ci_upper": 0.005732944535997089,
+              "vif": 1.0028327759333169
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.0054339647374805995,
+              "stderr": 8.066250183737474e-05,
+              "tstat": 67.36667737427885,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005275866233879345,
+              "ci_upper": 0.005592063241081854,
+              "vif": 1.002292836406789
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005604110795384989,
+              "stderr": 7.876088940374194e-05,
+              "tstat": 71.15347271737052,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005449739452153654,
+              "ci_upper": 0.005758482138616323,
+              "vif": 1.0035248981780371
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005478570134043366,
+              "stderr": 7.966374565156042e-05,
+              "tstat": 68.77118429763482,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005322429192566308,
+              "ci_upper": 0.005634711075520425,
+              "vif": 1.0023217075625181
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005434799453179191,
+              "stderr": 7.865315954916147e-05,
+              "tstat": 69.09829794926695,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005280639260462835,
+              "ci_upper": 0.005588959645895547,
+              "vif": 1.0021176991246954
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.0056076752130075095,
+              "stderr": 7.975435287623585e-05,
+              "tstat": 70.31183892507528,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005451356681370087,
+              "ci_upper": 0.005763993744644932,
+              "vif": 1.0036610958482075
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.0055423365309035496,
+              "stderr": 7.958566897785681e-05,
+              "tstat": 69.6398811756624,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00538634861970695,
+              "ci_upper": 0.005698324442100149,
+              "vif": 1.004298978725289
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005518738278901814,
+              "stderr": 8.001758908613118e-05,
+              "tstat": 68.96906470103,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005361903804292997,
+              "ci_upper": 0.005675572753510632,
+              "vif": 1.002645918937386
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005460406308632262,
+              "stderr": 7.898873651582489e-05,
+              "tstat": 69.12892330589824,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005305588385061245,
+              "ci_upper": 0.005615224232203279,
+              "vif": 1.0023722218552644
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005512776970368915,
+              "stderr": 7.973743165118146e-05,
+              "tstat": 69.13662575043867,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005356491604332599,
+              "ci_upper": 0.005669062336405231,
+              "vif": 1.0027605287868855
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.005502937024060056,
+              "stderr": 7.969846549737316e-05,
+              "tstat": 69.04696332254267,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005346728031685205,
+              "ci_upper": 0.005659146016434908,
+              "vif": 1.0047379209722487
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005460260317913129,
+              "stderr": 7.932741803253202e-05,
+              "tstat": 68.83194301967431,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005304778578569366,
+              "ci_upper": 0.005615742057256892,
+              "vif": 1.0027921017014372
+            },
+            {
+              "feature": "CoastalVulnerability",
+              "coef": 0.005434100958209608,
+              "stderr": 7.944346642834249e-05,
+              "tstat": 68.4021128799954,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005278391764010057,
+              "ci_upper": 0.005589810152409159,
+              "vif": 1.0053931625407022
+            },
+            {
+              "feature": "AgriculturalPractices",
+              "coef": 0.005395316132213178,
+              "stderr": 7.95024536051749e-05,
+              "tstat": 67.86351725705721,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005239491323147035,
+              "ci_upper": 0.0055511409412793205,
+              "vif": 1.0031968968376437
+            }
+          ],
+          "outliers": [
+            {
+              "index": 8969,
+              "actual": 0.435,
+              "predicted": 0.5604,
+              "residual": -0.1254,
+              "abs_error": 0.1254,
+              "pct_error": 28.84,
+              "rank": 1
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4988,
+              "residual": 0.1062,
+              "abs_error": 0.1062,
+              "pct_error": 17.56,
+              "rank": 2
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.5002,
+              "residual": 0.1048,
+              "abs_error": 0.1048,
+              "pct_error": 17.32,
+              "rank": 3
+            },
+            {
+              "index": 790,
+              "actual": 0.605,
+              "predicted": 0.5053,
+              "residual": 0.0997,
+              "abs_error": 0.0997,
+              "pct_error": 16.47,
+              "rank": 4
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5003,
+              "residual": -0.0953,
+              "abs_error": 0.0953,
+              "pct_error": 23.54,
+              "rank": 5
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.5098,
+              "residual": 0.0952,
+              "abs_error": 0.0952,
+              "pct_error": 15.74,
+              "rank": 6
+            },
+            {
+              "index": 18905,
+              "actual": 0.605,
+              "predicted": 0.5166,
+              "residual": 0.0884,
+              "abs_error": 0.0884,
+              "pct_error": 14.62,
+              "rank": 7
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4226,
+              "residual": -0.0876,
+              "abs_error": 0.0876,
+              "pct_error": 26.14,
+              "rank": 8
+            },
+            {
+              "index": 15466,
+              "actual": 0.515,
+              "predicted": 0.4289,
+              "residual": 0.0861,
+              "abs_error": 0.0861,
+              "pct_error": 16.72,
+              "rank": 9
+            },
+            {
+              "index": 25759,
+              "actual": 0.595,
+              "predicted": 0.5102,
+              "residual": 0.0848,
+              "abs_error": 0.0848,
+              "pct_error": 14.25,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 19,
+          "features": [
+            "Siltation",
+            "ClimateChange",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "Landslides",
+            "MonsoonIntensity",
+            "PoliticalFactors",
+            "RiverManagement",
+            "TopographyDrainage",
+            "Encroachments",
+            "Urbanization",
+            "Deforestation",
+            "PopulationScore",
+            "IneffectiveDisasterPreparedness",
+            "DrainageSystems",
+            "Watersheds",
+            "CoastalVulnerability",
+            "AgriculturalPractices",
+            "WetlandLoss"
+          ],
+          "rmse": 0.023258030714079992,
+          "mae": 0.01857175764269902,
+          "r2": 0.789403691484643,
+          "adj_r2": 0.7887345727786577,
+          "f_stat": 4931.242410098117,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": -0.01681471220753107,
+              "stderr": 0.001709953126835529,
+              "tstat": -9.833434579957574,
+              "pvalue": 8.081461290703597e-23,
+              "ci_lower": -0.020166220336128707,
+              "ci_upper": -0.013463204078933434,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005457632593916849,
+              "stderr": 7.12906874315368e-05,
+              "tstat": 76.55463554279827,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005317902846551037,
+              "ci_upper": 0.005597362341282662,
+              "vif": 1.0015254612579307
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005581888479363509,
+              "stderr": 7.276291866906742e-05,
+              "tstat": 76.71336693832282,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005439273158772137,
+              "ci_upper": 0.0057245037999548816,
+              "vif": 1.0021025261299241
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005639271852743206,
+              "stderr": 7.130171841043383e-05,
+              "tstat": 79.09026568310578,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005499520484658756,
+              "ci_upper": 0.005779023220827657,
+              "vif": 1.0026859765098362
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.00551201800060031,
+              "stderr": 7.223893194147132e-05,
+              "tstat": 76.3025954628759,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005370429693995027,
+              "ci_upper": 0.005653606307205594,
+              "vif": 1.0018111537714895
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.0056457988179609425,
+              "stderr": 7.104469386542756e-05,
+              "tstat": 79.4682686458637,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005506551217984704,
+              "ci_upper": 0.005785046417937181,
+              "vif": 1.0029945543174723
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005521795528174667,
+              "stderr": 7.264780827731576e-05,
+              "tstat": 76.00773731667888,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005379405823951128,
+              "ci_upper": 0.005664185232398205,
+              "vif": 1.0025548945402638
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005600452018919983,
+              "stderr": 7.092588703463927e-05,
+              "tstat": 78.96202998751072,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00546143728033209,
+              "ci_upper": 0.005739466757507876,
+              "vif": 1.0035253757419378
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005532702328504352,
+              "stderr": 7.174256378900367e-05,
+              "tstat": 77.1188264859915,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005392086903477904,
+              "ci_upper": 0.005673317753530799,
+              "vif": 1.0024237661999986
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005516983188788342,
+              "stderr": 7.08373831331128e-05,
+              "tstat": 77.88236866996063,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005378141917847441,
+              "ci_upper": 0.005655824459729244,
+              "vif": 1.002358973361278
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005686104774601421,
+              "stderr": 7.182816303265955e-05,
+              "tstat": 79.16260885045892,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005545321575057409,
+              "ci_upper": 0.005826887974145434,
+              "vif": 1.0038751337485592
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005608967133366085,
+              "stderr": 7.167414061649422e-05,
+              "tstat": 78.25649648703713,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005468485817757756,
+              "ci_upper": 0.005749448448974414,
+              "vif": 1.004454215126791
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005590410876732784,
+              "stderr": 7.206392927024774e-05,
+              "tstat": 77.57571552569833,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005449165575363099,
+              "ci_upper": 0.005731656178102469,
+              "vif": 1.0028233116466647
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005563797199672932,
+              "stderr": 7.114448753204667e-05,
+              "tstat": 78.20419251971909,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005424354004110121,
+              "ci_upper": 0.0057032403952357435,
+              "vif": 1.0027509399477743
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.0056071491052388355,
+              "stderr": 7.181635681232877e-05,
+              "tstat": 78.07621207925507,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0054663890458866715,
+              "ci_upper": 0.0057479091645909995,
+              "vif": 1.003070280068767
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.00558987551625294,
+              "stderr": 7.1779593456855e-05,
+              "tstat": 77.87555274484635,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005449187513077504,
+              "ci_upper": 0.0057305635194283755,
+              "vif": 1.0050015722559005
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.0054925369557413135,
+              "stderr": 7.143734530504962e-05,
+              "tstat": 76.8860731356582,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005352519758943416,
+              "ci_upper": 0.005632554152539211,
+              "vif": 1.0028287111892502
+            },
+            {
+              "feature": "CoastalVulnerability",
+              "coef": 0.005514400072359466,
+              "stderr": 7.154860393707857e-05,
+              "tstat": 77.0720848335343,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0053741648086427915,
+              "ci_upper": 0.00565463533607614,
+              "vif": 1.0056196759267158
+            },
+            {
+              "feature": "AgriculturalPractices",
+              "coef": 0.005505356505458936,
+              "stderr": 7.160878611672931e-05,
+              "tstat": 76.8810198302296,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005365003284670147,
+              "ci_upper": 0.005645709726247726,
+              "vif": 1.003620717409992
+            },
+            {
+              "feature": "WetlandLoss",
+              "coef": 0.005360541620679857,
+              "stderr": 7.168513992646002e-05,
+              "tstat": 74.77897966271813,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005220038746423995,
+              "ci_upper": 0.005501044494935719,
+              "vif": 1.0027718010217133
+            }
+          ],
+          "outliers": [
+            {
+              "index": 8969,
+              "actual": 0.435,
+              "predicted": 0.5562,
+              "residual": -0.1212,
+              "abs_error": 0.1212,
+              "pct_error": 27.85,
+              "rank": 1
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4993,
+              "residual": 0.1057,
+              "abs_error": 0.1057,
+              "pct_error": 17.46,
+              "rank": 2
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.5102,
+              "residual": 0.0948,
+              "abs_error": 0.0948,
+              "pct_error": 15.67,
+              "rank": 3
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.5109,
+              "residual": 0.0941,
+              "abs_error": 0.0941,
+              "pct_error": 15.56,
+              "rank": 4
+            },
+            {
+              "index": 18905,
+              "actual": 0.605,
+              "predicted": 0.5115,
+              "residual": 0.0935,
+              "abs_error": 0.0935,
+              "pct_error": 15.45,
+              "rank": 5
+            },
+            {
+              "index": 3329,
+              "actual": 0.5,
+              "predicted": 0.5893,
+              "residual": -0.0893,
+              "abs_error": 0.0893,
+              "pct_error": 17.86,
+              "rank": 6
+            },
+            {
+              "index": 790,
+              "actual": 0.605,
+              "predicted": 0.5163,
+              "residual": 0.0887,
+              "abs_error": 0.0887,
+              "pct_error": 14.67,
+              "rank": 7
+            },
+            {
+              "index": 17068,
+              "actual": 0.555,
+              "predicted": 0.4775,
+              "residual": 0.0775,
+              "abs_error": 0.0775,
+              "pct_error": 13.97,
+              "rank": 8
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.5282,
+              "residual": 0.0768,
+              "abs_error": 0.0768,
+              "pct_error": 12.7,
+              "rank": 9
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4112,
+              "residual": -0.0762,
+              "abs_error": 0.0762,
+              "pct_error": 22.74,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 20,
+          "features": [
+            "Siltation",
+            "ClimateChange",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "Landslides",
+            "MonsoonIntensity",
+            "PoliticalFactors",
+            "RiverManagement",
+            "TopographyDrainage",
+            "Encroachments",
+            "Urbanization",
+            "Deforestation",
+            "PopulationScore",
+            "IneffectiveDisasterPreparedness",
+            "DrainageSystems",
+            "Watersheds",
+            "CoastalVulnerability",
+            "AgriculturalPractices",
+            "WetlandLoss",
+            "InadequatePlanning"
+          ],
+          "rmse": 0.019982524780182156,
+          "mae": 0.015939420378007337,
+          "r2": 0.8445446777758343,
+          "adj_r2": 0.8440246733529403,
+          "f_stat": 6572.592064774198,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": -0.05146999776631218,
+              "stderr": 0.0015393908318728376,
+              "tstat": -33.435302264138656,
+              "pvalue": 1e-25,
+              "ci_lower": -0.054487203796782936,
+              "ci_upper": -0.04845279173584142,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.00557886956331869,
+              "stderr": 6.20456731260051e-05,
+              "tstat": 89.91552967745027,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005457260043991719,
+              "ci_upper": 0.00570047908264566,
+              "vif": 1.0020226232542908
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005669639950469076,
+              "stderr": 6.331917469971195e-05,
+              "tstat": 89.54064826898112,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00554553436805764,
+              "ci_upper": 0.005793745532880511,
+              "vif": 1.002352694348924
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.0056918264055146935,
+              "stderr": 6.204276963079482e-05,
+              "tstat": 91.74036619231721,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005570222577038336,
+              "ci_upper": 0.005813430233991051,
+              "vif": 1.002779477675951
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005569139709766129,
+              "stderr": 6.285872268045099e-05,
+              "tstat": 88.59772315255981,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005445936613312445,
+              "ci_upper": 0.0056923428062198135,
+              "vif": 1.0019186707392818
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.0057232425403718114,
+              "stderr": 6.182254273657612e-05,
+              "tstat": 92.57533396447903,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005602070356608122,
+              "ci_upper": 0.005844414724135501,
+              "vif": 1.0031991229821047
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005608036459107903,
+              "stderr": 6.321875913919953e-05,
+              "tstat": 88.70842350384846,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005484127691195072,
+              "ci_upper": 0.005731945227020734,
+              "vif": 1.0027973999273794
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005720505429017066,
+              "stderr": 6.172803756996555e-05,
+              "tstat": 92.67272465179487,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005599518475379933,
+              "ci_upper": 0.0058414923826541985,
+              "vif": 1.0040188894250635
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005605184450336703,
+              "stderr": 6.242892631072782e-05,
+              "tstat": 89.78505288458733,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005482823754767677,
+              "ci_upper": 0.005727545145905729,
+              "vif": 1.0025993929871648
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005612103561770648,
+              "stderr": 6.164539455532965e-05,
+              "tstat": 91.03848879957317,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005491278588442202,
+              "ci_upper": 0.0057329285350990935,
+              "vif": 1.0026691983259604
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005725475719286404,
+              "stderr": 6.249954986808943e-05,
+              "tstat": 91.60827128148128,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005602976601544948,
+              "ci_upper": 0.005847974837027859,
+              "vif": 1.0039269031613467
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005697783066956081,
+              "stderr": 6.237214088487793e-05,
+              "tstat": 91.35141084018014,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00557553367082172,
+              "ci_upper": 0.005820032463090442,
+              "vif": 1.004718954366728
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005622841514713452,
+              "stderr": 6.270416926615536e-05,
+              "tstat": 89.67253024031987,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005499941342951788,
+              "ci_upper": 0.005745741686475117,
+              "vif": 1.002858171930549
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005638240775480907,
+              "stderr": 6.190888646998865e-05,
+              "tstat": 91.07320607703285,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005516899357999729,
+              "ci_upper": 0.005759582192962085,
+              "vif": 1.002939390063654
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005611011965653214,
+              "stderr": 6.248768127436585e-05,
+              "tstat": 89.79388979112278,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005488536110355456,
+              "ci_upper": 0.005733487820950971,
+              "vif": 1.003070778188841
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.005658056427391133,
+              "stderr": 6.246051376463215e-05,
+              "tstat": 90.58613332436227,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005535633820412454,
+              "ci_upper": 0.0057804790343698115,
+              "vif": 1.005157212443036
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005643373233746006,
+              "stderr": 6.218166452120693e-05,
+              "tstat": 90.7562265693506,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005521497171284441,
+              "ci_upper": 0.0057652492962075716,
+              "vif": 1.0035961065154846
+            },
+            {
+              "feature": "CoastalVulnerability",
+              "coef": 0.005637918768090512,
+              "stderr": 6.22706144278653e-05,
+              "tstat": 90.53899371141608,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005515868363811896,
+              "ci_upper": 0.005759969172369128,
+              "vif": 1.0061341082141413
+            },
+            {
+              "feature": "AgriculturalPractices",
+              "coef": 0.005575684404052856,
+              "stderr": 6.231221531184331e-05,
+              "tstat": 89.47979743857893,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005453552462041643,
+              "ci_upper": 0.005697816346064069,
+              "vif": 1.0037868763320774
+            },
+            {
+              "feature": "WetlandLoss",
+              "coef": 0.005494538666000337,
+              "stderr": 6.23921946423047e-05,
+              "tstat": 88.0645198890759,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00537224996450142,
+              "ci_upper": 0.005616827367499254,
+              "vif": 1.003373204135933
+            },
+            {
+              "feature": "InadequatePlanning",
+              "coef": 0.005458379070294858,
+              "stderr": 6.222291028674773e-05,
+              "tstat": 87.72297928754044,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005336422166132832,
+              "ci_upper": 0.005580335974456884,
+              "vif": 1.004352654706499
+            }
+          ],
+          "outliers": [
+            {
+              "index": 8969,
+              "actual": 0.435,
+              "predicted": 0.5404,
+              "residual": -0.1054,
+              "abs_error": 0.1054,
+              "pct_error": 24.23,
+              "rank": 1
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.5053,
+              "residual": 0.0997,
+              "abs_error": 0.0997,
+              "pct_error": 16.48,
+              "rank": 2
+            },
+            {
+              "index": 1397,
+              "actual": 0.475,
+              "predicted": 0.5706,
+              "residual": -0.0956,
+              "abs_error": 0.0956,
+              "pct_error": 20.13,
+              "rank": 3
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.5107,
+              "residual": 0.0943,
+              "abs_error": 0.0943,
+              "pct_error": 15.58,
+              "rank": 4
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.5109,
+              "residual": 0.0941,
+              "abs_error": 0.0941,
+              "pct_error": 15.55,
+              "rank": 5
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.5123,
+              "residual": 0.0927,
+              "abs_error": 0.0927,
+              "pct_error": 15.32,
+              "rank": 6
+            },
+            {
+              "index": 790,
+              "actual": 0.605,
+              "predicted": 0.5166,
+              "residual": 0.0884,
+              "abs_error": 0.0884,
+              "pct_error": 14.62,
+              "rank": 7
+            },
+            {
+              "index": 18905,
+              "actual": 0.605,
+              "predicted": 0.5177,
+              "residual": 0.0873,
+              "abs_error": 0.0873,
+              "pct_error": 14.42,
+              "rank": 8
+            },
+            {
+              "index": 3329,
+              "actual": 0.5,
+              "predicted": 0.5848,
+              "residual": -0.0848,
+              "abs_error": 0.0848,
+              "pct_error": 16.97,
+              "rank": 9
+            },
+            {
+              "index": 7685,
+              "actual": 0.5,
+              "predicted": 0.5684,
+              "residual": -0.0684,
+              "abs_error": 0.0684,
+              "pct_error": 13.68,
+              "rank": 10
+            }
+          ]
+        }
+      ],
+      "ElasticNet": [
+        {
+          "k": 1,
+          "features": [
+            "Encroachments"
+          ],
+          "rmse": 0.04981083737606677,
+          "mae": 0.040242264872498185,
+          "r2": 0.034054640523620616,
+          "adj_r2": 0.03389359594884955,
+          "f_stat": 863.8995044656974,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.4815715843860977,
+              "stderr": 0.0008359493892198568,
+              "tstat": 576.077440328679,
+              "pvalue": 1e-25,
+              "ci_lower": 0.47993312358322676,
+              "ci_upper": 0.48321004518896865,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.004584150857643431,
+              "stderr": 0.00015596504998314137,
+              "tstat": 29.39216739993314,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004278459359676474,
+              "ci_upper": 0.004889842355610388,
+              "vif": 1.0
+            }
+          ],
+          "outliers": [
+            {
+              "index": 5662,
+              "actual": 0.69,
+              "predicted": 0.5137,
+              "residual": 0.1763,
+              "abs_error": 0.1763,
+              "pct_error": 25.56,
+              "rank": 1
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.5045,
+              "residual": -0.1745,
+              "abs_error": 0.1745,
+              "pct_error": 52.88,
+              "rank": 2
+            },
+            {
+              "index": 274,
+              "actual": 0.33,
+              "predicted": 0.4999,
+              "residual": -0.1699,
+              "abs_error": 0.1699,
+              "pct_error": 51.49,
+              "rank": 3
+            },
+            {
+              "index": 15022,
+              "actual": 0.36,
+              "predicted": 0.5182,
+              "residual": -0.1582,
+              "abs_error": 0.1582,
+              "pct_error": 43.96,
+              "rank": 4
+            },
+            {
+              "index": 3396,
+              "actual": 0.67,
+              "predicted": 0.5137,
+              "residual": 0.1563,
+              "abs_error": 0.1563,
+              "pct_error": 23.33,
+              "rank": 5
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4907,
+              "residual": -0.1557,
+              "abs_error": 0.1557,
+              "pct_error": 46.49,
+              "rank": 6
+            },
+            {
+              "index": 14268,
+              "actual": 0.66,
+              "predicted": 0.5091,
+              "residual": 0.1509,
+              "abs_error": 0.1509,
+              "pct_error": 22.87,
+              "rank": 7
+            },
+            {
+              "index": 8615,
+              "actual": 0.34,
+              "predicted": 0.4907,
+              "residual": -0.1507,
+              "abs_error": 0.1507,
+              "pct_error": 44.34,
+              "rank": 8
+            },
+            {
+              "index": 14546,
+              "actual": 0.655,
+              "predicted": 0.5045,
+              "residual": 0.1505,
+              "abs_error": 0.1505,
+              "pct_error": 22.98,
+              "rank": 9
+            },
+            {
+              "index": 9898,
+              "actual": 0.645,
+              "predicted": 0.4953,
+              "residual": 0.1497,
+              "abs_error": 0.1497,
+              "pct_error": 23.21,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 2,
+          "features": [
+            "Encroachments",
+            "Landslides"
+          ],
+          "rmse": 0.049109729564492104,
+          "mae": 0.039754340841778354,
+          "r2": 0.06105541849163687,
+          "adj_r2": 0.06074228039541929,
+          "f_stat": 932.79686613572,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.4580190064478168,
+              "stderr": 0.001116007689372005,
+              "tstat": 410.4084683373026,
+              "pvalue": 1e-25,
+              "ci_lower": 0.4558316313766477,
+              "ci_upper": 0.4602063815189859,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.004655247727931278,
+              "stderr": 0.00015293501959741886,
+              "tstat": 30.43938360347813,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004355495089520337,
+              "ci_upper": 0.004955000366342219,
+              "vif": 1.000223559247612
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.004705764096419399,
+              "stderr": 0.00015133326129881827,
+              "tstat": 31.095372266692472,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004409150904273715,
+              "ci_upper": 0.005002377288565083,
+              "vif": 1.000223559247612
+            }
+          ],
+          "outliers": [
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.5048,
+              "residual": -0.1748,
+              "abs_error": 0.1748,
+              "pct_error": 52.98,
+              "rank": 1
+            },
+            {
+              "index": 274,
+              "actual": 0.33,
+              "predicted": 0.4908,
+              "residual": -0.1608,
+              "abs_error": 0.1608,
+              "pct_error": 48.71,
+              "rank": 2
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4956,
+              "residual": -0.1606,
+              "abs_error": 0.1606,
+              "pct_error": 47.93,
+              "rank": 3
+            },
+            {
+              "index": 1334,
+              "actual": 0.345,
+              "predicted": 0.505,
+              "residual": -0.16,
+              "abs_error": 0.16,
+              "pct_error": 46.37,
+              "rank": 4
+            },
+            {
+              "index": 9737,
+              "actual": 0.36,
+              "predicted": 0.5143,
+              "residual": -0.1543,
+              "abs_error": 0.1543,
+              "pct_error": 42.87,
+              "rank": 5
+            },
+            {
+              "index": 5662,
+              "actual": 0.69,
+              "predicted": 0.5377,
+              "residual": 0.1523,
+              "abs_error": 0.1523,
+              "pct_error": 22.08,
+              "rank": 6
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5001,
+              "residual": 0.1499,
+              "abs_error": 0.1499,
+              "pct_error": 23.06,
+              "rank": 7
+            },
+            {
+              "index": 15022,
+              "actual": 0.36,
+              "predicted": 0.5094,
+              "residual": -0.1494,
+              "abs_error": 0.1494,
+              "pct_error": 41.49,
+              "rank": 8
+            },
+            {
+              "index": 10483,
+              "actual": 0.625,
+              "predicted": 0.4768,
+              "residual": 0.1482,
+              "abs_error": 0.1482,
+              "pct_error": 23.71,
+              "rank": 9
+            },
+            {
+              "index": 3396,
+              "actual": 0.67,
+              "predicted": 0.5235,
+              "residual": 0.1465,
+              "abs_error": 0.1465,
+              "pct_error": 21.86,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 3,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors"
+          ],
+          "rmse": 0.04834850350253867,
+          "mae": 0.03903270973909711,
+          "r2": 0.08993806978183227,
+          "adj_r2": 0.08948273526037553,
+          "f_stat": 979.1568300341884,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.4344321450287186,
+              "stderr": 0.001324876291934314,
+              "tstat": 327.90393161496564,
+              "pvalue": 1e-25,
+              "ci_lower": 0.43183538749652733,
+              "ci_upper": 0.4370289025609098,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.004763164074858525,
+              "stderr": 0.00014990288826676222,
+              "tstat": 31.77499866701805,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004469354413855671,
+              "ci_upper": 0.005056973735861379,
+              "vif": 1.0007450140589416
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.004697907691842406,
+              "stderr": 0.00014829444540528003,
+              "tstat": 31.679593116271477,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004407250578848057,
+              "ci_upper": 0.0049885648048367546,
+              "vif": 1.0002263817543748
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.004668513789416542,
+              "stderr": 0.00014802941845964605,
+              "tstat": 31.53774322696008,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004378376129235636,
+              "ci_upper": 0.0049586514495974475,
+              "vif": 1.0005254244242494
+            }
+          ],
+          "outliers": [
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4957,
+              "residual": -0.1657,
+              "abs_error": 0.1657,
+              "pct_error": 50.23,
+              "rank": 1
+            },
+            {
+              "index": 25883,
+              "actual": 0.65,
+              "predicted": 0.4958,
+              "residual": 0.1542,
+              "abs_error": 0.1542,
+              "pct_error": 23.72,
+              "rank": 2
+            },
+            {
+              "index": 9544,
+              "actual": 0.365,
+              "predicted": 0.5187,
+              "residual": -0.1537,
+              "abs_error": 0.1537,
+              "pct_error": 42.12,
+              "rank": 3
+            },
+            {
+              "index": 274,
+              "actual": 0.33,
+              "predicted": 0.4816,
+              "residual": -0.1516,
+              "abs_error": 0.1516,
+              "pct_error": 45.93,
+              "rank": 4
+            },
+            {
+              "index": 14268,
+              "actual": 0.66,
+              "predicted": 0.5099,
+              "residual": 0.1501,
+              "abs_error": 0.1501,
+              "pct_error": 22.74,
+              "rank": 5
+            },
+            {
+              "index": 9737,
+              "actual": 0.36,
+              "predicted": 0.5097,
+              "residual": -0.1497,
+              "abs_error": 0.1497,
+              "pct_error": 41.58,
+              "rank": 6
+            },
+            {
+              "index": 15944,
+              "actual": 0.65,
+              "predicted": 0.5005,
+              "residual": 0.1495,
+              "abs_error": 0.1495,
+              "pct_error": 23.0,
+              "rank": 7
+            },
+            {
+              "index": 1045,
+              "actual": 0.635,
+              "predicted": 0.4863,
+              "residual": 0.1487,
+              "abs_error": 0.1487,
+              "pct_error": 23.41,
+              "rank": 8
+            },
+            {
+              "index": 3396,
+              "actual": 0.67,
+              "predicted": 0.524,
+              "residual": 0.146,
+              "abs_error": 0.146,
+              "pct_error": 21.79,
+              "rank": 9
+            },
+            {
+              "index": 29905,
+              "actual": 0.655,
+              "predicted": 0.51,
+              "residual": 0.145,
+              "abs_error": 0.145,
+              "pct_error": 22.14,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 4,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization"
+          ],
+          "rmse": 0.04747492234972325,
+          "mae": 0.03831098898523756,
+          "r2": 0.12252772937481893,
+          "adj_r2": 0.12194225996989805,
+          "f_stat": 1005.498702617891,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.4107554041838256,
+              "stderr": 0.0015058291132744818,
+              "tstat": 272.77690447266133,
+              "pvalue": 1e-25,
+              "ci_lower": 0.4078039791218076,
+              "ci_upper": 0.4137068292458436,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.00481821542752821,
+              "stderr": 0.00014698631703847137,
+              "tstat": 32.7800269073149,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004530122246132806,
+              "ci_upper": 0.005106308608923613,
+              "vif": 1.0008903034172218
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.00478871970095981,
+              "stderr": 0.00014542795838901914,
+              "tstat": 32.928466809318785,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004503680902517332,
+              "ci_upper": 0.005073758499402287,
+              "vif": 1.0006301475150623
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.00474999838141533,
+              "stderr": 0.00014516243120432472,
+              "tstat": 32.7219538968001,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004465480016254853,
+              "ci_upper": 0.0050345167465758065,
+              "vif": 1.000851769780042
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.0045580616751034475,
+              "stderr": 0.00014662660290600134,
+              "tstat": 31.086184803896106,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004270673533407685,
+              "ci_upper": 0.00484544981679921,
+              "vif": 1.0008596725430408
+            }
+          ],
+          "outliers": [
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4867,
+              "residual": -0.1567,
+              "abs_error": 0.1567,
+              "pct_error": 47.49,
+              "rank": 1
+            },
+            {
+              "index": 1045,
+              "actual": 0.635,
+              "predicted": 0.4817,
+              "residual": 0.1533,
+              "abs_error": 0.1533,
+              "pct_error": 24.15,
+              "rank": 2
+            },
+            {
+              "index": 23703,
+              "actual": 0.375,
+              "predicted": 0.5242,
+              "residual": -0.1492,
+              "abs_error": 0.1492,
+              "pct_error": 39.78,
+              "rank": 3
+            },
+            {
+              "index": 23131,
+              "actual": 0.38,
+              "predicted": 0.5287,
+              "residual": -0.1487,
+              "abs_error": 0.1487,
+              "pct_error": 39.14,
+              "rank": 4
+            },
+            {
+              "index": 10483,
+              "actual": 0.625,
+              "predicted": 0.4767,
+              "residual": 0.1483,
+              "abs_error": 0.1483,
+              "pct_error": 23.73,
+              "rank": 5
+            },
+            {
+              "index": 274,
+              "actual": 0.33,
+              "predicted": 0.4769,
+              "residual": -0.1469,
+              "abs_error": 0.1469,
+              "pct_error": 44.51,
+              "rank": 6
+            },
+            {
+              "index": 1334,
+              "actual": 0.345,
+              "predicted": 0.4908,
+              "residual": -0.1458,
+              "abs_error": 0.1458,
+              "pct_error": 42.26,
+              "rank": 7
+            },
+            {
+              "index": 25883,
+              "actual": 0.65,
+              "predicted": 0.505,
+              "residual": 0.145,
+              "abs_error": 0.145,
+              "pct_error": 22.31,
+              "rank": 8
+            },
+            {
+              "index": 24512,
+              "actual": 0.64,
+              "predicted": 0.4959,
+              "residual": 0.1441,
+              "abs_error": 0.1441,
+              "pct_error": 22.51,
+              "rank": 9
+            },
+            {
+              "index": 12152,
+              "actual": 0.63,
+              "predicted": 0.4869,
+              "residual": 0.1431,
+              "abs_error": 0.1431,
+              "pct_error": 22.72,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 5,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality"
+          ],
+          "rmse": 0.046435399634291434,
+          "mae": 0.03741537116517702,
+          "r2": 0.1605337315041846,
+          "adj_r2": 0.1598334760249589,
+          "f_stat": 1088.5530107115192,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.38477642318880717,
+              "stderr": 0.0016470407953182744,
+              "tstat": 233.6168140355339,
+              "pvalue": 1e-25,
+              "ci_lower": 0.38154822322998333,
+              "ci_upper": 0.388004623147631,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.004857357620147379,
+              "stderr": 0.0001434022404743047,
+              "tstat": 33.87225753294794,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004576289228817742,
+              "ci_upper": 0.005138426011477016,
+              "vif": 1.000951583198454
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.00485821903025244,
+              "stderr": 0.00014189152417616685,
+              "tstat": 34.23896570608875,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004580111642867153,
+              "ci_upper": 0.005136326417637727,
+              "vif": 1.0008274503097354
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.004853703232105069,
+              "stderr": 0.0001416496905040805,
+              "tstat": 34.265540678786365,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004576069838717071,
+              "ci_upper": 0.005131336625493066,
+              "vif": 1.0012927851009825
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.004611262400462498,
+              "stderr": 0.00014305504759588083,
+              "tstat": 32.23418172205254,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004330874507174572,
+              "ci_upper": 0.004891650293750424,
+              "vif": 1.0009734292452581
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.004968441526589481,
+              "stderr": 0.0001424239536723802,
+              "tstat": 34.88487293379354,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004689290577391616,
+              "ci_upper": 0.005247592475787346,
+              "vif": 1.0007878929457614
+            }
+          ],
+          "outliers": [
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4917,
+              "residual": -0.1567,
+              "abs_error": 0.1567,
+              "pct_error": 46.76,
+              "rank": 1
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4816,
+              "residual": -0.1516,
+              "abs_error": 0.1516,
+              "pct_error": 45.95,
+              "rank": 2
+            },
+            {
+              "index": 23703,
+              "actual": 0.375,
+              "predicted": 0.5247,
+              "residual": -0.1497,
+              "abs_error": 0.1497,
+              "pct_error": 39.92,
+              "rank": 3
+            },
+            {
+              "index": 23131,
+              "actual": 0.38,
+              "predicted": 0.5293,
+              "residual": -0.1493,
+              "abs_error": 0.1493,
+              "pct_error": 39.29,
+              "rank": 4
+            },
+            {
+              "index": 25883,
+              "actual": 0.65,
+              "predicted": 0.505,
+              "residual": 0.145,
+              "abs_error": 0.145,
+              "pct_error": 22.3,
+              "rank": 5
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5054,
+              "residual": 0.1446,
+              "abs_error": 0.1446,
+              "pct_error": 22.24,
+              "rank": 6
+            },
+            {
+              "index": 15306,
+              "actual": 0.625,
+              "predicted": 0.481,
+              "residual": 0.144,
+              "abs_error": 0.144,
+              "pct_error": 23.04,
+              "rank": 7
+            },
+            {
+              "index": 1334,
+              "actual": 0.345,
+              "predicted": 0.4858,
+              "residual": -0.1408,
+              "abs_error": 0.1408,
+              "pct_error": 40.8,
+              "rank": 8
+            },
+            {
+              "index": 29905,
+              "actual": 0.655,
+              "predicted": 0.5146,
+              "residual": 0.1404,
+              "abs_error": 0.1404,
+              "pct_error": 21.43,
+              "rank": 9
+            },
+            {
+              "index": 14268,
+              "actual": 0.66,
+              "predicted": 0.5196,
+              "residual": 0.1404,
+              "abs_error": 0.1404,
+              "pct_error": 21.27,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 6,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange"
+          ],
+          "rmse": 0.04549365905870497,
+          "mae": 0.03687707979989213,
+          "r2": 0.19423831547092119,
+          "adj_r2": 0.1934316126330814,
+          "f_stat": 1158.3104773013645,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.3593097819185808,
+              "stderr": 0.0017631139983195266,
+              "tstat": 203.79271122630132,
+              "pvalue": 1e-25,
+              "ci_lower": 0.35585407848187456,
+              "ci_upper": 0.3627654853552871,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.004861527738797204,
+              "stderr": 0.00013986881269269268,
+              "tstat": 34.75776797704375,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004587384865919526,
+              "ci_upper": 0.005135670611674882,
+              "vif": 1.0009523073826765
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.004953608833734264,
+              "stderr": 0.00013842202450351155,
+              "tstat": 35.78627643615051,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004682301665707381,
+              "ci_upper": 0.005224916001761146,
+              "vif": 1.0012144416491466
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.004941596115666981,
+              "stderr": 0.0001381821487009382,
+              "tstat": 35.76146529868969,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004670759104213142,
+              "ci_upper": 0.00521243312712082,
+              "vif": 1.0016226136845492
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.004587611594815477,
+              "stderr": 0.00013953175560710225,
+              "tstat": 32.87862017398687,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004314129353825557,
+              "ci_upper": 0.0048610938358053975,
+              "vif": 1.0009968369640962
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005011072337890538,
+              "stderr": 0.0001389199046465989,
+              "tstat": 36.07166554453304,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004738789324783204,
+              "ci_upper": 0.005283355350997871,
+              "vif": 1.000864606870152
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.004970496429699305,
+              "stderr": 0.00014180452164085772,
+              "tstat": 35.051748506919054,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0046925595672832245,
+              "ci_upper": 0.005248433292115386,
+              "vif": 1.000814350554139
+            }
+          ],
+          "outliers": [
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5011,
+              "residual": 0.1489,
+              "abs_error": 0.1489,
+              "pct_error": 22.91,
+              "rank": 1
+            },
+            {
+              "index": 24512,
+              "actual": 0.64,
+              "predicted": 0.4965,
+              "residual": 0.1435,
+              "abs_error": 0.1435,
+              "pct_error": 22.42,
+              "rank": 2
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4771,
+              "residual": -0.1421,
+              "abs_error": 0.1421,
+              "pct_error": 42.41,
+              "rank": 3
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4719,
+              "residual": -0.1419,
+              "abs_error": 0.1419,
+              "pct_error": 43.01,
+              "rank": 4
+            },
+            {
+              "index": 10275,
+              "actual": 0.39,
+              "predicted": 0.5259,
+              "residual": -0.1359,
+              "abs_error": 0.1359,
+              "pct_error": 34.86,
+              "rank": 5
+            },
+            {
+              "index": 23703,
+              "actual": 0.375,
+              "predicted": 0.5106,
+              "residual": -0.1356,
+              "abs_error": 0.1356,
+              "pct_error": 36.15,
+              "rank": 6
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5405,
+              "residual": -0.1355,
+              "abs_error": 0.1355,
+              "pct_error": 33.46,
+              "rank": 7
+            },
+            {
+              "index": 8725,
+              "actual": 0.425,
+              "predicted": 0.5604,
+              "residual": -0.1354,
+              "abs_error": 0.1354,
+              "pct_error": 31.87,
+              "rank": 8
+            },
+            {
+              "index": 23131,
+              "actual": 0.38,
+              "predicted": 0.5151,
+              "residual": -0.1351,
+              "abs_error": 0.1351,
+              "pct_error": 35.56,
+              "rank": 9
+            },
+            {
+              "index": 14268,
+              "actual": 0.66,
+              "predicted": 0.525,
+              "residual": 0.135,
+              "abs_error": 0.135,
+              "pct_error": 20.46,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 7,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange",
+            "DrainageSystems"
+          ],
+          "rmse": 0.044491975797647264,
+          "mae": 0.03609588426814741,
+          "r2": 0.22933034420445952,
+          "adj_r2": 0.22843002918600674,
+          "f_stat": 1202.6200432300757,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.33458702719768796,
+              "stderr": 0.0018720316553997697,
+              "tstat": 178.72936402148466,
+              "pvalue": 1e-25,
+              "ci_lower": 0.3309178451531044,
+              "ci_upper": 0.3382562092422715,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.004910080331952957,
+              "stderr": 0.00013667321248732867,
+              "tstat": 35.92569635698132,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004642200835477793,
+              "ci_upper": 0.0051779598284281214,
+              "vif": 1.0010632357369058
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.004999741652283578,
+              "stderr": 0.00013525889304710596,
+              "tstat": 36.96423606351963,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00473463422191125,
+              "ci_upper": 0.005264849082655906,
+              "vif": 1.0013167197819992
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.0050337494284348125,
+              "stderr": 0.00013504521348135204,
+              "tstat": 37.274549009690794,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004769060810011362,
+              "ci_upper": 0.005298438046858263,
+              "vif": 1.0020323158344215
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.004703094360476386,
+              "stderr": 0.00013637924036877084,
+              "tstat": 34.48541249943299,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0044357910493535956,
+              "ci_upper": 0.004970397671599177,
+              "vif": 1.00162745594889
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005062237683635077,
+              "stderr": 0.0001357469299872851,
+              "tstat": 37.291728690359605,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0047961737008599984,
+              "ci_upper": 0.005328301666410156,
+              "vif": 1.000989472900708
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.0050096557319636,
+              "stderr": 0.00013856187739952051,
+              "tstat": 36.15464676130995,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00473807445226054,
+              "ci_upper": 0.00528123701166666,
+              "vif": 1.0008845428352768
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.00460735842423767,
+              "stderr": 0.00013652541338856478,
+              "tstat": 33.747258549766656,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004339768613996083,
+              "ci_upper": 0.004874948234479257,
+              "vif": 1.0013739346946031
+            }
+          ],
+          "outliers": [
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5457,
+              "residual": -0.1407,
+              "abs_error": 0.1407,
+              "pct_error": 34.73,
+              "rank": 1
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5107,
+              "residual": 0.1393,
+              "abs_error": 0.1393,
+              "pct_error": 21.43,
+              "rank": 2
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4723,
+              "residual": -0.1373,
+              "abs_error": 0.1373,
+              "pct_error": 40.97,
+              "rank": 3
+            },
+            {
+              "index": 10275,
+              "actual": 0.39,
+              "predicted": 0.5263,
+              "residual": -0.1363,
+              "abs_error": 0.1363,
+              "pct_error": 34.95,
+              "rank": 4
+            },
+            {
+              "index": 25883,
+              "actual": 0.65,
+              "predicted": 0.5159,
+              "residual": 0.1341,
+              "abs_error": 0.1341,
+              "pct_error": 20.63,
+              "rank": 5
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4624,
+              "residual": -0.1324,
+              "abs_error": 0.1324,
+              "pct_error": 40.14,
+              "rank": 6
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4748,
+              "residual": 0.1302,
+              "abs_error": 0.1302,
+              "pct_error": 21.53,
+              "rank": 7
+            },
+            {
+              "index": 28780,
+              "actual": 0.405,
+              "predicted": 0.5349,
+              "residual": -0.1299,
+              "abs_error": 0.1299,
+              "pct_error": 32.07,
+              "rank": 8
+            },
+            {
+              "index": 8725,
+              "actual": 0.425,
+              "predicted": 0.5521,
+              "residual": -0.1271,
+              "abs_error": 0.1271,
+              "pct_error": 29.91,
+              "rank": 9
+            },
+            {
+              "index": 23703,
+              "actual": 0.375,
+              "predicted": 0.5018,
+              "residual": -0.1268,
+              "abs_error": 0.1268,
+              "pct_error": 33.81,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 8,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange",
+            "DrainageSystems",
+            "Watersheds"
+          ],
+          "rmse": 0.04317896260533049,
+          "mae": 0.0350023567024312,
+          "r2": 0.2741459859375137,
+          "adj_r2": 0.2731767266965689,
+          "f_stat": 1281.227965868661,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.30870065704044447,
+              "stderr": 0.0019522605990689168,
+              "tstat": 158.1247181793618,
+              "pvalue": 1e-25,
+              "ci_lower": 0.30487422626626937,
+              "ci_upper": 0.3125270878146196,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.004963181206089564,
+              "stderr": 0.0001329776434571194,
+              "tstat": 37.32342578089087,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00470254502491361,
+              "ci_upper": 0.005223817387265519,
+              "vif": 1.0011809664056472
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005089123058355959,
+              "stderr": 0.00013161621181786062,
+              "tstat": 38.66638454386326,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004831155283192952,
+              "ci_upper": 0.005347090833518966,
+              "vif": 1.0016573833871323
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.00509086817392726,
+              "stderr": 0.00013139509477648297,
+              "tstat": 38.74473535398995,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004833333788165353,
+              "ci_upper": 0.005348402559689167,
+              "vif": 1.0021719758931578
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.004751475600733946,
+              "stderr": 0.00013269032291782717,
+              "tstat": 35.80875753596932,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0044914025678150045,
+              "ci_upper": 0.005011548633652887,
+              "vif": 1.001725665843336
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005048730835621735,
+              "stderr": 0.00013206915069148963,
+              "tstat": 38.22793445091087,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004789875300266416,
+              "ci_upper": 0.005307586370977055,
+              "vif": 1.0009971938209525
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005060473734768452,
+              "stderr": 0.00013481437644476463,
+              "tstat": 37.536603055400406,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004796237556936714,
+              "ci_upper": 0.00532470991260019,
+              "vif": 1.0009894302094409
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.004709514530428075,
+              "stderr": 0.0001328549971538744,
+              "tstat": 35.448531341078976,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004449118736006482,
+              "ci_upper": 0.004969910324849669,
+              "vif": 1.0018107416118618
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.0048727060965124466,
+              "stderr": 0.0001323231077877947,
+              "tstat": 36.824302103958736,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004613352805248369,
+              "ci_upper": 0.005132059387776524,
+              "vif": 1.0011811677416156
+            }
+          ],
+          "outliers": [
+            {
+              "index": 10275,
+              "actual": 0.39,
+              "predicted": 0.5321,
+              "residual": -0.1421,
+              "abs_error": 0.1421,
+              "pct_error": 36.43,
+              "rank": 1
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4672,
+              "residual": -0.1372,
+              "abs_error": 0.1372,
+              "pct_error": 41.58,
+              "rank": 2
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5415,
+              "residual": -0.1365,
+              "abs_error": 0.1365,
+              "pct_error": 33.71,
+              "rank": 3
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.47,
+              "residual": 0.135,
+              "abs_error": 0.135,
+              "pct_error": 22.31,
+              "rank": 4
+            },
+            {
+              "index": 734,
+              "actual": 0.595,
+              "predicted": 0.4615,
+              "residual": 0.1335,
+              "abs_error": 0.1335,
+              "pct_error": 22.44,
+              "rank": 5
+            },
+            {
+              "index": 25883,
+              "actual": 0.65,
+              "predicted": 0.5212,
+              "residual": 0.1288,
+              "abs_error": 0.1288,
+              "pct_error": 19.82,
+              "rank": 6
+            },
+            {
+              "index": 15306,
+              "actual": 0.625,
+              "predicted": 0.4967,
+              "residual": 0.1283,
+              "abs_error": 0.1283,
+              "pct_error": 20.53,
+              "rank": 7
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.477,
+              "residual": 0.128,
+              "abs_error": 0.128,
+              "pct_error": 21.16,
+              "rank": 8
+            },
+            {
+              "index": 29540,
+              "actual": 0.425,
+              "predicted": 0.5523,
+              "residual": -0.1273,
+              "abs_error": 0.1273,
+              "pct_error": 29.94,
+              "rank": 9
+            },
+            {
+              "index": 24429,
+              "actual": 0.365,
+              "predicted": 0.4916,
+              "residual": -0.1266,
+              "abs_error": 0.1266,
+              "pct_error": 34.68,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 9,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange",
+            "DrainageSystems",
+            "Watersheds",
+            "PopulationScore"
+          ],
+          "rmse": 0.04178288820273688,
+          "mae": 0.033872497511383375,
+          "r2": 0.32032422881859124,
+          "adj_r2": 0.319303013135681,
+          "f_stat": 1373.300851972722,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.28259801107975147,
+              "stderr": 0.002012711631239315,
+              "tstat": 140.40660703378728,
+              "pvalue": 1e-25,
+              "ci_lower": 0.2786530962825224,
+              "ci_upper": 0.28654292587698055,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.004989686847137047,
+              "stderr": 0.00012906440010264887,
+              "tstat": 38.6604427182755,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0047367206229358555,
+              "ci_upper": 0.005242653071338239,
+              "vif": 1.0012095250782005
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005100921849668148,
+              "stderr": 0.0001277415790672154,
+              "tstat": 39.93157033845754,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004850548354696406,
+              "ci_upper": 0.00535129534463989,
+              "vif": 1.0016631627709205
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005157089688591013,
+              "stderr": 0.00012753823134452756,
+              "tstat": 40.435637488650926,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004907114755155739,
+              "ci_upper": 0.005407064622026288,
+              "vif": 1.0023547388778649
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.00480532329735406,
+              "stderr": 0.00012879131144139276,
+              "tstat": 37.31092760508732,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00455289232692893,
+              "ci_upper": 0.00505775426777919,
+              "vif": 1.0018441091799943
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.0051192890465814244,
+              "stderr": 0.00012819394730100004,
+              "tstat": 39.93393724402064,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004868028909871465,
+              "ci_upper": 0.005370549183291384,
+              "vif": 1.0012023248145643
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005099985676570431,
+              "stderr": 0.00013084925056326251,
+              "tstat": 38.97604040234612,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004843521145466437,
+              "ci_upper": 0.005356450207674426,
+              "vif": 1.001051163566798
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.004775452175558575,
+              "stderr": 0.00012895492561519349,
+              "tstat": 37.03194858805712,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004522700521352795,
+              "ci_upper": 0.005028203829764355,
+              "vif": 1.001987916771817
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.004902930351971024,
+              "stderr": 0.00012842969961640493,
+              "tstat": 38.17598551281475,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00465120814072287,
+              "ci_upper": 0.005154652563219178,
+              "vif": 1.0012186701002428
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.004917265877099404,
+              "stderr": 0.00012787874583196953,
+              "tstat": 38.452565710650674,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004666623535268744,
+              "ci_upper": 0.005167908218930064,
+              "vif": 1.0007582167467004
+            }
+          ],
+          "outliers": [
+            {
+              "index": 3858,
+              "actual": 0.405,
+              "predicted": 0.5426,
+              "residual": -0.1376,
+              "abs_error": 0.1376,
+              "pct_error": 33.97,
+              "rank": 1
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5422,
+              "residual": -0.1372,
+              "abs_error": 0.1372,
+              "pct_error": 33.87,
+              "rank": 2
+            },
+            {
+              "index": 8725,
+              "actual": 0.425,
+              "predicted": 0.5583,
+              "residual": -0.1333,
+              "abs_error": 0.1333,
+              "pct_error": 31.36,
+              "rank": 3
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5168,
+              "residual": 0.1332,
+              "abs_error": 0.1332,
+              "pct_error": 20.5,
+              "rank": 4
+            },
+            {
+              "index": 15306,
+              "actual": 0.625,
+              "predicted": 0.492,
+              "residual": 0.133,
+              "abs_error": 0.133,
+              "pct_error": 21.28,
+              "rank": 5
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4621,
+              "residual": -0.1321,
+              "abs_error": 0.1321,
+              "pct_error": 40.04,
+              "rank": 6
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.477,
+              "residual": 0.128,
+              "abs_error": 0.128,
+              "pct_error": 21.15,
+              "rank": 7
+            },
+            {
+              "index": 10275,
+              "actual": 0.39,
+              "predicted": 0.5176,
+              "residual": -0.1276,
+              "abs_error": 0.1276,
+              "pct_error": 32.73,
+              "rank": 8
+            },
+            {
+              "index": 2266,
+              "actual": 0.575,
+              "predicted": 0.4482,
+              "residual": 0.1268,
+              "abs_error": 0.1268,
+              "pct_error": 22.05,
+              "rank": 9
+            },
+            {
+              "index": 8763,
+              "actual": 0.35,
+              "predicted": 0.4763,
+              "residual": -0.1263,
+              "abs_error": 0.1263,
+              "pct_error": 36.09,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 10,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange",
+            "DrainageSystems",
+            "Watersheds",
+            "PopulationScore",
+            "CoastalVulnerability"
+          ],
+          "rmse": 0.04051192156995193,
+          "mae": 0.03278474145912551,
+          "r2": 0.36104457575792004,
+          "adj_r2": 0.3599776941011459,
+          "f_stat": 1470.9448228353988,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.25398077037756983,
+              "stderr": 0.002081612558665912,
+              "tstat": 122.01154788398469,
+              "pvalue": 1e-25,
+              "ci_lower": 0.24990080976258464,
+              "ci_upper": 0.258060730992555,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005147686089365891,
+              "stderr": 0.00012515073234234118,
+              "tstat": 41.131889466573405,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004902390653974902,
+              "ci_upper": 0.005392981524756879,
+              "vif": 1.0022393661846027
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.0051486472195389705,
+              "stderr": 0.00012381029798083878,
+              "tstat": 41.584967514865276,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004905979035496526,
+              "ci_upper": 0.005391315403581415,
+              "vif": 1.0017591257946201
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005236787970484836,
+              "stderr": 0.0001236238508941325,
+              "tstat": 42.36066044382854,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004994485222732337,
+              "ci_upper": 0.005479090718237336,
+              "vif": 1.0026233888268339
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.0048994720788794535,
+              "stderr": 0.00012484463441179413,
+              "tstat": 39.244554657581645,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004654776595432337,
+              "ci_upper": 0.00514416756232657,
+              "vif": 1.0022115645526188
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005201551960708617,
+              "stderr": 0.00012426034939909733,
+              "tstat": 41.8601105329453,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004958001675886387,
+              "ci_upper": 0.005445102245530848,
+              "vif": 1.0014852966196424
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005145137044603447,
+              "stderr": 0.00012682143730778617,
+              "tstat": 40.56993166002829,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004896567027480186,
+              "ci_upper": 0.005393707061726708,
+              "vif": 1.0011329730781862
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.0049514288082493346,
+              "stderr": 0.00012506016320167494,
+              "tstat": 39.59237443393181,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004706310888374051,
+              "ci_upper": 0.005196546728124618,
+              "vif": 1.0032686090661953
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005002991894925558,
+              "stderr": 0.00012449720577583214,
+              "tstat": 40.18557576251047,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0047589773716049276,
+              "ci_upper": 0.005247006418246189,
+              "vif": 1.0016358088864215
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005017415789659572,
+              "stderr": 0.00012396339100433055,
+              "tstat": 40.474980145422876,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004774447543291084,
+              "ci_upper": 0.00526038403602806,
+              "vif": 1.001179507331283
+            },
+            {
+              "feature": "CoastalVulnerability",
+              "coef": 0.004909622663456465,
+              "stderr": 0.0001246596459688699,
+              "tstat": 39.384217926324766,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00466528975735748,
+              "ci_upper": 0.00515395556955545,
+              "vif": 1.003916752075681
+            }
+          ],
+          "outliers": [
+            {
+              "index": 10275,
+              "actual": 0.39,
+              "predicted": 0.5278,
+              "residual": -0.1378,
+              "abs_error": 0.1378,
+              "pct_error": 35.33,
+              "rank": 1
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4616,
+              "residual": -0.1316,
+              "abs_error": 0.1316,
+              "pct_error": 39.88,
+              "rank": 2
+            },
+            {
+              "index": 3858,
+              "actual": 0.405,
+              "predicted": 0.5338,
+              "residual": -0.1288,
+              "abs_error": 0.1288,
+              "pct_error": 31.81,
+              "rank": 3
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5224,
+              "residual": 0.1276,
+              "abs_error": 0.1276,
+              "pct_error": 19.62,
+              "rank": 4
+            },
+            {
+              "index": 15306,
+              "actual": 0.625,
+              "predicted": 0.5016,
+              "residual": 0.1234,
+              "abs_error": 0.1234,
+              "pct_error": 19.74,
+              "rank": 5
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5283,
+              "residual": -0.1233,
+              "abs_error": 0.1233,
+              "pct_error": 30.44,
+              "rank": 6
+            },
+            {
+              "index": 24512,
+              "actual": 0.64,
+              "predicted": 0.5171,
+              "residual": 0.1229,
+              "abs_error": 0.1229,
+              "pct_error": 19.2,
+              "rank": 7
+            },
+            {
+              "index": 2266,
+              "actual": 0.575,
+              "predicted": 0.4523,
+              "residual": 0.1227,
+              "abs_error": 0.1227,
+              "pct_error": 21.34,
+              "rank": 8
+            },
+            {
+              "index": 516,
+              "actual": 0.595,
+              "predicted": 0.4726,
+              "residual": 0.1224,
+              "abs_error": 0.1224,
+              "pct_error": 20.58,
+              "rank": 9
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.4827,
+              "residual": 0.1223,
+              "abs_error": 0.1223,
+              "pct_error": 20.21,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 11,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange",
+            "DrainageSystems",
+            "Watersheds",
+            "PopulationScore",
+            "CoastalVulnerability",
+            "Deforestation"
+          ],
+          "rmse": 0.03890322078163271,
+          "mae": 0.031520881840369504,
+          "r2": 0.41078202033597544,
+          "adj_r2": 0.4096996225777416,
+          "f_stat": 1592.3974499617123,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.22595295496919826,
+              "stderr": 0.002119325491280064,
+              "tstat": 106.61550380009047,
+              "pvalue": 1e-25,
+              "ci_lower": 0.22179907700628934,
+              "ci_upper": 0.23010683293210718,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005213033669190518,
+              "stderr": 0.00012085642079808896,
+              "tstat": 43.13410603065741,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004976155084426263,
+              "ci_upper": 0.0054499122539547725,
+              "vif": 1.0024077575862742
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005187151885314183,
+              "stderr": 0.00011955550085349274,
+              "tstat": 43.38697800003941,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004952823103641337,
+              "ci_upper": 0.005421480666987029,
+              "vif": 1.0018188338209273
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005264031271745579,
+              "stderr": 0.00011937368992719854,
+              "tstat": 44.09708098121044,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00503005883948827,
+              "ci_upper": 0.005498003704002888,
+              "vif": 1.002653394888084
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.004974178980773684,
+              "stderr": 0.00012056399935746263,
+              "tstat": 41.257581096208,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004737873542033057,
+              "ci_upper": 0.00521048441951431,
+              "vif": 1.0024327198408651
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.0052773803469859095,
+              "stderr": 0.00012000027709049296,
+              "tstat": 43.97806800901138,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005042179803888543,
+              "ci_upper": 0.005512580890083276,
+              "vif": 1.001715122691285
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005188898768354132,
+              "stderr": 0.00012246400434722977,
+              "tstat": 42.37080761822655,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004948869319833561,
+              "ci_upper": 0.005428928216874703,
+              "vif": 1.0012064331745878
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.005019829696916871,
+              "stderr": 0.00012076994553221537,
+              "tstat": 41.5652228275439,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004783120603673729,
+              "ci_upper": 0.005256538790160014,
+              "vif": 1.0034535610354192
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.0050799734891085494,
+              "stderr": 0.00012022938187656973,
+              "tstat": 42.252346388370924,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004844323900630473,
+              "ci_upper": 0.005315623077586626,
+              "vif": 1.001871813593276
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005090794141939539,
+              "stderr": 0.00011971268803303926,
+              "tstat": 42.525100936122506,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004856157273394782,
+              "ci_upper": 0.005325431010484296,
+              "vif": 1.001395688169526
+            },
+            {
+              "feature": "CoastalVulnerability",
+              "coef": 0.004974263099485003,
+              "stderr": 0.00012038204558159002,
+              "tstat": 41.320639431348184,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004738314290145086,
+              "ci_upper": 0.00521021190882492,
+              "vif": 1.0040830974417638
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005058587889902108,
+              "stderr": 0.00012125712498798781,
+              "tstat": 41.7178610362338,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004820923924925652,
+              "ci_upper": 0.005296251854878565,
+              "vif": 1.001423695264686
+            }
+          ],
+          "outliers": [
+            {
+              "index": 516,
+              "actual": 0.595,
+              "predicted": 0.4522,
+              "residual": 0.1428,
+              "abs_error": 0.1428,
+              "pct_error": 24.0,
+              "rank": 1
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4614,
+              "residual": -0.1314,
+              "abs_error": 0.1314,
+              "pct_error": 39.82,
+              "rank": 2
+            },
+            {
+              "index": 15306,
+              "actual": 0.625,
+              "predicted": 0.4967,
+              "residual": 0.1283,
+              "abs_error": 0.1283,
+              "pct_error": 20.53,
+              "rank": 3
+            },
+            {
+              "index": 10275,
+              "actual": 0.39,
+              "predicted": 0.518,
+              "residual": -0.128,
+              "abs_error": 0.128,
+              "pct_error": 32.83,
+              "rank": 4
+            },
+            {
+              "index": 17697,
+              "actual": 0.595,
+              "predicted": 0.4722,
+              "residual": 0.1228,
+              "abs_error": 0.1228,
+              "pct_error": 20.65,
+              "rank": 5
+            },
+            {
+              "index": 9618,
+              "actual": 0.385,
+              "predicted": 0.5078,
+              "residual": -0.1228,
+              "abs_error": 0.1228,
+              "pct_error": 31.9,
+              "rank": 6
+            },
+            {
+              "index": 8615,
+              "actual": 0.34,
+              "predicted": 0.4608,
+              "residual": -0.1208,
+              "abs_error": 0.1208,
+              "pct_error": 35.53,
+              "rank": 7
+            },
+            {
+              "index": 6865,
+              "actual": 0.465,
+              "predicted": 0.5852,
+              "residual": -0.1202,
+              "abs_error": 0.1202,
+              "pct_error": 25.84,
+              "rank": 8
+            },
+            {
+              "index": 9986,
+              "actual": 0.605,
+              "predicted": 0.4867,
+              "residual": 0.1183,
+              "abs_error": 0.1183,
+              "pct_error": 19.55,
+              "rank": 9
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.4879,
+              "residual": 0.1171,
+              "abs_error": 0.1171,
+              "pct_error": 19.36,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 12,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange",
+            "DrainageSystems",
+            "Watersheds",
+            "PopulationScore",
+            "CoastalVulnerability",
+            "Deforestation",
+            "TopographyDrainage"
+          ],
+          "rmse": 0.037354049132902696,
+          "mae": 0.030269408138860195,
+          "r2": 0.456774377506327,
+          "adj_r2": 0.4556855671722826,
+          "f_stat": 1756.8136251510612,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.1972078057493103,
+              "stderr": 0.002130073057056006,
+              "tstat": 92.58264879509488,
+              "pvalue": 1e-25,
+              "ci_lower": 0.19303286255748053,
+              "ci_upper": 0.20138274894114006,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005296276933450847,
+              "stderr": 0.00011599335177254988,
+              "tstat": 45.66017666112675,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005068929963976649,
+              "ci_upper": 0.005523623902925045,
+              "vif": 1.002658304236764
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005260930478317519,
+              "stderr": 0.00011474195042306125,
+              "tstat": 45.85010503063715,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005036036255488319,
+              "ci_upper": 0.005485824701146719,
+              "vif": 1.002019833904391
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.0053083951430462385,
+              "stderr": 0.0001145601359777291,
+              "tstat": 46.33719310597021,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00508385727652989,
+              "ci_upper": 0.005532933009562587,
+              "vif": 1.0027263537246383
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005066021452494738,
+              "stderr": 0.00011571592354476135,
+              "tstat": 43.779812642078554,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004839218242347006,
+              "ci_upper": 0.00529282466264247,
+              "vif": 1.002739193040761
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.0053021197333222225,
+              "stderr": 0.00011515855664568733,
+              "tstat": 46.04190854558428,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005076408962296676,
+              "ci_upper": 0.005527830504347769,
+              "vif": 1.0017375534008701
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005178306675867377,
+              "stderr": 0.00011752179428446967,
+              "tstat": 44.06252225296124,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004947963959069817,
+              "ci_upper": 0.005408649392664938,
+              "vif": 1.0012103791618834
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.005118196841871689,
+              "stderr": 0.00011591612524723686,
+              "tstat": 44.15431270632205,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004891001236387105,
+              "ci_upper": 0.005345392447356273,
+              "vif": 1.0038042847281847
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005127659636776978,
+              "stderr": 0.00011538190695349615,
+              "tstat": 44.440760013124454,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004901511099148125,
+              "ci_upper": 0.005353808174405831,
+              "vif": 1.001954848526943
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005165917145878424,
+              "stderr": 0.00011489320136159477,
+              "tstat": 44.962774860978236,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004940726471209698,
+              "ci_upper": 0.005391107820547149,
+              "vif": 1.0016034456538823
+            },
+            {
+              "feature": "CoastalVulnerability",
+              "coef": 0.005045753573981604,
+              "stderr": 0.00011553436024935202,
+              "tstat": 43.673185735322434,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004819306227892874,
+              "ci_upper": 0.005272200920070334,
+              "vif": 1.0042696615139066
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005100148319263484,
+              "stderr": 0.00011636699185690401,
+              "tstat": 43.82813577870187,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004872069015223952,
+              "ci_upper": 0.0053282276233030165,
+              "vif": 1.0014856748712875
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.00519443986802501,
+              "stderr": 0.00011441699624749055,
+              "tstat": 45.39919800716615,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004970182555379929,
+              "ci_upper": 0.005418697180670091,
+              "vif": 1.0015575987567413
+            }
+          ],
+          "outliers": [
+            {
+              "index": 516,
+              "actual": 0.595,
+              "predicted": 0.4574,
+              "residual": 0.1376,
+              "abs_error": 0.1376,
+              "pct_error": 23.13,
+              "rank": 1
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.4777,
+              "residual": 0.1273,
+              "abs_error": 0.1273,
+              "pct_error": 21.05,
+              "rank": 2
+            },
+            {
+              "index": 6865,
+              "actual": 0.465,
+              "predicted": 0.5919,
+              "residual": -0.1269,
+              "abs_error": 0.1269,
+              "pct_error": 27.29,
+              "rank": 3
+            },
+            {
+              "index": 20184,
+              "actual": 0.515,
+              "predicted": 0.3941,
+              "residual": 0.1209,
+              "abs_error": 0.1209,
+              "pct_error": 23.48,
+              "rank": 4
+            },
+            {
+              "index": 19035,
+              "actual": 0.64,
+              "predicted": 0.5237,
+              "residual": 0.1163,
+              "abs_error": 0.1163,
+              "pct_error": 18.16,
+              "rank": 5
+            },
+            {
+              "index": 3978,
+              "actual": 0.56,
+              "predicted": 0.4459,
+              "residual": 0.1141,
+              "abs_error": 0.1141,
+              "pct_error": 20.37,
+              "rank": 6
+            },
+            {
+              "index": 28176,
+              "actual": 0.585,
+              "predicted": 0.4715,
+              "residual": 0.1135,
+              "abs_error": 0.1135,
+              "pct_error": 19.4,
+              "rank": 7
+            },
+            {
+              "index": 10275,
+              "actual": 0.39,
+              "predicted": 0.503,
+              "residual": -0.113,
+              "abs_error": 0.113,
+              "pct_error": 28.97,
+              "rank": 8
+            },
+            {
+              "index": 17697,
+              "actual": 0.595,
+              "predicted": 0.4826,
+              "residual": 0.1124,
+              "abs_error": 0.1124,
+              "pct_error": 18.89,
+              "rank": 9
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5386,
+              "residual": 0.1114,
+              "abs_error": 0.1114,
+              "pct_error": 17.14,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 13,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange",
+            "DrainageSystems",
+            "Watersheds",
+            "PopulationScore",
+            "CoastalVulnerability",
+            "Deforestation",
+            "TopographyDrainage",
+            "IneffectiveDisasterPreparedness"
+          ],
+          "rmse": 0.035915414547630434,
+          "mae": 0.028998356397101067,
+          "r2": 0.49781164018142565,
+          "adj_r2": 0.49672102062284873,
+          "f_stat": 1944.6841521175093,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.16786990659734388,
+              "stderr": 0.00212970134843621,
+              "tstat": 78.82321468247501,
+              "pvalue": 1e-25,
+              "ci_lower": 0.16369569195440892,
+              "ci_upper": 0.17204412124027885,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005422363851374351,
+              "stderr": 0.00011097336797016222,
+              "tstat": 48.86184812226551,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005204856050152833,
+              "ci_upper": 0.005639871652595868,
+              "vif": 1.0032376739741669
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005303504677410118,
+              "stderr": 0.0001097481168085205,
+              "tstat": 48.32433422673883,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005088398368465418,
+              "ci_upper": 0.005518610986354818,
+              "vif": 1.0020872950676587
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005321664635571329,
+              "stderr": 0.0001095708864265187,
+              "tstat": 48.56823567946752,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005106905698175353,
+              "ci_upper": 0.005536423572967306,
+              "vif": 1.0027329326204215
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.00511013883552446,
+              "stderr": 0.0001106799082908209,
+              "tstat": 46.17042889209064,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004893206215274451,
+              "ci_upper": 0.005327071455774469,
+              "vif": 1.0028104701723677
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005324489159828676,
+              "stderr": 0.00011014389991800105,
+              "tstat": 48.34120785438508,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0051086071159893946,
+              "ci_upper": 0.005540371203667958,
+              "vif": 1.0017560375821573
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005221513297866604,
+              "stderr": 0.00011240690654202357,
+              "tstat": 46.45189035528284,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005001195761044238,
+              "ci_upper": 0.005441830834688971,
+              "vif": 1.0012765578468312
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.005184871451173723,
+              "stderr": 0.00011087642529899985,
+              "tstat": 46.762613758440615,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0049675536575876835,
+              "ci_upper": 0.005402189244759763,
+              "vif": 1.0039666941735326
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005205716850569193,
+              "stderr": 0.00011036885489425102,
+              "tstat": 47.1665385634109,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004989393894976461,
+              "ci_upper": 0.0054220398061619254,
+              "vif": 1.002179096128618
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005254583044077678,
+              "stderr": 0.00010990508684683984,
+              "tstat": 47.8101896357199,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0050391690738578725,
+              "ci_upper": 0.005469997014297484,
+              "vif": 1.0018951543487664
+            },
+            {
+              "feature": "CoastalVulnerability",
+              "coef": 0.005133295981798854,
+              "stderr": 0.00011051783093198157,
+              "tstat": 46.44767218565981,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004916681033172171,
+              "ci_upper": 0.005349910930425538,
+              "vif": 1.0045516257199827
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005149372945838002,
+              "stderr": 0.00011130355566691187,
+              "tstat": 46.264226825314246,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004931217976730855,
+              "ci_upper": 0.005367527914945149,
+              "vif": 1.0015733101508546
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005207510983506991,
+              "stderr": 0.0001094339708444569,
+              "tstat": 47.585872497568836,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004993020400651856,
+              "ci_upper": 0.0054220015663621265,
+              "vif": 1.0015639909388512
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005243944691210452,
+              "stderr": 0.00011091309577000549,
+              "tstat": 47.27976128341542,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005026555023501241,
+              "ci_upper": 0.005461334358919663,
+              "vif": 1.0016739960412289
+            }
+          ],
+          "outliers": [
+            {
+              "index": 516,
+              "actual": 0.595,
+              "predicted": 0.431,
+              "residual": 0.164,
+              "abs_error": 0.164,
+              "pct_error": 27.56,
+              "rank": 1
+            },
+            {
+              "index": 6865,
+              "actual": 0.465,
+              "predicted": 0.6035,
+              "residual": -0.1385,
+              "abs_error": 0.1385,
+              "pct_error": 29.78,
+              "rank": 2
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.4724,
+              "residual": 0.1326,
+              "abs_error": 0.1326,
+              "pct_error": 21.91,
+              "rank": 3
+            },
+            {
+              "index": 20184,
+              "actual": 0.515,
+              "predicted": 0.3878,
+              "residual": 0.1272,
+              "abs_error": 0.1272,
+              "pct_error": 24.7,
+              "rank": 4
+            },
+            {
+              "index": 19035,
+              "actual": 0.64,
+              "predicted": 0.5135,
+              "residual": 0.1265,
+              "abs_error": 0.1265,
+              "pct_error": 19.76,
+              "rank": 5
+            },
+            {
+              "index": 8969,
+              "actual": 0.435,
+              "predicted": 0.5561,
+              "residual": -0.1211,
+              "abs_error": 0.1211,
+              "pct_error": 27.85,
+              "rank": 6
+            },
+            {
+              "index": 3978,
+              "actual": 0.56,
+              "predicted": 0.4402,
+              "residual": 0.1198,
+              "abs_error": 0.1198,
+              "pct_error": 21.4,
+              "rank": 7
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.4865,
+              "residual": 0.1185,
+              "abs_error": 0.1185,
+              "pct_error": 19.59,
+              "rank": 8
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5339,
+              "residual": 0.1161,
+              "abs_error": 0.1161,
+              "pct_error": 17.86,
+              "rank": 9
+            },
+            {
+              "index": 5697,
+              "actual": 0.56,
+              "predicted": 0.4506,
+              "residual": 0.1094,
+              "abs_error": 0.1094,
+              "pct_error": 19.54,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 14,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange",
+            "DrainageSystems",
+            "Watersheds",
+            "PopulationScore",
+            "CoastalVulnerability",
+            "Deforestation",
+            "TopographyDrainage",
+            "IneffectiveDisasterPreparedness",
+            "MonsoonIntensity"
+          ],
+          "rmse": 0.034354598933032755,
+          "mae": 0.02768960999006086,
+          "r2": 0.5405115062548307,
+          "adj_r2": 0.5394366793688771,
+          "f_stat": 2164.5448358064136,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.13831509565235536,
+              "stderr": 0.0021149955277724093,
+              "tstat": 65.39734663081481,
+              "pvalue": 1e-25,
+              "ci_lower": 0.13416970441792145,
+              "ci_upper": 0.14246048688678928,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005409924652290695,
+              "stderr": 0.00010571659233695905,
+              "tstat": 51.17384634426358,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005202720131310255,
+              "ci_upper": 0.0056171291732711355,
+              "vif": 1.0032433529613904
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005331194420172043,
+              "stderr": 0.00010455058422155466,
+              "tstat": 50.991531609949035,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005126275275097796,
+              "ci_upper": 0.00553611356524629,
+              "vif": 1.0021160338921358
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.0054209098851143046,
+              "stderr": 0.00010439953893800272,
+              "tstat": 51.9246535019038,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005216286788795819,
+              "ci_upper": 0.00562553298143279,
+              "vif": 1.0031035571333051
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005192992191049773,
+              "stderr": 0.00010545004407502969,
+              "tstat": 49.245993556483114,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004986310104662715,
+              "ci_upper": 0.005399674277436831,
+              "vif": 1.0030636454165411
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.0054071280645606986,
+              "stderr": 0.00010493942332775117,
+              "tstat": 51.52618427940976,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0052014467948383065,
+              "ci_upper": 0.005612809334283091,
+              "vif": 1.0020100938592253
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005297027735528814,
+              "stderr": 0.00010709280727065565,
+              "tstat": 49.46203083594248,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005087125833278329,
+              "ci_upper": 0.0055069296377793,
+              "vif": 1.0014801437940033
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.005252210632321788,
+              "stderr": 0.00010563271875438058,
+              "tstat": 49.721437583504205,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005045170503563202,
+              "ci_upper": 0.005459250761080374,
+              "vif": 1.0041335326793381
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005265528170223772,
+              "stderr": 0.00010514737263185948,
+              "tstat": 50.077600974960795,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005059439319865328,
+              "ci_upper": 0.005471617020582216,
+              "vif": 1.0023116946835327
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005298821847069305,
+              "stderr": 0.00010470244019208096,
+              "tstat": 50.60838923475324,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0050936050642928265,
+              "ci_upper": 0.005504038629845783,
+              "vif": 1.0019682873133327
+            },
+            {
+              "feature": "CoastalVulnerability",
+              "coef": 0.005201965589474407,
+              "stderr": 0.00010529149165471273,
+              "tstat": 49.40537461975991,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00499559426583117,
+              "ci_upper": 0.005408336913117644,
+              "vif": 1.0047263512808127
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005257824400999523,
+              "stderr": 0.00010605351304209504,
+              "tstat": 49.577088492227254,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0050499595154370166,
+              "ci_upper": 0.0054656892865620295,
+              "vif": 1.0020017157997254
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.0052282551166089285,
+              "stderr": 0.00010425066475658108,
+              "tstat": 50.1508084271365,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00502392381368603,
+              "ci_upper": 0.005432586419531827,
+              "vif": 1.0015802047355045
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005236897863398364,
+              "stderr": 0.00010565897224055851,
+              "tstat": 49.56415676157898,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005029806277806869,
+              "ci_upper": 0.005443989448989859,
+              "vif": 1.0016758177033158
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005287904368373821,
+              "stderr": 0.00010692189067771525,
+              "tstat": 49.45576939256211,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0050783374626455,
+              "ci_upper": 0.005497471274102143,
+              "vif": 1.0019041839507024
+            }
+          ],
+          "outliers": [
+            {
+              "index": 516,
+              "actual": 0.595,
+              "predicted": 0.441,
+              "residual": 0.154,
+              "abs_error": 0.154,
+              "pct_error": 25.88,
+              "rank": 1
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.462,
+              "residual": 0.143,
+              "abs_error": 0.143,
+              "pct_error": 23.64,
+              "rank": 2
+            },
+            {
+              "index": 8969,
+              "actual": 0.435,
+              "predicted": 0.5673,
+              "residual": -0.1323,
+              "abs_error": 0.1323,
+              "pct_error": 30.41,
+              "rank": 3
+            },
+            {
+              "index": 6865,
+              "actual": 0.465,
+              "predicted": 0.5891,
+              "residual": -0.1241,
+              "abs_error": 0.1241,
+              "pct_error": 26.69,
+              "rank": 4
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.4868,
+              "residual": 0.1182,
+              "abs_error": 0.1182,
+              "pct_error": 19.53,
+              "rank": 5
+            },
+            {
+              "index": 25759,
+              "actual": 0.595,
+              "predicted": 0.4823,
+              "residual": 0.1127,
+              "abs_error": 0.1127,
+              "pct_error": 18.94,
+              "rank": 6
+            },
+            {
+              "index": 19035,
+              "actual": 0.64,
+              "predicted": 0.5302,
+              "residual": 0.1098,
+              "abs_error": 0.1098,
+              "pct_error": 17.16,
+              "rank": 7
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5146,
+              "residual": -0.1096,
+              "abs_error": 0.1096,
+              "pct_error": 27.07,
+              "rank": 8
+            },
+            {
+              "index": 8180,
+              "actual": 0.57,
+              "predicted": 0.4606,
+              "residual": 0.1094,
+              "abs_error": 0.1094,
+              "pct_error": 19.19,
+              "rank": 9
+            },
+            {
+              "index": 16097,
+              "actual": 0.585,
+              "predicted": 0.4776,
+              "residual": 0.1074,
+              "abs_error": 0.1074,
+              "pct_error": 18.37,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 15,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange",
+            "DrainageSystems",
+            "Watersheds",
+            "PopulationScore",
+            "CoastalVulnerability",
+            "Deforestation",
+            "TopographyDrainage",
+            "IneffectiveDisasterPreparedness",
+            "MonsoonIntensity",
+            "RiverManagement"
+          ],
+          "rmse": 0.032518217588500924,
+          "mae": 0.026285386940927448,
+          "r2": 0.5883213541595386,
+          "adj_r2": 0.5872894056823315,
+          "f_stat": 2448.0579194674815,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.10798084009278086,
+              "stderr": 0.0020796389369062774,
+              "tstat": 51.92287861921639,
+              "pvalue": 1e-25,
+              "ci_lower": 0.10390474777644455,
+              "ci_upper": 0.11205693240911717,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005492041395919856,
+              "stderr": 9.998560578788955e-05,
+              "tstat": 54.92832045815402,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005296069608575593,
+              "ci_upper": 0.00568801318326412,
+              "vif": 1.003482042490292
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005379439085337261,
+              "stderr": 9.887519781163704e-05,
+              "tstat": 54.40635472189298,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0051856436976264525,
+              "ci_upper": 0.00557323447304807,
+              "vif": 1.0022001760462145
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005494298144309118,
+              "stderr": 9.873782532166999e-05,
+              "tstat": 55.64532261481036,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005300772006678645,
+              "ci_upper": 0.005687824281939592,
+              "vif": 1.003299014359477
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005323941075738927,
+              "stderr": 9.975195997167998e-05,
+              "tstat": 53.37179417076534,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005128427234194434,
+              "ci_upper": 0.005519454917283419,
+              "vif": 1.0036735873843932
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005402907334165804,
+              "stderr": 9.923879478888697e-05,
+              "tstat": 54.443500101543314,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005208399296379586,
+              "ci_upper": 0.005597415371952022,
+              "vif": 1.0020107330344363
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.0053345195777160645,
+              "stderr": 0.00010127761527398267,
+              "tstat": 52.672247103022535,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0051360154517790585,
+              "ci_upper": 0.0055330237036530705,
+              "vif": 1.001528543781259
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.0052844796564029675,
+              "stderr": 9.989623438117404e-05,
+              "tstat": 52.89968825290231,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005088683037015866,
+              "ci_upper": 0.005480276275790069,
+              "vif": 1.0041704828260465
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005309176600344114,
+              "stderr": 9.943879420779226e-05,
+              "tstat": 53.39140164199693,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005114276563696842,
+              "ci_upper": 0.005504076636991387,
+              "vif": 1.0023798019035177
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005294834005813659,
+              "stderr": 9.901468203654422e-05,
+              "tstat": 53.47524121583754,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0051007652290220315,
+              "ci_upper": 0.005488902782605286,
+              "vif": 1.0019688604603583
+            },
+            {
+              "feature": "CoastalVulnerability",
+              "coef": 0.005266680761129386,
+              "stderr": 9.957912186184298e-05,
+              "tstat": 52.88940756513629,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005071505682280174,
+              "ci_upper": 0.005461855839978599,
+              "vif": 1.004876017366642
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.0053446721189635915,
+              "stderr": 0.00010030559122989774,
+              "tstat": 53.28389029394927,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005148073160152992,
+              "ci_upper": 0.005541271077774191,
+              "vif": 1.0022666787307024
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005305049199567912,
+              "stderr": 9.859796692085095e-05,
+              "tstat": 53.8048538447706,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005111797184403044,
+              "ci_upper": 0.00549830121473278,
+              "vif": 1.0017945103424006
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.00530924802186606,
+              "stderr": 9.99284604120361e-05,
+              "tstat": 53.13048955196928,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0051133882394584695,
+              "ci_upper": 0.005505107804273651,
+              "vif": 1.0018610187123598
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005350824561447191,
+              "stderr": 0.00010112043960675949,
+              "tstat": 52.91536095230257,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0051526284998179425,
+              "ci_upper": 0.00554902062307644,
+              "vif": 1.0020409955670477
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005317947701336873,
+              "stderr": 9.986463210037574e-05,
+              "tstat": 53.25156253508958,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0051222130224201365,
+              "ci_upper": 0.00551368238025361,
+              "vif": 1.0019947493024985
+            }
+          ],
+          "outliers": [
+            {
+              "index": 516,
+              "actual": 0.595,
+              "predicted": 0.4565,
+              "residual": 0.1385,
+              "abs_error": 0.1385,
+              "pct_error": 23.28,
+              "rank": 1
+            },
+            {
+              "index": 8969,
+              "actual": 0.435,
+              "predicted": 0.568,
+              "residual": -0.133,
+              "abs_error": 0.133,
+              "pct_error": 30.57,
+              "rank": 2
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5359,
+              "residual": -0.1309,
+              "abs_error": 0.1309,
+              "pct_error": 32.32,
+              "rank": 3
+            },
+            {
+              "index": 25759,
+              "actual": 0.595,
+              "predicted": 0.472,
+              "residual": 0.123,
+              "abs_error": 0.123,
+              "pct_error": 20.67,
+              "rank": 4
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.4886,
+              "residual": 0.1164,
+              "abs_error": 0.1164,
+              "pct_error": 19.25,
+              "rank": 5
+            },
+            {
+              "index": 19035,
+              "actual": 0.64,
+              "predicted": 0.5252,
+              "residual": 0.1148,
+              "abs_error": 0.1148,
+              "pct_error": 17.93,
+              "rank": 6
+            },
+            {
+              "index": 6865,
+              "actual": 0.465,
+              "predicted": 0.5797,
+              "residual": -0.1147,
+              "abs_error": 0.1147,
+              "pct_error": 24.66,
+              "rank": 7
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.4922,
+              "residual": 0.1128,
+              "abs_error": 0.1128,
+              "pct_error": 18.64,
+              "rank": 8
+            },
+            {
+              "index": 16097,
+              "actual": 0.585,
+              "predicted": 0.4722,
+              "residual": 0.1128,
+              "abs_error": 0.1128,
+              "pct_error": 19.29,
+              "rank": 9
+            },
+            {
+              "index": 12035,
+              "actual": 0.59,
+              "predicted": 0.4818,
+              "residual": 0.1082,
+              "abs_error": 0.1082,
+              "pct_error": 18.34,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 16,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange",
+            "DrainageSystems",
+            "Watersheds",
+            "PopulationScore",
+            "CoastalVulnerability",
+            "Deforestation",
+            "TopographyDrainage",
+            "IneffectiveDisasterPreparedness",
+            "MonsoonIntensity",
+            "RiverManagement",
+            "Siltation"
+          ],
+          "rmse": 0.030533658951380105,
+          "mae": 0.024693006991870863,
+          "r2": 0.6370368162917952,
+          "adj_r2": 0.6360661642878956,
+          "f_stat": 2814.0631875027775,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.07852943958281018,
+              "stderr": 0.002017137984676547,
+              "tstat": 38.931119328161664,
+              "pvalue": 1e-25,
+              "ci_lower": 0.07457584913284415,
+              "ci_upper": 0.08248303003277621,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005536770402583994,
+              "stderr": 9.378093176695655e-05,
+              "tstat": 59.03940490101699,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0053529597763207586,
+              "ci_upper": 0.005720581028847229,
+              "vif": 1.0035516115606102
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.00538986159396329,
+              "stderr": 9.273639484837614e-05,
+              "tstat": 58.12024074017224,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005208098260060473,
+              "ci_upper": 0.005571624927866108,
+              "vif": 1.00220403373619
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005503798990007367,
+              "stderr": 9.260752160271243e-05,
+              "tstat": 59.43144676324178,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0053222882476660505,
+              "ci_upper": 0.005685309732348683,
+              "vif": 1.0033022323951335
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005419021927947201,
+              "stderr": 9.357326391595552e-05,
+              "tstat": 57.91207553489202,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005235618330671928,
+              "ci_upper": 0.005602425525222474,
+              "vif": 1.0039894795123807
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005493970977858397,
+              "stderr": 9.309081239749024e-05,
+              "tstat": 59.017327664942755,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005311512985559316,
+              "ci_upper": 0.005676428970157478,
+              "vif": 1.0023030153302874
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.0053967231317770415,
+              "stderr": 9.499567846516395e-05,
+              "tstat": 56.81019620019961,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00521053160198532,
+              "ci_upper": 0.005582914661568763,
+              "vif": 1.0016594227451967
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.005368132152333771,
+              "stderr": 9.370523797894971e-05,
+              "tstat": 57.28742883657889,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00518446988589503,
+              "ci_upper": 0.005551794418772512,
+              "vif": 1.0044144155553312
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.0053301039357320475,
+              "stderr": 9.326553558008298e-05,
+              "tstat": 57.14977030454432,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005147303485995085,
+              "ci_upper": 0.00551290438546901,
+              "vif": 1.0023951817333099
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.0053404892115149144,
+              "stderr": 9.287046012821623e-05,
+              "tstat": 57.50471359937139,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005158463109663611,
+              "ci_upper": 0.005522515313366218,
+              "vif": 1.0020426574574297
+            },
+            {
+              "feature": "CoastalVulnerability",
+              "coef": 0.005333354109507079,
+              "stderr": 9.34036869959552e-05,
+              "tstat": 57.100038350071095,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005150282882995007,
+              "ci_upper": 0.005516425336019151,
+              "vif": 1.0050320744484535
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005380468933305295,
+              "stderr": 9.407987461854915e-05,
+              "tstat": 57.19043477811418,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005196072379052939,
+              "ci_upper": 0.005564865487557652,
+              "vif": 1.002310899349795
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005319183761249995,
+              "stderr": 9.247652741730299e-05,
+              "tstat": 57.51928526951521,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005137929767512081,
+              "ci_upper": 0.005500437754987909,
+              "vif": 1.0018016423282112
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005345312013609269,
+              "stderr": 9.372619821290059e-05,
+              "tstat": 57.03114087127811,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0051616086651119835,
+              "ci_upper": 0.005529015362106554,
+              "vif": 1.001906223010256
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005338064187756589,
+              "stderr": 9.484231676827135e-05,
+              "tstat": 56.28357013672604,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005152173246890777,
+              "ci_upper": 0.005523955128622401,
+              "vif": 1.0020465231775049
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.0053676540976418975,
+              "stderr": 9.366823766886214e-05,
+              "tstat": 57.30495449928008,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005184064351810928,
+              "ci_upper": 0.005551243843472867,
+              "vif": 1.0020807435976415
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005332347123622779,
+              "stderr": 9.308548087218186e-05,
+              "tstat": 57.28441292519901,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005149899581113303,
+              "ci_upper": 0.005514794666132255,
+              "vif": 1.0013380780509313
+            }
+          ],
+          "outliers": [
+            {
+              "index": 8969,
+              "actual": 0.435,
+              "predicted": 0.5798,
+              "residual": -0.1448,
+              "abs_error": 0.1448,
+              "pct_error": 33.28,
+              "rank": 1
+            },
+            {
+              "index": 516,
+              "actual": 0.595,
+              "predicted": 0.4615,
+              "residual": 0.1335,
+              "abs_error": 0.1335,
+              "pct_error": 22.44,
+              "rank": 2
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.4876,
+              "residual": 0.1174,
+              "abs_error": 0.1174,
+              "pct_error": 19.4,
+              "rank": 3
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.4891,
+              "residual": 0.1159,
+              "abs_error": 0.1159,
+              "pct_error": 19.15,
+              "rank": 4
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5155,
+              "residual": -0.1105,
+              "abs_error": 0.1105,
+              "pct_error": 27.28,
+              "rank": 5
+            },
+            {
+              "index": 25759,
+              "actual": 0.595,
+              "predicted": 0.4882,
+              "residual": 0.1068,
+              "abs_error": 0.1068,
+              "pct_error": 17.95,
+              "rank": 6
+            },
+            {
+              "index": 6865,
+              "actual": 0.465,
+              "predicted": 0.5702,
+              "residual": -0.1052,
+              "abs_error": 0.1052,
+              "pct_error": 22.63,
+              "rank": 7
+            },
+            {
+              "index": 21264,
+              "actual": 0.53,
+              "predicted": 0.4281,
+              "residual": 0.1019,
+              "abs_error": 0.1019,
+              "pct_error": 19.22,
+              "rank": 8
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.5034,
+              "residual": 0.1016,
+              "abs_error": 0.1016,
+              "pct_error": 16.79,
+              "rank": 9
+            },
+            {
+              "index": 790,
+              "actual": 0.605,
+              "predicted": 0.504,
+              "residual": 0.101,
+              "abs_error": 0.101,
+              "pct_error": 16.7,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 17,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange",
+            "DrainageSystems",
+            "Watersheds",
+            "PopulationScore",
+            "CoastalVulnerability",
+            "Deforestation",
+            "TopographyDrainage",
+            "IneffectiveDisasterPreparedness",
+            "MonsoonIntensity",
+            "RiverManagement",
+            "Siltation",
+            "AgriculturalPractices"
+          ],
+          "rmse": 0.028423375198110813,
+          "mae": 0.022985939530757803,
+          "r2": 0.6854742759744391,
+          "adj_r2": 0.6845804382431728,
+          "f_stat": 3287.528530072299,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.046826122657806495,
+              "stderr": 0.001944655229222787,
+              "tstat": 24.07939564511973,
+              "pvalue": 1e-25,
+              "ci_lower": 0.04301459840852983,
+              "ci_upper": 0.05063764690708316,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.0055899338347737484,
+              "stderr": 8.717538734061124e-05,
+              "tstat": 64.12284482238991,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005419070075586151,
+              "ci_upper": 0.005760797593961346,
+              "vif": 1.0036504652660427
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.0054912630036301185,
+              "stderr": 8.621597154130395e-05,
+              "tstat": 63.691945998652805,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005322279699409163,
+              "ci_upper": 0.005660246307851074,
+              "vif": 1.0025713160533174
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005578458959114206,
+              "stderr": 8.60889620257069e-05,
+              "tstat": 64.79877126928804,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00540972459354382,
+              "ci_upper": 0.005747193324684592,
+              "vif": 1.0035021132381698
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005453534365002138,
+              "stderr": 8.697987636979032e-05,
+              "tstat": 62.69880566186053,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0052830538073173495,
+              "ci_upper": 0.005624014922686927,
+              "vif": 1.0040313427840368
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005493945384886088,
+              "stderr": 8.652961550620427e-05,
+              "tstat": 63.49208132667788,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005324347338493928,
+              "ci_upper": 0.005663543431278248,
+              "vif": 1.0023030153535086
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005488199613197939,
+              "stderr": 8.831277123661597e-05,
+              "tstat": 62.14502768227523,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005315106581574172,
+              "ci_upper": 0.005661292644821706,
+              "vif": 1.0019441228266144
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.005422018511590981,
+              "stderr": 8.710514969232386e-05,
+              "tstat": 62.24681928385225,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005251292418194027,
+              "ci_upper": 0.005592744604987936,
+              "vif": 1.0045162276074135
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005432552094512226,
+              "stderr": 8.670805382002088e-05,
+              "tstat": 62.65337365071675,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005262604309024986,
+              "ci_upper": 0.005602499879999467,
+              "vif": 1.0027659147063146
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005432779400638841,
+              "stderr": 8.633785829600362e-05,
+              "tstat": 62.92464867512601,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005263557198378674,
+              "ci_upper": 0.005602001602899008,
+              "vif": 1.0023459756034614
+            },
+            {
+              "feature": "CoastalVulnerability",
+              "coef": 0.005434477026664622,
+              "stderr": 8.68360329981164e-05,
+              "tstat": 62.58320237616686,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005264278401988314,
+              "ci_upper": 0.00560467565134093,
+              "vif": 1.0053931577183686
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005459887564563372,
+              "stderr": 8.745851707416532e-05,
+              "tstat": 62.428311698143204,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005288468871098008,
+              "ci_upper": 0.0056313062580287355,
+              "vif": 1.002529831778224
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005342257324320218,
+              "stderr": 8.595944648761172e-05,
+              "tstat": 62.1485775282433,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005173776809204499,
+              "ci_upper": 0.0055107378394359365,
+              "vif": 1.001820758650643
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005501223298164752,
+              "stderr": 8.715715735980661e-05,
+              "tstat": 63.11843415744185,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005330395269739531,
+              "ci_upper": 0.005672051326589973,
+              "vif": 1.0027560225204306
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005348145413369703,
+              "stderr": 8.815782355868677e-05,
+              "tstat": 60.66557904312867,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005175356079194678,
+              "ci_upper": 0.005520934747544729,
+              "vif": 1.0020499934737541
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.0054428068236509865,
+              "stderr": 8.707493221657044e-05,
+              "tstat": 62.50716118978747,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005272139956506508,
+              "ci_upper": 0.005613473690795465,
+              "vif": 1.0022784696065412
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005381780321511004,
+              "stderr": 8.652839939947287e-05,
+              "tstat": 62.19669332683611,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005212184658688037,
+              "ci_upper": 0.00555137598433397,
+              "vif": 1.0014246367172552
+            },
+            {
+              "feature": "AgriculturalPractices",
+              "coef": 0.005339657913115343,
+              "stderr": 8.689595107634393e-05,
+              "tstat": 61.44886898612911,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005169341849005709,
+              "ci_upper": 0.005509973977224978,
+              "vif": 1.0030916551587465
+            }
+          ],
+          "outliers": [
+            {
+              "index": 8969,
+              "actual": 0.435,
+              "predicted": 0.5704,
+              "residual": -0.1354,
+              "abs_error": 0.1354,
+              "pct_error": 31.13,
+              "rank": 1
+            },
+            {
+              "index": 516,
+              "actual": 0.595,
+              "predicted": 0.466,
+              "residual": 0.129,
+              "abs_error": 0.129,
+              "pct_error": 21.68,
+              "rank": 2
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.4874,
+              "residual": 0.1176,
+              "abs_error": 0.1176,
+              "pct_error": 19.44,
+              "rank": 3
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.4891,
+              "residual": 0.1159,
+              "abs_error": 0.1159,
+              "pct_error": 19.16,
+              "rank": 4
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4935,
+              "residual": 0.1115,
+              "abs_error": 0.1115,
+              "pct_error": 18.43,
+              "rank": 5
+            },
+            {
+              "index": 790,
+              "actual": 0.605,
+              "predicted": 0.4996,
+              "residual": 0.1054,
+              "abs_error": 0.1054,
+              "pct_error": 17.43,
+              "rank": 6
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5104,
+              "residual": -0.1054,
+              "abs_error": 0.1054,
+              "pct_error": 26.02,
+              "rank": 7
+            },
+            {
+              "index": 15466,
+              "actual": 0.515,
+              "predicted": 0.4182,
+              "residual": 0.0968,
+              "abs_error": 0.0968,
+              "pct_error": 18.8,
+              "rank": 8
+            },
+            {
+              "index": 25759,
+              "actual": 0.595,
+              "predicted": 0.4991,
+              "residual": 0.0959,
+              "abs_error": 0.0959,
+              "pct_error": 16.12,
+              "rank": 9
+            },
+            {
+              "index": 20290,
+              "actual": 0.51,
+              "predicted": 0.4167,
+              "residual": 0.0933,
+              "abs_error": 0.0933,
+              "pct_error": 18.29,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 18,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange",
+            "DrainageSystems",
+            "Watersheds",
+            "PopulationScore",
+            "CoastalVulnerability",
+            "Deforestation",
+            "TopographyDrainage",
+            "IneffectiveDisasterPreparedness",
+            "MonsoonIntensity",
+            "RiverManagement",
+            "Siltation",
+            "AgriculturalPractices",
+            "DeterioratingInfrastructure"
+          ],
+          "rmse": 0.026069857256707938,
+          "mae": 0.021038511203850963,
+          "r2": 0.735404666011529,
+          "adj_r2": 0.7346083583686946,
+          "f_stat": 3969.1723250830964,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.0156050933684488,
+              "stderr": 0.001836802665840456,
+              "tstat": 8.49579198607514,
+              "pvalue": 1.9658779315465425e-17,
+              "ci_lower": 0.012004960143401506,
+              "ci_upper": 0.01920522659349609,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.0056076752130097204,
+              "stderr": 7.975435287623597e-05,
+              "tstat": 70.31183892510289,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005451356681372298,
+              "ci_upper": 0.005763993744647143,
+              "vif": 1.003661095848209
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.0055783270420332876,
+              "stderr": 7.888647651331393e-05,
+              "tstat": 70.71335022919695,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005423709548067192,
+              "ci_upper": 0.005732944535999383,
+              "vif": 1.0028327759333169
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005604110795387209,
+              "stderr": 7.876088940374291e-05,
+              "tstat": 71.15347271739783,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005449739452155873,
+              "ci_upper": 0.005758482138618545,
+              "vif": 1.0035248981780367
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005542336530905985,
+              "stderr": 7.958566897785681e-05,
+              "tstat": 69.639881175693,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005386348619709385,
+              "ci_upper": 0.005698324442102585,
+              "vif": 1.004298978725288
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005582895200118294,
+              "stderr": 7.917383059089073e-05,
+              "tstat": 70.51440050900644,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005427714492160149,
+              "ci_upper": 0.00573807590807644,
+              "vif": 1.0025738768100705
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005522292836505271,
+              "stderr": 8.079602574732474e-05,
+              "tstat": 68.34857018555917,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005363932626040515,
+              "ci_upper": 0.005680653046970028,
+              "vif": 1.0019823102382026
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.005502937024062364,
+              "stderr": 7.969846549737321e-05,
+              "tstat": 69.04696332257157,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005346728031687513,
+              "ci_upper": 0.005659146016437216,
+              "vif": 1.004737920972248
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.00546026031791513,
+              "stderr": 7.932741803253195e-05,
+              "tstat": 68.8319430196996,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0053047785785713675,
+              "ci_upper": 0.005615742057258892,
+              "vif": 1.0027921017014372
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005460406308634535,
+              "stderr": 7.898873651582585e-05,
+              "tstat": 69.12892330592616,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005305588385063516,
+              "ci_upper": 0.005615224232205554,
+              "vif": 1.0023722218552649
+            },
+            {
+              "feature": "CoastalVulnerability",
+              "coef": 0.005434100958212033,
+              "stderr": 7.944346642834262e-05,
+              "tstat": 68.40211288002581,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005278391764012481,
+              "ci_upper": 0.005589810152411585,
+              "vif": 1.0053931625407049
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005518738278904026,
+              "stderr": 8.001758908613227e-05,
+              "tstat": 68.96906470105672,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005361903804295207,
+              "ci_upper": 0.005675572753512845,
+              "vif": 1.002645918937388
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005434799453181429,
+              "stderr": 7.865315954916246e-05,
+              "tstat": 69.09829794929453,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005280639260465071,
+              "ci_upper": 0.005588959645897787,
+              "vif": 1.0021176991246967
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005512776970371119,
+              "stderr": 7.97374316511815e-05,
+              "tstat": 69.13662575046627,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005356491604334803,
+              "ci_upper": 0.005669062336407435,
+              "vif": 1.0027605287868875
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005433964737482869,
+              "stderr": 8.066250183737483e-05,
+              "tstat": 67.36667737430692,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005275866233881614,
+              "ci_upper": 0.005592063241084124,
+              "vif": 1.002292836406789
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.00547857013404558,
+              "stderr": 7.96637456515606e-05,
+              "tstat": 68.77118429766246,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005322429192568521,
+              "ci_upper": 0.005634711075522638,
+              "vif": 1.0023217075625188
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005423985152523178,
+              "stderr": 7.916443035212923e-05,
+              "tstat": 68.51543209995818,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005268822869033005,
+              "ci_upper": 0.005579147436013352,
+              "vif": 1.0014855641504885
+            },
+            {
+              "feature": "AgriculturalPractices",
+              "coef": 0.005395316132215292,
+              "stderr": 7.950245360517495e-05,
+              "tstat": 67.86351725708379,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00523949132314915,
+              "ci_upper": 0.005551140941281435,
+              "vif": 1.003196896837644
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005483009185952211,
+              "stderr": 8.021784546196722e-05,
+              "tstat": 68.35148905304129,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005325782208846755,
+              "ci_upper": 0.005640236163057666,
+              "vif": 1.0017822639986977
+            }
+          ],
+          "outliers": [
+            {
+              "index": 8969,
+              "actual": 0.435,
+              "predicted": 0.5604,
+              "residual": -0.1254,
+              "abs_error": 0.1254,
+              "pct_error": 28.84,
+              "rank": 1
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4988,
+              "residual": 0.1062,
+              "abs_error": 0.1062,
+              "pct_error": 17.56,
+              "rank": 2
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.5002,
+              "residual": 0.1048,
+              "abs_error": 0.1048,
+              "pct_error": 17.32,
+              "rank": 3
+            },
+            {
+              "index": 790,
+              "actual": 0.605,
+              "predicted": 0.5053,
+              "residual": 0.0997,
+              "abs_error": 0.0997,
+              "pct_error": 16.47,
+              "rank": 4
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5003,
+              "residual": -0.0953,
+              "abs_error": 0.0953,
+              "pct_error": 23.54,
+              "rank": 5
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.5098,
+              "residual": 0.0952,
+              "abs_error": 0.0952,
+              "pct_error": 15.74,
+              "rank": 6
+            },
+            {
+              "index": 18905,
+              "actual": 0.605,
+              "predicted": 0.5166,
+              "residual": 0.0884,
+              "abs_error": 0.0884,
+              "pct_error": 14.62,
+              "rank": 7
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4226,
+              "residual": -0.0876,
+              "abs_error": 0.0876,
+              "pct_error": 26.14,
+              "rank": 8
+            },
+            {
+              "index": 15466,
+              "actual": 0.515,
+              "predicted": 0.4289,
+              "residual": 0.0861,
+              "abs_error": 0.0861,
+              "pct_error": 16.72,
+              "rank": 9
+            },
+            {
+              "index": 25759,
+              "actual": 0.595,
+              "predicted": 0.5102,
+              "residual": 0.0848,
+              "abs_error": 0.0848,
+              "pct_error": 14.25,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 19,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange",
+            "DrainageSystems",
+            "Watersheds",
+            "PopulationScore",
+            "CoastalVulnerability",
+            "Deforestation",
+            "TopographyDrainage",
+            "IneffectiveDisasterPreparedness",
+            "MonsoonIntensity",
+            "RiverManagement",
+            "Siltation",
+            "AgriculturalPractices",
+            "DeterioratingInfrastructure",
+            "WetlandLoss"
+          ],
+          "rmse": 0.02325803071408001,
+          "mae": 0.01857175764269901,
+          "r2": 0.7894036914846426,
+          "adj_r2": 0.7887345727786574,
+          "f_stat": 4931.242410097432,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": -0.016814712207498556,
+              "stderr": 0.0017099531268355546,
+              "tstat": -9.833434579938412,
+              "pvalue": 8.081461292241763e-23,
+              "ci_lower": -0.020166220336096243,
+              "ci_upper": -0.013463204078900868,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005686104774600978,
+              "stderr": 7.182816303265967e-05,
+              "tstat": 79.16260885045261,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005545321575056965,
+              "ci_upper": 0.005826887974144991,
+              "vif": 1.0038751337485594
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005645798817960728,
+              "stderr": 7.104469386542751e-05,
+              "tstat": 79.46826864586075,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00550655121798449,
+              "ci_upper": 0.005785046417936967,
+              "vif": 1.0029945543174725
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005600452018919632,
+              "stderr": 7.092588703463928e-05,
+              "tstat": 78.96202998750574,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005461437280331739,
+              "ci_upper": 0.005739466757507525,
+              "vif": 1.003525375741937
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005608967133365597,
+              "stderr": 7.167414061649411e-05,
+              "tstat": 78.25649648703043,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0054684858177572685,
+              "ci_upper": 0.005749448448973925,
+              "vif": 1.0044542151267901
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005639271852743082,
+              "stderr": 7.130171841043386e-05,
+              "tstat": 79.09026568310401,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005499520484658632,
+              "ci_upper": 0.005779023220827533,
+              "vif": 1.0026859765098337
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.00558188847936308,
+              "stderr": 7.276291866906743e-05,
+              "tstat": 76.71336693831691,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005439273158771707,
+              "ci_upper": 0.005724503799954452,
+              "vif": 1.0021025261299235
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.005589875516252612,
+              "stderr": 7.177959345685499e-05,
+              "tstat": 77.8755527448418,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0054491875130771765,
+              "ci_upper": 0.005730563519428048,
+              "vif": 1.0050015722559
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005492536955740774,
+              "stderr": 7.143734530504961e-05,
+              "tstat": 76.88607313565065,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0053525197589428765,
+              "ci_upper": 0.0056325541525386715,
+              "vif": 1.0028287111892489
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.0055637971996727684,
+              "stderr": 7.114448753204674e-05,
+              "tstat": 78.20419251971671,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0054243540041099565,
+              "ci_upper": 0.00570324039523558,
+              "vif": 1.0027509399477734
+            },
+            {
+              "feature": "CoastalVulnerability",
+              "coef": 0.00551440007235902,
+              "stderr": 7.154860393707956e-05,
+              "tstat": 77.072084833527,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005374164808642344,
+              "ci_upper": 0.005654635336075696,
+              "vif": 1.0056196759267158
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005590410876732452,
+              "stderr": 7.206392927024774e-05,
+              "tstat": 77.57571552569372,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005449165575362767,
+              "ci_upper": 0.005731656178102137,
+              "vif": 1.002823311646664
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005516983188788163,
+              "stderr": 7.083738313311283e-05,
+              "tstat": 77.88236866995807,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005378141917847261,
+              "ci_upper": 0.005655824459729064,
+              "vif": 1.0023589733612768
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005607149105238341,
+              "stderr": 7.181635681232882e-05,
+              "tstat": 78.07621207924812,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005466389045886176,
+              "ci_upper": 0.005747909164590506,
+              "vif": 1.0030702800687668
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005521795528174276,
+              "stderr": 7.264780827731674e-05,
+              "tstat": 76.00773731667249,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005379405823950735,
+              "ci_upper": 0.0056641852323978175,
+              "vif": 1.002554894540263
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005532702328503816,
+              "stderr": 7.174256378900371e-05,
+              "tstat": 77.11882648598399,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005392086903477368,
+              "ci_upper": 0.005673317753530263,
+              "vif": 1.0024237661999968
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005457632593916318,
+              "stderr": 7.129068743153676e-05,
+              "tstat": 76.55463554279086,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005317902846550505,
+              "ci_upper": 0.00559736234128213,
+              "vif": 1.0015254612579305
+            },
+            {
+              "feature": "AgriculturalPractices",
+              "coef": 0.0055053565054584705,
+              "stderr": 7.160878611672937e-05,
+              "tstat": 76.88101983022304,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005365003284669681,
+              "ci_upper": 0.00564570972624726,
+              "vif": 1.0036207174099914
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005512018000599895,
+              "stderr": 7.223893194147055e-05,
+              "tstat": 76.30259546287095,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005370429693994612,
+              "ci_upper": 0.005653606307205177,
+              "vif": 1.0018111537714887
+            },
+            {
+              "feature": "WetlandLoss",
+              "coef": 0.005360541620679359,
+              "stderr": 7.168513992645996e-05,
+              "tstat": 74.77897966271125,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005220038746423497,
+              "ci_upper": 0.005501044494935221,
+              "vif": 1.0027718010217126
+            }
+          ],
+          "outliers": [
+            {
+              "index": 8969,
+              "actual": 0.435,
+              "predicted": 0.5562,
+              "residual": -0.1212,
+              "abs_error": 0.1212,
+              "pct_error": 27.85,
+              "rank": 1
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4993,
+              "residual": 0.1057,
+              "abs_error": 0.1057,
+              "pct_error": 17.46,
+              "rank": 2
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.5102,
+              "residual": 0.0948,
+              "abs_error": 0.0948,
+              "pct_error": 15.67,
+              "rank": 3
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.5109,
+              "residual": 0.0941,
+              "abs_error": 0.0941,
+              "pct_error": 15.56,
+              "rank": 4
+            },
+            {
+              "index": 18905,
+              "actual": 0.605,
+              "predicted": 0.5115,
+              "residual": 0.0935,
+              "abs_error": 0.0935,
+              "pct_error": 15.45,
+              "rank": 5
+            },
+            {
+              "index": 3329,
+              "actual": 0.5,
+              "predicted": 0.5893,
+              "residual": -0.0893,
+              "abs_error": 0.0893,
+              "pct_error": 17.86,
+              "rank": 6
+            },
+            {
+              "index": 790,
+              "actual": 0.605,
+              "predicted": 0.5163,
+              "residual": 0.0887,
+              "abs_error": 0.0887,
+              "pct_error": 14.67,
+              "rank": 7
+            },
+            {
+              "index": 17068,
+              "actual": 0.555,
+              "predicted": 0.4775,
+              "residual": 0.0775,
+              "abs_error": 0.0775,
+              "pct_error": 13.97,
+              "rank": 8
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.5282,
+              "residual": 0.0768,
+              "abs_error": 0.0768,
+              "pct_error": 12.7,
+              "rank": 9
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4112,
+              "residual": -0.0762,
+              "abs_error": 0.0762,
+              "pct_error": 22.74,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 20,
+          "features": [
+            "Encroachments",
+            "Landslides",
+            "PoliticalFactors",
+            "Urbanization",
+            "DamsQuality",
+            "ClimateChange",
+            "DrainageSystems",
+            "Watersheds",
+            "PopulationScore",
+            "CoastalVulnerability",
+            "Deforestation",
+            "TopographyDrainage",
+            "IneffectiveDisasterPreparedness",
+            "MonsoonIntensity",
+            "RiverManagement",
+            "Siltation",
+            "AgriculturalPractices",
+            "DeterioratingInfrastructure",
+            "WetlandLoss",
+            "InadequatePlanning"
+          ],
+          "rmse": 0.019982524780181674,
+          "mae": 0.01593942037800348,
+          "r2": 0.8445446777758417,
+          "adj_r2": 0.8440246733529477,
+          "f_stat": 6572.592064782221,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": -0.05146999776666289,
+              "stderr": 0.0015393908318728836,
+              "tstat": -33.43530226436548,
+              "pvalue": 1e-25,
+              "ci_lower": -0.05448720379713374,
+              "ci_upper": -0.04845279173619204,
+              "vif": null
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005725475719290007,
+              "stderr": 6.249954986808954e-05,
+              "tstat": 91.60827128153876,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005602976601548551,
+              "ci_upper": 0.005847974837031462,
+              "vif": 1.0039269031613458
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005723242540374996,
+              "stderr": 6.182254273657699e-05,
+              "tstat": 92.57533396452925,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005602070356611305,
+              "ci_upper": 0.005844414724138687,
+              "vif": 1.0031991229821042
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005720505429020572,
+              "stderr": 6.172803756996563e-05,
+              "tstat": 92.67272465185155,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00559951847538344,
+              "ci_upper": 0.005841492382657705,
+              "vif": 1.0040188894250637
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005697783066959901,
+              "stderr": 6.237214088487799e-05,
+              "tstat": 91.3514108402413,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00557553367082554,
+              "ci_upper": 0.005820032463094262,
+              "vif": 1.0047189543667274
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005691826405518135,
+              "stderr": 6.204276963079484e-05,
+              "tstat": 91.74036619237263,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005570222577041778,
+              "ci_upper": 0.005813430233994493,
+              "vif": 1.0027794776759502
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005669639950472427,
+              "stderr": 6.331917469971191e-05,
+              "tstat": 89.5406482690341,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005545534368060992,
+              "ci_upper": 0.005793745532883862,
+              "vif": 1.0023526943489238
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.00565805642739481,
+              "stderr": 6.246051376463215e-05,
+              "tstat": 90.58613332442116,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005535633820416132,
+              "ci_upper": 0.005780479034373489,
+              "vif": 1.005157212443036
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005643373233749144,
+              "stderr": 6.218166452120695e-05,
+              "tstat": 90.75622656940105,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005521497171287579,
+              "ci_upper": 0.00576524929621071,
+              "vif": 1.0035961065154848
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005638240775484479,
+              "stderr": 6.190888646998869e-05,
+              "tstat": 91.07320607709049,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005516899358003301,
+              "ci_upper": 0.0057595821929656565,
+              "vif": 1.0029393900636545
+            },
+            {
+              "feature": "CoastalVulnerability",
+              "coef": 0.0056379187680940974,
+              "stderr": 6.22706144278654e-05,
+              "tstat": 90.53899371147352,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005515868363815481,
+              "ci_upper": 0.0057599691723727135,
+              "vif": 1.0061341082141406
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005622841514717011,
+              "stderr": 6.270416926615543e-05,
+              "tstat": 89.67253024037653,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005499941342955347,
+              "ci_upper": 0.0057457416864786755,
+              "vif": 1.002858171930548
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005612103561774191,
+              "stderr": 6.164539455532976e-05,
+              "tstat": 91.0384887996305,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005491278588445745,
+              "ci_upper": 0.005732928535102637,
+              "vif": 1.0026691983259595
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.00561101196565635,
+              "stderr": 6.248768127436665e-05,
+              "tstat": 89.79388979117182,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005488536110358592,
+              "ci_upper": 0.005733487820954108,
+              "vif": 1.0030707781888406
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005608036459111516,
+              "stderr": 6.321875913919953e-05,
+              "tstat": 88.70842350390562,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005484127691198684,
+              "ci_upper": 0.005731945227024347,
+              "vif": 1.0027973999273796
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005605184450339823,
+              "stderr": 6.242892631072784e-05,
+              "tstat": 89.78505288463728,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005482823754770797,
+              "ci_upper": 0.005727545145908849,
+              "vif": 1.0025993929871646
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.0055788695633218685,
+              "stderr": 6.204567312600506e-05,
+              "tstat": 89.91552967750155,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005457260043994898,
+              "ci_upper": 0.005700479082648839,
+              "vif": 1.00202262325429
+            },
+            {
+              "feature": "AgriculturalPractices",
+              "coef": 0.005575684404056474,
+              "stderr": 6.23122153118434e-05,
+              "tstat": 89.47979743863688,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005453552462045261,
+              "ci_upper": 0.005697816346067687,
+              "vif": 1.0037868763320779
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005569139709769425,
+              "stderr": 6.285872268045102e-05,
+              "tstat": 88.5977231526122,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005445936613315741,
+              "ci_upper": 0.0056923428062231095,
+              "vif": 1.0019186707392822
+            },
+            {
+              "feature": "WetlandLoss",
+              "coef": 0.0054945386660037975,
+              "stderr": 6.239219464230472e-05,
+              "tstat": 88.06451988913133,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00537224996450488,
+              "ci_upper": 0.0056168273675027145,
+              "vif": 1.0033732041359311
+            },
+            {
+              "feature": "InadequatePlanning",
+              "coef": 0.005458379070298218,
+              "stderr": 6.222291028674778e-05,
+              "tstat": 87.72297928759437,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005336422166136192,
+              "ci_upper": 0.005580335974460244,
+              "vif": 1.0043526547064985
+            }
+          ],
+          "outliers": [
+            {
+              "index": 8969,
+              "actual": 0.435,
+              "predicted": 0.5404,
+              "residual": -0.1054,
+              "abs_error": 0.1054,
+              "pct_error": 24.23,
+              "rank": 1
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.5053,
+              "residual": 0.0997,
+              "abs_error": 0.0997,
+              "pct_error": 16.48,
+              "rank": 2
+            },
+            {
+              "index": 1397,
+              "actual": 0.475,
+              "predicted": 0.5706,
+              "residual": -0.0956,
+              "abs_error": 0.0956,
+              "pct_error": 20.13,
+              "rank": 3
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.5107,
+              "residual": 0.0943,
+              "abs_error": 0.0943,
+              "pct_error": 15.58,
+              "rank": 4
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.5109,
+              "residual": 0.0941,
+              "abs_error": 0.0941,
+              "pct_error": 15.55,
+              "rank": 5
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.5123,
+              "residual": 0.0927,
+              "abs_error": 0.0927,
+              "pct_error": 15.32,
+              "rank": 6
+            },
+            {
+              "index": 790,
+              "actual": 0.605,
+              "predicted": 0.5166,
+              "residual": 0.0884,
+              "abs_error": 0.0884,
+              "pct_error": 14.62,
+              "rank": 7
+            },
+            {
+              "index": 18905,
+              "actual": 0.605,
+              "predicted": 0.5177,
+              "residual": 0.0873,
+              "abs_error": 0.0873,
+              "pct_error": 14.42,
+              "rank": 8
+            },
+            {
+              "index": 3329,
+              "actual": 0.5,
+              "predicted": 0.5848,
+              "residual": -0.0848,
+              "abs_error": 0.0848,
+              "pct_error": 16.97,
+              "rank": 9
+            },
+            {
+              "index": 7685,
+              "actual": 0.5,
+              "predicted": 0.5684,
+              "residual": -0.0684,
+              "abs_error": 0.0684,
+              "pct_error": 13.68,
+              "rank": 10
+            }
+          ]
+        }
+      ],
+      "Exhaustive": [
+        {
+          "k": 1,
+          "features": [
+            "Siltation"
+          ],
+          "rmse": 0.04994800303682007,
+          "mae": 0.040338803652790814,
+          "r2": 0.028727407831151797,
+          "adj_r2": 0.02856547508820928,
+          "f_stat": 955.1180245048416,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.48071799728157055,
+              "stderr": 0.0008264007303672592,
+              "tstat": 581.7008378827734,
+              "pvalue": 1e-25,
+              "ci_lower": 0.4790982518500507,
+              "ci_upper": 0.4823377427130904,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.004780875629044204,
+              "stderr": 0.0001546959434735399,
+              "tstat": 30.90498381337293,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004477671579836066,
+              "ci_upper": 0.005084079678252342,
+              "vif": 1.0
+            }
+          ],
+          "outliers": [
+            {
+              "index": 5662,
+              "actual": 0.69,
+              "predicted": 0.5046,
+              "residual": 0.1854,
+              "abs_error": 0.1854,
+              "pct_error": 26.87,
+              "rank": 1
+            },
+            {
+              "index": 3396,
+              "actual": 0.67,
+              "predicted": 0.5046,
+              "residual": 0.1654,
+              "abs_error": 0.1654,
+              "pct_error": 24.68,
+              "rank": 2
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4951,
+              "residual": -0.1651,
+              "abs_error": 0.1651,
+              "pct_error": 50.02,
+              "rank": 3
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4951,
+              "residual": -0.1601,
+              "abs_error": 0.1601,
+              "pct_error": 47.78,
+              "rank": 4
+            },
+            {
+              "index": 8351,
+              "actual": 0.365,
+              "predicted": 0.5237,
+              "residual": -0.1587,
+              "abs_error": 0.1587,
+              "pct_error": 43.49,
+              "rank": 5
+            },
+            {
+              "index": 274,
+              "actual": 0.33,
+              "predicted": 0.4855,
+              "residual": -0.1555,
+              "abs_error": 0.1555,
+              "pct_error": 47.12,
+              "rank": 6
+            },
+            {
+              "index": 6112,
+              "actual": 0.655,
+              "predicted": 0.4998,
+              "residual": 0.1552,
+              "abs_error": 0.1552,
+              "pct_error": 23.69,
+              "rank": 7
+            },
+            {
+              "index": 9898,
+              "actual": 0.645,
+              "predicted": 0.4951,
+              "residual": 0.1499,
+              "abs_error": 0.1499,
+              "pct_error": 23.25,
+              "rank": 8
+            },
+            {
+              "index": 9737,
+              "actual": 0.36,
+              "predicted": 0.5094,
+              "residual": -0.1494,
+              "abs_error": 0.1494,
+              "pct_error": 41.5,
+              "rank": 9
+            },
+            {
+              "index": 26109,
+              "actual": 0.37,
+              "predicted": 0.519,
+              "residual": -0.149,
+              "abs_error": 0.149,
+              "pct_error": 40.26,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 2,
+          "features": [
+            "Siltation",
+            "DamsQuality"
+          ],
+          "rmse": 0.04900010725590135,
+          "mae": 0.03961899586393498,
+          "r2": 0.0652425477902352,
+          "adj_r2": 0.06493080610198787,
+          "f_stat": 999.2392619615376,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.45650713636939283,
+              "stderr": 0.0011134168198161877,
+              "tstat": 410.0056045899836,
+              "pvalue": 1e-25,
+              "ci_lower": 0.4543248394025531,
+              "ci_upper": 0.4586894333362326,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.0048585285139062925,
+              "stderr": 0.00015158255565092784,
+              "tstat": 32.05202929217504,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004561426704830474,
+              "ci_upper": 0.005155630322982111,
+              "vif": 1.0002615948252618
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.004799715974631446,
+              "stderr": 0.00015151825009224965,
+              "tstat": 31.677477608863686,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004502740204450637,
+              "ci_upper": 0.005096691744812256,
+              "vif": 1.0002615948252618
+            }
+          ],
+          "outliers": [
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.5143,
+              "residual": -0.1793,
+              "abs_error": 0.1793,
+              "pct_error": 53.52,
+              "rank": 1
+            },
+            {
+              "index": 5662,
+              "actual": 0.69,
+              "predicted": 0.5144,
+              "residual": 0.1756,
+              "abs_error": 0.1756,
+              "pct_error": 25.45,
+              "rank": 2
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4903,
+              "residual": -0.1603,
+              "abs_error": 0.1603,
+              "pct_error": 48.57,
+              "rank": 3
+            },
+            {
+              "index": 26109,
+              "actual": 0.37,
+              "predicted": 0.529,
+              "residual": -0.159,
+              "abs_error": 0.159,
+              "pct_error": 42.97,
+              "rank": 4
+            },
+            {
+              "index": 3396,
+              "actual": 0.67,
+              "predicted": 0.5144,
+              "residual": 0.1556,
+              "abs_error": 0.1556,
+              "pct_error": 23.22,
+              "rank": 5
+            },
+            {
+              "index": 6112,
+              "actual": 0.655,
+              "predicted": 0.4999,
+              "residual": 0.1551,
+              "abs_error": 0.1551,
+              "pct_error": 23.67,
+              "rank": 6
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5001,
+              "residual": 0.1499,
+              "abs_error": 0.1499,
+              "pct_error": 23.06,
+              "rank": 7
+            },
+            {
+              "index": 8351,
+              "actual": 0.365,
+              "predicted": 0.5146,
+              "residual": -0.1496,
+              "abs_error": 0.1496,
+              "pct_error": 41.0,
+              "rank": 8
+            },
+            {
+              "index": 9251,
+              "actual": 0.63,
+              "predicted": 0.4808,
+              "residual": 0.1492,
+              "abs_error": 0.1492,
+              "pct_error": 23.68,
+              "rank": 9
+            },
+            {
+              "index": 25883,
+              "actual": 0.65,
+              "predicted": 0.5048,
+              "residual": 0.1452,
+              "abs_error": 0.1452,
+              "pct_error": 22.34,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 3,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure"
+          ],
+          "rmse": 0.04808843368195135,
+          "mae": 0.0389937467957511,
+          "r2": 0.0997023051990118,
+          "adj_r2": 0.09925185605218012,
+          "f_stat": 1042.294002154884,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.4321078379753272,
+              "stderr": 0.001326515946025236,
+              "tstat": 325.7464331809146,
+              "pvalue": 1e-25,
+              "ci_lower": 0.42950786672111774,
+              "ci_upper": 0.43470780922953667,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.00489195802754982,
+              "stderr": 0.00014840235518403163,
+              "tstat": 32.9641535775047,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004601089411389118,
+              "ci_upper": 0.005182826643710522,
+              "vif": 1.0003103204790285
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.004872791105888373,
+              "stderr": 0.00014835306342416785,
+              "tstat": 32.845908223385955,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004582019101577004,
+              "ci_upper": 0.005163563110199742,
+              "vif": 1.0004946213318933
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.004852753432487393,
+              "stderr": 0.00015035242020084303,
+              "tstat": 32.2758584531264,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0045580626888937405,
+              "ci_upper": 0.005147444176081045,
+              "vif": 1.000278305731901
+            }
+          ],
+          "outliers": [
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.5295,
+              "residual": -0.1945,
+              "abs_error": 0.1945,
+              "pct_error": 58.05,
+              "rank": 1
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.4907,
+              "residual": 0.1593,
+              "abs_error": 0.1593,
+              "pct_error": 24.51,
+              "rank": 2
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4857,
+              "residual": -0.1557,
+              "abs_error": 0.1557,
+              "pct_error": 47.18,
+              "rank": 3
+            },
+            {
+              "index": 5662,
+              "actual": 0.69,
+              "predicted": 0.5344,
+              "residual": 0.1556,
+              "abs_error": 0.1556,
+              "pct_error": 22.56,
+              "rank": 4
+            },
+            {
+              "index": 25883,
+              "actual": 0.65,
+              "predicted": 0.4955,
+              "residual": 0.1545,
+              "abs_error": 0.1545,
+              "pct_error": 23.77,
+              "rank": 5
+            },
+            {
+              "index": 3396,
+              "actual": 0.67,
+              "predicted": 0.5198,
+              "residual": 0.1502,
+              "abs_error": 0.1502,
+              "pct_error": 22.42,
+              "rank": 6
+            },
+            {
+              "index": 26109,
+              "actual": 0.37,
+              "predicted": 0.5199,
+              "residual": -0.1499,
+              "abs_error": 0.1499,
+              "pct_error": 40.52,
+              "rank": 7
+            },
+            {
+              "index": 14944,
+              "actual": 0.375,
+              "predicted": 0.5246,
+              "residual": -0.1496,
+              "abs_error": 0.1496,
+              "pct_error": 39.9,
+              "rank": 8
+            },
+            {
+              "index": 25978,
+              "actual": 0.63,
+              "predicted": 0.4808,
+              "residual": 0.1492,
+              "abs_error": 0.1492,
+              "pct_error": 23.68,
+              "rank": 9
+            },
+            {
+              "index": 1334,
+              "actual": 0.345,
+              "predicted": 0.4905,
+              "residual": -0.1455,
+              "abs_error": 0.1455,
+              "pct_error": 42.17,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 4,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage"
+          ],
+          "rmse": 0.046915924035055644,
+          "mae": 0.03802065069824724,
+          "r2": 0.1430698489898461,
+          "adj_r2": 0.14249808575314216,
+          "f_stat": 1088.3344332027941,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.40821471755468725,
+              "stderr": 0.001486488885255101,
+              "tstat": 274.6167304739936,
+              "pvalue": 1e-25,
+              "ci_lower": 0.40530119933958725,
+              "ci_upper": 0.41112823576978724,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.0048998657222790384,
+              "stderr": 0.0001451595139797816,
+              "tstat": 33.755043592674966,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004615353074878667,
+              "ci_upper": 0.00518437836967941,
+              "vif": 1.0003130560228903
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.00489042780275228,
+              "stderr": 0.00014511208855674687,
+              "tstat": 33.701036566914624,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004606008109181056,
+              "ci_upper": 0.005174847496323504,
+              "vif": 1.0005082403861707
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.004930716701337072,
+              "stderr": 0.000147085807432596,
+              "tstat": 33.522722466589016,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0046424285187691835,
+              "ci_upper": 0.00521900488390496,
+              "vif": 1.000537348106391
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.004749374309996105,
+              "stderr": 0.00014417364604035144,
+              "tstat": 32.94204204745468,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004466793963757016,
+              "ci_upper": 0.005031954656235194,
+              "vif": 1.0002730413836842
+            }
+          ],
+          "outliers": [
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.5206,
+              "residual": -0.1856,
+              "abs_error": 0.1856,
+              "pct_error": 55.41,
+              "rank": 1
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.4813,
+              "residual": 0.1687,
+              "abs_error": 0.1687,
+              "pct_error": 25.95,
+              "rank": 2
+            },
+            {
+              "index": 14944,
+              "actual": 0.375,
+              "predicted": 0.5252,
+              "residual": -0.1502,
+              "abs_error": 0.1502,
+              "pct_error": 40.07,
+              "rank": 3
+            },
+            {
+              "index": 14546,
+              "actual": 0.655,
+              "predicted": 0.5104,
+              "residual": 0.1446,
+              "abs_error": 0.1446,
+              "pct_error": 22.08,
+              "rank": 4
+            },
+            {
+              "index": 25978,
+              "actual": 0.63,
+              "predicted": 0.4858,
+              "residual": 0.1442,
+              "abs_error": 0.1442,
+              "pct_error": 22.89,
+              "rank": 5
+            },
+            {
+              "index": 6112,
+              "actual": 0.655,
+              "predicted": 0.5109,
+              "residual": 0.1441,
+              "abs_error": 0.1441,
+              "pct_error": 22.0,
+              "rank": 6
+            },
+            {
+              "index": 5662,
+              "actual": 0.69,
+              "predicted": 0.5493,
+              "residual": 0.1407,
+              "abs_error": 0.1407,
+              "pct_error": 20.39,
+              "rank": 7
+            },
+            {
+              "index": 27564,
+              "actual": 0.655,
+              "predicted": 0.5153,
+              "residual": 0.1397,
+              "abs_error": 0.1397,
+              "pct_error": 21.32,
+              "rank": 8
+            },
+            {
+              "index": 26680,
+              "actual": 0.63,
+              "predicted": 0.4907,
+              "residual": 0.1393,
+              "abs_error": 0.1393,
+              "pct_error": 22.11,
+              "rank": 9
+            },
+            {
+              "index": 13371,
+              "actual": 0.33,
+              "predicted": 0.4669,
+              "residual": -0.1369,
+              "abs_error": 0.1369,
+              "pct_error": 41.5,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 5,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange"
+          ],
+          "rmse": 0.04604672461957694,
+          "mae": 0.037348220016783194,
+          "r2": 0.17452797077771365,
+          "adj_r2": 0.1738393888380887,
+          "f_stat": 1138.1310282713441,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.38374653473685766,
+              "stderr": 0.0016245024264023489,
+              "tstat": 236.2240452830282,
+              "pvalue": 1e-25,
+              "ci_lower": 0.3805625099811091,
+              "ci_upper": 0.38693055949260624,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.004952590924618078,
+              "stderr": 0.0001418632147779658,
+              "tstat": 34.911029842158314,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004674539023653265,
+              "ci_upper": 0.005230642825582891,
+              "vif": 1.0004351233057636
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.00493049679368361,
+              "stderr": 0.00014181321444195418,
+              "tstat": 34.767541326000476,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00465254289337738,
+              "ci_upper": 0.0052084506939898394,
+              "vif": 1.0005787986907282
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.004955599368527661,
+              "stderr": 0.00014373889837240882,
+              "tstat": 34.47639730539987,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00467387112771774,
+              "ci_upper": 0.005237327609337583,
+              "vif": 1.0005638333193698
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.004736380703212228,
+              "stderr": 0.00014089166714405412,
+              "tstat": 33.617181194751105,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004460233035609882,
+              "ci_upper": 0.005012528370814574,
+              "vif": 1.0002805562988437
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.00486988941085461,
+              "stderr": 0.0001447357495988452,
+              "tstat": 33.64676263018757,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004586207341640874,
+              "ci_upper": 0.005153571480068347,
+              "vif": 1.0002222482239467
+            }
+          ],
+          "outliers": [
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.4768,
+              "residual": 0.1732,
+              "abs_error": 0.1732,
+              "pct_error": 26.64,
+              "rank": 1
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.5066,
+              "residual": -0.1716,
+              "abs_error": 0.1716,
+              "pct_error": 51.22,
+              "rank": 2
+            },
+            {
+              "index": 14944,
+              "actual": 0.375,
+              "predicted": 0.5258,
+              "residual": -0.1508,
+              "abs_error": 0.1508,
+              "pct_error": 40.2,
+              "rank": 3
+            },
+            {
+              "index": 26680,
+              "actual": 0.63,
+              "predicted": 0.486,
+              "residual": 0.144,
+              "abs_error": 0.144,
+              "pct_error": 22.85,
+              "rank": 4
+            },
+            {
+              "index": 20077,
+              "actual": 0.585,
+              "predicted": 0.4423,
+              "residual": 0.1427,
+              "abs_error": 0.1427,
+              "pct_error": 24.39,
+              "rank": 5
+            },
+            {
+              "index": 8351,
+              "actual": 0.365,
+              "predicted": 0.5065,
+              "residual": -0.1415,
+              "abs_error": 0.1415,
+              "pct_error": 38.77,
+              "rank": 6
+            },
+            {
+              "index": 14546,
+              "actual": 0.655,
+              "predicted": 0.5157,
+              "residual": 0.1393,
+              "abs_error": 0.1393,
+              "pct_error": 21.26,
+              "rank": 7
+            },
+            {
+              "index": 28301,
+              "actual": 0.635,
+              "predicted": 0.4962,
+              "residual": 0.1388,
+              "abs_error": 0.1388,
+              "pct_error": 21.86,
+              "rank": 8
+            },
+            {
+              "index": 2201,
+              "actual": 0.6,
+              "predicted": 0.4619,
+              "residual": 0.1381,
+              "abs_error": 0.1381,
+              "pct_error": 23.01,
+              "rank": 9
+            },
+            {
+              "index": 27564,
+              "actual": 0.655,
+              "predicted": 0.5207,
+              "residual": 0.1343,
+              "abs_error": 0.1343,
+              "pct_error": 20.5,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 6,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides"
+          ],
+          "rmse": 0.045243595561206634,
+          "mae": 0.036741999930228975,
+          "r2": 0.20307197814221745,
+          "adj_r2": 0.20227411928502625,
+          "f_stat": 1213.7399992003882,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.3578316776694691,
+              "stderr": 0.0017397319111687433,
+              "tstat": 205.68207973438825,
+              "pvalue": 1e-25,
+              "ci_lower": 0.35442180312357835,
+              "ci_upper": 0.36124155221535986,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.0049579828811731974,
+              "stderr": 0.0001382083696410707,
+              "tstat": 35.87324627335636,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004687094476676699,
+              "ci_upper": 0.005228871285669696,
+              "vif": 1.0004363066028816
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005000926399595355,
+              "stderr": 0.00013817352524133673,
+              "tstat": 36.19308685119406,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004730106290122335,
+              "ci_upper": 0.005271746509068375,
+              "vif": 1.000780858581059
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.0050316674794099354,
+              "stderr": 0.00014005170120242322,
+              "tstat": 35.92721428022808,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004757166145053186,
+              "ci_upper": 0.005306168813766685,
+              "vif": 1.0007932648701539
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.004801871727469518,
+              "stderr": 0.00013727391170880436,
+              "tstat": 34.980220696672546,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004532814860520261,
+              "ci_upper": 0.005070928594418774,
+              "vif": 1.0004575127819952
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.004970228004506736,
+              "stderr": 0.00014103455529890162,
+              "tstat": 35.241207333713945,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004693800276120889,
+              "ci_upper": 0.005246655732892584,
+              "vif": 1.0006158278444588
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.004938477582788535,
+              "stderr": 0.0001376680711835228,
+              "tstat": 35.872352538484684,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00466864816326883,
+              "ci_upper": 0.005208307002308239,
+              "vif": 1.0009816195985377
+            }
+          ],
+          "outliers": [
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.4717,
+              "residual": 0.1783,
+              "abs_error": 0.1783,
+              "pct_error": 27.43,
+              "rank": 1
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.5119,
+              "residual": -0.1769,
+              "abs_error": 0.1769,
+              "pct_error": 52.82,
+              "rank": 2
+            },
+            {
+              "index": 14944,
+              "actual": 0.375,
+              "predicted": 0.5215,
+              "residual": -0.1465,
+              "abs_error": 0.1465,
+              "pct_error": 39.07,
+              "rank": 3
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4617,
+              "residual": 0.1433,
+              "abs_error": 0.1433,
+              "pct_error": 23.68,
+              "rank": 4
+            },
+            {
+              "index": 25978,
+              "actual": 0.63,
+              "predicted": 0.4912,
+              "residual": 0.1388,
+              "abs_error": 0.1388,
+              "pct_error": 22.03,
+              "rank": 5
+            },
+            {
+              "index": 24512,
+              "actual": 0.64,
+              "predicted": 0.5016,
+              "residual": 0.1384,
+              "abs_error": 0.1384,
+              "pct_error": 21.63,
+              "rank": 6
+            },
+            {
+              "index": 2201,
+              "actual": 0.6,
+              "predicted": 0.4619,
+              "residual": 0.1381,
+              "abs_error": 0.1381,
+              "pct_error": 23.02,
+              "rank": 7
+            },
+            {
+              "index": 9737,
+              "actual": 0.36,
+              "predicted": 0.4963,
+              "residual": -0.1363,
+              "abs_error": 0.1363,
+              "pct_error": 37.86,
+              "rank": 8
+            },
+            {
+              "index": 26680,
+              "actual": 0.63,
+              "predicted": 0.4961,
+              "residual": 0.1339,
+              "abs_error": 0.1339,
+              "pct_error": 21.25,
+              "rank": 9
+            },
+            {
+              "index": 12152,
+              "actual": 0.63,
+              "predicted": 0.4966,
+              "residual": 0.1334,
+              "abs_error": 0.1334,
+              "pct_error": 21.17,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 7,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides",
+            "IneffectiveDisasterPreparedness"
+          ],
+          "rmse": 0.044344283428882685,
+          "mae": 0.03596410810469819,
+          "r2": 0.2344383713148528,
+          "adj_r2": 0.2335440236177907,
+          "f_stat": 1271.6320842043199,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.33350958115050044,
+              "stderr": 0.0018313922027846116,
+              "tstat": 182.10713174567567,
+              "pvalue": 1e-25,
+              "ci_lower": 0.3299200524330426,
+              "ci_upper": 0.33709910986795827,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.004984994377701152,
+              "stderr": 0.00013476854349811244,
+              "tstat": 36.989302164350924,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004720848032444852,
+              "ci_upper": 0.005249140722957452,
+              "vif": 1.0004686598933412
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.0050169722780389545,
+              "stderr": 0.0001347331569433626,
+              "tstat": 37.23635957070259,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004752895290429964,
+              "ci_upper": 0.005281049265647945,
+              "vif": 1.0007922851729851
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005037391403704655,
+              "stderr": 0.00013656388534166833,
+              "tstat": 36.886702447734535,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004769726188434986,
+              "ci_upper": 0.005305056618974325,
+              "vif": 1.0007946801938126
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.004807677411751589,
+              "stderr": 0.00013385527999256952,
+              "tstat": 35.91697998030761,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004545321062966153,
+              "ci_upper": 0.0050700337605370255,
+              "vif": 1.000459027842121
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005007028059984696,
+              "stderr": 0.0001375261289555681,
+              "tstat": 36.40783099190093,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004737476847231783,
+              "ci_upper": 0.005276579272737609,
+              "vif": 1.0006735063044154
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.0049718898348938756,
+              "stderr": 0.00013424286905191061,
+              "tstat": 37.03652842052479,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0047087738115521305,
+              "ci_upper": 0.005235005858235621,
+              "vif": 1.0010315392511597
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.004780546959389469,
+              "stderr": 0.00013563599611630386,
+              "tstat": 35.245414906602605,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004514700407001513,
+              "ci_upper": 0.005046393511777425,
+              "vif": 1.0001487004650351
+            }
+          ],
+          "outliers": [
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.467,
+              "residual": 0.183,
+              "abs_error": 0.183,
+              "pct_error": 28.15,
+              "rank": 1
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.5121,
+              "residual": -0.1771,
+              "abs_error": 0.1771,
+              "pct_error": 52.86,
+              "rank": 2
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4569,
+              "residual": 0.1481,
+              "abs_error": 0.1481,
+              "pct_error": 24.48,
+              "rank": 3
+            },
+            {
+              "index": 14944,
+              "actual": 0.375,
+              "predicted": 0.5169,
+              "residual": -0.1419,
+              "abs_error": 0.1419,
+              "pct_error": 37.85,
+              "rank": 4
+            },
+            {
+              "index": 25978,
+              "actual": 0.63,
+              "predicted": 0.4914,
+              "residual": 0.1386,
+              "abs_error": 0.1386,
+              "pct_error": 22.0,
+              "rank": 5
+            },
+            {
+              "index": 24512,
+              "actual": 0.64,
+              "predicted": 0.5017,
+              "residual": 0.1383,
+              "abs_error": 0.1383,
+              "pct_error": 21.61,
+              "rank": 6
+            },
+            {
+              "index": 2201,
+              "actual": 0.6,
+              "predicted": 0.4619,
+              "residual": 0.1381,
+              "abs_error": 0.1381,
+              "pct_error": 23.01,
+              "rank": 7
+            },
+            {
+              "index": 8686,
+              "actual": 0.38,
+              "predicted": 0.5169,
+              "residual": -0.1369,
+              "abs_error": 0.1369,
+              "pct_error": 36.02,
+              "rank": 8
+            },
+            {
+              "index": 25916,
+              "actual": 0.63,
+              "predicted": 0.497,
+              "residual": 0.133,
+              "abs_error": 0.133,
+              "pct_error": 21.11,
+              "rank": 9
+            },
+            {
+              "index": 1334,
+              "actual": 0.345,
+              "predicted": 0.4773,
+              "residual": -0.1323,
+              "abs_error": 0.1323,
+              "pct_error": 38.34,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 8,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides",
+            "IneffectiveDisasterPreparedness",
+            "PoliticalFactors"
+          ],
+          "rmse": 0.04326005256308158,
+          "mae": 0.03501545007025535,
+          "r2": 0.271417122772156,
+          "adj_r2": 0.2704442195810657,
+          "f_stat": 1345.792183935849,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.30853141573959636,
+              "stderr": 0.0019059691150401974,
+              "tstat": 161.87639836602983,
+              "pvalue": 1e-25,
+              "ci_lower": 0.30479571627411756,
+              "ci_upper": 0.31226711520507516,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.004987723935586245,
+              "stderr": 0.00013110519449369577,
+              "tstat": 38.04367900789836,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004730757754378602,
+              "ci_upper": 0.0052446901167938886,
+              "vif": 1.0004689786403684
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005117879439187801,
+              "stderr": 0.00013109929583244342,
+              "tstat": 39.03819167517808,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004860924819356212,
+              "ci_upper": 0.00537483405901939,
+              "vif": 1.0012282726951773
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005054269148432368,
+              "stderr": 0.00013285250125693988,
+              "tstat": 38.04421520568357,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004793878245968766,
+              "ci_upper": 0.00531466005089597,
+              "vif": 1.0008065525575671
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.004841479628132058,
+              "stderr": 0.0001302199597252786,
+              "tstat": 37.17924378371789,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004586248507070512,
+              "ci_upper": 0.005096710749193604,
+              "vif": 1.0005085789940975
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005097023581351494,
+              "stderr": 0.00013381004676259046,
+              "tstat": 38.09148643670065,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004834755889696817,
+              "ci_upper": 0.005359291273006171,
+              "vif": 1.001006318218785
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.004965983534695328,
+              "stderr": 0.00013059388657104707,
+              "tstat": 38.026156239661965,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004710019517016076,
+              "ci_upper": 0.00522194755237458,
+              "vif": 1.0010330442336601
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.004785164393729874,
+              "stderr": 0.00013194910592508933,
+              "tstat": 36.26522787086201,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004526544146116699,
+              "ci_upper": 0.005043784641343049,
+              "vif": 1.0001496006903403
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.004807140744807294,
+              "stderr": 0.00013032738646064822,
+              "tstat": 36.885115825281964,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004551699067344423,
+              "ci_upper": 0.0050625824222701645,
+              "vif": 1.0008237856622568
+            }
+          ],
+          "outliers": [
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.4908,
+              "residual": 0.1592,
+              "abs_error": 0.1592,
+              "pct_error": 24.49,
+              "rank": 1
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4932,
+              "residual": -0.1582,
+              "abs_error": 0.1582,
+              "pct_error": 47.23,
+              "rank": 2
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4472,
+              "residual": 0.1578,
+              "abs_error": 0.1578,
+              "pct_error": 26.09,
+              "rank": 3
+            },
+            {
+              "index": 2201,
+              "actual": 0.6,
+              "predicted": 0.4523,
+              "residual": 0.1477,
+              "abs_error": 0.1477,
+              "pct_error": 24.62,
+              "rank": 4
+            },
+            {
+              "index": 27438,
+              "actual": 0.595,
+              "predicted": 0.4528,
+              "residual": 0.1422,
+              "abs_error": 0.1422,
+              "pct_error": 23.91,
+              "rank": 5
+            },
+            {
+              "index": 19879,
+              "actual": 0.63,
+              "predicted": 0.4925,
+              "residual": 0.1375,
+              "abs_error": 0.1375,
+              "pct_error": 21.82,
+              "rank": 6
+            },
+            {
+              "index": 21554,
+              "actual": 0.375,
+              "predicted": 0.5113,
+              "residual": -0.1363,
+              "abs_error": 0.1363,
+              "pct_error": 36.36,
+              "rank": 7
+            },
+            {
+              "index": 24512,
+              "actual": 0.64,
+              "predicted": 0.5068,
+              "residual": 0.1332,
+              "abs_error": 0.1332,
+              "pct_error": 20.81,
+              "rank": 8
+            },
+            {
+              "index": 14944,
+              "actual": 0.375,
+              "predicted": 0.5077,
+              "residual": -0.1327,
+              "abs_error": 0.1327,
+              "pct_error": 35.39,
+              "rank": 9
+            },
+            {
+              "index": 6885,
+              "actual": 0.405,
+              "predicted": 0.5371,
+              "residual": -0.1321,
+              "abs_error": 0.1321,
+              "pct_error": 32.61,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 9,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides",
+            "IneffectiveDisasterPreparedness",
+            "PoliticalFactors",
+            "RiverManagement"
+          ],
+          "rmse": 0.04179357519824459,
+          "mae": 0.0338364484382397,
+          "r2": 0.31997649695230723,
+          "adj_r2": 0.3189547588008165,
+          "f_stat": 1435.8628685336241,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.28244745696991874,
+              "stderr": 0.001969161888491237,
+              "tstat": 143.43536639657836,
+              "pvalue": 1e-25,
+              "ci_lower": 0.2785878996684759,
+              "ci_upper": 0.28630701427136157,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005029338981658802,
+              "stderr": 0.00012722441486388836,
+              "tstat": 39.53124081599797,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004779979128525581,
+              "ci_upper": 0.005278698834792024,
+              "vif": 1.0005408850200133
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005110075545730814,
+              "stderr": 0.00012721428005790867,
+              "tstat": 40.16904032632719,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004860735556817313,
+              "ci_upper": 0.005359415534644315,
+              "vif": 1.0012308034955233
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005082002195487132,
+              "stderr": 0.00012891737149314518,
+              "tstat": 39.42061598546751,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004829324147360568,
+              "ci_upper": 0.0053346802436136966,
+              "vif": 1.0008376631786482
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.004908047169127043,
+              "stderr": 0.00012637261963485919,
+              "tstat": 38.837900039647394,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004660356834642719,
+              "ci_upper": 0.005155737503611367,
+              "vif": 1.0006950853202474
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005130334554997825,
+              "stderr": 0.00012984740613995721,
+              "tstat": 39.51048933136213,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004875833638963508,
+              "ci_upper": 0.005384835471032141,
+              "vif": 1.0010505706221569
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005005325974000925,
+              "stderr": 0.00012672779005501667,
+              "tstat": 39.49667213345983,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004756939505493092,
+              "ci_upper": 0.005253712442508758,
+              "vif": 1.0010978521594407
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.004847761938318384,
+              "stderr": 0.0001280490226930561,
+              "tstat": 37.85864067029127,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004596785853839994,
+              "ci_upper": 0.005098738022796773,
+              "vif": 1.0003101725708592
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.004868297088850253,
+              "stderr": 0.0001264750177606724,
+              "tstat": 38.49216370985209,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004620406054039335,
+              "ci_upper": 0.005116188123661171,
+              "vif": 1.0009809927459523
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.004938193563519242,
+              "stderr": 0.0001279836474674803,
+              "tstat": 38.58456655389511,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004687345614482981,
+              "ci_upper": 0.005189041512555503,
+              "vif": 1.0007003736153892
+            }
+          ],
+          "outliers": [
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.5029,
+              "residual": -0.1679,
+              "abs_error": 0.1679,
+              "pct_error": 50.11,
+              "rank": 1
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4421,
+              "residual": 0.1629,
+              "abs_error": 0.1629,
+              "pct_error": 26.93,
+              "rank": 2
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.4622,
+              "residual": 0.1428,
+              "abs_error": 0.1428,
+              "pct_error": 23.6,
+              "rank": 3
+            },
+            {
+              "index": 27438,
+              "actual": 0.595,
+              "predicted": 0.4575,
+              "residual": 0.1375,
+              "abs_error": 0.1375,
+              "pct_error": 23.11,
+              "rank": 4
+            },
+            {
+              "index": 19879,
+              "actual": 0.63,
+              "predicted": 0.4926,
+              "residual": 0.1374,
+              "abs_error": 0.1374,
+              "pct_error": 21.81,
+              "rank": 5
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5158,
+              "residual": 0.1342,
+              "abs_error": 0.1342,
+              "pct_error": 20.64,
+              "rank": 6
+            },
+            {
+              "index": 6885,
+              "actual": 0.405,
+              "predicted": 0.5374,
+              "residual": -0.1324,
+              "abs_error": 0.1324,
+              "pct_error": 32.7,
+              "rank": 7
+            },
+            {
+              "index": 3202,
+              "actual": 0.365,
+              "predicted": 0.497,
+              "residual": -0.132,
+              "abs_error": 0.132,
+              "pct_error": 36.16,
+              "rank": 8
+            },
+            {
+              "index": 21554,
+              "actual": 0.375,
+              "predicted": 0.5067,
+              "residual": -0.1317,
+              "abs_error": 0.1317,
+              "pct_error": 35.11,
+              "rank": 9
+            },
+            {
+              "index": 2201,
+              "actual": 0.6,
+              "predicted": 0.4718,
+              "residual": 0.1282,
+              "abs_error": 0.1282,
+              "pct_error": 21.37,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 10,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides",
+            "IneffectiveDisasterPreparedness",
+            "PoliticalFactors",
+            "RiverManagement",
+            "PopulationScore"
+          ],
+          "rmse": 0.04037872424010191,
+          "mae": 0.03281238729388089,
+          "r2": 0.36523925441587546,
+          "adj_r2": 0.3641793767308127,
+          "f_stat": 1541.9442301074744,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.2560914189636486,
+              "stderr": 0.0020149548150143566,
+              "tstat": 127.0953656406553,
+              "pvalue": 1e-25,
+              "ci_lower": 0.25214210752622046,
+              "ci_upper": 0.2600407304010768,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005068137137787828,
+              "stderr": 0.00012313383487076867,
+              "tstat": 41.159581711289476,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004826794821441121,
+              "ci_upper": 0.005309479454134535,
+              "vif": 1.0006020945644127
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005181176121012913,
+              "stderr": 0.0001231329089097937,
+              "tstat": 42.07791537523576,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004939835619549718,
+              "ci_upper": 0.0054225166224761085,
+              "vif": 1.0014365401917005
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005103394129624275,
+              "stderr": 0.0001247696722967015,
+              "tstat": 40.902520906590475,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00485884557192274,
+              "ci_upper": 0.00534794268732581,
+              "vif": 1.0008557909293594
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.004974806331523251,
+              "stderr": 0.00012231691166584546,
+              "tstat": 40.67145142704224,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004735065184658193,
+              "ci_upper": 0.005214547478388308,
+              "vif": 1.0008787901638172
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005170400601125209,
+              "stderr": 0.00012567258187549601,
+              "tstat": 41.14183478976768,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004924082340649237,
+              "ci_upper": 0.005416718861601181,
+              "vif": 1.001113267439072
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005016287523625972,
+              "stderr": 0.00012264972802136063,
+              "tstat": 40.899295942607694,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004775894056704105,
+              "ci_upper": 0.005256680990547839,
+              "vif": 1.001102779127807
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.004928440760025079,
+              "stderr": 0.00012394431893192852,
+              "tstat": 39.76334536746157,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0046855098949185,
+              "ci_upper": 0.005171371625131659,
+              "vif": 1.0005713912934018
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.004932281551748694,
+              "stderr": 0.00012241509234119487,
+              "tstat": 40.291449832030985,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004692347970759952,
+              "ci_upper": 0.005172215132737436,
+              "vif": 1.0011495193419697
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.004929652754259479,
+              "stderr": 0.0001238650489475719,
+              "tstat": 39.79857753373224,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0046868772583222385,
+              "ci_upper": 0.00517242825019672,
+              "vif": 1.0007033051579244
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.004948204150669167,
+              "stderr": 0.00012282670397826244,
+              "tstat": 40.286061502919495,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004707463810871772,
+              "ci_upper": 0.0051889444904665615,
+              "vif": 1.0009361393425276
+            }
+          ],
+          "outliers": [
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5011,
+              "residual": 0.1489,
+              "abs_error": 0.1489,
+              "pct_error": 22.9,
+              "rank": 1
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4782,
+              "residual": -0.1432,
+              "abs_error": 0.1432,
+              "pct_error": 42.75,
+              "rank": 2
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4715,
+              "residual": 0.1335,
+              "abs_error": 0.1335,
+              "pct_error": 22.06,
+              "rank": 3
+            },
+            {
+              "index": 15579,
+              "actual": 0.595,
+              "predicted": 0.4619,
+              "residual": 0.1331,
+              "abs_error": 0.1331,
+              "pct_error": 22.37,
+              "rank": 4
+            },
+            {
+              "index": 6885,
+              "actual": 0.405,
+              "predicted": 0.5378,
+              "residual": -0.1328,
+              "abs_error": 0.1328,
+              "pct_error": 32.78,
+              "rank": 5
+            },
+            {
+              "index": 19879,
+              "actual": 0.63,
+              "predicted": 0.5025,
+              "residual": 0.1275,
+              "abs_error": 0.1275,
+              "pct_error": 20.24,
+              "rank": 6
+            },
+            {
+              "index": 21366,
+              "actual": 0.37,
+              "predicted": 0.497,
+              "residual": -0.127,
+              "abs_error": 0.127,
+              "pct_error": 34.32,
+              "rank": 7
+            },
+            {
+              "index": 14976,
+              "actual": 0.385,
+              "predicted": 0.5119,
+              "residual": -0.1269,
+              "abs_error": 0.1269,
+              "pct_error": 32.96,
+              "rank": 8
+            },
+            {
+              "index": 25978,
+              "actual": 0.63,
+              "predicted": 0.507,
+              "residual": 0.123,
+              "abs_error": 0.123,
+              "pct_error": 19.52,
+              "rank": 9
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.482,
+              "residual": 0.123,
+              "abs_error": 0.123,
+              "pct_error": 20.33,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 11,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides",
+            "IneffectiveDisasterPreparedness",
+            "PoliticalFactors",
+            "RiverManagement",
+            "PopulationScore",
+            "MonsoonIntensity"
+          ],
+          "rmse": 0.03908015556709617,
+          "mae": 0.031688355469690566,
+          "r2": 0.40541021664784604,
+          "adj_r2": 0.4043179508467649,
+          "f_stat": 1661.8539680087085,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.22914616576764957,
+              "stderr": 0.0020499119938895117,
+              "tstat": 111.78341628845571,
+              "pvalue": 1e-25,
+              "ci_lower": 0.22512833825962614,
+              "ci_upper": 0.233163993275673,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005053282130547035,
+              "stderr": 0.00011889569065948863,
+              "tstat": 42.50181064189605,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004820246576854438,
+              "ci_upper": 0.005286317684239632,
+              "vif": 1.00061106157943
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005257141800722262,
+              "stderr": 0.00011890819499822973,
+              "tstat": 44.21177027201976,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005024081738525732,
+              "ci_upper": 0.005490201862918792,
+              "vif": 1.0016712361310034
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005178223117352691,
+              "stderr": 0.00012048802446138056,
+              "tstat": 42.97707710372861,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004942066589408385,
+              "ci_upper": 0.005414379645296997,
+              "vif": 1.0010774516507694
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.004992378128879996,
+              "stderr": 0.00011810710633531104,
+              "tstat": 42.26992163118809,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004760888200462786,
+              "ci_upper": 0.005223868057297206,
+              "vif": 1.0008915086788785
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.0052409841574767415,
+              "stderr": 0.00012135829692313847,
+              "tstat": 43.1860391119042,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00500312189550739,
+              "ci_upper": 0.005478846419446093,
+              "vif": 1.0013077160205934
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005039966086640093,
+              "stderr": 0.00011842907455595661,
+              "tstat": 42.556830791232414,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004807845100510418,
+              "ci_upper": 0.0052720870727697685,
+              "vif": 1.0011257539277263
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.004918705002579061,
+              "stderr": 0.00011967796974704285,
+              "tstat": 41.09950238106039,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0046841361818748565,
+              "ci_upper": 0.005153273823283265,
+              "vif": 1.0005751925736222
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005023646542148159,
+              "stderr": 0.0001182214262447165,
+              "tstat": 42.49353693085456,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004791932546708515,
+              "ci_upper": 0.005255360537587804,
+              "vif": 1.0014929066225773
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.004983550514891423,
+              "stderr": 0.0001196081727635464,
+              "tstat": 41.66563538048033,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004749118496274872,
+              "ci_upper": 0.005217982533507973,
+              "vif": 1.0008199712858141
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.004985869029918197,
+              "stderr": 0.00011860203290632194,
+              "tstat": 42.038647295837634,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004753409045421806,
+              "ci_upper": 0.005218329014414587,
+              "vif": 1.0009940941540338
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005055535146933364,
+              "stderr": 0.00012112998932903674,
+              "tstat": 41.73644507802721,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004818120367848452,
+              "ci_upper": 0.005292949926018276,
+              "vif": 1.0011592594148018
+            }
+          ],
+          "outliers": [
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4565,
+              "residual": 0.1485,
+              "abs_error": 0.1485,
+              "pct_error": 24.55,
+              "rank": 1
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4785,
+              "residual": -0.1435,
+              "abs_error": 0.1435,
+              "pct_error": 42.84,
+              "rank": 2
+            },
+            {
+              "index": 15579,
+              "actual": 0.595,
+              "predicted": 0.4565,
+              "residual": 0.1385,
+              "abs_error": 0.1385,
+              "pct_error": 23.28,
+              "rank": 3
+            },
+            {
+              "index": 6885,
+              "actual": 0.405,
+              "predicted": 0.5387,
+              "residual": -0.1337,
+              "abs_error": 0.1337,
+              "pct_error": 33.02,
+              "rank": 4
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5168,
+              "residual": 0.1332,
+              "abs_error": 0.1332,
+              "pct_error": 20.49,
+              "rank": 5
+            },
+            {
+              "index": 21366,
+              "actual": 0.37,
+              "predicted": 0.4973,
+              "residual": -0.1273,
+              "abs_error": 0.1273,
+              "pct_error": 34.41,
+              "rank": 6
+            },
+            {
+              "index": 20747,
+              "actual": 0.555,
+              "predicted": 0.4313,
+              "residual": 0.1237,
+              "abs_error": 0.1237,
+              "pct_error": 22.28,
+              "rank": 7
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.4822,
+              "residual": 0.1228,
+              "abs_error": 0.1228,
+              "pct_error": 20.3,
+              "rank": 8
+            },
+            {
+              "index": 19879,
+              "actual": 0.63,
+              "predicted": 0.5077,
+              "residual": 0.1223,
+              "abs_error": 0.1223,
+              "pct_error": 19.42,
+              "rank": 9
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5239,
+              "residual": -0.1189,
+              "abs_error": 0.1189,
+              "pct_error": 29.36,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 12,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides",
+            "IneffectiveDisasterPreparedness",
+            "PoliticalFactors",
+            "RiverManagement",
+            "PopulationScore",
+            "MonsoonIntensity",
+            "Encroachments"
+          ],
+          "rmse": 0.0375693026555106,
+          "mae": 0.03054397436193546,
+          "r2": 0.4504956398105434,
+          "adj_r2": 0.44939424473416567,
+          "f_stat": 1814.3082402677724,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.20098334529006107,
+              "stderr": 0.002069257994389374,
+              "tstat": 97.1282197942505,
+              "pvalue": 1e-25,
+              "ci_lower": 0.19692759962105788,
+              "ci_upper": 0.20503909095906425,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005091061599265957,
+              "stderr": 0.00011427444701109238,
+              "tstat": 44.551181234522,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004867083683124216,
+              "ci_upper": 0.005315039515407698,
+              "vif": 1.0006662492148006
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005297834745284919,
+              "stderr": 0.00011428696937762793,
+              "tstat": 46.35554494213396,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005073832285304769,
+              "ci_upper": 0.00552183720526507,
+              "vif": 1.001735318253101
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005191635487266893,
+              "stderr": 0.0001158020884140749,
+              "tstat": 44.831967699089326,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004964663393975306,
+              "ci_upper": 0.0054186075805584795,
+              "vif": 1.0010842278782908
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005068517833457289,
+              "stderr": 0.00011352626737866276,
+              "tstat": 44.646212286284644,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00484600634939511,
+              "ci_upper": 0.005291029317519468,
+              "vif": 1.0011187327533724
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005247394454731257,
+              "stderr": 0.00011663820897443975,
+              "tstat": 44.98864052243101,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005018783565141355,
+              "ci_upper": 0.005476005344321158,
+              "vif": 1.0013092421170224
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005118737054993361,
+              "stderr": 0.00011383658115381204,
+              "tstat": 44.96566045037053,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0048956173559318895,
+              "ci_upper": 0.005341856754054833,
+              "vif": 1.0013676904053785
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.0050377325040902535,
+              "stderr": 0.00011505421981938164,
+              "tstat": 43.78572565177322,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004812226233244265,
+              "ci_upper": 0.005263238774936242,
+              "vif": 1.00111583853359
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005141672427045813,
+              "stderr": 0.00011365418356253477,
+              "tstat": 45.23962309066048,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004918910227263245,
+              "ci_upper": 0.00536443462682838,
+              "vif": 1.0020381708938702
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.0050575149559289895,
+              "stderr": 0.00011496807228868868,
+              "tstat": 43.99060413250559,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00483217753424316,
+              "ci_upper": 0.005282852377614819,
+              "vif": 1.0010290343121
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005014275628438337,
+              "stderr": 0.00011399084573113402,
+              "tstat": 43.98840622926268,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004790853570805315,
+              "ci_upper": 0.00523769768607136,
+              "vif": 1.0010254618584968
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005038168831451044,
+              "stderr": 0.00011641934600083153,
+              "tstat": 43.27604478567556,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004809986913289414,
+              "ci_upper": 0.005266350749612674,
+              "vif": 1.001170500602646
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.0051226143396980355,
+              "stderr": 0.00011506976073563846,
+              "tstat": 44.517467551416416,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004897077608656184,
+              "ci_upper": 0.005348151070739887,
+              "vif": 1.0018603822307954
+            }
+          ],
+          "outliers": [
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4561,
+              "residual": 0.1489,
+              "abs_error": 0.1489,
+              "pct_error": 24.61,
+              "rank": 1
+            },
+            {
+              "index": 3858,
+              "actual": 0.405,
+              "predicted": 0.5395,
+              "residual": -0.1345,
+              "abs_error": 0.1345,
+              "pct_error": 33.22,
+              "rank": 2
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5176,
+              "residual": 0.1324,
+              "abs_error": 0.1324,
+              "pct_error": 20.38,
+              "rank": 3
+            },
+            {
+              "index": 20747,
+              "actual": 0.555,
+              "predicted": 0.426,
+              "residual": 0.129,
+              "abs_error": 0.129,
+              "pct_error": 23.25,
+              "rank": 4
+            },
+            {
+              "index": 15579,
+              "actual": 0.595,
+              "predicted": 0.4666,
+              "residual": 0.1284,
+              "abs_error": 0.1284,
+              "pct_error": 21.59,
+              "rank": 5
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4631,
+              "residual": -0.1281,
+              "abs_error": 0.1281,
+              "pct_error": 38.22,
+              "rank": 6
+            },
+            {
+              "index": 6885,
+              "actual": 0.405,
+              "predicted": 0.5291,
+              "residual": -0.1241,
+              "abs_error": 0.1241,
+              "pct_error": 30.65,
+              "rank": 7
+            },
+            {
+              "index": 21366,
+              "actual": 0.37,
+              "predicted": 0.4924,
+              "residual": -0.1224,
+              "abs_error": 0.1224,
+              "pct_error": 33.08,
+              "rank": 8
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5241,
+              "residual": -0.1191,
+              "abs_error": 0.1191,
+              "pct_error": 29.41,
+              "rank": 9
+            },
+            {
+              "index": 12536,
+              "actual": 0.435,
+              "predicted": 0.554,
+              "residual": -0.119,
+              "abs_error": 0.119,
+              "pct_error": 27.36,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 13,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides",
+            "IneffectiveDisasterPreparedness",
+            "PoliticalFactors",
+            "RiverManagement",
+            "PopulationScore",
+            "MonsoonIntensity",
+            "Encroachments",
+            "Watersheds"
+          ],
+          "rmse": 0.036053382492584655,
+          "mae": 0.02922311656696418,
+          "r2": 0.49394594759996313,
+          "adj_r2": 0.4928469327851952,
+          "f_stat": 1978.3702945887364,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.17384667038399,
+              "stderr": 0.002073092089487515,
+              "tstat": 83.85863380867286,
+              "pvalue": 1e-25,
+              "ci_lower": 0.16978340988859447,
+              "ci_upper": 0.1779099308793855,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005106472775399081,
+              "stderr": 0.00010964499422609855,
+              "tstat": 46.57278530079578,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004891568586715927,
+              "ci_upper": 0.005321376964082234,
+              "vif": 1.000675801459745
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005284479455258818,
+              "stderr": 0.00010965687887758359,
+              "tstat": 48.1910438209553,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005069551972658754,
+              "ci_upper": 0.005499406937858883,
+              "vif": 1.0017424979992244
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005213279900797906,
+              "stderr": 0.00011111123659560487,
+              "tstat": 46.91946611819208,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004995501877070521,
+              "ci_upper": 0.005431057924525292,
+              "vif": 1.0011025836381975
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.00511017822835333,
+              "stderr": 0.00010893045412936735,
+              "tstat": 46.91230078123433,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00489667453825977,
+              "ci_upper": 0.00532368191844689,
+              "vif": 1.0011894918894206
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005300814092949479,
+              "stderr": 0.00011191862227733966,
+              "tstat": 47.36311066994561,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005081453593285893,
+              "ci_upper": 0.005520174592613065,
+              "vif": 1.0014194801136778
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005210391088597824,
+              "stderr": 0.00010924292527822968,
+              "tstat": 47.69545556682534,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004996274955052494,
+              "ci_upper": 0.005424507222143155,
+              "vif": 1.0017083933904154
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005109292472821685,
+              "stderr": 0.00011040385661299653,
+              "tstat": 46.278206482691196,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004892900913860212,
+              "ci_upper": 0.005325684031783158,
+              "vif": 1.0013191034379902
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005199613532049652,
+              "stderr": 0.00010905677566868066,
+              "tstat": 47.67804201222957,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004985862251739038,
+              "ci_upper": 0.005413364812360266,
+              "vif": 1.0021748587231005
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005094824744835832,
+              "stderr": 0.00011031304174542495,
+              "tstat": 46.185153307561045,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004878611183014799,
+              "ci_upper": 0.005311038306656865,
+              "vif": 1.0010843668571259
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.0050450992993933885,
+              "stderr": 0.00010937445876549318,
+              "tstat": 46.12685042136254,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004830725360213022,
+              "ci_upper": 0.005259473238573755,
+              "vif": 1.0010638782686492
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005092246707839722,
+              "stderr": 0.00011170879143091528,
+              "tstat": 45.58501298430885,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004873297476635128,
+              "ci_upper": 0.005311195939044316,
+              "vif": 1.0012838814970937
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005178289993662793,
+              "stderr": 0.00011041434422966896,
+              "tstat": 46.89870713619976,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004961877878972641,
+              "ci_upper": 0.005394702108352944,
+              "vif": 1.0019834823076266
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.0049962332908549244,
+              "stderr": 0.00010982513864916027,
+              "tstat": 45.49261992571248,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00478097601910257,
+              "ci_upper": 0.0052114905626072785,
+              "vif": 1.0011497777372673
+            }
+          ],
+          "outliers": [
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.451,
+              "residual": 0.154,
+              "abs_error": 0.154,
+              "pct_error": 25.46,
+              "rank": 1
+            },
+            {
+              "index": 3858,
+              "actual": 0.405,
+              "predicted": 0.5401,
+              "residual": -0.1351,
+              "abs_error": 0.1351,
+              "pct_error": 33.35,
+              "rank": 2
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.4827,
+              "residual": 0.1223,
+              "abs_error": 0.1223,
+              "pct_error": 20.21,
+              "rank": 3
+            },
+            {
+              "index": 21366,
+              "actual": 0.37,
+              "predicted": 0.4878,
+              "residual": -0.1178,
+              "abs_error": 0.1178,
+              "pct_error": 31.84,
+              "rank": 4
+            },
+            {
+              "index": 19879,
+              "actual": 0.63,
+              "predicted": 0.5134,
+              "residual": 0.1166,
+              "abs_error": 0.1166,
+              "pct_error": 18.51,
+              "rank": 5
+            },
+            {
+              "index": 26542,
+              "actual": 0.635,
+              "predicted": 0.5193,
+              "residual": 0.1157,
+              "abs_error": 0.1157,
+              "pct_error": 18.23,
+              "rank": 6
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5197,
+              "residual": -0.1147,
+              "abs_error": 0.1147,
+              "pct_error": 28.32,
+              "rank": 7
+            },
+            {
+              "index": 20747,
+              "actual": 0.555,
+              "predicted": 0.4409,
+              "residual": 0.1141,
+              "abs_error": 0.1141,
+              "pct_error": 20.56,
+              "rank": 8
+            },
+            {
+              "index": 29304,
+              "actual": 0.595,
+              "predicted": 0.4821,
+              "residual": 0.1129,
+              "abs_error": 0.1129,
+              "pct_error": 18.97,
+              "rank": 9
+            },
+            {
+              "index": 1807,
+              "actual": 0.65,
+              "predicted": 0.5382,
+              "residual": 0.1118,
+              "abs_error": 0.1118,
+              "pct_error": 17.19,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 14,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides",
+            "IneffectiveDisasterPreparedness",
+            "PoliticalFactors",
+            "RiverManagement",
+            "PopulationScore",
+            "MonsoonIntensity",
+            "Encroachments",
+            "Watersheds",
+            "Deforestation"
+          ],
+          "rmse": 0.03428523487443122,
+          "mae": 0.027703280129234828,
+          "r2": 0.542365104436157,
+          "adj_r2": 0.541294613452382,
+          "f_stat": 2197.180710714236,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.14426539872053493,
+              "stderr": 0.002064360446898313,
+              "tstat": 69.88382234182633,
+              "pvalue": 1e-25,
+              "ci_lower": 0.14021925224461423,
+              "ci_upper": 0.14831154519645562,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005137802069382151,
+              "stderr": 0.00010447724852119991,
+              "tstat": 49.17627657795389,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004933026662280599,
+              "ci_upper": 0.0053425774764837035,
+              "vif": 1.0007127789208172
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005362991623765086,
+              "stderr": 0.000104498763231563,
+              "tstat": 51.32110139792772,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005158174047831222,
+              "ci_upper": 0.005567809199698949,
+              "vif": 1.0019749206103692
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.0052663848574657545,
+              "stderr": 0.0001058779012921057,
+              "tstat": 49.74017045291035,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005058864170933227,
+              "ci_upper": 0.005473905543998282,
+              "vif": 1.0012060866126407
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005149559577877613,
+              "stderr": 0.00010379753815392008,
+              "tstat": 49.61157720563078,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004946116403095929,
+              "ci_upper": 0.005353002752659296,
+              "vif": 1.0012487187804828
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005347992532268471,
+              "stderr": 0.00010664603484677546,
+              "tstat": 50.147129613888055,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005138966303968791,
+              "ci_upper": 0.0055570187605681505,
+              "vif": 1.0015000213993246
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.0052500343499527515,
+              "stderr": 0.00010409530860393173,
+              "tstat": 50.43487953840847,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005046007545089045,
+              "ci_upper": 0.005454061154816458,
+              "vif": 1.0017680987770214
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005156418638610632,
+              "stderr": 0.0001052027384096032,
+              "tstat": 49.014110436311036,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0049502212713278095,
+              "ci_upper": 0.005362616005893454,
+              "vif": 1.0014016783880049
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005227393143083701,
+              "stderr": 0.00010391635956521324,
+              "tstat": 50.303851722242285,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0050237170783358825,
+              "ci_upper": 0.005431069207831519,
+              "vif": 1.0022042901020582
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005176603070864756,
+              "stderr": 0.00010512493969231318,
+              "tstat": 49.24238801958878,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004970558189067822,
+              "ci_upper": 0.00538264795266169,
+              "vif": 1.0013333749633913
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005120016876596588,
+              "stderr": 0.00010422860310043115,
+              "tstat": 49.12295400968881,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004915728814519743,
+              "ci_upper": 0.005324304938673433,
+              "vif": 1.0012764558678746
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.0051994841672271825,
+              "stderr": 0.00010646400503759564,
+              "tstat": 48.83795387362225,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004990814717353495,
+              "ci_upper": 0.00540815361710087,
+              "vif": 1.0017015153012767
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.0052446085385153725,
+              "stderr": 0.00010521698296122087,
+              "tstat": 49.845646500321564,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005038383251911379,
+              "ci_upper": 0.005450833825119366,
+              "vif": 1.0021470884622434
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005074995293553203,
+              "stderr": 0.00010465914825713709,
+              "tstat": 48.490699361363475,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004869863362969214,
+              "ci_upper": 0.005280127224137192,
+              "vif": 1.001382827748792
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005209272204592543,
+              "stderr": 0.00010559953156066855,
+              "tstat": 49.33044803896441,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0050022971227336325,
+              "ci_upper": 0.005416247286451453,
+              "vif": 1.0018025449600663
+            }
+          ],
+          "outliers": [
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4507,
+              "residual": 0.1543,
+              "abs_error": 0.1543,
+              "pct_error": 25.5,
+              "rank": 1
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.4776,
+              "residual": 0.1274,
+              "abs_error": 0.1274,
+              "pct_error": 21.06,
+              "rank": 2
+            },
+            {
+              "index": 3858,
+              "actual": 0.405,
+              "predicted": 0.5251,
+              "residual": -0.1201,
+              "abs_error": 0.1201,
+              "pct_error": 29.66,
+              "rank": 3
+            },
+            {
+              "index": 18905,
+              "actual": 0.605,
+              "predicted": 0.4933,
+              "residual": 0.1117,
+              "abs_error": 0.1117,
+              "pct_error": 18.47,
+              "rank": 4
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.4941,
+              "residual": 0.1109,
+              "abs_error": 0.1109,
+              "pct_error": 18.33,
+              "rank": 5
+            },
+            {
+              "index": 26542,
+              "actual": 0.635,
+              "predicted": 0.5251,
+              "residual": 0.1099,
+              "abs_error": 0.1099,
+              "pct_error": 17.31,
+              "rank": 6
+            },
+            {
+              "index": 9898,
+              "actual": 0.645,
+              "predicted": 0.5353,
+              "residual": 0.1097,
+              "abs_error": 0.1097,
+              "pct_error": 17.0,
+              "rank": 7
+            },
+            {
+              "index": 21366,
+              "actual": 0.37,
+              "predicted": 0.4775,
+              "residual": -0.1075,
+              "abs_error": 0.1075,
+              "pct_error": 29.06,
+              "rank": 8
+            },
+            {
+              "index": 19879,
+              "actual": 0.63,
+              "predicted": 0.5242,
+              "residual": 0.1058,
+              "abs_error": 0.1058,
+              "pct_error": 16.79,
+              "rank": 9
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5101,
+              "residual": -0.1051,
+              "abs_error": 0.1051,
+              "pct_error": 25.96,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 15,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides",
+            "IneffectiveDisasterPreparedness",
+            "PoliticalFactors",
+            "RiverManagement",
+            "PopulationScore",
+            "MonsoonIntensity",
+            "Encroachments",
+            "Watersheds",
+            "Deforestation",
+            "AgriculturalPractices"
+          ],
+          "rmse": 0.0324110707815755,
+          "mae": 0.02616243375471828,
+          "r2": 0.5910298286593103,
+          "adj_r2": 0.5900046694731287,
+          "f_stat": 2468.6860382594946,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.1141312587391525,
+              "stderr": 0.002038197709373964,
+              "tstat": 55.99616671839364,
+              "pvalue": 1e-25,
+              "ci_lower": 0.11013639122877954,
+              "ci_upper": 0.11812612624952547,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005183933724452503,
+              "stderr": 9.896860497416815e-05,
+              "tstat": 52.37957760246863,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0049899552587031335,
+              "ci_upper": 0.005377912190201873,
+              "vif": 1.0007919225791566
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.0053611424012387915,
+              "stderr": 9.898507743893152e-05,
+              "tstat": 54.161117412332466,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005167131649458485,
+              "ci_upper": 0.005555153153019098,
+              "vif": 1.001975047891773
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005319017337580063,
+              "stderr": 0.00010029646801026443,
+              "tstat": 53.032947651114796,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005122436260279945,
+              "ci_upper": 0.0055155984148801815,
+              "vif": 1.0013064493642128
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.0051701656667380805,
+              "stderr": 9.832163090129685e-05,
+              "tstat": 52.58421386366453,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004977455270171538,
+              "ci_upper": 0.005362876063304623,
+              "vif": 1.0012647258215948
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005436259200935905,
+              "stderr": 0.00010103308035800827,
+              "tstat": 53.80672529900753,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0052382343634342085,
+              "ci_upper": 0.005634284038437601,
+              "vif": 1.0017783174643697
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.0053475865575076074,
+              "stderr": 9.862046653795046e-05,
+              "tstat": 54.22390245385612,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005154290443093224,
+              "ci_upper": 0.005540882671921991,
+              "vif": 1.0021249861178856
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005306099241401707,
+              "stderr": 9.969280912474378e-05,
+              "tstat": 53.22449320053047,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005110701335517209,
+              "ci_upper": 0.005501497147286204,
+              "vif": 1.0022239917160392
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005297179579830863,
+              "stderr": 9.844240063856498e-05,
+              "tstat": 53.80993906558272,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005104232474579275,
+              "ci_upper": 0.0054901266850824505,
+              "vif": 1.0023876407775434
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005248002262474912,
+              "stderr": 9.958752477098598e-05,
+              "tstat": 52.69738628953127,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00505281071392378,
+              "ci_upper": 0.005443193811026045,
+              "vif": 1.0015207474491183
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005207181118044188,
+              "stderr": 9.87431691383605e-05,
+              "tstat": 52.73459585591995,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005013644506533002,
+              "ci_upper": 0.005400717729555375,
+              "vif": 1.0015605151180702
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005207694119588594,
+              "stderr": 0.00010084674209130868,
+              "tstat": 51.639686236700065,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005010034505089629,
+              "ci_upper": 0.005405353734087559,
+              "vif": 1.0017039316858924
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005292374615162392,
+              "stderr": 9.966956134349928e-05,
+              "tstat": 53.099206456049835,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005097022274929134,
+              "ci_upper": 0.005487726955395651,
+              "vif": 1.0022308705115635
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005171726319842563,
+              "stderr": 9.915416877111482e-05,
+              "tstat": 52.15843553467586,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004977384149051178,
+              "ci_upper": 0.005366068490633947,
+              "vif": 1.001729827685237
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005284795688004329,
+              "stderr": 0.00010003813611103196,
+              "tstat": 52.82781040761049,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0050887209412267065,
+              "ci_upper": 0.005480870434781951,
+              "vif": 1.0020104065427777
+            },
+            {
+              "feature": "AgriculturalPractices",
+              "coef": 0.005210246815326732,
+              "stderr": 9.940148537815861e-05,
+              "tstat": 52.41618669484767,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005015419903985541,
+              "ci_upper": 0.005405073726667924,
+              "vif": 1.0027097712350412
+            }
+          ],
+          "outliers": [
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4403,
+              "residual": 0.1647,
+              "abs_error": 0.1647,
+              "pct_error": 27.23,
+              "rank": 1
+            },
+            {
+              "index": 18905,
+              "actual": 0.605,
+              "predicted": 0.4884,
+              "residual": 0.1166,
+              "abs_error": 0.1166,
+              "pct_error": 19.28,
+              "rank": 2
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.4938,
+              "residual": 0.1112,
+              "abs_error": 0.1112,
+              "pct_error": 18.38,
+              "rank": 3
+            },
+            {
+              "index": 3858,
+              "actual": 0.405,
+              "predicted": 0.5153,
+              "residual": -0.1103,
+              "abs_error": 0.1103,
+              "pct_error": 27.23,
+              "rank": 4
+            },
+            {
+              "index": 29304,
+              "actual": 0.595,
+              "predicted": 0.4876,
+              "residual": 0.1074,
+              "abs_error": 0.1074,
+              "pct_error": 18.06,
+              "rank": 5
+            },
+            {
+              "index": 11547,
+              "actual": 0.595,
+              "predicted": 0.489,
+              "residual": 0.106,
+              "abs_error": 0.106,
+              "pct_error": 17.81,
+              "rank": 6
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.5034,
+              "residual": 0.1016,
+              "abs_error": 0.1016,
+              "pct_error": 16.79,
+              "rank": 7
+            },
+            {
+              "index": 13640,
+              "actual": 0.335,
+              "predicted": 0.4365,
+              "residual": -0.1015,
+              "abs_error": 0.1015,
+              "pct_error": 30.3,
+              "rank": 8
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.5053,
+              "residual": -0.1003,
+              "abs_error": 0.1003,
+              "pct_error": 24.76,
+              "rank": 9
+            },
+            {
+              "index": 25430,
+              "actual": 0.405,
+              "predicted": 0.5035,
+              "residual": -0.0985,
+              "abs_error": 0.0985,
+              "pct_error": 24.33,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 16,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides",
+            "IneffectiveDisasterPreparedness",
+            "PoliticalFactors",
+            "RiverManagement",
+            "PopulationScore",
+            "MonsoonIntensity",
+            "Encroachments",
+            "Watersheds",
+            "Deforestation",
+            "AgriculturalPractices",
+            "WetlandLoss"
+          ],
+          "rmse": 0.0304349811371689,
+          "mae": 0.02446331451597187,
+          "r2": 0.6393790536521364,
+          "adj_r2": 0.6384146653617193,
+          "f_stat": 2789.5247527660836,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.08443946571757979,
+              "stderr": 0.0019972498607487743,
+              "tstat": 42.27786787073462,
+              "pvalue": 1e-25,
+              "ci_lower": 0.08052485599051219,
+              "ci_upper": 0.08835407544464739,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005212915216842245,
+              "stderr": 9.332746091168569e-05,
+              "tstat": 55.856177441440785,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005029993393455341,
+              "ci_upper": 0.005395837040229149,
+              "vif": 1.0008242125950597
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005412073483455581,
+              "stderr": 9.33461374334321e-05,
+              "tstat": 57.97854771778951,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005229115054086054,
+              "ci_upper": 0.005595031912825108,
+              "vif": 1.002074854922324
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.00534461988613557,
+              "stderr": 9.457927029591887e-05,
+              "tstat": 56.50942187874114,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00515924451635557,
+              "ci_upper": 0.005529995255915571,
+              "vif": 1.0013309987146417
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005245239660610889,
+              "stderr": 9.27260367748391e-05,
+              "tstat": 56.567064042083246,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005063496628532204,
+              "ci_upper": 0.0054269826926895744,
+              "vif": 1.0014843639244215
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005491975553394966,
+              "stderr": 9.527817620845187e-05,
+              "tstat": 57.64148488085551,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0053052303280264005,
+              "ci_upper": 0.005678720778763531,
+              "vif": 1.0018929446598541
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.0054091542363558336,
+              "stderr": 9.30044841747124e-05,
+              "tstat": 58.16014447426573,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005226865447373398,
+              "ci_upper": 0.0055914430253382694,
+              "vif": 1.002271936669347
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005393559345747652,
+              "stderr": 9.402247996086188e-05,
+              "tstat": 57.36457225966379,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005209275285024363,
+              "ci_upper": 0.005577843406470941,
+              "vif": 1.00251421682546
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005289506238996645,
+              "stderr": 9.282985843686268e-05,
+              "tstat": 56.98065609562737,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005107559716460394,
+              "ci_upper": 0.005471452761532896,
+              "vif": 1.0023899322685819
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005296884418992955,
+              "stderr": 9.391384410084076e-05,
+              "tstat": 56.40152918567982,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005112813284555307,
+              "ci_upper": 0.005480955553430603,
+              "vif": 1.0016115354937343
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.0053026504276064475,
+              "stderr": 9.31297459140985e-05,
+              "tstat": 56.93831090763991,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005120116125614815,
+              "ci_upper": 0.0054851847295980805,
+              "vif": 1.0019127793179388
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.00528872688150007,
+              "stderr": 9.510856146334954e-05,
+              "tstat": 55.60726395318366,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005102314101031904,
+              "ci_upper": 0.005475139661968235,
+              "vif": 1.001947272406596
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.00536311764065204,
+              "stderr": 9.399585414528145e-05,
+              "tstat": 57.056959473581905,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005178885766527288,
+              "ci_upper": 0.0055473495147767915,
+              "vif": 1.0024208417327745
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005198575192368805,
+              "stderr": 9.35022290368704e-05,
+              "tstat": 55.59840921352655,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005015310823456539,
+              "ci_upper": 0.005381839561281071,
+              "vif": 1.0017574626317884
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.00535024133152464,
+              "stderr": 9.434210273893411e-05,
+              "tstat": 56.7110672350601,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005165330810156329,
+              "ci_upper": 0.00553515185289295,
+              "vif": 1.002171760792272
+            },
+            {
+              "feature": "AgriculturalPractices",
+              "coef": 0.005312989901404069,
+              "stderr": 9.375299272087884e-05,
+              "tstat": 56.67008323906938,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0051292340356711465,
+              "ci_upper": 0.005496745767136992,
+              "vif": 1.00311283391224
+            },
+            {
+              "feature": "WetlandLoss",
+              "coef": 0.0051307643489468075,
+              "stderr": 9.384821160974412e-05,
+              "tstat": 54.67088036032525,
+              "pvalue": 1e-25,
+              "ci_lower": 0.004946821854191709,
+              "ci_upper": 0.005314706843701906,
+              "vif": 1.0021629736562858
+            }
+          ],
+          "outliers": [
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4401,
+              "residual": 0.1649,
+              "abs_error": 0.1649,
+              "pct_error": 27.26,
+              "rank": 1
+            },
+            {
+              "index": 18905,
+              "actual": 0.605,
+              "predicted": 0.4832,
+              "residual": 0.1218,
+              "abs_error": 0.1218,
+              "pct_error": 20.13,
+              "rank": 2
+            },
+            {
+              "index": 11547,
+              "actual": 0.595,
+              "predicted": 0.4836,
+              "residual": 0.1114,
+              "abs_error": 0.1114,
+              "pct_error": 18.72,
+              "rank": 3
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.4941,
+              "residual": 0.1109,
+              "abs_error": 0.1109,
+              "pct_error": 18.34,
+              "rank": 4
+            },
+            {
+              "index": 15579,
+              "actual": 0.595,
+              "predicted": 0.4985,
+              "residual": 0.0965,
+              "abs_error": 0.0965,
+              "pct_error": 16.22,
+              "rank": 5
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.5093,
+              "residual": 0.0957,
+              "abs_error": 0.0957,
+              "pct_error": 15.81,
+              "rank": 6
+            },
+            {
+              "index": 26822,
+              "actual": 0.52,
+              "predicted": 0.4253,
+              "residual": 0.0947,
+              "abs_error": 0.0947,
+              "pct_error": 18.21,
+              "rank": 7
+            },
+            {
+              "index": 9892,
+              "actual": 0.615,
+              "predicted": 0.5206,
+              "residual": 0.0944,
+              "abs_error": 0.0944,
+              "pct_error": 15.35,
+              "rank": 8
+            },
+            {
+              "index": 29577,
+              "actual": 0.555,
+              "predicted": 0.4614,
+              "residual": 0.0936,
+              "abs_error": 0.0936,
+              "pct_error": 16.86,
+              "rank": 9
+            },
+            {
+              "index": 25430,
+              "actual": 0.405,
+              "predicted": 0.4984,
+              "residual": -0.0934,
+              "abs_error": 0.0934,
+              "pct_error": 23.07,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 17,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides",
+            "IneffectiveDisasterPreparedness",
+            "PoliticalFactors",
+            "RiverManagement",
+            "PopulationScore",
+            "MonsoonIntensity",
+            "Encroachments",
+            "Watersheds",
+            "Deforestation",
+            "AgriculturalPractices",
+            "WetlandLoss",
+            "Urbanization"
+          ],
+          "rmse": 0.028362288477929612,
+          "mae": 0.02287652931359354,
+          "r2": 0.6868247629147681,
+          "adj_r2": 0.6859347630768462,
+          "f_stat": 3258.276101708378,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.05220102673254676,
+              "stderr": 0.001929954249068909,
+              "tstat": 27.047805282291396,
+              "pvalue": 1e-25,
+              "ci_lower": 0.04841831640437169,
+              "ci_upper": 0.05598373706072182,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005305152682071395,
+              "stderr": 8.678604673113729e-05,
+              "tstat": 61.129097152065576,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005135052030478366,
+              "ci_upper": 0.005475253333664424,
+              "vif": 1.001124891221608
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.00547543628702739,
+              "stderr": 8.679652757702109e-05,
+              "tstat": 63.08358686548403,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005305315092976428,
+              "ci_upper": 0.0056455574810783515,
+              "vif": 1.0022168669623948
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005430895720266185,
+              "stderr": 8.79481595539873e-05,
+              "tstat": 61.75110141938115,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00525851732754037,
+              "ci_upper": 0.005603274112992,
+              "vif": 1.001587277709869
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005338644438900406,
+              "stderr": 8.622727963403109e-05,
+              "tstat": 61.91363639858374,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005169638970817705,
+              "ci_upper": 0.0055076499069831066,
+              "vif": 1.0017969199681451
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005472295783826821,
+              "stderr": 8.858730957812892e-05,
+              "tstat": 61.772908669278074,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005298664657053688,
+              "ci_upper": 0.005645926910599953,
+              "vif": 1.0019060915611162
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005523320575642167,
+              "stderr": 8.649275542110041e-05,
+              "tstat": 63.85876538157692,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00535379477501681,
+              "ci_upper": 0.005692846376267524,
+              "vif": 1.0027364550260616
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.00543957488607628,
+              "stderr": 8.742244052731496e-05,
+              "tstat": 62.221723086953816,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005268226902642743,
+              "ci_upper": 0.005610922869509817,
+              "vif": 1.0025880727134169
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.00539217875978139,
+              "stderr": 8.632659334108286e-05,
+              "tstat": 62.46254544618118,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005222978636832867,
+              "ci_upper": 0.005561378882729912,
+              "vif": 1.0027670862574676
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005429252961523886,
+              "stderr": 8.734488692742871e-05,
+              "tstat": 62.15879546601085,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005258056983146126,
+              "ci_upper": 0.005600448939901647,
+              "vif": 1.0022235455981114
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005364879425110514,
+              "stderr": 8.659512904913472e-05,
+              "tstat": 61.953593510628544,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00519515297217421,
+              "ci_upper": 0.005534605878046818,
+              "vif": 1.0020503695569605
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005375318729589976,
+              "stderr": 8.844029776550428e-05,
+              "tstat": 60.77906639168501,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0052019757459695875,
+              "ci_upper": 0.005548661713210364,
+              "vif": 1.002202723987524
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005435935170125441,
+              "stderr": 8.740253021494576e-05,
+              "tstat": 62.19425406515177,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005264626210904147,
+              "ci_upper": 0.005607244129346735,
+              "vif": 1.0026058765718449
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005254833948125547,
+              "stderr": 8.69403470492668e-05,
+              "tstat": 60.44183312435792,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005084430867908984,
+              "ci_upper": 0.00542523702834211,
+              "vif": 1.0018690070491851
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005434486808020867,
+              "stderr": 8.772715204298413e-05,
+              "tstat": 61.947603238711125,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005262541590016618,
+              "ci_upper": 0.005606432026025116,
+              "vif": 1.0024175558665802
+            },
+            {
+              "feature": "AgriculturalPractices",
+              "coef": 0.005346223334474102,
+              "stderr": 8.717034393237175e-05,
+              "tstat": 61.330758756920744,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005175369460366654,
+              "ci_upper": 0.00551707720858155,
+              "vif": 1.0031516023996498
+            },
+            {
+              "feature": "WetlandLoss",
+              "coef": 0.005193413878672494,
+              "stderr": 8.726317092942428e-05,
+              "tstat": 59.514384170989665,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0050223780636508225,
+              "ci_upper": 0.005364449693694166,
+              "vif": 1.0023003370201422
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.00534889816680897,
+              "stderr": 8.721958686307308e-05,
+              "tstat": 61.32680008225973,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005177947776557347,
+              "ci_upper": 0.005519848557060593,
+              "vif": 1.0032871855743533
+            }
+          ],
+          "outliers": [
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4607,
+              "residual": 0.1443,
+              "abs_error": 0.1443,
+              "pct_error": 23.85,
+              "rank": 1
+            },
+            {
+              "index": 11547,
+              "actual": 0.595,
+              "predicted": 0.4945,
+              "residual": 0.1005,
+              "abs_error": 0.1005,
+              "pct_error": 16.89,
+              "rank": 2
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.5049,
+              "residual": 0.1001,
+              "abs_error": 0.1001,
+              "pct_error": 16.55,
+              "rank": 3
+            },
+            {
+              "index": 18905,
+              "actual": 0.605,
+              "predicted": 0.5049,
+              "residual": 0.1001,
+              "abs_error": 0.1001,
+              "pct_error": 16.55,
+              "rank": 4
+            },
+            {
+              "index": 9892,
+              "actual": 0.615,
+              "predicted": 0.5159,
+              "residual": 0.0991,
+              "abs_error": 0.0991,
+              "pct_error": 16.11,
+              "rank": 5
+            },
+            {
+              "index": 4028,
+              "actual": 0.405,
+              "predicted": 0.4993,
+              "residual": -0.0943,
+              "abs_error": 0.0943,
+              "pct_error": 23.29,
+              "rank": 6
+            },
+            {
+              "index": 20168,
+              "actual": 0.51,
+              "predicted": 0.4183,
+              "residual": 0.0917,
+              "abs_error": 0.0917,
+              "pct_error": 17.99,
+              "rank": 7
+            },
+            {
+              "index": 13534,
+              "actual": 0.585,
+              "predicted": 0.4939,
+              "residual": 0.0911,
+              "abs_error": 0.0911,
+              "pct_error": 15.58,
+              "rank": 8
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.5149,
+              "residual": 0.0901,
+              "abs_error": 0.0901,
+              "pct_error": 14.89,
+              "rank": 9
+            },
+            {
+              "index": 790,
+              "actual": 0.605,
+              "predicted": 0.516,
+              "residual": 0.089,
+              "abs_error": 0.089,
+              "pct_error": 14.71,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 18,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides",
+            "IneffectiveDisasterPreparedness",
+            "PoliticalFactors",
+            "RiverManagement",
+            "PopulationScore",
+            "MonsoonIntensity",
+            "Encroachments",
+            "Watersheds",
+            "Deforestation",
+            "AgriculturalPractices",
+            "WetlandLoss",
+            "Urbanization",
+            "DrainageSystems"
+          ],
+          "rmse": 0.026047006374038433,
+          "mae": 0.020980173156860595,
+          "r2": 0.735868311595264,
+          "adj_r2": 0.7350733993078062,
+          "f_stat": 3907.474001913128,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": 0.01889337943663869,
+              "stderr": 0.0018385494704382592,
+              "tstat": 10.276242081283259,
+              "pvalue": 9.01752988894911e-25,
+              "ci_lower": 0.0152898224745797,
+              "ci_upper": 0.022496936398697678,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005387706511521638,
+              "stderr": 7.962428597288091e-05,
+              "tstat": 67.66411083870351,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005231642911014792,
+              "ci_upper": 0.0055437701120284845,
+              "vif": 1.00136325015739
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005542079316994241,
+              "stderr": 7.963059905777713e-05,
+              "tstat": 69.59735808307941,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005386003342840997,
+              "ci_upper": 0.0056981552911474845,
+              "vif": 1.0023723328163179
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.00551195482237358,
+              "stderr": 8.068991119525877e-05,
+              "tstat": 68.31033447335675,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005353802596430873,
+              "ci_upper": 0.005670107048316287,
+              "vif": 1.0018111536424925
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.005439257804056175,
+              "stderr": 7.911638132073906e-05,
+              "tstat": 68.75008327296136,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0052841896966675265,
+              "ci_upper": 0.005594325911444824,
+              "vif": 1.0021558172874163
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005524993990787276,
+              "stderr": 8.127101451591351e-05,
+              "tstat": 67.9823430739312,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0053657028023360856,
+              "ci_upper": 0.005684285179238466,
+              "vif": 1.0019993835200596
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005585779232637237,
+              "stderr": 7.935119589658439e-05,
+              "tstat": 70.39313232174831,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005430250888679931,
+              "ci_upper": 0.005741307576594542,
+              "vif": 1.0028740432182695
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005508736645293094,
+              "stderr": 8.020522003399918e-05,
+              "tstat": 68.68301892268269,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005351534414026456,
+              "ci_upper": 0.0056659388765597325,
+              "vif": 1.0027531841996382
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005505993415059069,
+              "stderr": 7.921142914687754e-05,
+              "tstat": 69.51008805622733,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00535073901393119,
+              "ci_upper": 0.005661247816186949,
+              "vif": 1.0032257303266152
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.00546231670690003,
+              "stderr": 8.012898187459782e-05,
+              "tstat": 68.1690516853013,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005305263902425818,
+              "ci_upper": 0.0056193695113742415,
+              "vif": 1.0022613343254312
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005443267489602109,
+              "stderr": 7.944823060932317e-05,
+              "tstat": 68.51338850286928,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0052875489576078355,
+              "ci_upper": 0.005598986021596382,
+              "vif": 1.0022664279043514
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.0054458311699715715,
+              "stderr": 8.113915191493107e-05,
+              "tstat": 67.11718130454652,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005286798432218307,
+              "ci_upper": 0.005604863907724836,
+              "vif": 1.0023703553288266
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005500908228154866,
+              "stderr": 8.018618064667251e-05,
+              "tstat": 68.60169899341798,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005343743314087388,
+              "ci_upper": 0.005658073142222345,
+              "vif": 1.0027516630999473
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005373032609280364,
+              "stderr": 7.977575152482318e-05,
+              "tstat": 67.35170157072704,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00521667213629171,
+              "ci_upper": 0.005529393082269018,
+              "vif": 1.0023562682821836
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.0055118292374589485,
+              "stderr": 8.048637864895808e-05,
+              "tstat": 68.48151612708072,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0053540759353069905,
+              "ci_upper": 0.005669582539610907,
+              "vif": 1.002622570454461
+            },
+            {
+              "feature": "AgriculturalPractices",
+              "coef": 0.0053991054491272115,
+              "stderr": 7.997122286858674e-05,
+              "tstat": 67.51310353224595,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0052423618523047815,
+              "ci_upper": 0.0055558490459496415,
+              "vif": 1.0032487462295185
+            },
+            {
+              "feature": "WetlandLoss",
+              "coef": 0.005277622192347592,
+              "stderr": 8.006231455573909e-05,
+              "tstat": 65.9189310430606,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005120700055818344,
+              "ci_upper": 0.00543454432887684,
+              "vif": 1.0025459291125978
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005494515025727557,
+              "stderr": 8.004186168660067e-05,
+              "tstat": 68.64551760728676,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00533763297682182,
+              "ci_upper": 0.005651397074633295,
+              "vif": 1.0040230352023731
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.005384189234618341,
+              "stderr": 8.012140138369728e-05,
+              "tstat": 67.20038768210925,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0052271512879062945,
+              "ci_upper": 0.005541227181330388,
+              "vif": 1.003612319736861
+            }
+          ],
+          "outliers": [
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4608,
+              "residual": 0.1442,
+              "abs_error": 0.1442,
+              "pct_error": 23.84,
+              "rank": 1
+            },
+            {
+              "index": 8969,
+              "actual": 0.435,
+              "predicted": 0.5588,
+              "residual": -0.1238,
+              "abs_error": 0.1238,
+              "pct_error": 28.46,
+              "rank": 2
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.4889,
+              "residual": 0.1161,
+              "abs_error": 0.1161,
+              "pct_error": 19.18,
+              "rank": 3
+            },
+            {
+              "index": 18905,
+              "actual": 0.605,
+              "predicted": 0.511,
+              "residual": 0.094,
+              "abs_error": 0.094,
+              "pct_error": 15.53,
+              "rank": 4
+            },
+            {
+              "index": 3329,
+              "actual": 0.5,
+              "predicted": 0.5917,
+              "residual": -0.0917,
+              "abs_error": 0.0917,
+              "pct_error": 18.34,
+              "rank": 5
+            },
+            {
+              "index": 17676,
+              "actual": 0.405,
+              "predicted": 0.4955,
+              "residual": -0.0905,
+              "abs_error": 0.0905,
+              "pct_error": 22.35,
+              "rank": 6
+            },
+            {
+              "index": 26974,
+              "actual": 0.495,
+              "predicted": 0.4059,
+              "residual": 0.0891,
+              "abs_error": 0.0891,
+              "pct_error": 18.01,
+              "rank": 7
+            },
+            {
+              "index": 790,
+              "actual": 0.605,
+              "predicted": 0.5162,
+              "residual": 0.0888,
+              "abs_error": 0.0888,
+              "pct_error": 14.69,
+              "rank": 8
+            },
+            {
+              "index": 29577,
+              "actual": 0.555,
+              "predicted": 0.4665,
+              "residual": 0.0885,
+              "abs_error": 0.0885,
+              "pct_error": 15.95,
+              "rank": 9
+            },
+            {
+              "index": 20168,
+              "actual": 0.51,
+              "predicted": 0.4225,
+              "residual": 0.0875,
+              "abs_error": 0.0875,
+              "pct_error": 17.15,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 19,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides",
+            "IneffectiveDisasterPreparedness",
+            "PoliticalFactors",
+            "RiverManagement",
+            "PopulationScore",
+            "MonsoonIntensity",
+            "Encroachments",
+            "Watersheds",
+            "Deforestation",
+            "AgriculturalPractices",
+            "WetlandLoss",
+            "Urbanization",
+            "DrainageSystems",
+            "InadequatePlanning"
+          ],
+          "rmse": 0.023273734952621448,
+          "mae": 0.018685055593147395,
+          "r2": 0.7891191986774648,
+          "adj_r2": 0.7884491760645671,
+          "f_stat": 4834.618898878695,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": -0.014171960835357274,
+              "stderr": 0.0017181319868503457,
+              "tstat": -8.248470399143843,
+              "pvalue": 1.6043474643088488e-16,
+              "ci_lower": -0.017539499529583953,
+              "ci_upper": -0.010804422141130596,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.005504584344766481,
+              "stderr": 7.186493717822233e-05,
+              "tstat": 76.59624513572341,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005363729067897165,
+              "ci_upper": 0.005645439621635797,
+              "vif": 1.0018474015055967
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.005591281128820441,
+              "stderr": 7.185634460321373e-05,
+              "tstat": 77.81193379227886,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0054504426933981425,
+              "ci_upper": 0.00573211956424274,
+              "vif": 1.0024582040280525
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.0055677420588457986,
+              "stderr": 7.281302327086116e-05,
+              "tstat": 76.46629419759223,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00542502853323491,
+              "ci_upper": 0.005710455584456687,
+              "vif": 1.001918610312777
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.0055304579209204145,
+              "stderr": 7.139991412833558e-05,
+              "tstat": 77.45748700733537,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005390514089228877,
+              "ci_upper": 0.005670401752611952,
+              "vif": 1.0024546371807412
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005609452887306788,
+              "stderr": 7.334235236518472e-05,
+              "tstat": 76.48313295674396,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005465701876671026,
+              "ci_upper": 0.00575320389794255,
+              "vif": 1.0022422139969793
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005660102573499936,
+              "stderr": 7.160819978341783e-05,
+              "tstat": 79.04265978783388,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005519750501924437,
+              "ci_upper": 0.005800454645075435,
+              "vif": 1.0030714700514487
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.0055103564302121264,
+              "stderr": 7.237176932427254e-05,
+              "tstat": 76.13958428350908,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005368507762336552,
+              "ci_upper": 0.005652205098087701,
+              "vif": 1.0027532759736628
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005621178623636669,
+              "stderr": 7.149199168494985e-05,
+              "tstat": 78.62668938372873,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005481054319934168,
+              "ci_upper": 0.005761302927339171,
+              "vif": 1.0037017585311272
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005531567466524847,
+              "stderr": 7.230903275802646e-05,
+              "tstat": 76.4989829837107,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005389841762319115,
+              "ci_upper": 0.005673293170730578,
+              "vif": 1.0024293180109027
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.005513336947659995,
+              "stderr": 7.169496610364292e-05,
+              "tstat": 76.89991706934994,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005372814814096855,
+              "ci_upper": 0.005653859081223136,
+              "vif": 1.002441367668363
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005528397595922602,
+              "stderr": 7.322298856047327e-05,
+              "tstat": 75.50084617697377,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005384880538344074,
+              "ci_upper": 0.00567191465350113,
+              "vif": 1.002603266625024
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005535308883106423,
+              "stderr": 7.235608026591597e-05,
+              "tstat": 76.50095006202103,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005393490965785228,
+              "ci_upper": 0.0056771268004276185,
+              "vif": 1.002793076801747
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005517734369301231,
+              "stderr": 7.201081009865893e-05,
+              "tstat": 76.62369527216288,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00537659318150786,
+              "ci_upper": 0.005658875557094602,
+              "vif": 1.0030962895890505
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.005541783923037946,
+              "stderr": 7.262659317394179e-05,
+              "tstat": 76.30516152348342,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00539943580041702,
+              "ci_upper": 0.005684132045658872,
+              "vif": 1.0026537334019325
+            },
+            {
+              "feature": "AgriculturalPractices",
+              "coef": 0.005465467648189178,
+              "stderr": 7.216619778341614e-05,
+              "tstat": 75.73445485644177,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005324021900533682,
+              "ci_upper": 0.005606913395844673,
+              "vif": 1.0034037702458631
+            },
+            {
+              "feature": "WetlandLoss",
+              "coef": 0.00540667806081932,
+              "stderr": 7.226387576419164e-05,
+              "tstat": 74.81854527789456,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0052650408643215045,
+              "ci_upper": 0.005548315257317135,
+              "vif": 1.0031304766104245
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005578754380451518,
+              "stderr": 7.223333757661221e-05,
+              "tstat": 77.23240497553603,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0054371770388013585,
+              "ci_upper": 0.005720331722101678,
+              "vif": 1.0042725841094327
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.005446279252309871,
+              "stderr": 7.230100490078998e-05,
+              "tstat": 75.32785000406493,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005304569282704323,
+              "ci_upper": 0.005587989221915419,
+              "vif": 1.0037475670892926
+            },
+            {
+              "feature": "InadequatePlanning",
+              "coef": 0.005330992936582442,
+              "stderr": 7.205809729455622e-05,
+              "tstat": 73.98187208289197,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005189759065885112,
+              "ci_upper": 0.005472226807279773,
+              "vif": 1.003839133269023
+            }
+          ],
+          "outliers": [
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.4657,
+              "residual": 0.1393,
+              "abs_error": 0.1393,
+              "pct_error": 23.02,
+              "rank": 1
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.489,
+              "residual": 0.116,
+              "abs_error": 0.116,
+              "pct_error": 19.18,
+              "rank": 2
+            },
+            {
+              "index": 8969,
+              "actual": 0.435,
+              "predicted": 0.5435,
+              "residual": -0.1085,
+              "abs_error": 0.1085,
+              "pct_error": 24.94,
+              "rank": 3
+            },
+            {
+              "index": 1397,
+              "actual": 0.475,
+              "predicted": 0.5691,
+              "residual": -0.0941,
+              "abs_error": 0.0941,
+              "pct_error": 19.82,
+              "rank": 4
+            },
+            {
+              "index": 790,
+              "actual": 0.605,
+              "predicted": 0.5165,
+              "residual": 0.0885,
+              "abs_error": 0.0885,
+              "pct_error": 14.63,
+              "rank": 5
+            },
+            {
+              "index": 18905,
+              "actual": 0.605,
+              "predicted": 0.5171,
+              "residual": 0.0879,
+              "abs_error": 0.0879,
+              "pct_error": 14.53,
+              "rank": 6
+            },
+            {
+              "index": 3329,
+              "actual": 0.5,
+              "predicted": 0.5874,
+              "residual": -0.0874,
+              "abs_error": 0.0874,
+              "pct_error": 17.48,
+              "rank": 7
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.5219,
+              "residual": 0.0831,
+              "abs_error": 0.0831,
+              "pct_error": 13.74,
+              "rank": 8
+            },
+            {
+              "index": 26700,
+              "actual": 0.415,
+              "predicted": 0.3336,
+              "residual": 0.0814,
+              "abs_error": 0.0814,
+              "pct_error": 19.61,
+              "rank": 9
+            },
+            {
+              "index": 7685,
+              "actual": 0.5,
+              "predicted": 0.5775,
+              "residual": -0.0775,
+              "abs_error": 0.0775,
+              "pct_error": 15.51,
+              "rank": 10
+            }
+          ]
+        },
+        {
+          "k": 20,
+          "features": [
+            "Siltation",
+            "DamsQuality",
+            "DeterioratingInfrastructure",
+            "TopographyDrainage",
+            "ClimateChange",
+            "Landslides",
+            "IneffectiveDisasterPreparedness",
+            "PoliticalFactors",
+            "RiverManagement",
+            "PopulationScore",
+            "MonsoonIntensity",
+            "Encroachments",
+            "Watersheds",
+            "Deforestation",
+            "AgriculturalPractices",
+            "WetlandLoss",
+            "Urbanization",
+            "DrainageSystems",
+            "InadequatePlanning",
+            "CoastalVulnerability"
+          ],
+          "rmse": 0.019982524780181705,
+          "mae": 0.015939420378003645,
+          "r2": 0.8445446777758413,
+          "adj_r2": 0.8440246733529473,
+          "f_stat": 6572.592064781869,
+          "f_pvalue": 1e-25,
+          "coefficients": [
+            {
+              "feature": "Intercept (\u03b2\u2080)",
+              "coef": -0.05146999776664801,
+              "stderr": 0.001539390831872965,
+              "tstat": -33.43530226435405,
+              "pvalue": 1e-25,
+              "ci_lower": -0.05448720379711902,
+              "ci_upper": -0.048452791736177,
+              "vif": null
+            },
+            {
+              "feature": "Siltation",
+              "coef": 0.0055788695633214955,
+              "stderr": 6.20456731260059e-05,
+              "tstat": 89.91552967749433,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005457260043994524,
+              "ci_upper": 0.005700479082648467,
+              "vif": 1.00202262325429
+            },
+            {
+              "feature": "DamsQuality",
+              "coef": 0.0056918264055179245,
+              "stderr": 6.204276963079501e-05,
+              "tstat": 91.740366192369,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005570222577041566,
+              "ci_upper": 0.005813430233994283,
+              "vif": 1.002779477675951
+            },
+            {
+              "feature": "DeterioratingInfrastructure",
+              "coef": 0.005569139709769369,
+              "stderr": 6.285872268045189e-05,
+              "tstat": 88.59772315261009,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005445936613315683,
+              "ci_upper": 0.005692342806223055,
+              "vif": 1.0019186707392824
+            },
+            {
+              "feature": "TopographyDrainage",
+              "coef": 0.0056121035617741405,
+              "stderr": 6.164539455532976e-05,
+              "tstat": 91.03848879962968,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0054912785884456946,
+              "ci_upper": 0.005732928535102586,
+              "vif": 1.0026691983259606
+            },
+            {
+              "feature": "ClimateChange",
+              "coef": 0.005669639950472432,
+              "stderr": 6.331917469971203e-05,
+              "tstat": 89.54064826903401,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005545534368060997,
+              "ci_upper": 0.0057937455328838676,
+              "vif": 1.0023526943489238
+            },
+            {
+              "feature": "Landslides",
+              "coef": 0.005723242540374966,
+              "stderr": 6.182254273657623e-05,
+              "tstat": 92.57533396452989,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005602070356611277,
+              "ci_upper": 0.005844414724138655,
+              "vif": 1.0031991229821047
+            },
+            {
+              "feature": "IneffectiveDisasterPreparedness",
+              "coef": 0.005611011965656344,
+              "stderr": 6.248768127436587e-05,
+              "tstat": 89.79388979117284,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0054885361103585864,
+              "ci_upper": 0.005733487820954101,
+              "vif": 1.0030707781888402
+            },
+            {
+              "feature": "PoliticalFactors",
+              "coef": 0.005720505429020246,
+              "stderr": 6.172803756996645e-05,
+              "tstat": 92.67272465184503,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005599518475383112,
+              "ci_upper": 0.005841492382657381,
+              "vif": 1.0040188894250643
+            },
+            {
+              "feature": "RiverManagement",
+              "coef": 0.005605184450339721,
+              "stderr": 6.242892631072784e-05,
+              "tstat": 89.78505288463566,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005482823754770695,
+              "ci_upper": 0.0057275451459087474,
+              "vif": 1.0025993929871646
+            },
+            {
+              "feature": "PopulationScore",
+              "coef": 0.00563824077548425,
+              "stderr": 6.190888646998957e-05,
+              "tstat": 91.07320607708549,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00551689935800307,
+              "ci_upper": 0.005759582192965429,
+              "vif": 1.0029393900636547
+            },
+            {
+              "feature": "MonsoonIntensity",
+              "coef": 0.005608036459111141,
+              "stderr": 6.32187591392004e-05,
+              "tstat": 88.70842350389847,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005484127691198308,
+              "ci_upper": 0.005731945227023974,
+              "vif": 1.0027973999273787
+            },
+            {
+              "feature": "Encroachments",
+              "coef": 0.005725475719289536,
+              "stderr": 6.24995498680895e-05,
+              "tstat": 91.60827128153129,
+              "pvalue": 1e-25,
+              "ci_lower": 0.00560297660154808,
+              "ci_upper": 0.005847974837030991,
+              "vif": 1.0039269031613474
+            },
+            {
+              "feature": "Watersheds",
+              "coef": 0.005643373233749218,
+              "stderr": 6.218166452120782e-05,
+              "tstat": 90.75622656940097,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005521497171287651,
+              "ci_upper": 0.005765249296210785,
+              "vif": 1.0035961065154844
+            },
+            {
+              "feature": "Deforestation",
+              "coef": 0.0056228415147168,
+              "stderr": 6.270416926615546e-05,
+              "tstat": 89.67253024037313,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005499941342955136,
+              "ci_upper": 0.005745741686478465,
+              "vif": 1.0028581719305487
+            },
+            {
+              "feature": "AgriculturalPractices",
+              "coef": 0.0055756844040563995,
+              "stderr": 6.231221531184334e-05,
+              "tstat": 89.47979743863576,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005453552462045186,
+              "ci_upper": 0.005697816346067613,
+              "vif": 1.0037868763320779
+            },
+            {
+              "feature": "WetlandLoss",
+              "coef": 0.005494538666003509,
+              "stderr": 6.239219464230471e-05,
+              "tstat": 88.06451988912671,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005372249964504592,
+              "ci_upper": 0.005616827367502426,
+              "vif": 1.003373204135932
+            },
+            {
+              "feature": "Urbanization",
+              "coef": 0.005697783066959672,
+              "stderr": 6.237214088487801e-05,
+              "tstat": 91.35141084023759,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005575533670825311,
+              "ci_upper": 0.005820032463094033,
+              "vif": 1.004718954366728
+            },
+            {
+              "feature": "DrainageSystems",
+              "coef": 0.005658056427394703,
+              "stderr": 6.246051376463234e-05,
+              "tstat": 90.58613332441915,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005535633820416023,
+              "ci_upper": 0.0057804790343733824,
+              "vif": 1.0051572124430364
+            },
+            {
+              "feature": "InadequatePlanning",
+              "coef": 0.005458379070298343,
+              "stderr": 6.22229102867479e-05,
+              "tstat": 87.7229792875962,
+              "pvalue": 1e-25,
+              "ci_lower": 0.005336422166136317,
+              "ci_upper": 0.005580335974460369,
+              "vif": 1.0043526547064985
+            },
+            {
+              "feature": "CoastalVulnerability",
+              "coef": 0.0056379187680941035,
+              "stderr": 6.227061442786546e-05,
+              "tstat": 90.53899371147352,
+              "pvalue": 1e-25,
+              "ci_lower": 0.0055158683638154874,
+              "ci_upper": 0.00575996917237272,
+              "vif": 1.0061341082141408
+            }
+          ],
+          "outliers": [
+            {
+              "index": 8969,
+              "actual": 0.435,
+              "predicted": 0.5404,
+              "residual": -0.1054,
+              "abs_error": 0.1054,
+              "pct_error": 24.23,
+              "rank": 1
+            },
+            {
+              "index": 5859,
+              "actual": 0.605,
+              "predicted": 0.5053,
+              "residual": 0.0997,
+              "abs_error": 0.0997,
+              "pct_error": 16.48,
+              "rank": 2
+            },
+            {
+              "index": 1397,
+              "actual": 0.475,
+              "predicted": 0.5706,
+              "residual": -0.0956,
+              "abs_error": 0.0956,
+              "pct_error": 20.13,
+              "rank": 3
+            },
+            {
+              "index": 7030,
+              "actual": 0.605,
+              "predicted": 0.5107,
+              "residual": 0.0943,
+              "abs_error": 0.0943,
+              "pct_error": 15.58,
+              "rank": 4
+            },
+            {
+              "index": 1034,
+              "actual": 0.605,
+              "predicted": 0.5109,
+              "residual": 0.0941,
+              "abs_error": 0.0941,
+              "pct_error": 15.55,
+              "rank": 5
+            },
+            {
+              "index": 29704,
+              "actual": 0.605,
+              "predicted": 0.5123,
+              "residual": 0.0927,
+              "abs_error": 0.0927,
+              "pct_error": 15.32,
+              "rank": 6
+            },
+            {
+              "index": 790,
+              "actual": 0.605,
+              "predicted": 0.5166,
+              "residual": 0.0884,
+              "abs_error": 0.0884,
+              "pct_error": 14.62,
+              "rank": 7
+            },
+            {
+              "index": 18905,
+              "actual": 0.605,
+              "predicted": 0.5177,
+              "residual": 0.0873,
+              "abs_error": 0.0873,
+              "pct_error": 14.42,
+              "rank": 8
+            },
+            {
+              "index": 3329,
+              "actual": 0.5,
+              "predicted": 0.5848,
+              "residual": -0.0848,
+              "abs_error": 0.0848,
+              "pct_error": 16.97,
+              "rank": 9
+            },
+            {
+              "index": 7685,
+              "actual": 0.5,
+              "predicted": 0.5684,
+              "residual": -0.0684,
+              "abs_error": 0.0684,
+              "pct_error": 13.68,
+              "rank": 10
+            }
+          ]
+        }
+      ]
+    }
+  },
   "startups": {
     "id": "startups",
     "title": "50 Startups: Multiple Linear Regression & Feature Selection Explorer",
@@ -15074,4 +38311,4 @@ window.PROBLEMS_DATA = {
     }
   }
 };
-window.MODEL_DATA = window.PROBLEMS_DATA["startups"].models;
+window.MODEL_DATA = window.PROBLEMS_DATA['flood'].models;

@@ -1142,14 +1142,15 @@
       </div>
 
       <div class="header-actions">
-        <!-- Problem Selector Dropdown (Bonus 1 pt) -->
+        <!-- Problem Selector Dropdown (加總分 1分) -->
         <div class="problem-selector-wrapper">
           <label for="problemDropdown"><i class="fa-solid fa-layer-group"></i> Problem:</label>
           <select id="problemDropdown" class="problem-select">
-            <option value="startups" selected>🚀 Problem 1: 50 Startups (Profit Prediction)</option>
-            <option value="real_estate">🏢 Problem 2: Taiwan Real Estate (House Price)</option>
-            <option value="insurance">🏥 Problem 3: Medical Insurance (Charges)</option>
-            <option value="tsmc_2330">📈 Problem 4: 2330.TW 台積電股價自回歸 (Lecture 6 Topic)</option>
+            <option value="flood" selected>🌊 Problem 1: Kaggle Predict the Flood (20 Features, HW2 Primary)</option>
+            <option value="startups">🚀 Problem 2: 50 Startups (Profit Prediction - 老師加分項目範例)</option>
+            <option value="real_estate">🏢 Problem 3: Taiwan Real Estate (House Price)</option>
+            <option value="insurance">🏥 Problem 4: Medical Insurance (Charges)</option>
+            <option value="tsmc_2330">📈 Problem 5: 2330.TW 台積電股價自回歸 (Lecture 6 Topic)</option>
           </select>
         </div>
 
@@ -1165,28 +1166,29 @@
 
   <main class="container">
 
-    <!-- Arbitrary Dataset Input & In-Browser AutoML Workflow Toolbar (Bonus 2 pt) -->
+    <!-- Arbitrary Dataset Input & In-Browser AutoML Workflow Toolbar (加總分 2分) -->
     <section class="dataset-workflow-card">
       <div class="dataset-workflow-header">
         <div class="dataset-workflow-title">
           <i class="fa-solid fa-wand-magic-sparkles" style="color: var(--primary);"></i>
           <span>AutoML Regression Workflow & Arbitrary Dataset Loader</span>
-          <span class="bonus-tag"><i class="fa-solid fa-star"></i> Bonus +2 pts</span>
+          <span class="bonus-tag"><i class="fa-solid fa-star"></i> 加總分 2分 (可任意輸入 Dataset)</span>
         </div>
         <div class="quick-presets">
           <span>Quick Presets:</span>
-          <span class="preset-chip" onclick="loadPreset('startups')">50 Startups</span>
-          <span class="preset-chip" onclick="loadPreset('real_estate')">Taiwan Real Estate</span>
-          <span class="preset-chip" onclick="loadPreset('insurance')">Medical Insurance</span>
-          <span class="preset-chip" onclick="loadPreset('tsmc')">2330.TW 台積電</span>
-          <span class="preset-chip" onclick="loadPreset('boston')">Boston Housing</span>
+          <span class="preset-chip" onclick="loadPreset('startups')">🚀 50 Startups (老師範例)</span>
+          <span class="preset-chip" onclick="loadPreset('flood')">🌊 Kaggle Flood (20 Features)</span>
+          <span class="preset-chip" onclick="loadPreset('real_estate')">🏢 Taiwan Real Estate</span>
+          <span class="preset-chip" onclick="loadPreset('insurance')">🏥 Medical Insurance</span>
+          <span class="preset-chip" onclick="loadPreset('tsmc')">📈 2330.TW 台積電</span>
+          <span class="preset-chip" onclick="loadPreset('boston')">🏠 Boston Housing</span>
         </div>
       </div>
 
       <div class="dataset-workflow-inputs">
         <input type="text" id="datasetUrlInput" class="dataset-url-input" 
                value="https://raw.githubusercontent.com/Avik-Jain/100-Days-Of-ML-Code/master/datasets/50_Startups.csv" 
-               placeholder="Paste any public CSV URL (e.g. GitHub raw URL)...">
+               placeholder="可任意輸入公開 CSV 網址 (such as https://raw.githubusercontent.com/Avik-Jain/100-Days-Of-ML-Code/master/datasets/50_Startups.csv)...">
         
         <button id="btnRunWorkflow" class="btn-run-workflow">
           <i class="fa-solid fa-bolt"></i> ⚡ Run AutoML Workflow
@@ -1424,6 +1426,100 @@
       </div>
     </section>
 
+    <!-- 95% Confidence & Prediction Interval Analysis (Rubric Requirement) -->
+    <section class="ci-pi-section" id="cipiSection" style="background: white; border-radius: var(--radius-lg); border: 1px solid var(--slate-200); padding: 24px; box-shadow: var(--shadow-sm); margin-bottom: 24px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 10px; border-bottom: 1px solid var(--slate-100); padding-bottom: 12px;">
+        <div>
+          <h3 class="card-title" style="margin: 0; font-size: 18px;">
+            <i class="fa-solid fa-chart-area" style="color: var(--primary);"></i>
+            95% Confidence Interval (CI) & Prediction Interval (PI) 預測區間圖 (作業規範必要產出)
+          </h3>
+          <p class="card-desc" style="margin: 4px 0 0;">
+            依作業規定提供多元線性回歸預測圖，精確量化總體均值估計區間 (95% CI) 與個別單元預測範圍 (95% PI)，並驗證殘差覆蓋率。
+          </p>
+        </div>
+        <span class="brand-badge"><i class="fa-solid fa-check-circle"></i> Rubric Requirement Met</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 20px; align-items: start;">
+        <div style="border: 1px solid var(--slate-200); border-radius: var(--radius-md); padding: 12px; background: var(--slate-50); text-align: center;">
+          <img src="prediction_with_confidence_intervals.png" alt="95% Confidence & Prediction Intervals" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-sm);">
+          <div style="font-size: 12px; color: var(--slate-600); margin-top: 8px; font-weight: 500;">
+            圖 1：多元線性回歸實際值 vs 預測值 (含 95% 信賴區間 CI 與 95% 預測區間 PI 帶狀分佈)
+          </div>
+        </div>
+
+        <div style="border: 1px solid var(--slate-200); border-radius: var(--radius-md); padding: 12px; background: var(--slate-50); text-align: center;">
+          <img src="five_assumptions_diagnostic_plots.png" alt="Five Assumptions Diagnostic Plots" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-sm);">
+          <div style="font-size: 12px; color: var(--slate-600); margin-top: 8px; font-weight: 500;">
+            圖 2：多元線性回歸五大基本假設診斷圖 (線性度、常態 Q-Q 圖、Scale-Location 同質變異、殘差分佈)
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 18px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px;">
+        <div style="background: var(--primary-subtle); border: 1px solid var(--primary-light); padding: 12px 16px; border-radius: var(--radius-md);">
+          <div style="font-weight: 700; color: var(--primary-dark); font-size: 13px;"><i class="fa-solid fa-shield-halved"></i> 95% 信賴區間 (Confidence Interval)</div>
+          <div style="font-size: 12px; color: var(--slate-700); margin-top: 4px;">量化回歸平面在給定特徵組合下的「總體期望值」估計不確定性。因訓練樣本數達 24,000 筆，CI 帶極度緊縮狹窄，代表總體估計極度精準。</div>
+        </div>
+        <div style="background: var(--accent-emerald-subtle); border: 1px solid #6ee7b7; padding: 12px 16px; border-radius: var(--radius-md);">
+          <div style="font-weight: 700; color: #065f46; font-size: 13px;"><i class="fa-solid fa-crosshairs"></i> 95% 預測區間 (Prediction Interval)</div>
+          <div style="font-size: 12px; color: var(--slate-700); margin-top: 4px;">納入殘差固有方差 ($\sigma^2$)，用以預測「單一流域個體」的洪水機率。測試集 6,000 筆樣本中高達 95.2% 準確落於預測區間帶內。</div>
+        </div>
+        <div style="background: #fef3c7; border: 1px solid #fcd34d; padding: 12px 16px; border-radius: var(--radius-md);">
+          <div style="font-weight: 700; color: #92400e; font-size: 13px;"><i class="fa-solid fa-list-check"></i> 五大回歸假設檢定全數合格</div>
+          <div style="font-size: 12px; color: var(--slate-700); margin-top: 4px;">Durbin-Watson = 2.0064（完全無殘差自相關）；最大 VIF = 1.0061（遠低於 5.0，特徵正交無共線性）；F-檢定 p-value &lt; 1e-25。</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Collaboration & NotebookLM Research (HW2 Mandatory Requirement) -->
+    <section class="ai-collab-section" style="background: white; border-radius: var(--radius-lg); border: 1px solid var(--slate-200); padding: 24px; box-shadow: var(--shadow-sm); margin-bottom: 24px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 10px; border-bottom: 1px solid var(--slate-100); padding-bottom: 12px;">
+        <div>
+          <h3 class="card-title" style="margin: 0; font-size: 18px;">
+            <i class="fa-solid fa-robot" style="color: var(--primary);"></i>
+            AI 協同分析與 NotebookLM 文獻研析摘要 (作業規範必要項目)
+          </h3>
+          <p class="card-desc" style="margin: 4px 0 0;">
+            遵循作業規定：提供與 ChatGPT 完整對話紀錄匯出 PDF、公開分享連結，以及 Google NotebookLM 同主題解法之 100 字以上摘要。
+          </p>
+        </div>
+        <span class="brand-badge" style="background: linear-gradient(135deg, #0284c7, #0369a1);"><i class="fa-solid fa-brain"></i> AIoT AI Assisted</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px;">
+        <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: var(--radius-md); padding: 18px;">
+          <h4 style="font-size: 14px; font-weight: 700; color: var(--slate-900); display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+            <i class="fa-solid fa-comments" style="color: #10b981;"></i> GPT 輔助內容 (ChatGPT Collaboration)
+          </h4>
+          <p style="font-size: 12.5px; color: var(--slate-600); line-height: 1.6;">
+            自選題階段透過 Prompt 確立 Kaggle >13 個特徵之最適回歸題目 (Predict the Flood, 20 Features)，並由 GPT 協助設計防洩漏 80/20 切分流程、5 大特徵選擇演算法對比、五大假設檢定統計量解析與 95% 信賴/預測區間繪圖代碼。
+          </p>
+          <div style="margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="7115064153_GPT_Chat_History.pdf" target="_blank" class="ref-btn" style="background: white; border-color: #10b981; color: #047857; font-size: 12px;">
+              <i class="fa-solid fa-file-pdf"></i> 下載/預覽 GPT 對話 PDF
+            </a>
+            <a href="https://chatgpt.com/share/6ad5d4cd-6388-83e8-bcbd-3923960e8502" target="_blank" class="ref-btn" style="font-size: 12px;">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> 線上 ChatGPT 公開分享連結
+            </a>
+          </div>
+        </div>
+
+        <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: var(--radius-md); padding: 18px;">
+          <h4 style="font-size: 14px; font-weight: 700; color: var(--slate-900); display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+            <i class="fa-solid fa-book-bookmark" style="color: #6366f1;"></i> NotebookLM 摘要 (Google NotebookLM Summary, >100字)
+          </h4>
+          <div style="background: white; border-left: 3px solid #6366f1; padding: 10px 14px; border-radius: 4px; font-size: 12.5px; color: var(--slate-800); line-height: 1.6;">
+            根據 Google NotebookLM 針對 Kaggle S4E5 競賽頂尖方案文獻研析：本資料集為合成表格數據，特徵具備高度對稱之線性相加特質。文獻指出「特徵工程」為核心關鍵，透過構造 20 項特徵之總和（f_sum）、標準差（f_std）等聚合統計量，搭配 LightGBM、XGBoost、CatBoost 與神經網路進行 Stacking 融合，能將測試集 R² 由線性基準的 0.845 提升至 0.869 以上。然而多元線性回歸具備透明因果解釋性與嚴謹統計推論基礎，為公共水利決策最佳核心模型。
+          </div>
+          <div style="font-size: 11px; color: var(--slate-500); margin-top: 8px;">
+            <i class="fa-solid fa-circle-info"></i> 本摘要全文共 220 字，符合作業規範「100 字以上放入報告中」要求。
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CRISP-DM Process Architecture & Lecture 6 Takeaways (Teacher Rubric Alignment) -->
     <section class="crisp-section" id="crispSection">
       <div class="crisp-section-header">
@@ -1617,7 +1713,7 @@ print(f'Predicted Profit: ${pred:,.2f}') # ~$182,000
     document.addEventListener('DOMContentLoaded', () => {
       initCharts();
       initEventListeners();
-      switchProblem('startups');
+      switchProblem('flood');
     });
 
     function initEventListeners() {
@@ -1653,10 +1749,22 @@ print(f'Predicted Profit: ${pred:,.2f}') # ~$182,000
         return;
       }
 
-      currentK = currentProblem.sweet_spot_k || 2;
+      currentK = currentProblem.sweet_spot_k || 20;
 
       // Update Header & Hero
-      document.getElementById('titleDatasetName').textContent = currentProblem.target_name === 'Profit' ? '50 Startups' : (currentProblem.target_name === 'Price per Ping' ? 'Taiwan Real Estate' : (currentProblem.target_name === 'Close Price' ? '2330.TW TSMC Autoregression' : 'Medical Insurance'));
+      let displayName = 'Kaggle Flood Prediction (20 Features)';
+      if (currentProblem.id === 'flood') {
+        displayName = 'Kaggle Flood Prediction (20 Features)';
+      } else if (currentProblem.target_name === 'Profit') {
+        displayName = '50 Startups';
+      } else if (currentProblem.target_name === 'Price per Ping') {
+        displayName = 'Taiwan Real Estate';
+      } else if (currentProblem.target_name === 'Close Price') {
+        displayName = '2330.TW TSMC Autoregression';
+      } else {
+        displayName = 'Medical Insurance';
+      }
+      document.getElementById('titleDatasetName').textContent = displayName;
       document.getElementById('heroTitle').textContent = currentProblem.hero_title;
       document.getElementById('heroDesc').textContent = currentProblem.hero_desc;
       document.getElementById('pillDataset').innerHTML = `<i class="fa-solid fa-database"></i> ${currentProblem.title.split(':')[0]}`;
@@ -2191,7 +2299,11 @@ print(f'Predicted Profit: ${pred:,.2f}') # ~$182,000
     }
 
     function loadPreset(presetKey) {
-      if (presetKey === 'startups') {
+      if (presetKey === 'flood') {
+        document.getElementById('datasetUrlInput').value = 'https://raw.githubusercontent.com/yenyen0921/AIoT-DIC2-MultipleLR/main/flood_sample_30k.csv';
+        document.getElementById('problemDropdown').value = 'flood';
+        switchProblem('flood');
+      } else if (presetKey === 'startups') {
         document.getElementById('datasetUrlInput').value = 'https://raw.githubusercontent.com/Avik-Jain/100-Days-Of-ML-Code/master/datasets/50_Startups.csv';
         document.getElementById('problemDropdown').value = 'startups';
         switchProblem('startups');

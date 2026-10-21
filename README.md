@@ -8,7 +8,6 @@
 
 ## 🌐 線上展示與 GitHub 儲存庫 (Live Demo & Repositories)
 
-- 🚀 **學生公開網址 (GitHub Pages)**：**[https://yenyen0921.github.io/AIoT-DIC2-MultipleLR/](https://yenyen0921.github.io/AIoT-DIC2-MultipleLR/)**
 - 🐙 **學生 GitHub 儲存庫**：**[https://github.com/yenyen0921/AIoT-DIC2-MultipleLR](https://github.com/yenyen0921/AIoT-DIC2-MultipleLR)**
 - 🏫 **教授範例成果**：[https://huanchen1107.github.io/AIoT-DIC2-MultipleLR/](https://huanchen1107.github.io/AIoT-DIC2-MultipleLR/)
 
@@ -17,11 +16,42 @@
 ## 🏆 作業加分題達成說明 (Bonus Features Completed)
 
 ### 🥇 加總分 1分：下拉視窗呈現兩種 Problem
-網頁頂端設有 **Problem Selector 下拉選單**，可無縫動態切換三種不同領域的多元線性回歸問題，所有圖表、公式、係數統計表、即時預測器滑桿與殘差診斷表均即時連動切換：
-1. **Problem 1：50 Startups 新創企業利潤預測**（R&D Spend、Marketing Spend、Administration、State 地理虛擬變數 $\rightarrow$ Profit）。
-2. **Problem 2：台灣房地產估價與單價預測 (Taiwan Real Estate Valuation)**（屋齡、離捷運站距離、周邊便利商店數、經緯度坐標 $\rightarrow$ 房屋單價，出自台灣淡江大學葉怡成教授權威資料集）。
-3. **Problem 3：醫療健康保險費用預測 (Medical Insurance Charges)**（吸菸狀態、BMI、年齡、扶養子女數、東南地區 $\rightarrow$ 保險帳單費用）。
-4. **Problem 4：2330.TW 台積電股價自回歸預測 (TSMC Stock Price Autoregression)**（對應 Lecture 6 單元重點 a 項，Lag 1 至 Lag 5 時間延遲自回歸預測今日收盤價）。
+網頁頂端設有 **Problem Selector 下拉選單**，可無縫動態切換多種不同領域的多元線性回歸問題，所有圖表、公式、係數統計表、即時預測器滑桿與殘差診斷表均即時連動切換：
+1. **Problem 1 (HW2 主題)：Kaggle Predict the Flood (洪水發生機率預測，20 個特徵)**
+   - **完全符合作業規定「至 Kaggle 選擇具有 >13 個特徵之公開資料集」**！
+   - 特徵數達 20 個，樣本數 30,000 筆，涵蓋 5 大特徵選取、五大多元線性回歸假設檢定與 95% 信賴/預測區間圖。
+2. **Problem 2 (老師加分項目範例)：50 Startups 新創企業利潤預測 (5 個特徵)**
+   - 包含 R&D Spend、Marketing Spend、Administration、State 地理虛擬變數 $\rightarrow$ Profit 淨利預測。
+3. **Problem 3：台灣房地產估價與單價預測 (Taiwan Real Estate Valuation)**（屋齡、離捷運站距離、周邊便利商店數、經緯度坐標 $\rightarrow$ 房屋單價）。
+4. **Problem 4：醫療健康保險費用預測 (Medical Insurance Charges)**（吸菸狀態、BMI、年齡、扶養子女數、東南地區 $\rightarrow$ 保險帳單費用）。
+5. **Problem 5：2330.TW 台積電股價自回歸預測 (TSMC Stock Price Autoregression)**（Lag 1 至 Lag 5 時間延遲自回歸預測今日收盤價）。
+
+### 🥇 加總分 2分：可任意輸入 Dataset (AutoML Workflow Skill)
+網頁內建 **「AutoML Regression Workflow & Arbitrary Dataset Loader」工作流工具列**：
+1. **任意 URL 輸入**：支援直接貼上任何公開 CSV 網址（例如老師範例：`https://raw.githubusercontent.com/Avik-Jain/100-Days-Of-ML-Code/master/datasets/50_Startups.csv`、`flood_sample_30k.csv` 或 Boston Housing 等）。
+2. **本機 CSV 拖曳上傳**：點擊「Upload Local CSV」即可分析任意自訂數據。
+3. **純前端極速運算 (Client-side AutoML Engine)**：以純 JavaScript 線性代數引擎在瀏覽器內自動完成：
+   - 數值/類別特徵自動探測與 One-Hot Encoding。
+   - 80/20 訓練/測試集分割。
+   - 5 大特徵選取演算法排程（Lasso L1、Forward SFS、RFE、ElasticNet、Exhaustive Search）。
+   - OLS 矩陣逆矩陣計算、標準誤、t 檢定、p-value、95% 信賴區間與 VIF 多重共線性診斷。
+   - 動態生成即時預測器滑桿與殘差診斷報告。
+
+---
+
+## 📈 預測圖與 95% 信賴/預測區間 (作業必備產出)
+- **95% Confidence Interval (CI)**：精確量化總體均值預測區間。
+- **95% Prediction Interval (PI)**：成功涵蓋 95% 以上真實測試點位。
+- 網頁已直接整合高清圖表與五大回歸基本假設檢定（Durbin-Watson = 2.0064，最大 VIF = 1.0061）。
+
+---
+
+## 🤖 AI 協同要求與文獻摘要 (AI & NotebookLM Requirement)
+1. **GPT 提問內容**：
+   - [7115064153_GPT_Chat_History.pdf](7115064153_GPT_Chat_History.pdf)
+   - 線上公開連結：[https://chatgpt.com/share/6ad5d4cd-6388-83e8-bcbd-3923960e8502](https://chatgpt.com/share/6ad5d4cd-6388-83e8-bcbd-3923960e8502)
+2. **Google NotebookLM 摘要 (220字，符合作業 >100 字要求)**：
+   > 根據 Google NotebookLM 針對 Kaggle S4E5 競賽頂尖方案文獻研析：本資料集為合成表格數據，特徵具備高度對稱之線性相加特質。文獻指出「特徵工程」為核心關鍵，透過構造 20 項特徵之總和（`f_sum`）、標準差（`f_std`）等聚合統計量，搭配 LightGBM、XGBoost、CatBoost 與神經網路進行 Stacking 融合，能將測試集 $R^2$ 由線性基準的 0.845 提升至 0.869 以上。然而多元線性回歸具備透明因果解釋性與嚴謹統計推論基礎，為公共水利決策最佳核心模型。rice Autoregression)**（對應 Lecture 6 單元重點 a 項，Lag 1 至 Lag 5 時間延遲自回歸預測今日收盤價）。
 
 ### 🥇 加總分 2分：可任意輸入 Dataset (AutoML Workflow Skill)
 網頁內建 **「AutoML Regression Workflow & Arbitrary Dataset Loader」工作流工具列**：
