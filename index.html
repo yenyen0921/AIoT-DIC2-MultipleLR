@@ -1205,13 +1205,106 @@
     <section class="hero-card">
       <h2 id="heroTitle">Feature Selection & Parsimony Analysis</h2>
       <p id="heroDesc">
-        Compare 5 Machine Learning Feature Selection Algorithms (Lasso, Forward SFS, RFE, ElasticNet, Exhaustive Search) against Baseline OLS. Explore the bias-variance tradeoff across feature counts (k=1 to 5), pinpointing the optimal sweet spot and guarding against multicollinearity.
+        Compare 5 Machine Learning Feature Selection Algorithms (Lasso, Forward SFS, RFE, ElasticNet, SelectKBest) against Baseline OLS. Explore the bias-variance tradeoff across feature counts (k=1 to 20), pinpointing the optimal sweet spot and guarding against multicollinearity.
       </p>
       <div class="hero-tags">
-        <span class="hero-pill" id="pillDataset"><i class="fa-solid fa-database"></i> 50 Startups Dataset</span>
+        <span class="hero-pill" id="pillDataset"><i class="fa-solid fa-database"></i> Kaggle Predict the Flood (20 Features)</span>
         <span class="hero-pill"><i class="fa-solid fa-filter"></i> 5 Selection Methods</span>
-        <span class="hero-pill" id="pillSweetSpot"><i class="fa-solid fa-bullseye"></i> Global Sweet Spot: k=2 ($8,198.80 RMSE)</span>
-        <span class="hero-pill" id="pillOverfitting"><i class="fa-solid fa-triangle-exclamation"></i> Overfitting Warning: k=5</span>
+        <span class="hero-pill" id="pillSweetSpot"><i class="fa-solid fa-bullseye"></i> Peak R² = 0.8445: k=20 (0.01998 RMSE)</span>
+        <span class="hero-pill" id="pillOverfitting"><i class="fa-solid fa-triangle-exclamation"></i> Consensus Top 14 Sub-model</span>
+      </div>
+    </section>
+
+    <!-- Deliverables Hub: Report, GPT History, Infographic (Teacher Required Deliverables) -->
+    <section class="deliverables-card" style="background: white; border: 1.5px solid var(--primary-light); border-radius: var(--radius-lg); padding: 20px 24px; margin-bottom: 24px; box-shadow: var(--shadow-md);">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 10px; border-bottom: 1px solid var(--slate-100); padding-bottom: 12px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="width: 38px; height: 38px; border-radius: 10px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); display: flex; align-items: center; justify-content: center; color: white; font-size: 18px;">
+            <i class="fa-solid fa-folder-closed"></i>
+          </div>
+          <div>
+            <h3 style="font-size: 17px; font-weight: 700; color: var(--slate-900); margin: 0;">作業核心繳交產出總覽 (HW2 Complete Deliverables Hub)</h3>
+            <p style="font-size: 12px; color: var(--slate-500); margin: 2px 0 0;">學號：<strong>7115064153</strong> ｜ 完整具備報告書、資訊圖表、ChatGPT 歷程紀錄與原始碼</p>
+          </div>
+        </div>
+        <span class="bonus-tag" style="font-size: 11.5px; padding: 4px 12px;"><i class="fa-solid fa-award"></i> 完整具備</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px;">
+        <!-- 1. 報告書 -->
+        <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: var(--radius-md); padding: 14px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="font-size: 13.5px; font-weight: 700; color: var(--slate-900); display: flex; align-items: center; gap: 8px;">
+              <i class="fa-solid fa-file-pdf" style="color: #ef4444; font-size: 16px;"></i> 1. 完整學術報告書 (Report PDF)
+            </div>
+            <p style="font-size: 11.5px; color: var(--slate-600); margin: 6px 0 12px; line-height: 1.5;">
+              遵循 CRISP-DM 六大階段、5 大特徵選取對比、五大假設檢定統計量與 95% CI/PI 深度解讀。
+            </p>
+          </div>
+          <a href="7115064153_hw2_report.pdf" target="_blank" class="ref-btn" style="background: white; border-color: #ef4444; color: #b91c1c; font-size: 12px; justify-content: center;">
+            <i class="fa-solid fa-download"></i> 檢視 / 下載 報告書 (PDF)
+          </a>
+        </div>
+
+        <!-- 2. 資訊圖表 -->
+        <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: var(--radius-md); padding: 14px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="font-size: 13.5px; font-weight: 700; color: var(--slate-900); display: flex; align-items: center; gap: 8px;">
+              <i class="fa-solid fa-image" style="color: #3b82f6; font-size: 16px;"></i> 2. 核心成果資訊圖表 (Infographic)
+            </div>
+            <p style="font-size: 11.5px; color: var(--slate-600); margin: 6px 0 12px; line-height: 1.5;">
+              一圖綜覽全案：CRISP-DM 流程圖、5 大特徵演算法投票排名、五大假設診斷圖與 CI/PI 分佈圖。
+            </p>
+          </div>
+          <div style="display: flex; gap: 6px;">
+            <a href="7115064153_hw2_infographic.png" target="_blank" class="ref-btn" style="flex: 1; background: white; border-color: #3b82f6; color: #1d4ed8; font-size: 11.5px; justify-content: center;">
+              <i class="fa-solid fa-eye"></i> 檢視 PNG
+            </a>
+            <a href="7115064153_hw2_infographic.pdf" target="_blank" class="ref-btn" style="flex: 1; background: white; border-color: #3b82f6; color: #1d4ed8; font-size: 11.5px; justify-content: center;">
+              <i class="fa-solid fa-file-pdf"></i> 下載 PDF
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. GPT 對話內容 -->
+        <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: var(--radius-md); padding: 14px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="font-size: 13.5px; font-weight: 700; color: var(--slate-900); display: flex; align-items: center; gap: 8px;">
+              <i class="fa-solid fa-comments" style="color: #10b981; font-size: 16px;"></i> 3. ChatGPT 對話歷程紀錄
+            </div>
+            <p style="font-size: 11.5px; color: var(--slate-600); margin: 6px 0 12px; line-height: 1.5;">
+              自選題探索至模型評估之 7 大提問階段對話，附官方公開分享網址與高解析匯出 PDF。
+            </p>
+          </div>
+          <div style="display: flex; gap: 6px;">
+            <a href="7115064153_GPT_Chat_History.pdf" target="_blank" class="ref-btn" style="flex: 1; background: white; border-color: #10b981; color: #047857; font-size: 11.5px; justify-content: center;">
+              <i class="fa-solid fa-file-pdf"></i> 對話 PDF
+            </a>
+            <a href="https://chatgpt.com/share/6ad5d4cd-6388-83e8-bcbd-3923960e8502" target="_blank" class="ref-btn" style="flex: 1; background: white; border-color: #10b981; color: #047857; font-size: 11.5px; justify-content: center;">
+              <i class="fa-solid fa-share-nodes"></i> 線上分享
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. 原始碼與資料集 -->
+        <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: var(--radius-md); padding: 14px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="font-size: 13.5px; font-weight: 700; color: var(--slate-900); display: flex; align-items: center; gap: 8px;">
+              <i class="fa-brands fa-python" style="color: #f59e0b; font-size: 16px;"></i> 4. Python 腳本與資料集
+            </div>
+            <p style="font-size: 11.5px; color: var(--slate-600); margin: 6px 0 12px; line-height: 1.5;">
+              包含終端一鍵執行腳本、完整圖表分析 Jupyter Notebook 與 30,000 筆乾淨資料集。
+            </p>
+          </div>
+          <div style="display: flex; gap: 6px;">
+            <a href="https://github.com/yenyen0921/AIoT-DIC2-MultipleLR" target="_blank" class="ref-btn" style="flex: 1; background: white; border-color: #f59e0b; color: #b45309; font-size: 11.5px; justify-content: center;">
+              <i class="fa-brands fa-github"></i> 專案倉庫
+            </a>
+            <a href="kaggle_house_prices_18f.csv" download class="ref-btn" style="flex: 1; background: white; border-color: #f59e0b; color: #b45309; font-size: 11.5px; justify-content: center;">
+              <i class="fa-solid fa-download"></i> 房價 CSV
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
