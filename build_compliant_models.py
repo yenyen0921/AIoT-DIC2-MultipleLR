@@ -245,20 +245,11 @@ def main():
         overfit_note="Full Model (k=18): Achieves lowest overall test RMSE with minor multicollinearity between area variables (GrLivArea vs 1stFlrSF)."
     )
 
-    # Keep existing Real Estate and TSMC 2330
-    with open('model_data.json', 'r', encoding='utf-8') as f:
-        existing = json.load(f)
-
+    # Only keep the two compliant HW2 Kaggle problems
     all_problems = {
         "flood": flood_problem,
         "house_prices": house_problem
     }
-    if "real_estate" in existing:
-        all_problems["real_estate"] = existing["real_estate"]
-    if "insurance" in existing:
-        all_problems["insurance"] = existing["insurance"]
-    if "tsmc_2330" in existing:
-        all_problems["tsmc_2330"] = existing["tsmc_2330"]
 
     with open('model_data.json', 'w', encoding='utf-8') as f:
         json.dump(all_problems, f, indent=2)

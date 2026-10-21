@@ -17,15 +17,12 @@
 
 ### 🥇 加總分 1分：下拉視窗呈現兩種 Problem
 網頁頂端設有 **Problem Selector 下拉選單**，可無縫動態切換多種不同領域的多元線性回歸問題，所有圖表、公式、係數統計表、即時預測器滑桿與殘差診斷表均即時連動切換：
-1. **Problem 1 (HW2 主題)：Kaggle Predict the Flood (洪水發生機率預測，20 個特徵)**
+1. **Problem 1 (HW2 核心主題)：Kaggle Predict the Flood (洪水發生機率預測，20 個特徵)**
    - **完全符合作業規定「至 Kaggle 選擇具有 >13 個特徵之公開資料集」**！
    - 特徵數達 20 個，樣本數 30,000 筆，涵蓋 5 大特徵選取、五大多元線性回歸假設檢定與 95% 信賴/預測區間圖。
 2. **Problem 2 (HW2 第二主題)：Kaggle House Prices: Advanced Regression (愛荷華州房價預測，18 個特徵)**
    - **完全符合作業規定「至 Kaggle 選擇具有 >13 個特徵之公開資料集」**！
    - 包含 OverallQual、GrLivArea、GarageCars、TotalBsmtSF 等 18 項數值特徵 $\rightarrow$ SalePrice 預測（**恪守老師課堂規範：完全不使用 50 Startups 與 Boston Housing**）。
-3. **Problem 3：台灣房地產估價與單價預測 (Taiwan Real Estate Valuation)**（屋齡、離捷運站距離、周邊便利商店數、經緯度坐標 $\rightarrow$ 房屋單價）。
-4. **Problem 4：醫療健康保險費用預測 (Medical Insurance Charges)**（吸菸狀態、BMI、年齡、扶養子女數、東南地區 $\rightarrow$ 保險帳單費用）。
-5. **Problem 5：2330.TW 台積電股價自回歸預測 (TSMC Stock Price Autoregression)**（Lag 1 至 Lag 5 時間延遲自回歸預測今日收盤價）。
 
 ### 🥇 加總分 2分：可任意輸入 Dataset (AutoML Workflow Skill)
 網頁內建 **「AutoML Regression Workflow & Arbitrary Dataset Loader」工作流工具列**：

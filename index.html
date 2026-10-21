@@ -1142,15 +1142,12 @@
       </div>
 
       <div class="header-actions">
-        <!-- Problem Selector Dropdown (加總分 1分) -->
+        <!-- Problem Selector Dropdown (加總分 1分: 呈現兩種 Problem) -->
         <div class="problem-selector-wrapper">
           <label for="problemDropdown"><i class="fa-solid fa-layer-group"></i> Problem:</label>
           <select id="problemDropdown" class="problem-select">
             <option value="flood" selected>🌊 Problem 1: Kaggle Predict the Flood (20 Features, HW2 Primary)</option>
             <option value="house_prices">🏡 Problem 2: Kaggle House Prices: Advanced Regression (18 Features, HW2 Secondary)</option>
-            <option value="real_estate">🏢 Problem 3: Taiwan Real Estate (House Price)</option>
-            <option value="insurance">🏥 Problem 4: Medical Insurance (Charges)</option>
-            <option value="tsmc_2330">📈 Problem 5: 2330.TW 台積電股價自回歸 (Lecture 6 Topic)</option>
           </select>
         </div>
 
@@ -1178,9 +1175,6 @@
           <span>Quick Presets:</span>
           <span class="preset-chip" onclick="loadPreset('flood')">🌊 Kaggle Flood (20 Features)</span>
           <span class="preset-chip" onclick="loadPreset('house_prices')">🏡 Kaggle House Prices (18 Features)</span>
-          <span class="preset-chip" onclick="loadPreset('real_estate')">🏢 Taiwan Real Estate</span>
-          <span class="preset-chip" onclick="loadPreset('insurance')">🏥 Medical Insurance</span>
-          <span class="preset-chip" onclick="loadPreset('tsmc')">📈 2330.TW 台積電</span>
         </div>
       </div>
 
@@ -1776,8 +1770,6 @@ print(f'Predicted Profit: ${pred:,.2f}') # ~$182,000
           <li><i class="fa-solid fa-book"></i> Design Reference: <a href="https://statsunlock.com/multiple-linear-regression-calculator/" target="_blank">StatsUnlock Multiple Linear Regression Calculator</a></li>
           <li><i class="fa-solid fa-database"></i> Problem 1: <a href="https://www.kaggle.com/competitions/playground-series-s4e5" target="_blank">Kaggle S4E5: Flood Prediction Dataset (20 Features)</a></li>
           <li><i class="fa-solid fa-house"></i> Problem 2: <a href="https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques" target="_blank">Kaggle: House Prices Advanced Regression (18 Features)</a></li>
-          <li><i class="fa-solid fa-building"></i> Problem 3: <a href="https://raw.githubusercontent.com/Minuri427/DataSet_ML/main/Real%20estate%20valuation%20data%20set.csv" target="_blank">Taiwan Real Estate Valuation (Prof. I-Cheng Yeh)</a></li>
-          <li><i class="fa-solid fa-heart-pulse"></i> Problem 4: <a href="https://raw.githubusercontent.com/stedy/Machine-Learning-with-R-datasets/master/insurance.csv" target="_blank">Medical Healthcare Insurance Charges</a></li>
           <li><i class="fa-solid fa-diagram-project"></i> Methodology: <strong>CRISP-DM (Cross-Industry Standard Process for Data Mining)</strong></li>
         </ul>
       </div>
@@ -2400,18 +2392,6 @@ print(f'Predicted Profit: ${pred:,.2f}') # ~$182,000
         document.getElementById('datasetUrlInput').value = 'https://raw.githubusercontent.com/yenyen0921/AIoT-DIC2-MultipleLR/main/kaggle_house_prices_18f.csv';
         document.getElementById('problemDropdown').value = 'house_prices';
         switchProblem('house_prices');
-      } else if (presetKey === 'real_estate') {
-        document.getElementById('datasetUrlInput').value = 'https://raw.githubusercontent.com/Minuri427/DataSet_ML/main/Real%20estate%20valuation%20data%20set.csv';
-        document.getElementById('problemDropdown').value = 'real_estate';
-        switchProblem('real_estate');
-      } else if (presetKey === 'insurance') {
-        document.getElementById('datasetUrlInput').value = 'https://raw.githubusercontent.com/stedy/Machine-Learning-with-R-datasets/master/insurance.csv';
-        document.getElementById('problemDropdown').value = 'insurance';
-        switchProblem('insurance');
-      } else if (presetKey === 'tsmc') {
-        document.getElementById('datasetUrlInput').value = 'https://raw.githubusercontent.com/yenyen0921/AIoT-DIC2-MultipleLR/main/tsmc_2330_ar.csv';
-        document.getElementById('problemDropdown').value = 'tsmc_2330';
-        switchProblem('tsmc_2330');
       }
     }
 
